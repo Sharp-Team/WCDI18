@@ -7,7 +7,7 @@ const user = {
   age: -20
 }
 
-router.get('/', (req, res) => {
+router.get('/api', (req, res) => {
   res.status(200).json(user)
 })
 

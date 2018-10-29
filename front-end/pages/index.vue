@@ -1,57 +1,60 @@
 <template>
   <section class="container">
     <div>
-      <logo/>
-      <h1 class="title">
-        CDI18
-      </h1>
-      <h2 class="subtitle">
+      <h2 class="title">
         Coding Project 2018
       </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Trang</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody v-for="page in pages" :key=page.no>
+          <tr>
+            <th scope="row">{{ page.no }}</th>
+            <td>{{ page.name }}</td>
+            <td><a :href="page.link">{{ page.link }}</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <h5 class="title-small">Modal</h5>
+      <div class="flex-row">
+        Đăng Nhập: <Button>Đăng nhập</Button>
       </div>
+      <div class="flex-row">
+        Đăng Ký: <Button>Đăng ký</Button>
+      </div>
+      <h5 class="title-small">Test back-end</h5>
+      <back-end />
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+  import BackEnd from '~/components/TestBackEnd.vue'
 
-export default {
-  components: {
-    Logo
+  export default {
+    data () {
+      return {
+        pages: [
+          { no: '1', name: 'Thông tin tài khoản', link: '/profile' },
+          { no: '2', name: 'Đổi mật khẩu', link: '/change-password' }
+        ]
+      }
+    },
+    components: {
+      BackEnd
+    }
   }
-}
+
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
+<style lang="scss" scope>
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
+  margin: 0 auto;
   font-weight: 300;
   font-size: 42px;
   color: #526488;
@@ -59,7 +62,13 @@ export default {
   padding-bottom: 15px;
 }
 
-.links {
-  padding-top: 15px;
+.title-small {
+  margin-top: 25px;
+  font-weight: 300;
+  font-size: 30px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
 }
+
 </style>
