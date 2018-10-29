@@ -1,4 +1,5 @@
 const express = require('express')
+require('dotenv').config()
 
 const router = express()
 
@@ -7,10 +8,11 @@ const user = {
   age: -20
 }
 
-router.get('/api', (req, res) => {
+router.get('/', (req, res) => {
   res.status(200).json(user)
 })
 
-router.listen(5000, () => {
-  console.log(`Ahihi, Server is running !`);
+let port = process.env.PORT
+router.listen(port, () => {
+  console.log(`Ahihi, Server is running on port ${port} !`)
 })
