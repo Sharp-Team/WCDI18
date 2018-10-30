@@ -131,6 +131,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '~/assets/scss/variable.scss';
   .profile{
       background-color: #F4F0F0;
     .breadcrumb{
@@ -185,7 +186,7 @@ export default {
             color: #666666;
           }
           .total{
-            color: #d05e0d;
+            color: $color-orange;
           }
           .income{
             color:#d05e0d;
