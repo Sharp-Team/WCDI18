@@ -32,6 +32,10 @@
                 <input type="tel" class="form-control" />
               </div>
               <div class="form-group">
+                <div class="label">Username</div>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
                 <div class="label">Mật khẩu</div>
                 <input type="password" class="form-control" />
               </div>
@@ -46,31 +50,31 @@
               <div class="form-group">
                 <div class="label">Đia chỉ</div>
                 <select class="form-control mt-2">
-                  <option>Tỉnh/ Thành Phố</option>
-                  <option>Hưng Yên</option>
-                  <option>Hà Nội</option>
-                  <option>Nam Định</option>
-                  <option>Hồ Chí Minh</option>
+                  <option v-for="province in provinces"
+                          :key=province.id>
+                    {{ province.name }}
+                  </option>
                 </select>
                 <select class="form-control mt-2">
-                  <option>Quận/ Huyện</option>
-                  <option>Văn Lâm</option>
-                  <option>Văn Giang</option>
+                  <option v-for="district in districts"
+                          :key=district.id>
+                    {{ district.name }}
+                  </option>
                 </select>
                 <select class="form-control mt-2">
-                  <option>Phường/ Xã</option>
-                  <option>Lạc Hồng</option>
-                  <option>Chỉ Đạo</option>
+                  <option v-for="ward in wards"
+                          :key=ward.id>
+                    {{ ward.name }}
+                  </option>
                 </select>
               </div>
               <div class="form-group">
-                <div class="label">Đia chỉ chi tiết</div>
-                <input type="text" class="form-control" placeholder="số nhà, ngõ, phố" />
+                <textarea type="text" class="form-control" placeholder="Số nhà, ngõ, phố" rows="3"></textarea>
               </div>
               <div class="form-group">
                 <div class="row mt-3">
-                  <div class="col-3 label">Đối tượng:</div>
-                  <div class="col-9">
+                  <div class="col-4 label">Đối tượng:</div>
+                  <div class="col-8">
                     <div class="custom-control custom-radio custom-control-inline">
                       <input
                         type="radio"
@@ -100,8 +104,8 @@
               </div>
               <div class="form-group">
                 <div class="row mt-3">
-                  <div class="col-3 label">Loại địa chỉ:</div>
-                  <div class="col-9">
+                  <div class="col-4 label">Loại địa chỉ:</div>
+                  <div class="col-8">
                     <div class="custom-control custom-radio custom-control-inline">
                     <input
                       type="radio"
@@ -169,6 +173,21 @@ export default {
   name: 'Register',
   data () {
     return {
+      provinces: [
+        { name: 'Tỉnh/ Thành Phố' },
+        { name: 'Hưng Yên' },
+        { name: 'Hà Nội' },
+      ],
+      districts: [
+        { name: 'Quận/ Huyện' },
+        { name: 'Văn Lâm' },
+        { name: 'Văn Giang' },
+      ],
+      wards: [
+        { name: 'Phường/ Xã' },
+        { name: 'Lạc Hồng' },
+        { name: 'Chỉ Đạo' },
+      ],
       picked: null
     }
   },
@@ -181,6 +200,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/scss/variable.scss';
   .form-register {
     .modal {
       .modal-dialog {
@@ -239,6 +259,27 @@ export default {
     }
     .form-register .modal .modal-dialog .modal-content .modal-body .form-group .custom-btn-register .social-btn {
       border: none;
+    }
+    .form-register .modal .modal-dialog .modal-content .modal-header h3 {
+      font-size: $font-title-mobile !important;
+    }
+    .form-register .modal .modal-dialog .modal-content .modal-body .form-group .label {
+      font-size: $font-title-small-mobile !important;
+    }
+    .form-register .modal .modal-dialog .modal-content .modal-body .form-group .form-control {
+      font-size: $font-title-small-mobile !important;
+    }
+    .form-register .modal .modal-dialog .modal-content .modal-body .form-group .or-text.text-center.py-2 {
+      font-size: $font-description-mobile !important;
+    }
+    .form-register .modal .modal-dialog .modal-content .modal-footer .text-center.have-acc {
+      font-size: $font-title-small-mobile !important;
+    }
+    .form-register .modal .modal-dialog .modal-content .modal-body .form-group .row .col-8 .custom-control label.custom-control-label {
+      font-size: $font-title-small-mobile !important
+    }
+    .form-register .modal .modal-dialog .modal-content .modal-body .form-group .row .col-8 {
+      bottom: 5px;
     }
   }
 </style>

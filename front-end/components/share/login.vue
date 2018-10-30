@@ -57,6 +57,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/scss/variable.scss';
   .form-login {
     .modal {
       .modal-dialog {
@@ -113,6 +114,21 @@ export default {
     }
     .form-login .modal .modal-dialog .modal-content .modal-body .form-group .custom-btn-login .social-btn {
       border: none;
+    }
+    .form-login .modal .modal-dialog .modal-content .modal-header h3 {
+      font-size: $font-title-mobile !important;
+    }
+    .form-login .modal .modal-dialog .modal-content .modal-body .form-group .label {
+      font-size: $font-title-small-mobile !important;
+    }
+    .form-login .modal .modal-dialog .modal-content .modal-body .form-group .form-control {
+      font-size: $font-title-small-mobile !important;
+    }
+    .form-login .modal .modal-dialog .modal-content .modal-body .form-group .or-text.text-center.py-2 {
+      font-size: $font-description-mobile !important;
+    }
+    .form-login .modal .modal-dialog .modal-content .modal-body .form-group .text-right a {
+      font-size: $font-title-small-mobile !important;
     }
   }
 </style>
