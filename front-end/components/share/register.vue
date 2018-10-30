@@ -1,6 +1,10 @@
 <template>
   <div class="container form-register">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#register">
       Đăng ký
     </button>
     <div class="modal fade" id="register">
@@ -8,7 +12,10 @@
         <div class="modal-content">
           <div class="modal-header">
             <h3 class="modal-title">ĐĂNG KÝ</h3>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
             <form role="form">
@@ -65,17 +72,29 @@
                   <div class="col-3 label">Đối tượng:</div>
                   <div class="col-9">
                     <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" value="Khách hàng" id="check-is-user1" name="is-user" v-model="picked" class="custom-control-input">
-                    <label class="custom-control-label" for="check-is-user1">Khách hàng</label>
+                      <input
+                        type="radio"
+                        value="Khách hàng"
+                        id="check-is-user1"
+                        name="is-user"
+                        v-model="picked"
+                        class="custom-control-input">
+                      <label class="custom-control-label" for="check-is-user1">Khách hàng</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" value="Người làm việc" id="check-is-user2" name="is-user" v-model="picked" class="custom-control-input">
+                      <input
+                        type="radio"
+                        value="Người làm việc"
+                        id="check-is-user2"
+                        name="is-user"
+                        v-model="picked"
+                        class="custom-control-input">
                       <label class="custom-control-label" for="check-is-user2">Người làm việc</label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div v-if="picked === 'Người làm việc'" class="form-group">
+              <div v-show="isWorker" class="form-group">
                 <div class="label">CMND</div>
                 <input type="file" class="form-control-file">
               </div>
@@ -84,11 +103,21 @@
                   <div class="col-3 label">Loại địa chỉ:</div>
                   <div class="col-9">
                     <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="type-address1" name="type-address" value="Nhà riếng,chung cư" class="custom-control-input">
+                    <input
+                      type="radio"
+                      id="type-address1"
+                      name="type-address"
+                      value="Nhà riếng,chung cư"
+                      class="custom-control-input">
                     <label class="custom-control-label" for="type-address1">Nhà riêng, chung cư</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" id="type-address2" name="type-address" value="Cơ quan,công ty" class="custom-control-input">
+                      <input
+                        type="radio"
+                        id="type-address2"
+                        name="type-address"
+                        value="Cơ quan,công ty"
+                        class="custom-control-input">
                       <label class="custom-control-label" for="type-address2">Cơ quan, công ty</label>
                     </div>
                   </div>
@@ -140,7 +169,12 @@ export default {
   name: 'Register',
   data () {
     return {
-      picked: ''
+      picked: null
+    }
+  },
+  computed: {
+    isWorker: function() {
+      return this.picked === 'Người làm việc'
     }
   }
 }
@@ -163,7 +197,6 @@ export default {
               .label {
                 float: left;
               }
-
               .custom-btn-register {
                 display: flex;
                 .social-btn {
