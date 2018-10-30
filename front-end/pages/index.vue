@@ -22,11 +22,13 @@
       </table>
       <h5 class="title-small">Modal</h5>
       <div class="flex-row">
-        Đăng Nhập: <Button>Đăng nhập</Button>
+        Đăng Nhập:
       </div>
+      <login />
       <div class="flex-row">
-        Đăng Ký: <Button>Đăng ký</Button>
+        Đăng Ký:
       </div>
+      <register />
       <h5 class="title-small">Test back-end</h5>
       <back-end />
     </div>
@@ -35,7 +37,8 @@
 
 <script>
   import BackEnd from '~/components/TestBackEnd.vue'
-
+  import Login from '../components/share/login.vue'
+  import Register from '../components/share/register.vue'
   export default {
     data () {
       return {
@@ -46,7 +49,9 @@
       }
     },
     components: {
-      BackEnd
+      BackEnd,
+      Login,
+      Register
     }
   }
 
