@@ -1,6 +1,6 @@
 <template>
   <div class="container form-login">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
+    <button type="button" class="btn" data-toggle="modal" data-target="#login">
       Đăng nhập
     </button>
     <div class="modal fade" id="login">
@@ -26,7 +26,7 @@
                   <div class="social-btn text-right">
                     <button class="btn-block">
                       <a href="#">
-                        <img src="../../assets/images/facebook.png" alt="facebook" />
+                        <img src="~/assets/images/facebook.png" alt="facebook" />
                         <span class="text">Đăng nhập bằng Facebook</span>
                       </a>
                     </button>
@@ -35,7 +35,7 @@
                     <button class="btn-block">
                       <div class="right-social">
                         <a href="#">
-                          <img src="../../assets/images/google.png" alt="google" />
+                          <img src="~/assets/images/google.png" alt="google" />
                           <span class="text">Đăng nhập bằng Google</span>
                         </a>
                       </div>
@@ -59,6 +59,9 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
   .form-login {
+    .btn {
+      font-weight: 500;
+    }
     .modal {
       .modal-dialog {
         .modal-content {

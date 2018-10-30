@@ -2,7 +2,7 @@
   <div class="container form-register">
     <button
       type="button"
-      class="btn btn-primary"
+      class="btn btn-success my-btn"
       data-toggle="modal"
       data-target="#register">
       Đăng ký
@@ -202,6 +202,12 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
   .form-register {
+    .btn {
+      font-weight: 600!important;
+    }
+    button.btn.btn-success.my-btn {
+      width: 12%;
+    }
     .modal {
       .modal-dialog {
         .modal-content {
