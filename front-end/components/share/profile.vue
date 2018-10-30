@@ -133,26 +133,26 @@ export default {
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';
   .profile{
-      background-color: #F4F0F0;
+      background-color: $color-background;
     .breadcrumb{
-      background-color:  #F4F0F0;
+      background-color:  $color-background;
       .breadcrumb-item:first-child::after{
         display: inline-block;
-        color: #6c757d;
+        color: $font-color-dark;
         content: ">";
         padding-left: 10px;
         padding-right: 0px;
       }
       .breadcrumb-item:last-child::before{
         display: inline-block;
-        color: #6c757d;
+        color: $font-color-dark;
         content: "";
       }
       li{
-          color: #564a3a;
+          color: $font-color-dark;
       }
       a{
-        color: #564a3a;
+        color: $font-color-dark;
       }
     }
     .left{
@@ -173,29 +173,29 @@ export default {
         .info{
           padding-bottom: 20px;
           .name{
-            color: #0a0909;
+            color: $font-color-black;
             font-weight: bold;
           }
           .score{
-            color: #0a0909;
+            color: $font-color-black;
             font-weight: bold;
           }
         }
         .money{
           padding-bottom: 30px;
           p{
-            color: #666666;
+            color: $font-color-grey;
           }
           .total{
             color: $color-orange;
           }
           .income{
-            color:#d05e0d;
+            color:$color-orange;
           }
         }
       }
       .account-info{
-        border-top: 1px solid #d0c0c0;
+        border-top: 1px solid $color-border;
         text-align: left;
         ul{
           margin-left: -30px;
@@ -204,23 +204,24 @@ export default {
           list-style: none;
         }
         ul li a{
-          color: #826b4c;
+          color: $font-color-dark;
         }
         h4{
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           font-size: 18px;
-          color: #0a0909;
+          color: $font-color-black;
           font-weight: bold;
           padding-top: 20px;
         }
       }
     }
     .right{
-      background-color: #ffffff;
+      background-color: $color-background-white;
       text-align: right;
       .form-info{
         .form-control:disabled{
-          background-color: #ffffff;
+          background-color: $color-background-white;
+          font-weight: bold;
         }
         padding-top: 40px;
         .confirm{
@@ -229,7 +230,7 @@ export default {
           top: 8px;
           i{
             border-radius: 50%;
-            background: #2EBE4A;
+            background: $color-main;
             color: white;
             padding: 2px;
             font-size: 11px
@@ -242,7 +243,7 @@ export default {
         }
       }
       .title{
-        border-bottom: 1px solid #d0c0c0;
+        border-bottom: 1px solid $color-border;
         h3{
           text-align: left;
           text-transform: uppercase;
@@ -250,6 +251,7 @@ export default {
           font-size: 18px;
           padding-bottom: 15px;
           padding-top: 20px;
+          font-weight: bold;
         }
       }
     }
