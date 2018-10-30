@@ -42,21 +42,21 @@
             <div class="form-group row">
               <label for="fullname" class="col-sm-12 col-md-3 col-form-label">Họ tên đầy đủ</label>
               <div class="col-sm-12 col-md-7">
-                <input type="text" class="form-control" id="fullname" value="Phan Văn Đức" readonly>
+                <input type="text" class="form-control" id="fullname" value="Phan Văn Đức" disabled>
               </div>
             </div>
             <!-- Email -->
             <div class="form-group row">
               <label for="email" class="col-sm-3 col-form-label">Địa chỉ E-mail</label>
               <div class="col-sm-12 col-md-7">
-                <input type="text" class="form-control" id="email" value="phanduc0908@gmail.com" readonly>
+                <input type="text" class="form-control" id="email" value="phanduc0908@gmail.com" disabled>
               </div>
             </div>
             <!-- Mobile -->
             <div class="form-group row">
               <label for="mobile" class="col-sm-12 col-md-3 col-form-label">Mobile</label>
               <div class="col-sm-12 col-md-7">
-                <input type="text" class="form-control" id="mobile" value="0981131870" readonly>
+                <input type="text" class="form-control" id="mobile" value="0981131870" disabled>
                 <div class="confirm">
                   <span>Đã xác thực</span>
                   <i class="fas fa-check"></i>
@@ -157,6 +157,7 @@ export default {
     }
     .left{
       .avata-img{
+        text-align: center;
         img{
           height: 100px;
           width: 100px;
@@ -218,6 +219,9 @@ export default {
       background-color: #ffffff;
       text-align: right;
       .form-info{
+        .form-control:disabled{
+          background-color: #ffffff;
+        }
         padding-top: 40px;
         .confirm{
           position: absolute;
