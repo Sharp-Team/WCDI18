@@ -65,17 +65,17 @@
                   <div class="col-3 label">Đối tượng:</div>
                   <div class="col-9">
                     <div class="custom-control custom-radio custom-control-inline">
-                    <input v-model="picked" type="radio" value="first" id="check-is-user1" name="check-is-user" class="custom-control-input">
+                    <input type="radio" value="Khách hàng" id="check-is-user1" name="is-user" v-model="picked" class="custom-control-input">
                     <label class="custom-control-label" for="check-is-user1">Khách hàng</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input v-model="picked" type="radio" value="second" id="check-is-user2" name="check-is-user" class="custom-control-input">
+                      <input type="radio" value="Người làm việc" id="check-is-user2" name="is-user" v-model="picked" class="custom-control-input">
                       <label class="custom-control-label" for="check-is-user2">Người làm việc</label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div v-if="picked === 'second'" class="form-group">
+              <div v-if="picked === 'Người làm việc'" class="form-group">
                 <div class="label">CMND</div>
                 <input type="file" class="form-control-file">
               </div>
@@ -84,19 +84,19 @@
                   <div class="col-3 label">Loại địa chỉ:</div>
                   <div class="col-9">
                     <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="type-address1" name="type-address" class="custom-control-input">
-                    <label class="custom-control-label" for="type-address1">Nhà riếng,chung cư</label>
+                    <input type="radio" id="type-address1" name="type-address" value="Nhà riếng,chung cư" class="custom-control-input">
+                    <label class="custom-control-label" for="type-address1">Nhà riêng, chung cư</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" id="type-address2" name="type-address" class="custom-control-input">
-                      <label class="custom-control-label" for="type-address2">Cơ quan,công ty</label>
+                      <input type="radio" id="type-address2" name="type-address" value="Cơ quan,công ty" class="custom-control-input">
+                      <label class="custom-control-label" for="type-address2">Cơ quan, công ty</label>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <div class="pt-2">
-                  <button type="button" class="btn btn-block btn-success">Đăng ký</button>
+                  <button type="submit" class="btn btn-block btn-success">Đăng ký</button>
                 </div>
                 <div class="or-text text-center py-2">Hoặc tạo tài khoản nhanh</div>
                 <div class="custom-btn-register">

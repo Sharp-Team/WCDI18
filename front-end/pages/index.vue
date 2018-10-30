@@ -24,11 +24,11 @@
       <div class="flex-row">
         Đăng Nhập:
       </div>
-      <login></login>
+      <login />
       <div class="flex-row">
         Đăng Ký:
       </div>
-      <register></register>
+      <register />
       <h5 class="title-small">Test back-end</h5>
       <back-end />
     </div>

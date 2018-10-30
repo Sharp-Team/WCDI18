@@ -20,7 +20,7 @@
                 <div class="pt-2 pb-3 text-right">
                   <a href="#">Quên mật khẩu?</a>
                 </div>
-                <button type="button" class="btn btn-block btn-success">Đăng nhập</button>
+                <button type="submit" class="btn btn-block btn-success">Đăng nhập</button>
                 <div class="or-text text-center py-2">Hoặc</div>
                 <div class="custom-btn-login">
                   <div class="social-btn text-right">
