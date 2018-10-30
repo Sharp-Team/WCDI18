@@ -1,5 +1,5 @@
 <template>
-  <div class="container form-register">
+  <div class="form-register">
     <button
       type="button"
       class="btn btn-success my-btn"

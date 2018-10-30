@@ -1,6 +1,6 @@
 <template>
-  <div class="container form-login">
-    <button type="button" class="btn" data-toggle="modal" data-target="#login">
+  <div class="form-login">
+    <button type="button" class="btn bg-light" data-toggle="modal" data-target="#login">
       Đăng nhập
     </button>
     <div class="modal fade" id="login">

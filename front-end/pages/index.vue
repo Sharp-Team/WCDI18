@@ -1,5 +1,6 @@
 <template>
   <div>
+    <navbar />
     <section class="container">
       <div>
         <h2 class="title">
@@ -43,6 +44,7 @@
   import Login from '../components/share/login.vue'
   import Register from '../components/share/register.vue'
   import MyFooter from '../components/share/footer.vue'
+  import Navbar from '../components/share/navbar.vue'
   export default {
     data () {
       return {
@@ -56,7 +58,8 @@
       BackEnd,
       Login,
       Register,
-      MyFooter
+      MyFooter,
+      Navbar,
     }
   }
 
