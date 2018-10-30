@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     changeValue() {
-      this.$axios.post(`/api`)
+      this.$axios.get(`http://localhost:5000/test`)
       .then(result => {
         console.log(result)
       })
