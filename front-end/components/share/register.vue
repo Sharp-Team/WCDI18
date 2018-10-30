@@ -206,7 +206,7 @@ export default {
       font-weight: 600!important;
     }
     button.btn.btn-success.my-btn {
-      width: 12%;
+      width: 8rem;
     }
     .modal {
       .modal-dialog {

@@ -40,6 +40,7 @@
           <div class="market-text">505 Minh Khai, Hai Bà Trưng, Hà Nội</div>
           <login class="d-none d-sm-block" />
           <register class="d-none d-sm-block" />
+          <notification />
         </div>
       </div>
     </nav>
@@ -49,12 +50,14 @@
 <script>
   import Login from '../../components/share/login.vue'
   import Register from '../../components/share/register.vue'
+  import Notification from '../../components/share/notification.vue'
 
   export default {
     name: 'Navbar',
     components: {
       Login,
-      Register
+      Register,
+      Notification
     }
 }
 </script>

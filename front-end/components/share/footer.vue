@@ -257,5 +257,16 @@ export default {
       }
     }
   }
+    @media (max-width: 576px) {
+      .footer .up-footer .item-footer h3 {
+        font-size: $font-title-mobile;
+      }
+      .footer .up-footer .item-footer a {
+        font-size: $font-title-small-mobile;
+      }
+      .footer .up-footer .item-footer .social-link{
+       font-size: 2rem;
+      }
+    }
 </style>
 
