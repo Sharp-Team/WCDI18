@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     changeValue() {
-      this.$axios.post(`/api`)
+      this.$axios.get(`/api`)
       .then(result => {
         console.log(result)
       })
