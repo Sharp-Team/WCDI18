@@ -1,44 +1,48 @@
 <template>
-  <section class="container">
-    <div>
-      <h2 class="title">
-        Coding Project 2018
-      </h2>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">STT</th>
-            <th scope="col">Trang</th>
-            <th scope="col">Link</th>
-          </tr>
-        </thead>
-        <tbody v-for="page in pages" :key=page.no>
-          <tr>
-            <th scope="row">{{ page.no }}</th>
-            <td>{{ page.name }}</td>
-            <td><a :href="page.link">{{ page.link }}</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <h5 class="title-small">Modal</h5>
-      <div class="flex-row">
-        Đăng Nhập:
+  <div>
+    <section class="container">
+      <div>
+        <h2 class="title">
+          Coding Project 2018
+        </h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">STT</th>
+              <th scope="col">Trang</th>
+              <th scope="col">Link</th>
+            </tr>
+          </thead>
+          <tbody v-for="page in pages" :key=page.no>
+            <tr>
+              <th scope="row">{{ page.no }}</th>
+              <td>{{ page.name }}</td>
+              <td><a :href="page.link">{{ page.link }}</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h5 class="title-small">Modal</h5>
+        <div class="flex-row">
+          Đăng Nhập:
+        </div>
+        <login />
+        <div class="flex-row">
+          Đăng Ký:
+        </div>
+        <register />
+        <h5 class="title-small">Test back-end</h5>
+        <back-end />
       </div>
-      <login />
-      <div class="flex-row">
-        Đăng Ký:
-      </div>
-      <register />
-      <h5 class="title-small">Test back-end</h5>
-      <back-end />
-    </div>
-  </section>
+    </section>
+    <my-footer />
+  </div>
 </template>
 
 <script>
   import BackEnd from '~/components/TestBackEnd.vue'
   import Login from '../components/share/login.vue'
   import Register from '../components/share/register.vue'
+  import MyFooter from '../components/share/footer.vue'
   export default {
     data () {
       return {
@@ -51,7 +55,8 @@
     components: {
       BackEnd,
       Login,
-      Register
+      Register,
+      MyFooter
     }
   }
 
