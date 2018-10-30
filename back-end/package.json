@@ -2,14 +2,71 @@
   "name": "back-end",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "dev": "nodemon app.js"
+  "author": {
+    "name": "Elisa Kajima Team"
   },
+  "scripts": {
+    "dev": "nodemon app.js",
+    "init-db": "node_modules/.bin/sequelize init",
+    "model-province": "node_modules/.bin/sequelize model:generate --name Province --attributes name:string",
+    "model-district": "node_modules/.bin/sequelize model:generate --name District --attributes name:string,province_id:integer",
+    "model-ward": "node_modules/.bin/sequelize model:generate --name Ward --attributes name:string,district_id:integer",
+    "model-type-address": "node_modules/.bin/sequelize model:generate --name Type_Address --attributes type:string",
+    "model-address": "node_modules/.bin/sequelize model:generate --name Address --attributes address_detail:string,province_id:integer,type_id:integer",
+    "model-permission": "node_modules/.bin/sequelize model:generate --name Permission --attributes name:string,action_code:string",
+    "model-permission-role": "node_modules/.bin/sequelize model:generate --name Permission_Role --attributes permission_id:integer,role_id:integer",
+    "model-role": "node_modules/.bin/sequelize model:generate --name Role --attributes role:string",
+    "model-user": "node_modules/.bin/sequelize model:generate --name User --attributes username:string,password:string",
+    "model-user-detail": "node_modules/.bin/sequelize model:generate --name User_Detail --attributes full_name:string,phone_number:string,email:string,avatar_image:string,indentify_card_image:string,address_id:integer,role_id:integer,user_id:integer",
+    "model-job": "node_modules/.bin/sequelize model:generate --name Job --attributes name:string,icon_job:string",
+    "model-user-job": "node_modules/.bin/sequelize model:generate --name User_Job --attributes user_id:integer,job_id:integer",
+    "model-booking": "node_modules/.bin/sequelize model:generate --name Booking --attributes customer_id:integer,worker_id:integer,contents:string,status:string",
+    "seed-province": "node_modules/.bin/sequelize seed:generate --name Province",
+    "seed-district": "node_modules/.bin/sequelize seed:generate --name District",
+    "seed-ward": "node_modules/.bin/sequelize seed:generate --name Ward",
+    "seed-type-address": "node_modules/.bin/sequelize seed:generate --name Type_Address",
+    "seed-address": "node_modules/.bin/sequelize seed:generate --name Address",
+    "seed-permission": "node_modules/.bin/sequelize seed:generate --name Permission",
+    "seed-permission-role": "node_modules/.bin/sequelize seed:generate --name Permission_Role",
+    "seed-role": "node_modules/.bin/sequelize seed:generate --name Role",
+    "seed-user": "node_modules/.bin/sequelize seed:generate --name User",
+    "seed-user-detail": "node_modules/.bin/sequelize seed:generate --name User_Detail",
+    "seed-job": "node_modules/.bin/sequelize seed:generate --name Job",
+    "seed-user-job": "node_modules/.bin/sequelize seed:generate --name User_Job",
+    "seed-booking": "node_modules/.bin/sequelize seed:generate --name Booking",
+
+    "mig": "node_modules/.bin/sequelize db:migrate",
+    
+    "undo-mig": "node_modules/.bin/sequelize db:migrate:undo:all",
+    "run-seed": "node_modules/.bin/sequelize db:seed:all",
+    "undo-run-seed": "node_modules/.bin/sequelize db:seed:undo:all"
+  },
+  "keyword": [
+    "node",
+    "express",
+    "jsonwebtoken",
+    "passport",
+    "sequelize"
+  ],
+  "bugs": {
+    "url": "https://github.com/Sharp-Team/WCDI18/issues"
+  },
+  "homepage": "https://github.com/Sharp-Team/WCDI18#README",
   "license": "MIT",
+  "private": false,
   "dependencies": {
-    "express": "^4.16.4"
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "sequelize": "^4.41.0",
+    "sequelize-cli": "^5.2.0"
   },
   "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
     "nodemon": "^1.18.5"
   }
 }
