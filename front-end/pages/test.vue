@@ -1,23 +1,18 @@
 <template>
-  <div>
   <div class="button">
     <span class="button__mask"></span>
-    <span class="button__text">Đăng Nhập</span>
-    <span class="button__text button__text--bis">Đăng Nhập</span>
+    <span class="button__text">{{ content }}</span>
+    <span class="button__text button__text--bis">{{ content }}</span>
   </div>
-
-  <br>
-
-  <div class="button">
-    <span class="button__mask"></span>
-    <span class="button__text">button with long text</span>
-    <span class="button__text button__text--bis">button with long text</span>
-  </div>
-
-</div>
 </template>
 
 <script>
+export default {
+  props: {
+    content: String
+  }
+};
+
 </script>
 
 <style lang="scss" scoped>
@@ -47,6 +42,7 @@ $anim-text-offset: 1em;
       top: 0; left:0; right: 0; bottom: 0;
       transform: translateX(-1 * $anim-text-offset);
       opacity: 0;
+      background-color: rgb(22, 173, 52);
     }
   }
   &__mask{
