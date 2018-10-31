@@ -57,9 +57,10 @@
 }
 
 .wrap-icon-noti {
+  cursor: pointer;
   position: relative;
+  margin: 0 10px;
   .is-icon-noti {
-    position: absolute;
     font-size: 30px;
   }
 
@@ -70,6 +71,7 @@
     border-radius: 10px;
     position: absolute;
     margin-left: 20px;
+    margin-top: -35px;
   }
 }
 
