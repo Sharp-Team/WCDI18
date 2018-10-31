@@ -11,12 +11,14 @@
       <div class="left col-md-3 col-sm-12">
         <card-left></card-left>
       </div>
-      <div class="right col-md-9 d-none d-sm-block">
+      <div class="right col-md-9">
         <card-right></card-right>
+        <!-- Tab-List -->
+        <div class="tab-list d-block d-sm-none">
+          <tab-list></tab-list>
+        </div>
       </div>
-      <div class="tab-list d-block d-sm-none">
-        <tab-list></tab-list>
-      </div>
+      
     </div>
   </div>
 </div>

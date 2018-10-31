@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="d-none d-sm-block">
     <div class="title">
       <h3>Đổi mật khẩu</h3>
     </div>
