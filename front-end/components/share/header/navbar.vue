@@ -37,9 +37,12 @@
             alt="local"
             class="market-image"
           />
-          <div class="market-text">505 Minh Khai, Hai Bà Trưng, Hà Nội</div>
-          <login class="d-none d-sm-block ml-4" />
-          <register class="d-none d-sm-block ml-2" />
+          <div class="market-text">{{ address }}</div>
+          <login v-if="username === ''" class="d-none d-sm-block ml-4" />
+          <register v-if="username === ''" class="d-none d-sm-block ml-2" />
+          <nuxt-link v-else to="/profile" class="ml-4">
+            <div>abc {{ username }}</div>
+          </nuxt-link>
           <notification />
         </div>
       </div>
@@ -49,13 +52,19 @@
 </template>
 
 <script>
-  import Login from '../../components/share/login.vue'
-  import Register from '../../components/share/register.vue'
-  import Notification from '../../components/share/notification.vue'
-  import Navmenu from '../../components/share/navmenu.vue'
-  import navbar from '../../assets/js/navbar';
+  import Login from '../../../components/share/login.vue'
+  import Register from '../../../components/share/register.vue'
+  import Notification from '../../../components/share/notification.vue'
+  import Navmenu from '../../../components/share/header/navmenu.vue'
+  import navbar from '../../../assets/js/navbar';
   export default {
     name: 'Navbar',
+    data () {
+      return {
+        username: 'bacode',
+        address: 'Phòng D413, FPT university'
+      }
+    },
     components: {
       Login,
       Register,

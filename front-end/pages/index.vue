@@ -48,7 +48,7 @@
   import Login from '../components/share/login.vue'
   import Register from '../components/share/register.vue'
   import MyFooter from '../components/share/footer.vue'
-  import Navbar from '../components/share/navbar.vue'
+  import Navbar from '../components/share/header/navbar.vue'
   import Notification from '../components/share/notification.vue'
   export default {
     data () {
