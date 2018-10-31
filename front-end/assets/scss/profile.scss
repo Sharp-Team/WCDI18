@@ -167,8 +167,8 @@
               border: none;
             }
             .nav-link.active{
-              border-bottom: 3px solid $color-red;
-              color: $color-main !important;
+              border-bottom: 3px solid $color-main;
+              color: $font-color-dark !important;
               font-weight: bold;
             }
           }
