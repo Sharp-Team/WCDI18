@@ -1,6 +1,6 @@
 <template>
   <div class="container form-login">
-    <my-button content="Đăng nhập" background="white" backgroundHover="white" color="black" data-toggle="modal"
+    <my-button  content="Đăng nhập" background="white" backgroundHover="white" color="black" data-toggle="modal"
       data-target="#login" />
     <button type="button" class="btn" data-toggle="modal" data-target="#login">
       Đăng nhập

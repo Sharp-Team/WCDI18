@@ -53,7 +53,8 @@
       return {
         pages: [
           { no: '1', name: 'Thông tin tài khoản', link: '/profile' },
-          { no: '2', name: 'Đổi mật khẩu', link: '/change-password' }
+          { no: '2', name: 'Đổi mật khẩu', link: '/change-password' },
+          { no: '3', name: 'Lịch sử giao dịch',link: '/history'}
         ]
       }
     },
