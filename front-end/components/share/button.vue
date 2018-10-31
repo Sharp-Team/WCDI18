@@ -1,22 +1,31 @@
 <template>
-  <div class="button">
+  <button
+    class="button my-btn"
+    :style="{ backgroundColor: background, color: color }"
+    :data-toggle="dataToggle"
+    :data-target="dataTarget">
     <span class="button__mask"></span>
     <span class="button__text">{{ content }}</span>
-    <span class="button__text button__text--bis">{{ content }}</span>
-  </div>
+    <span class="button__text button__text--bis" :style="{ backgroundColor: backgroundHover }">{{ content }}</span>
+  </button>
 </template>
 
 <script>
 export default {
   props: {
-    content: String
+    content: String,
+    background: String,
+    backgroundHover: String,
+    color: String,
+    dataToggle: String,
+    dataTarget: String
   }
 };
 
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/scss/variable.scss';
+@import '../../assets/scss/variable.scss';
 $anim-text-offset: 1em;
 .button{
   user-select: none;
@@ -26,12 +35,10 @@ $anim-text-offset: 1em;
   cursor: pointer;
   overflow: hidden;
   opacity: 1;
-  color: #FFF;
-  background-color: $color-main;
   border-radius: 4px;
   &__text{
     display: block;
-        padding: 8px 25px;
+        padding: 5px 25px;
     font-weight: 500;
     &:before{
       content: attr(title);
@@ -42,7 +49,6 @@ $anim-text-offset: 1em;
       top: 0; left:0; right: 0; bottom: 0;
       transform: translateX(-1 * $anim-text-offset);
       opacity: 0;
-      background-color: rgb(22, 173, 52);
     }
   }
   &__mask{
