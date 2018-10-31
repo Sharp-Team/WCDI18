@@ -4,8 +4,9 @@
 <script>
 import ChangePassword from "../components/share/change-password/password";
 export default {
-    components:{
-        ChangePassword
-    }
+  components:{
+    ChangePassword
+  },
+  layout: 'user'
 }
 </script>

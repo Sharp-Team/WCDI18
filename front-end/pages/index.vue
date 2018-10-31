@@ -51,7 +51,8 @@
           { no: '1', name: 'Thông tin tài khoản', link: '/profile' },
           { no: '2', name: 'Đổi mật khẩu', link: '/change-password' },
           { no: '3', name: 'Lịch sử giao dịch',link: '/history'},
-          { no: '4', name: 'Đăng nhập ver 2',link: '/login'}
+          { no: '4', name: 'Footer map', link: '/footer-map'},
+          { no: '5', name: 'Đăng nhập ver 2',link: '/login'}
         ]
       }
     },
@@ -63,7 +64,7 @@
       Navbar,
       Notification
     },
-    lauout: 'default'
+    layout: 'user'
   }
 
 </script>

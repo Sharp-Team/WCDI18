@@ -5,9 +5,9 @@
 <script>
 import History from './../components/share/history/history'
 export default {
-    components:{
-        History
-    },
-    layout: 'default'
+  components:{
+    History
+  },
+  layout: 'user'
 }
 </script>
