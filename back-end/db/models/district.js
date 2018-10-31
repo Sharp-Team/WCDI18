@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
   	collate: 'utf8_unicode_ci'
 	});
   District.associate = function(models) {
-		District.belongsTo(models.Provinces)
-		District.hasMany(models.Wards)
+		// District.belongsTo(models.Provinces)
+		// District.hasMany(models.Wards)
   };
   return District;
 };

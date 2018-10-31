@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   	collate: 'utf8_unicode_ci'
 	});
   Ward.associate = function(models) {
-    Ward.belongsTo(models.Districts)
+    // Ward.belongsTo(models.Districts)
   };
   return Ward;
 };
