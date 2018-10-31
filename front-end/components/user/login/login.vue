@@ -17,13 +17,13 @@
             <div class="form-group row">
               <label for="username" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Tên đăng nhập</label>
               <div class="col-sm-12 col-md-7 col-lg-7">
-                <input type="text" class="form-control" id="username">
+                <input v-model="username" type="text" class="form-control" id="username">
               </div>
             </div>
             <div class="form-group row">
               <label for="password" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Mật khẩu</label>
               <div class="col-sm-12 col-md-7 col-lg-7">
-                <input type="password" class="form-control" id="password" value="" >
+                <input v-model="password" type="password" class="form-control" id="password" value="" >
                 <div class="pt-2 pb-3 text-right">
                   <a href="#">Quên mật khẩu?</a>
                 </div>
@@ -71,6 +71,12 @@
 import MyButton from '~/components/share/button.vue';
   export default {
     name: 'Login',
+    data () {
+      return {
+        username: '',
+        password: ''
+      }
+    },
     components: {
       MyButton
     },
