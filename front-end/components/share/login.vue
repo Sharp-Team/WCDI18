@@ -2,9 +2,6 @@
   <div class="container form-login">
     <my-button  content="Đăng nhập" background="white" backgroundHover="white" color="black" data-toggle="modal"
       data-target="#login" />
-    <button type="button" class="btn" data-toggle="modal" data-target="#login">
-      Đăng nhập
-    </button>
     <div class="modal fade" id="login">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -22,8 +19,7 @@
                 <div class="pt-2 pb-3 text-right">
                   <a href="#">Quên mật khẩu?</a>
                 </div>
-                <my-button content="Đăng nhập" background="white" backgroundHover="white" color="black" />
-                <button type="submit" class="btn btn-block btn-success">Đăng nhập</button>
+                <my-button class="btn-block" content="Đăng nhập" background="#28a745" backgroundHover="grey" color="white" />
                 <div class="or-text text-center py-2">Hoặc</div>
                 <div class="custom-btn-login">
                   <div class="social-btn text-right">
