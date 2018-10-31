@@ -8,7 +8,7 @@ export default {
   components: {
     Profile
   },
-  layout: 'default'
+  layout: 'user'
 };
 
 </script>
