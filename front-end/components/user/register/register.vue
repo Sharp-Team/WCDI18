@@ -10,7 +10,7 @@
     <div class="row">
       <div class="wrap-content col-md-10 offset-md-1">
         <div class="title">
-          <h3>Thông tin cơ bản</h3>
+          <h3>Đăng ký tài khoản</h3>
         </div>
         <div class="form-info">
           <form action="">
@@ -170,6 +170,16 @@
                 </div>
               </div>
             </div>
+            <div v-if="pickUser ==='Người làm việc'" class="form-group row">
+              <label for="jobuser" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Nghề nghiệp</label>
+              <div class="col-sm-12 col-md-7 col-lg-7">
+                <select v-model="jobSelected"  class="form-control">
+                  <option v-for="job in jobs" :key=job.id>
+                    {{ job.name }}
+                  </option>
+                </select>
+              </div>
+            </div>
             <div class="form-group row">
               <label for="isuser" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Loại địa chỉ</label>
               <div class="col-sm-12 col-md-7 col-lg-7 mt-2">
@@ -285,8 +295,19 @@ export default {
           name: 'Chỉ Đạo'
         },
       ],
+      jobs: [{
+          name: 'Sửa xe máy'
+        },
+        {
+          name: 'Sửa quạt, điều hòa,...'
+        },
+        {
+          name: 'Sửa máy tính'
+        },
+      ],
       pickUser: '',
-      pickHome: ''
+      pickHome: '',
+      jobSelected: 'Sửa quạt, điều hòa,...'
     }
   },
   components: {

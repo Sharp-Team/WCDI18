@@ -7,7 +7,8 @@ import Register from '../components/user/register/register'
 export default {
   components: {
     Register
-  }
+  },
+  layout: 'user',
 };
 
 </script>

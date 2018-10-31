@@ -70,7 +70,6 @@
 <script>
 import MyButton from '~/components/share/button.vue';
   export default {
-    name: 'Login',
     data () {
       return {
         username: '',
