@@ -81,7 +81,7 @@ import MyButton from '~/components/share/button.vue';
 @import '~/assets/scss/variable.scss';
   .wrap-login {
     background-color: $color-background;
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
     .breadcrumb{
       background-color:  $color-background;
       .breadcrumb-item:first-child::after{
