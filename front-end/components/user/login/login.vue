@@ -3,14 +3,14 @@
   <div class="container">
     <div class="crumb d-none d-md-block">
       <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
         <li class="breadcrumb-item active">Đăng nhập</li>
       </ul>
     </div>
     <div class="row">
-      <div class="wrap-content col-md-8 offset-md-2">
+      <div class="wrap-content col-md-10 offset-md-1">
         <div class="title">
-          <h3>Thông tin cơ bản</h3>
+          <h3>Đăng nhập</h3>
         </div>
         <div class="form-info">
           <form action="">
@@ -38,7 +38,7 @@
             <div class="form-group row">
               <div class="col-sm-12 col-md-7 col-lg-7 offset-md-4 offset-lg-3">
                 <div class="custom-btn-login">
-                  <div class="social-btn text-right">
+                  <div class="social-btn text-right mb-2">
                     <button class="btn-block">
                       <a href="#">
                         <img src="~/assets/images/facebook.png" alt="facebook" />
@@ -85,6 +85,9 @@ import MyButton from '~/components/share/button.vue';
 
 <style lang="scss" scoped>
 @import '~/assets/scss/variable.scss';
+  .btn-block {
+
+  }
   .wrap-login {
     background-color: $color-background;
     padding-bottom: 4rem;
@@ -110,7 +113,7 @@ import MyButton from '~/components/share/button.vue';
       }
     }
     .wrap-content{
-      padding-bottom: 50px;
+      padding: 25px 25px 50px 25px !important;
       background-color: $color-background-white;
       text-align: right;
       .form-info{
@@ -120,7 +123,6 @@ import MyButton from '~/components/share/button.vue';
         }
         padding-top: 40px;
         .custom-btn-login {
-          display: flex;
           .social-btn {
             border: 1px solid #7e7e7e;
             margin-left: 4px;
@@ -128,12 +130,13 @@ import MyButton from '~/components/share/button.vue';
             .btn-block {
               a {
                 text-decoration: none;
+                display: inline-table;
               }
               cursor: pointer;
               border: none;
               span {
-                font-size: 12px;
-                margin-left: 4px;
+                font-size: 16px;
+                margin-left: 15px;
                 color: rgb(102, 102, 102);
               }
               .right-social {
