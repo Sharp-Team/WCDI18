@@ -1,29 +1,42 @@
 /* eslint-disable */
-'use strict'
+'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('District', {
+    return queryInterface.createTable('User', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      username: {
+				allowNull: false,
+				unique: true,
+        type: Sequelize.STRING
+      },
+      password: {
 				allowNull: false,
         type: Sequelize.STRING
       },
-      province_id: {
+			role_id: {
 				allowNull: false,
         type: Sequelize.INTEGER,
 				// references: {
-        //   model: 'Province',
+        //   model: 'Role',
         //   key: 'id'
         // }
+			},
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
       }
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Districts');
+    return queryInterface.dropTable('Users');
   }
 };

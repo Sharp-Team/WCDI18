@@ -8,9 +8,12 @@ module.exports = (sequelize, DataTypes) => {
     avatar_image: DataTypes.STRING,
     indentify_card_image: DataTypes.STRING,
     address_id: DataTypes.INTEGER,
-    role_id: DataTypes.INTEGER,
+    status_id: DataTypes.INTEGER,
     user_id: DataTypes.INTEGER
-  }, {});
+  }, {
+  	charset: 'utf8',
+  	collate: 'utf8_unicode_ci'
+	});
   User_Detail.associate = function(models) {
     // associations can be defined here
   };

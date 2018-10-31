@@ -3,10 +3,15 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-      return queryInterface.bulkInsert('Person', [{
-        name: 'John Doe',
-        isBetaMember: false
-      }], {});
+      return queryInterface.bulkInsert('Province', [{
+        name: 'Nghệ An',
+      }, {
+				name: 'Hà Nội',
+			}
+		], {
+  	charset: 'utf8',
+  	collate: 'utf8_unicode_ci'
+		});
   },
 
   down: (queryInterface, Sequelize) => {

@@ -2,7 +2,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Permissions', {
+    return queryInterface.createTable('Permission', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -16,14 +16,6 @@ module.exports = {
       action_code: {
 				allowNull: false,
         type: Sequelize.STRING
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
     });
   },

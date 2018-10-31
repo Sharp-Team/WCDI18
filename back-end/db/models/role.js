@@ -3,9 +3,14 @@
 module.exports = (sequelize, DataTypes) => {
   const Role = sequelize.define('Role', {
     role: DataTypes.STRING
-  }, {});
+  }, {
+  	charset: 'utf8',
+  	collate: 'utf8_unicode_ci'
+	});
   Role.associate = function(models) {
-    // associations can be defined here
+    Role.hasMany(models.Permissions)
+		Role.belongsTo(models.Users)
+		Role.belongsTo(models.Permission_Roles)
   };
   return Role;
 };

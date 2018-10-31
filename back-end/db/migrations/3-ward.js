@@ -2,7 +2,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Wards', {
+    return queryInterface.createTable('Ward', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -16,10 +16,10 @@ module.exports = {
       district_id: {
 				allowNull: false,
         type: Sequelize.INTEGER,
-				references: {
-          model: 'Districts',
-          key: 'id'
-        }
+				// references: {
+        //   model: 'District',
+        //   key: 'id'
+        // }
       },
     });
   },

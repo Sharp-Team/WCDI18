@@ -1,14 +1,15 @@
 /* eslint-disable */
 'use strict';
-
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Role', [{
-        role: 'Admin'
+    return queryInterface.bulkInsert('Status', [{
+        code: 'Free'
       }, {
-				role: 'Worker'
+				code: 'Trading'
 			}, {
-				role: 'Customer'
+				code: 'Working'
+			}, {
+				code: 'Blocked'
 			}
 		], {});
   },

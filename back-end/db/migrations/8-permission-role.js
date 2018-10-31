@@ -2,25 +2,24 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Permission_Roles', {
+    return queryInterface.createTable('Permission_Role', {
       permission_id: {
 				allowNull: false,
         primaryKey: true,
         type: Sequelize.INTEGER,
-				references: {
-          model: 'Permissions',
-          key: 'id'
-        }
-				
+				// references: {
+        //   model: 'Permission',
+        //   key: 'id'
+        // }
       },
       role_id: {
 				allowNull: false,
         primaryKey: true,
         type: Sequelize.INTEGER,
-				references: {
-          model: 'Roles',
-          key: 'id'
-        }
+				// references: {
+        //   model: 'Role',
+        //   key: 'id'
+        // }
       },
     });
   },
