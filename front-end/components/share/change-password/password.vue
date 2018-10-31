@@ -9,14 +9,13 @@
     </div>
     <div class="row content">
       <div class="left col-md-3 col-sm-12">
-        <card-left />
+        <card-left></card-left>
       </div>
-      <div class="right col-md-9 col-sm-12">
-        <cart-right></cart-right>
-        <!-- TabList -->
-        <div class="tab-list d-block d-sm-none">
-          <tab-list></tab-list>
-        </div>
+      <div class="right col-md-9 d-none d-sm-block">
+        <card-right></card-right>
+      </div>
+      <div class="tab-list d-block d-sm-none">
+        <tab-list></tab-list>
       </div>
     </div>
   </div>
@@ -24,17 +23,18 @@
 </template>
 
 <script>
-import CardLeft from './CartLeft';
-import CartRight from './CartRight';
+import CardLeft from './../profile/CartLeft';
+import CardRight from './../change-password/CartRight'
 import TabList from './../common/TabList'
 export default {
-  components:{
-    CardLeft,
-    CartRight,
-    TabList
-  }
+    components:{
+        CardLeft,
+        CardRight,
+        TabList
+    }
 }
 </script>
+
 
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';

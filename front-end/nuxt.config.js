@@ -22,6 +22,15 @@ module.exports = {
           'sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns',
         crossorigin: 'anonymous'
       }
+    ],
+    script: [
+      {
+        src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
+      },
+      {
+        src:
+          'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
+      }
     ]
   },
 

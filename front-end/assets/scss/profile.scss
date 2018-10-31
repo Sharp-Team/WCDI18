@@ -135,9 +135,10 @@
             font-size: 21px !important;
             padding-bottom: 5px !important;
           }
+          border-bottom: none !important; 
         }
         .form-info{
-          padding-top: 10px !important;
+          padding-top: 0px !important;
           label{
             text-align: left;
             font-size: $font-title-small-mobile;
@@ -149,6 +150,27 @@
           }
           .form-group{
             padding-bottom: 0px !important;
+          }
+        }
+        .tab-list{
+          .nav-tabs{
+            display: -webkit-inline-box !important;
+            overflow: scroll;
+            width: 100%;
+            &::-webkit-scrollbar{
+              display: none;
+            }
+            a{
+              color: $font-color-grey !important;
+            }
+            .nav-link{
+              border: none;
+            }
+            .nav-link.active{
+              border-bottom: 3px solid $color-red;
+              color: $font-color-dark;
+              font-weight: bold;
+            }
           }
         }
       }
