@@ -24,26 +24,18 @@
         </ul>
       </div>
       <div class="navbar-branch" id="idNavBranch">
-        <img
-          src="~/assets/images/icon-navbar/logo-navbar.png"
-          alt="nav-img"
-          class="nav-img"
-        />
+        <img src="~/assets/images/icon-navbar/logo-navbar.png" alt="nav-img" class="nav-img" />
       </div>
       <div class="navbar-right">
         <div class="nav-button">
-          <img
-            src="~/assets/images/icon-navbar/local.png"
-            alt="local"
-            class="market-image"
-          />
+          <img src="~/assets/images/icon-navbar/local.png" alt="local" class="market-image" />
           <div class="market-text">{{ address }}</div>
           <login v-if="username === ''" class="d-none d-sm-block ml-4" />
           <register v-if="username === ''" class="d-none d-sm-block ml-2" />
           <nuxt-link v-else to="/profile" class="ml-4">
             <div class="wrap-profile">
               <div class="wrap-img-profile">
-                <img :src="imgProfile" alt="image-profile" >
+                <img :src="imgProfile" alt="image-profile">
               </div>
               <div class="wrap-username">
                 {{ username }}
@@ -66,7 +58,7 @@
   import navbar from '../../assets/js/navbar';
   export default {
     name: 'Navbar',
-    data () {
+    data() {
       return {
         username: 'Flame',
         imgProfile: '/images/flame.jpg',
@@ -82,7 +74,8 @@
     beforeMount() {
       navbar()
     }
-}
+  }
+
 </script>
 
 <style lang="scss" scoped>
@@ -96,6 +89,7 @@
       border: none !important;
       outline: none !important;
     }
+
     .navbar-nav {
       .nav-item {
         .nav-link {
@@ -111,6 +105,7 @@
         }
       }
     }
+
     .navbar-branch {
       position: absolute;
       left: 50%;
@@ -120,6 +115,7 @@
         height: 42px;
       }
     }
+
     .navbar-right {
       display: flex;
 
@@ -140,6 +136,7 @@
 
         .wrap-profile {
           display: flex;
+
           .wrap-img-profile {
             img {
               margin-right: 0.4em;
@@ -148,6 +145,7 @@
               border-radius: 100%;
             }
           }
+
           .wrap-username {
             padding-top: 3px;
             color: #333;
@@ -157,6 +155,7 @@
       }
     }
   }
+
   @media (max-width: 1300px) {
     .navbar {
       padding: 0.6em 1em !important;
@@ -170,6 +169,7 @@
 
     .navbar-right {
       .nav-button {
+
         .market-image,
         .market-text {
           display: none;
@@ -177,6 +177,7 @@
       }
     }
   }
+
   @media (max-width: 1110px) {
     .navbar-nav {
       .nav-item {
@@ -186,6 +187,7 @@
       }
     }
   }
+
   @media (max-width: 992px) {
     .navbar-right {
       .nav-button {
@@ -195,6 +197,7 @@
       }
     }
   }
+
   @media (max-width: 576px) {
     .navbar {
       padding: 0.5em 1em !important;
