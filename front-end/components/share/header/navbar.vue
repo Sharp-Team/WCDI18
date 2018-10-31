@@ -41,7 +41,14 @@
           <login v-if="username === ''" class="d-none d-sm-block ml-4" />
           <register v-if="username === ''" class="d-none d-sm-block ml-2" />
           <nuxt-link v-else to="/profile" class="ml-4">
-            <div>abc {{ username }}</div>
+            <div class="wrap-profile">
+              <div class="wrap-img-profile">
+                <img :src="imgProfile" alt="image-profile" >
+              </div>
+              <div class="wrap-username">
+                {{ username }}
+              </div>
+            </div>
           </nuxt-link>
           <notification />
         </div>
@@ -61,7 +68,8 @@
     name: 'Navbar',
     data () {
       return {
-        username: 'bacode',
+        username: 'Flame',
+        imgProfile: '/images/flame.jpg',
         address: 'Phòng D413, FPT university'
       }
     },
@@ -128,6 +136,23 @@
           font-size: 12px;
           color: rgba(0, 0, 0, 0.5);
           font-weight: 500;
+        }
+
+        .wrap-profile {
+          display: flex;
+          .wrap-img-profile {
+            img {
+              margin-right: 0.4em;
+              width: 1.9em;
+              height: 1.9em;
+              border-radius: 100%;
+            }
+          }
+          .wrap-username {
+            padding-top: 3px;
+            color: #333;
+            font-weight: 500;
+          }
         }
       }
     }

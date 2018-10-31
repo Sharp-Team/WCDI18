@@ -31,10 +31,6 @@
           Đăng Ký:
         </div>
         <register />
-        <div class="flex-row">
-          Thông báo
-        </div>
-        <!-- <notification /> -->
         <h5 class="title-small">Test back-end</h5>
         <back-end />
       </div>
