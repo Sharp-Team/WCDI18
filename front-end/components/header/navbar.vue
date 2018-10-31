@@ -42,7 +42,7 @@
               </div>
             </div>
           </nuxt-link>
-          <notification />
+          <notification v-if="username !== ''"/>
         </div>
       </div>
     </nav>
@@ -80,6 +80,9 @@
 
 <style lang="scss" scoped>
   .navbar-section {
+    position: fixed;
+    width: 100%;
+    top: 0;
     .navbar {
       padding: 0.5em 1em !important;
       box-shadow: 0 5px 6px rgba(0, 0, 0, 0.05);
