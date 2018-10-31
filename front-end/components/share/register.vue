@@ -103,7 +103,13 @@
               </div>
               <div class="form-group">
                 <div class="pt-2">
-                  <button type="submit" class="btn btn-block btn-success">Đăng ký</button>
+                  <my-button
+                    content="Đăng ký"
+                    background="#28a745"
+                    backgroundHover="grey"
+                    color="white"
+                    class="btn btn-block is-btn-register"
+                  />
                 </div>
                 <div class="or-text text-center py-2">Hoặc tạo tài khoản nhanh</div>
                 <div class="custom-btn-register">
@@ -132,9 +138,13 @@
           <div class="modal-footer">
             <div class="text-center have-acc">Bạn đã có tài khoản?</div>
             <div class="pl-1">
-              <button type="button" class="btn-block btn-success">
-                Đăng nhập ngay
-              </button>
+              <my-button
+                content="Đăng nhập ngay"
+                background="#28a745"
+                backgroundHover="grey"
+                color="white"
+                class="btn btn-block is-btn-now"
+              />
             </div>
           </div>
         </div>
@@ -195,6 +205,13 @@
 
 <style lang="scss" scoped>
   @import '../../assets/scss/variable.scss';
+
+  .is-btn-now {
+    padding: 0px 25px !important;
+  }
+  .is-btn-register {
+    padding: 1px 25px !important;
+  }
 
   .form-register {
     .btn {
