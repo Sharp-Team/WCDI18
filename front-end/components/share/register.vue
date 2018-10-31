@@ -1,5 +1,5 @@
 <template>
-  <div class="container form-register">
+  <div class="form-register">
     <my-button
       content="Đăng ký"
       background="#28a745"

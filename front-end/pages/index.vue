@@ -30,15 +30,10 @@
           Đăng Ký:
         </div>
         <register />
-        <div class="flex-row">
-          Thông báo
-        </div>
-        <notification />
         <h5 class="title-small">Test back-end</h5>
         <back-end />
       </div>
     </section>
-    <my-footer />
   </div>
 </template>
 
@@ -47,6 +42,7 @@
   import Login from '../components/share/login.vue'
   import Register from '../components/share/register.vue'
   import MyFooter from '../components/footer/footer.vue'
+  import Navbar from '../components/header/navbar.vue'
   import Notification from '../components/share/notification.vue'
   export default {
     data () {
@@ -64,8 +60,10 @@
       Login,
       Register,
       MyFooter,
+      Navbar,
       Notification
-    }
+    },
+    lauout: 'default'
   }
 
 </script>

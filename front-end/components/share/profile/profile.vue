@@ -3,7 +3,7 @@
   <div class="container">
     <div class="crumb d-none d-md-block">
       <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
         <li class="breadcrumb-item active">Thông tin cá nhân</li>
       </ul>
     </div>

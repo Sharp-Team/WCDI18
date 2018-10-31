@@ -1,5 +1,5 @@
 <template>
-  <div class="container form-login">
+  <div class="form-login">
     <my-button  content="Đăng nhập" background="white" backgroundHover="white" color="black" data-toggle="modal"
       data-target="#login" />
     <div class="modal fade" id="login">
@@ -12,8 +12,8 @@
           <div class="modal-body">
             <form role="form">
               <div class="form-group">
-                <div class="label">Email</div>
-                <input type="email" class="form-control" />
+                <div class="label">Tên đăng nhập/ Email</div>
+                <input type="text" class="form-control" />
                 <div class="label">Mật khẩu</div>
                 <input type="password" class="form-control" />
                 <div class="pt-2 pb-3 text-right">
@@ -50,6 +50,7 @@
   </div>
 </template>
 <script>
+
   import MyButton from '~/components/share/button.vue';
   export default {
     name: 'Login',
@@ -57,7 +58,6 @@
       MyButton
     },
   }
-
 </script>
 
 <style lang="scss" scoped>
