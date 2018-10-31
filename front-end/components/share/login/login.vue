@@ -1,0 +1,199 @@
+<template>
+<div class="wrap-login">
+  <div class="container">
+    <div class="crumb d-none d-md-block">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Đăng nhập</li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="wrap-content col-md-8 offset-md-2">
+        <div class="title">
+          <h3>Thông tin cơ bản</h3>
+        </div>
+        <div class="form-info">
+          <form action="">
+            <div class="form-group row">
+              <label for="username" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Tên đăng nhập</label>
+              <div class="col-sm-12 col-md-7 col-lg-7">
+                <input type="text" class="form-control" id="username">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="password" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Mật khẩu</label>
+              <div class="col-sm-12 col-md-7 col-lg-7">
+                <input type="password" class="form-control" id="password" value="" >
+                <div class="pt-2 pb-3 text-right">
+                  <a href="#">Quên mật khẩu?</a>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 col-md-7 col-lg-7 offset-md-4 offset-lg-3">
+                <my-button class="btn-block" content="Đăng nhập" background="#28a745" backgroundHover="grey" color="white" />
+                <div class="or-text text-center py-2">Hoặc</div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 col-md-7 col-lg-7 offset-md-4 offset-lg-3">
+                <div class="custom-btn-login">
+                  <div class="social-btn text-right">
+                    <button class="btn-block">
+                      <a href="#">
+                        <img src="~/assets/images/facebook.png" alt="facebook" />
+                        <span class="text">Đăng nhập bằng Facebook</span>
+                      </a>
+                    </button>
+                  </div>
+                  <div class="social-btn">
+                    <button class="btn-block">
+                      <div class="right-social">
+                        <a href="#">
+                          <img src="~/assets/images/google.png" alt="google" />
+                          <span class="text">Đăng nhập bằng Google</span>
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</template>
+
+<script>
+import MyButton from '~/components/share/button.vue';
+  export default {
+    name: 'Login',
+    components: {
+      MyButton
+    },
+  }
+</script>
+
+<style lang="scss" scoped>
+@import '~/assets/scss/variable.scss';
+  .wrap-login {
+    background-color: $color-background;
+    padding-bottom: 5rem;
+    .breadcrumb{
+      background-color:  $color-background;
+      .breadcrumb-item:first-child::after{
+        display: inline-block;
+        color: $font-color-dark;
+        content: ">";
+        padding-left: 10px;
+        padding-right: 0px;
+      }
+      .breadcrumb-item:last-child::before{
+        display: inline-block;
+        color: $font-color-dark;
+        content: "";
+      }
+      li{
+          color: $font-color-dark;
+      }
+      a{
+        color: $font-color-dark;
+      }
+    }
+    .wrap-content{
+      padding-bottom: 50px;
+      background-color: $color-background-white;
+      text-align: right;
+      .form-info{
+        .form-control:disabled{
+          background-color: $color-background-white;
+          font-weight: bold;
+        }
+        padding-top: 40px;
+        .custom-btn-login {
+          display: flex;
+          .social-btn {
+            border: 1px solid #7e7e7e;
+            margin-left: 4px;
+            border-radius: 4%;
+            .btn-block {
+              a {
+                text-decoration: none;
+              }
+              cursor: pointer;
+              border: none;
+              span {
+                font-size: 12px;
+                margin-left: 4px;
+                color: rgb(102, 102, 102);
+              }
+              .right-social {
+                padding-top: 5px;
+              }
+            }
+          }
+        }
+      }
+      .title{
+        border-bottom: 1px solid $color-border;
+        h3{
+          text-align: left;
+          text-transform: uppercase;
+          font-family: sans-serif;
+          font-size: 18px;
+          padding-bottom: 15px;
+          padding-top: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .wrap-login {
+      .wrap-content {
+        .title {
+          h3 {
+            font-size: $font-title-mobile !important;
+            padding-bottom: 5px !important;
+          }
+          border-bottom: none !important;
+        }
+        .form-info {
+          padding-top: 0px !important;
+          label {
+            text-align: left;
+            font-size: $font-title-small-mobile;
+            padding-bottom: 3px;
+            padding-top: 5px;
+          }
+          .form-control {
+            font-size: $font-title-small-mobile !important;
+          }
+          .form-group {
+            padding-bottom: 0px !important;
+          }
+          .text-right {
+            font-size: $font-title-small-mobile !important;
+          }
+          .or-text {
+            font-size: $font-title-small-mobile !important;
+          }
+          .custom-btn-login {
+            justify-content: center;
+          }
+          .custom-btn-login .social-btn .btn-block span {
+            display: none;
+          }
+          .custom-btn-login .social-btn {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+</style>
+
+
