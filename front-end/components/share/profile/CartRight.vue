@@ -1,5 +1,5 @@
 <template>
-  <div class="d-none d-sm-block">
+  <div class="d-none d-sm-block is-content">
     <div class="title">
       <h3>Thông tin cơ bản</h3>
     </div>
