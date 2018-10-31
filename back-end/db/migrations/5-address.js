@@ -15,11 +15,19 @@ module.exports = {
       },
       province_id: {
 				allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+				references: {
+          model: 'Provinces',
+          key: 'id'
+        }
       },
       type_id: {
 				allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+				references: {
+          model: 'Type_Addresses',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
