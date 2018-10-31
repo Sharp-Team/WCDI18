@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Type_Address = sequelize.define('Type_Address', {
