@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Address = sequelize.define('Address', {
@@ -6,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     type_id: DataTypes.INTEGER
   }, {});
   Address.associate = function(models) {
-    // associations can be defined here
+    
   };
   return Address;
 };

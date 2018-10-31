@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const User_Detail = sequelize.define('User_Detail', {

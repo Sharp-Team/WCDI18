@@ -19,10 +19,17 @@ module.exports = {
       },
       email: {
 				allowNull: false,
+				validate: {
+					isEmail: true,
+				},
+				unique: {
+      		args: true,
+      		msg: 'Email address already in use!'
+  			},
         type: Sequelize.STRING
       },
       avatar_image: {
-				allowNull: false,
+				allowNull: true,
         type: Sequelize.STRING
       },
       indentify_card_image: {
@@ -31,15 +38,27 @@ module.exports = {
       },
       address_id: {
 				allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+				references: {
+          model: 'Addresses',
+          key: 'id'
+        }
       },
       role_id: {
 				allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+				references: {
+          model: 'Roles',
+          key: 'id'
+        }
       },
       user_id: {
 				allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+				references: {
+          model: 'Users',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

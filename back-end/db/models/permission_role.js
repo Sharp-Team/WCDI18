@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Permission_Role = sequelize.define('Permission_Role', {
