@@ -6,8 +6,9 @@
 import FooterMap from '../components/share/footer-map/footer';
 export default {
   components:{
-      FooterMap
-  }
+    FooterMap
+  },
+  layout: 'map'
 }
 </script>
 

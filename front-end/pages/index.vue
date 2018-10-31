@@ -63,7 +63,7 @@
       Navbar,
       Notification
     },
-    lauout: 'default'
+    layout: 'user'
   }
 
 </script>
