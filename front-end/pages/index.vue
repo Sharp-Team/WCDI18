@@ -46,7 +46,7 @@
   import BackEnd from '~/components/TestBackEnd.vue'
   import Login from '../components/share/login.vue'
   import Register from '../components/share/register.vue'
-  import MyFooter from '../components/share/footer.vue'
+  import MyFooter from '../components/footer/footer.vue'
   import Notification from '../components/share/notification.vue'
   export default {
     data () {

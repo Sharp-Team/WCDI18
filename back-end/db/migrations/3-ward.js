@@ -15,16 +15,12 @@ module.exports = {
       },
       district_id: {
 				allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+				references: {
+          model: 'Districts',
+          key: 'id'
+        }
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      }
     });
   },
   down: (queryInterface, Sequelize) => {

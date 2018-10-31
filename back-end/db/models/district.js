@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const District = sequelize.define('District', {
@@ -5,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     province_id: DataTypes.INTEGER
   }, {});
   District.associate = function(models) {
-    // associations can be defined here
+		District.belongsTo(models.Provinces)
+		District.hasMany(models.Wards)
   };
   return District;
 };
