@@ -15,6 +15,7 @@ const user = {
 }
 
 app.use('/users', require('./app/routes/users'))
+
 app.get('/', (req, res) => {
   res.status(200).json(user)
 })
