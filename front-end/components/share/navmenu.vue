@@ -1,10 +1,7 @@
 <template>
   <div class="menu-section">
     <div class="modal mark-menu" id="markMenuModal">
-      <div
-        class="modal-menu-content flex-column modal-menu-content-1"
-        id="markModalMenuContent"
-      >
+      <div class="modal-menu-content flex-column modal-menu-content-1" id="markModalMenuContent">
         <div class="menu-header">
           <img src="~/assets/images/icon-navbar/user.jpg" alt="UserAvatar" class="user-image" />
           <a href="#" class="user-login">Đăng nhập</a>
@@ -48,13 +45,13 @@
   </div>
 </template>
 <script>
-export default {
-  name: 'Navmenu',
-}
+  export default {}
+
 </script>
 
 <style lang="scss" scoped>
-@import '~assets/scss/variable.scss';
+  @import '~assets/scss/variable.scss';
+
   .menu-section {
     .mark-menu {
       visibility: hidden;
@@ -65,6 +62,7 @@ export default {
       display: block !important;
       cursor: pointer;
     }
+
     .modal-menu-content {
       position: fixed;
       left: 0;
@@ -85,6 +83,7 @@ export default {
     .modal-menu-content-2 {
       transform: translateX(0);
     }
+
     .menu-header {
       background: $color-main;
       padding: 0.7em 0 0.7em 15px;
@@ -100,10 +99,12 @@ export default {
           text-decoration: underline;
         }
       }
+
       .user-image {
         margin-right: 0.8em;
         width: 2.6em;
       }
+
       .flat-line {
         margin: 0 0.45em;
       }
@@ -134,6 +135,7 @@ export default {
         }
       }
     }
+
     .menu-contact {
       margin-top: auto;
       background: #f2f2f2;
@@ -144,5 +146,5 @@ export default {
       flex-direction: column;
     }
   }
-</style>
 
+</style>
