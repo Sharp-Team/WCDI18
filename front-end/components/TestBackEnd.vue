@@ -21,6 +21,7 @@ export default {
   methods: {
     changeValue() {
       this.$axios.get(`/api`)
+
       .then(result => {
         console.log(result)
       })
