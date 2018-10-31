@@ -60,7 +60,7 @@
     name: 'Navbar',
     data() {
       return {
-        username: 'Flame',
+        username: '',
         imgProfile: '/images/flame.jpg',
         address: 'Phòng D413, FPT university'
       }
@@ -83,6 +83,7 @@
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 999;
     .navbar {
       padding: 0.5em 1em !important;
       box-shadow: 0 5px 6px rgba(0, 0, 0, 0.05);

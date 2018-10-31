@@ -7,7 +7,8 @@ import Profile from '../components/share/profile/profile'
 export default {
   components: {
     Profile
-  }
+  },
+  layout: 'default'
 };
 
 </script>

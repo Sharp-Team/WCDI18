@@ -1,6 +1,5 @@
 <template>
   <div>
-    <navbar />
     <section class="container">
       <div>
         <h2 class="title">
@@ -35,7 +34,6 @@
         <back-end />
       </div>
     </section>
-    <my-footer />
   </div>
 </template>
 
@@ -63,7 +61,8 @@
       MyFooter,
       Navbar,
       Notification
-    }
+    },
+    lauout: 'default'
   }
 
 </script>
