@@ -5,8 +5,11 @@ module.exports = (sequelize, DataTypes) => {
     customer_id: DataTypes.INTEGER,
     worker_id: DataTypes.INTEGER,
     contents: DataTypes.STRING,
-    status: DataTypes.STRING
-  }, {});
+    status_id: DataTypes.STRING
+  }, {
+  	charset: 'utf8',
+  	collate: 'utf8_unicode_ci'
+	});
   Booking.associate = function(models) {
     // associations can be defined here
   };
