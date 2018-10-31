@@ -43,15 +43,16 @@
   import BackEnd from '~/components/TestBackEnd.vue'
   import Login from '../components/share/login.vue'
   import Register from '../components/share/register.vue'
-  import MyFooter from '../components/share/footer.vue'
-  import Navbar from '../components/share/header/navbar.vue'
+  import MyFooter from '../components/footer/footer.vue'
+  import Navbar from '../components/header/navbar.vue'
   import Notification from '../components/share/notification.vue'
   export default {
     data () {
       return {
         pages: [
           { no: '1', name: 'Thông tin tài khoản', link: '/profile' },
-          { no: '2', name: 'Đổi mật khẩu', link: '/change-password' }
+          { no: '2', name: 'Đổi mật khẩu', link: '/change-password' },
+          { no: '3', name: 'Lịch sử giao dịch',link: '/history'}
         ]
       }
     },

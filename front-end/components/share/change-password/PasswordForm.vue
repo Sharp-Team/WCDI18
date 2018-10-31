@@ -23,11 +23,21 @@
           </div>
         </div>
         <div class="update">
-            <button type="button" class="btn btn-success">Cập nhật</button>
+            <my-button content="Cập nhật" background="#2EBE4A" backgroundHover="white" color="black" data-toggle="modal"></my-button>
         </div>
       </form>
     </div>
 </template>
+
+<script>
+import MyButton from './../button'
+export default {
+  components:{
+    MyButton
+  }
+}
+</script>
+
 
 <style lang="scss">
   @import '~/assets/scss/variable.scss';

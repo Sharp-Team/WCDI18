@@ -59,11 +59,11 @@
 </template>
 
 <script>
-  import Login from '../../../components/share/login.vue'
-  import Register from '../../../components/share/register.vue'
-  import Notification from '../../../components/share/notification.vue'
-  import Navmenu from '../../../components/share/header/navmenu.vue'
-  import navbar from '../../../assets/js/navbar';
+  import Login from '../../components/share/login.vue'
+  import Register from '../../components/share/register.vue'
+  import Notification from '../../components/share/notification.vue'
+  import Navmenu from '../../components/header/navmenu.vue'
+  import navbar from '../../assets/js/navbar';
   export default {
     name: 'Navbar',
     data () {

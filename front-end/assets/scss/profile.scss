@@ -122,9 +122,53 @@
             font-weight: bold;
           }
         }
+        .table-data{
+          
+          padding-top: 50px;
+          .table-striped tbody tr:nth-of-type(even){
+            background-color: $color-background;
+          }
+          .table-striped tbody tr:nth-of-type(odd){
+            background-color: $color-background-white;
+          }
+          thead{
+            text-align: center;
+            background-color: $color-background;
+            th{
+              border: none;
+              color: $font-color-dark;
+              font-weight: bold;
+            }
+          }
+          tbody{
+            text-align: center;
+            td{
+              color: $font-color-grey;
+            }
+            .done{
+              color: $color-main;
+            }
+            .fail{
+              color: $color-red;
+            }
+          }
+          .paging{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+              color: $font-color-dark;
+              font-weight: bold;
+            }
+          }
+        }
+        .search{
+          position: absolute;
+          right: 0;
+          top: -54px;
+        }
       }
     }
-    
   }
 
   @media (max-width: 576px) {
@@ -171,6 +215,23 @@
               color: $font-color-dark !important;
               font-weight: bold;
             }
+          }
+          .table-data{
+            padding-top: 20px !important;
+            th{
+              font-size: $font-title-small-mobile;
+            }
+            td{
+              font-size: $font-title-small-mobile;
+              .employee{
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+            }
+            
           }
         }
       }
