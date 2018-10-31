@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="bottom-footer">
-        <div class="container">
+        <div class="container is-footer">
           <div class="copyright">
             Copyright@2018.Go Green
           </div>
@@ -80,6 +80,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
+.is-footer {
+  margin-top: 0 !important;
+}
 .copyright {
   color: #fff;
 }

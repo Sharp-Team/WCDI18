@@ -63,6 +63,10 @@
 <style lang="scss" scoped>
   @import '~assets/scss/variable.scss';
 
+  .is-button-facebook {
+    width: 25px;
+  }
+
   .form-login {
     .btn {
       font-weight: 500;
