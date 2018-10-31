@@ -38,12 +38,13 @@
             class="market-image"
           />
           <div class="market-text">505 Minh Khai, Hai Bà Trưng, Hà Nội</div>
-          <login class="d-none d-sm-block" />
-          <register class="d-none d-sm-block" />
+          <login class="d-none d-sm-block ml-4" />
+          <register class="d-none d-sm-block ml-2" />
           <notification />
         </div>
       </div>
     </nav>
+    <navmenu />
   </div>
 </template>
 
@@ -51,13 +52,18 @@
   import Login from '../../components/share/login.vue'
   import Register from '../../components/share/register.vue'
   import Notification from '../../components/share/notification.vue'
-
+  import Navmenu from '../../components/share/navmenu.vue'
+  import navbar from '../../assets/js/navbar';
   export default {
     name: 'Navbar',
     components: {
       Login,
       Register,
-      Notification
+      Notification,
+      Navmenu
+    },
+    beforeMount() {
+      navbar()
     }
 }
 </script>

@@ -13,8 +13,8 @@
           <div class="modal-body">
             <form role="form">
               <div class="form-group">
-                <div class="label">Email</div>
-                <input type="email" class="form-control" />
+                <div class="label">Username/ Email</div>
+                <input v-model="username" type="text" class="form-control" />
                 <div class="label">Mật khẩu</div>
                 <input type="password" class="form-control" />
                 <div class="pt-2 pb-3 text-right">
@@ -53,6 +53,11 @@
 <script>
 export default {
   name: 'Login',
+  data () {
+    return {
+      username: ''
+    }
+  },
 }
 </script>
 
