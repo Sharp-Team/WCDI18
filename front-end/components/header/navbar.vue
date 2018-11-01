@@ -60,7 +60,7 @@
     name: 'Navbar',
     data() {
       return {
-        username: '',
+        username: 'Flame',
         imgProfile: '/images/flame.jpg',
         address: 'Phòng D413, FPT university'
       }
