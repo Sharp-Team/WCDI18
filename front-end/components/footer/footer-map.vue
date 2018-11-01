@@ -44,18 +44,11 @@
 
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';
-
-  .image {
-    background-image: url('./../../../assets/images/Desktop.jpg');
-    width: 100%;
-    height: 500px;
-  }
   .statusworker {
       position: absolute;
       left: 5%;
       bottom: 12%;
     }
-
   .footer {
     width: 100%;
     height: 50px;
@@ -123,8 +116,8 @@
 
 </style>
 <script>
-  import Status from "../../../components/status-worker/status.vue"
-  import status from '../../../assets/js/status';
+  import Status from "../../components/status-worker/status.vue"
+  import status from '../../assets/js/status.js';
   export default {
     components: {
       Status
