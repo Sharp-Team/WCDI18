@@ -1,12 +1,12 @@
 <template>
-  <login />
+  <register />
 </template>
 
 <script>
-import Login from '../components/user/login/login'
+import Register from '../components/user/register/register'
 export default {
   components: {
-    Login
+    Register
   },
   layout: 'user',
 };

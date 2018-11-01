@@ -116,7 +116,7 @@
                   <div class="social-btn text-right">
                     <button class="btn-block">
                       <a href="#">
-                        <img src="../../assets/images/facebook.png" alt="facebook" />
+                        <img src="~/assets/images/facebook.png" alt="facebook" />
                         <span class="text">Đăng nhập bằng Facebook</span>
                       </a>
                     </button>
@@ -125,7 +125,7 @@
                     <button class="btn-block">
                       <div class="right-social">
                         <a href="#">
-                          <img src="../../assets/images/google.png" alt="google" />
+                          <img src="~/assets/images/google.png" alt="google" />
                           <span class="text">Đăng nhập bằng Google</span>
                         </a>
                       </div>

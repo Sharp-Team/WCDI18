@@ -70,7 +70,6 @@
 <script>
 import MyButton from '~/components/share/button.vue';
   export default {
-    name: 'Login',
     data () {
       return {
         username: '',
@@ -85,9 +84,6 @@ import MyButton from '~/components/share/button.vue';
 
 <style lang="scss" scoped>
 @import '~/assets/scss/variable.scss';
-  .btn-block {
-
-  }
   .wrap-login {
     background-color: $color-background;
     padding-bottom: 4rem;
@@ -117,7 +113,7 @@ import MyButton from '~/components/share/button.vue';
       background-color: $color-background-white;
       text-align: right;
       .form-info{
-        .form-control:disabled{
+        .form-control{
           background-color: $color-background-white;
           font-weight: bold;
         }
@@ -191,6 +187,7 @@ import MyButton from '~/components/share/button.vue';
             font-size: $font-title-small-mobile !important;
           }
           .custom-btn-login {
+            display: flex;
             justify-content: center;
           }
           .custom-btn-login .social-btn .btn-block span {
