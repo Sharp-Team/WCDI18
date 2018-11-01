@@ -3,7 +3,7 @@
   <div class="container">
     <div class="crumb d-none d-md-block">
       <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
         <li class="breadcrumb-item active">Thông tin cá nhân</li>
       </ul>
     </div>
@@ -11,11 +11,12 @@
       <div class="left col-md-3 col-sm-12">
         <card-left></card-left>
       </div>
-      <div class="right col-md-9 d-none d-sm-block">
+      <div class="right col-md-9">
         <card-right></card-right>
-      </div>
-      <div class="tab-list d-block d-sm-none">
-        <tab-list></tab-list>
+        <!-- Tab-List -->
+        <div class="tab-list d-block d-sm-none">
+          <tab-list></tab-list>
+        </div>
       </div>
     </div>
   </div>

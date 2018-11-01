@@ -21,6 +21,10 @@ module.exports = {
         integrity:
           'sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns',
         crossorigin: 'anonymous'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Varela+Round'
       }
     ],
     script: [
@@ -58,8 +62,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: ['~/assets/scss/main.scss'],
 
   /*
   ** Plugins to load before mounting the App

@@ -22,23 +22,10 @@
           </tbody>
         </table>
         <h5 class="title-small">Modal</h5>
-        <div class="flex-row">
-          Đăng Nhập:
-        </div>
-        <login />
-        <div class="flex-row">
-          Đăng Ký:
-        </div>
-        <register />
-        <div class="flex-row">
-          Thông báo
-        </div>
-        <notification />
         <h5 class="title-small">Test back-end</h5>
         <back-end />
       </div>
     </section>
-    <my-footer />
   </div>
 </template>
 
@@ -46,24 +33,29 @@
   import BackEnd from '~/components/TestBackEnd.vue'
   import Login from '../components/share/login.vue'
   import Register from '../components/share/register.vue'
-  import MyFooter from '../components/share/footer.vue'
+  import MyFooter from '../components/footer/footer.vue'
+  import Navbar from '../components/header/navbar.vue'
   import Notification from '../components/share/notification.vue'
   export default {
     data () {
       return {
         pages: [
           { no: '1', name: 'Thông tin tài khoản', link: '/profile' },
-          { no: '2', name: 'Đổi mật khẩu', link: '/change-password' }
+          { no: '2', name: 'Đổi mật khẩu', link: '/change-password' },
+          { no: '3', name: 'Lịch sử giao dịch',link: '/history'},
+          { no: '4', name: 'Footer map', link: '/footer-map'},
+          { no: '5', name: 'Đăng nhập ver 2',link: '/login'},
+          { no: '6', name: 'Đăng kí ver 2',link: '/register'}
         ]
       }
     },
     components: {
       BackEnd,
-      Login,
-      Register,
       MyFooter,
+      Navbar,
       Notification
-    }
+    },
+    layout: 'user'
   }
 
 </script>

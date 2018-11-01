@@ -1,5 +1,6 @@
 .profile{
     background-color: $color-background;
+    height: 100vh;
     .breadcrumb{
       background-color:  $color-background;
       .breadcrumb-item:first-child::after{
@@ -122,9 +123,53 @@
             font-weight: bold;
           }
         }
+        .table-data{
+
+          padding-top: 50px;
+          .table-striped tbody tr:nth-of-type(even){
+            background-color: $color-background;
+          }
+          .table-striped tbody tr:nth-of-type(odd){
+            background-color: $color-background-white;
+          }
+          thead{
+            text-align: center;
+            background-color: $color-background;
+            th{
+              border: none;
+              color: $font-color-dark;
+              font-weight: bold;
+            }
+          }
+          tbody{
+            text-align: center;
+            td{
+              color: $font-color-grey;
+            }
+            .done{
+              color: $color-main;
+            }
+            .fail{
+              color: $color-red;
+            }
+          }
+          .paging{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+              color: $font-color-dark;
+              font-weight: bold;
+            }
+          }
+        }
+        .search{
+          position: absolute;
+          right: 0;
+          top: -54px;
+        }
       }
     }
-    
   }
 
   @media (max-width: 576px) {
@@ -135,7 +180,7 @@
             font-size: 21px !important;
             padding-bottom: 5px !important;
           }
-          border-bottom: none !important; 
+          border-bottom: none !important;
         }
         .form-info{
           padding-top: 0px !important;
@@ -172,6 +217,23 @@
               font-weight: bold;
             }
           }
+          .table-data{
+            padding-top: 20px !important;
+            th{
+              font-size: $font-title-small-mobile;
+            }
+            td{
+              font-size: $font-title-small-mobile;
+              .employee{
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+            }
+
+          }
         }
       }
 
@@ -186,3 +248,12 @@
       }
     }
   }
+.is-content {
+  padding: 25px 25px 50px 25px;
+}
+.form-info{
+  .update{
+      text-align: center;
+      padding-top: 30px;
+  }
+}

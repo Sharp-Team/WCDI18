@@ -1,20 +1,21 @@
 <template>
-  <div class="d-none d-sm-block is-content">
+  <div class="container d-none d-sm-block is-content">
     <div class="title">
-      <h3>Đổi mật khẩu</h3>
+      <h3>Lịch sử giao dịch</h3>
     </div>
-    <password-form></password-form>
+    <table-data></table-data>
   </div>
 </template>
 
 <script>
-import PasswordForm from './PasswordForm'
+import TableData from './TableData';
 export default {
-    components:{
-      PasswordForm
-    }
+  components:{
+      TableData
+  }
 }
 </script>
+
 
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';

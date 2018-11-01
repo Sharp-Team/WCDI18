@@ -1,8 +1,7 @@
 <template>
-  <div class="container form-login">
-    <button type="button" class="btn" data-toggle="modal" data-target="#login">
-      Đăng nhập
-    </button>
+  <div class="form-login">
+    <my-button  content="Đăng nhập" background="white" backgroundHover="white" color="black" data-toggle="modal"
+      data-target="#login" />
     <div class="modal fade" id="login">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -13,14 +12,14 @@
           <div class="modal-body">
             <form role="form">
               <div class="form-group">
-                <div class="label">Email</div>
-                <input type="email" class="form-control" />
+                <div class="label">Tên đăng nhập/ Email</div>
+                <input type="text" class="form-control" />
                 <div class="label">Mật khẩu</div>
                 <input type="password" class="form-control" />
                 <div class="pt-2 pb-3 text-right">
                   <a href="#">Quên mật khẩu?</a>
                 </div>
-                <button type="submit" class="btn btn-block btn-success">Đăng nhập</button>
+                <my-button class="btn-block" content="Đăng nhập" background="#28a745" backgroundHover="grey" color="white" />
                 <div class="or-text text-center py-2">Hoặc</div>
                 <div class="custom-btn-login">
                   <div class="social-btn text-right">
@@ -51,17 +50,28 @@
   </div>
 </template>
 <script>
-export default {
-  name: 'Login',
-}
+
+  import MyButton from '~/components/share/button.vue';
+  export default {
+    name: 'Login',
+    components: {
+      MyButton
+    },
+  }
 </script>
 
 <style lang="scss" scoped>
-@import '~assets/scss/variable.scss';
+  @import '~assets/scss/variable.scss';
+
+  .is-button-facebook {
+    width: 25px;
+  }
+
   .form-login {
     .btn {
       font-weight: 500;
     }
+
     .modal {
       .modal-dialog {
         .modal-content {
@@ -71,31 +81,39 @@ export default {
               font-weight: 600;
             }
           }
+
           .modal-body {
             .form-group {
               padding: 0px 30px;
+
               .label {
                 margin-top: 12px;
                 margin-bottom: 6px;
                 float: left;
               }
+
               .custom-btn-login {
                 display: flex;
+
                 .social-btn {
                   border: 1px solid #7e7e7e;
                   margin-left: 4px;
                   border-radius: 4%;
+
                   .btn-block {
                     a {
                       text-decoration: none;
                     }
+
                     cursor: pointer;
                     border: none;
+
                     span {
                       font-size: 12px;
                       margin-left: 4px;
                       color: rgb(102, 102, 102);
                     }
+
                     .right-social {
                       padding-top: 5px;
                     }
@@ -108,30 +126,39 @@ export default {
       }
     }
   }
+
   @media (max-width: 576px) {
     .form-login .modal .modal-dialog .modal-content .modal-body .form-group .custom-btn-login {
       justify-content: center;
     }
+
     .form-login .modal .modal-dialog .modal-content .modal-body .form-group .custom-btn-login .social-btn .btn-block span {
       display: none;
     }
+
     .form-login .modal .modal-dialog .modal-content .modal-body .form-group .custom-btn-login .social-btn {
       border: none;
     }
+
     .form-login .modal .modal-dialog .modal-content .modal-header h3 {
       font-size: $font-title-mobile !important;
     }
+
     .form-login .modal .modal-dialog .modal-content .modal-body .form-group .label {
       font-size: $font-title-small-mobile !important;
     }
+
     .form-login .modal .modal-dialog .modal-content .modal-body .form-group .form-control {
       font-size: $font-title-small-mobile !important;
     }
+
     .form-login .modal .modal-dialog .modal-content .modal-body .form-group .or-text.text-center.py-2 {
       font-size: $font-description-mobile !important;
     }
+
     .form-login .modal .modal-dialog .modal-content .modal-body .form-group .text-right a {
       font-size: $font-title-small-mobile !important;
     }
   }
+
 </style>

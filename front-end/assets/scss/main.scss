@@ -1,1 +1,12 @@
-@import "variable.sass"
+/**
+* setup
+**/
+
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.container {
+  margin-top: 53px;
+}

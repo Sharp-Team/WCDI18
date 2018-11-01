@@ -14,7 +14,7 @@
         </li>
       </ul>
       </div>
-      
+
 
         <!-- Tab panes -->
       <div class="tab-content">
@@ -25,8 +25,7 @@
           <password-form></password-form>
         </div>
         <div id="menu2" class="tab-pane fade"><br>
-          <h3>Menu 2</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          <table-data></table-data>
         </div>
       </div>
     </div>
@@ -35,10 +34,12 @@
 <script>
 import ProfileForm from './../profile/ProfileForm'
 import PasswordForm from './../change-password/PasswordForm'
+import TableData from './../history/TableData'
 export default {
   components:{
       ProfileForm,
-      PasswordForm
+      PasswordForm,
+      TableData
   }
 }
 </script>
