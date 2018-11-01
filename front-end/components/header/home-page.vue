@@ -1,9 +1,10 @@
 <template>
-  <div class="home-page">
+  <div class="home-page d-none d-lg-block">
     <img src="../../assets/images/homepage.jpg" class="bg"/>
     <div class="button">
       <button type="button" class="btn btn-home">START MEDITATION</button>
     </div>
+    <!-- Add Map SVG -->
     <div class="map">
       <svg id="world-map" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 384">
         <defs></defs>
@@ -569,12 +570,28 @@
         <g></g>
       </svg>
     </div>
+    <div class="page-info">
+      <div class="row">
+        <div class="col-md-6 left">
+          <div class="content">
+            <p>users online: <span class="number">13</span></p>
+            <p>total sessions: <span class="number">627</span></p>
+            <p>total minutes: <span class="number">8451</span></p>
+          </div>
+        </div>
+        <div class="col-md-6 right">
+          <div class="content">
+            <p>For each minute you mediate we will</p>
+            <p>donate 10 grains of rice through Oxfam</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss" csoped>
   .home-page{
-    background-image: url('../../assets/images/homepage.jpg');
     .bg{
       width: 100%;
       height: 100%;
@@ -586,13 +603,13 @@
     }
     .map{
       #world-map{
-        max-height: 550px;
+        max-height: 350px;
         position: absolute;
         top: 40%;
         transform: translateY(-50%);
       }
       path.jvectormap-region.jvectormap-element {
-        fill:#e4f7f7b5;
+        fill:#ededee;
         opacity: 0.8;
       }
     }
@@ -615,6 +632,40 @@
         -webkit-transform: scale(1.5);
         transform: scale(1.5);
       }
+    }
+    .page-info{
+      position: absolute;
+      bottom: 60px;
+      right: 30%;
+      .left{
+        border-right: 1px solid #ededee;
+        .content{
+          padding-top: 20px;
+          padding-right: 20px;
+          p{
+            text-transform: uppercase;
+            text-align: right;
+            color:#ededee;
+            margin-bottom: 6px;
+          }
+          .number{
+            color: #eafbfa;
+            font-weight: bold;
+          }
+        }
+      }
+      .right{
+        .content{
+            padding-top: 35px;
+            padding-left: 20px;
+            min-width: 300px;
+          p{
+            color:#ededee;
+            margin-bottom: 6px;
+          }
+        } 
+      }
+      
     }
   }
 </style>
