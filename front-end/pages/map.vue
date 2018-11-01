@@ -1,7 +1,8 @@
 <template>
   <div>
     <no-ssr>
-      <googlemaps-map ref="map" :center="center" @ready="ready"></googlemaps-map>
+    <GmapMap :center="{lat:14.058324, lng:108.277199}" :zoom="7" map-type-id="terrain" id="map">
+    </GmapMap>
     </no-ssr>
     <footer-map></footer-map>
   </div>
@@ -32,8 +33,9 @@
 </script>
 
 <style lang="scss" scoped>
-.vue-google-map {
-  width: 500px;
-  height: 400px;
-}
+  #map {
+    width: 100%;
+    height: 100vh;
+  }
+
 </style>

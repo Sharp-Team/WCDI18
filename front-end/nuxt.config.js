@@ -50,12 +50,6 @@ module.exports = {
         integrity:
           'sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy',
         crossorigin: 'anonymous'
-      },
-      {
-        async: true,
-        defer: true,
-        src:
-          'https://maps.googleapis.com/maps/api/js?key=AIzaSyApqfiv2Z8viVANB-8LmLmbZqTWyS5Bx1Y&callback=initMap'
       }
     ]
   },
@@ -102,6 +96,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendors: ['babel-polyfill'],
     /*
     ** You can extend webpack config here
     */
@@ -115,6 +110,16 @@ module.exports = {
         //   exclude: /(node_modules)/
         // })
       }
+      // if (!ctx.isClient) {
+      //   // This instructs Webpack to include `vue2-google-maps`'s Vue files
+      //   config.externals.splice(0, 0, function(context, request, callback) {
+      //     if (/^vue2-google-maps($|\/)/.test(request)) {
+      //       callback(null, false)
+      //     } else {
+      //       callback()
+      //     }
+      //   })
+      // }
     },
     serverMiddleware: [
       // API middleware
