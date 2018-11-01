@@ -2,11 +2,12 @@
   <div>
     <div class="image">
     </div>
+    <status class="statusworker"/>
     <div class="footer">
       <div class="action">
         <div class="icon status">
           <a href="#">
-            <i class="fas fa-street-view"></i>
+            <i class="fas fa-street-view" id="showStatusWorker"></i>
           </a>
           <span class="tooltip-status">
             Trạng thái
@@ -49,6 +50,11 @@
     width: 100%;
     height: 500px;
   }
+  .statusworker {
+      position: absolute;
+      left: 5%;
+      bottom: 12%;
+    }
 
   .footer {
     width: 100%;
@@ -117,4 +123,14 @@
 
 </style>
 <script>
+  import Status from "../../../components/status-worker/status.vue"
+  import status from '../../../assets/js/status';
+  export default {
+    components: {
+      Status
+    },
+    beforeMount() {
+      status()
+    },
+  }
 </script>
