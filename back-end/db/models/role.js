@@ -8,9 +8,9 @@ module.exports = (sequelize, DataTypes) => {
   	collate: 'utf8_unicode_ci'
 	});
   Role.associate = function(models) {
-    Role.hasMany(models.Permissions)
-		Role.belongsTo(models.Users)
-		Role.belongsTo(models.Permission_Roles)
+    // Role.hasMany(models.Permissions)
+		// Role.belongsTo(models.Users)
+		// Role.belongsTo(models.Permission_Roles)
   };
   return Role;
 };

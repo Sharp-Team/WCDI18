@@ -9,7 +9,7 @@ const app = express()
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use('/api/v1', routes)
+app.use('/', routes)
 
 const user = {
   name: 'Hoa Mat Lol',
