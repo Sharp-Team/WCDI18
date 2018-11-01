@@ -19,7 +19,8 @@
     "cross-env": "^5.2.0",
     "node-sass": "^4.9.4",
     "nuxt": "^2.0.0",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "vue2-google-maps": "^0.10.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
