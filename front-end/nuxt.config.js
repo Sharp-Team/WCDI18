@@ -50,6 +50,12 @@ module.exports = {
         integrity:
           'sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy',
         crossorigin: 'anonymous'
+      },
+      {
+        async: true,
+        defer: true,
+        src:
+          'https://maps.googleapis.com/maps/api/js?key=AIzaSyApqfiv2Z8viVANB-8LmLmbZqTWyS5Bx1Y&callback=initMap'
       }
     ]
   },
@@ -67,8 +73,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [{ src: '~/plugins/googlemaps.js', ssr: false }],
 
   /*
   ** Nuxt.js modules
