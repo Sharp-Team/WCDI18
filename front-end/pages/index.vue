@@ -22,14 +22,6 @@
           </tbody>
         </table>
         <h5 class="title-small">Modal</h5>
-        <div class="flex-row">
-          Đăng Nhập:
-        </div>
-        <login />
-        <div class="flex-row">
-          Đăng Ký:
-        </div>
-        <register />
         <h5 class="title-small">Test back-end</h5>
         <back-end />
       </div>
@@ -59,8 +51,6 @@
     },
     components: {
       BackEnd,
-      Login,
-      Register,
       MyFooter,
       Navbar,
       Notification
