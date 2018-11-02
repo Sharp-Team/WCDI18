@@ -1,5 +1,5 @@
 const models = require('../../db/models');
-const { jsonHelper } = require('../helpers/index');
+const { jwtHelper } = require('../helpers/index');
 const passport = require('passport');
 // const JWT = require('jsonwebtoken')
 // const bcrypt = require('bcrypt')
@@ -8,29 +8,6 @@ require('dotenv').config();
 // let session = null;
 
 module.exports = {
-	update: async (req, res) => {
-		try {
-			const {
-				password
-			} = req.body;
-			const id = req.params.id
-			await User.update({
-				password
-			}, {
-				where: {
-					id
-				},
-				raw: true
-			});
-			res.status(200).json({
-				status: `Updated id ${id}`
-			});
-		} catch (error) {
-			res.status(500).json({
-				message: error
-			});
-		}
-	},
 	signUp: async (req, res, next) => {
     const { username, password } = req.body;
     // Check if there is a user with the same email
@@ -88,7 +65,6 @@ module.exports = {
       res.status(500).json(error.message)
     }
 	},
-	
 	signOut: async (req, res) => {
 		await delete req.session
 		if (req.session == null) {
@@ -102,8 +78,35 @@ module.exports = {
 			error: `Can't logout ....`
 			})
 		}
-  }
-	,
+  },
+	oauthGoogle: async (req, res, next) => {
+		//Generate token
+		const token = jwtHelper.encode(req.user);
+    res.status(200).json({ token });
+	},
+	update: async (req, res) => {
+		try {
+			const {
+				password
+			} = req.body;
+			const id = req.params.id
+			await User.update({
+				password
+			}, {
+				where: {
+					id
+				},
+				raw: true
+			});
+			res.status(200).json({
+				status: `Updated id ${id}`
+			});
+		} catch (error) {
+			res.status(500).json({
+				message: error
+			});
+		}
+	},
 	changePassword: async (req, res) => {
     try {
       const { username, oldPassword, newPassword, confirmPassword } = req.body
@@ -130,5 +133,7 @@ module.exports = {
       const result = jsonHelper(null, error.message, 500)
       res.status(500).json(result)
     }
-  }	
+  },
+	
+		
 }

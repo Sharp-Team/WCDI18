@@ -2,8 +2,19 @@ const passport = require('passport')
 const JwtStrategy = require('passport-jwt').Strategy
 const localStrategy = require('passport-local').Strategy;
 const { ExtractJwt } = require('passport-jwt')
+const OauthGoogle = require('passport-google-plus-token');
 const models = require('../db/models');
 require('dotenv').config()
+
+// GOOGLE API
+passport.use('google_token', new OauthGoogle({
+	clientID: process.env.GOOGLE_ID,
+	clientSecret: process.env.GOOGLE_SECRET,
+}, async (accessToken, refreshToken, profile, done) => {
+	console.log(accessToken)
+	console.log(profile);
+}))
+
 
 // JWT
 passport.use(new JwtStrategy({
