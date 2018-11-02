@@ -1,9 +1,11 @@
 <template>
   <div class="home-page d-flex">
-    <!-- <img src="../../assets/images/homepage.jpg" class="bg"/> -->
+    <!-- <img src="/image/slider/slider/homepage.jpg" class="bg"/> -->
+    <no-ssr>
     <div class="my-button">
-      <my-button type="my-button" class="btn btn-home">Bắt đầu với maps</my-button>
+      <button type="my-button" class="btn btn-home">Bắt đầu với maps </button>
     </div>
+    </no-ssr>
     <!-- Add Map SVG -->
     <div class="map">
       <svg id="world-map" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 384">
@@ -539,34 +541,34 @@
         <g></g>
         <g>
           <image data-index="0" fill="grey" stroke="#505050" fill-opacity="1" stroke-width="1" stroke-opacity="1" r="5"
-            class="jvectormap-marker jvectormap-element blue5" href="../../assets/images/6.png" width="35" height="35"
+            class="jvectormap-marker jvectormap-element image-1" width="35" height="35"
             x="444.0889262322294" y="221.37641413057995"></image>
           <image data-index="2" fill="grey" stroke="#505050" fill-opacity="1" stroke-width="1" stroke-opacity="1" r="5"
-            class="jvectormap-marker jvectormap-element blue5" href="../../assets/images/6.png" width="35" height="35"
+            class="jvectormap-marker jvectormap-element image-2" width="35" height="35"
             x="387.80778" y="257.30380282393287"></image>
           <image data-index="6" fill="grey" stroke="#505050" fill-opacity="1" stroke-width="1" stroke-opacity="1" r="5"
-            class="jvectormap-marker jvectormap-element blue1" href="../../assets/images/6.png" width="35" height="35"
+            class="jvectormap-marker jvectormap-element image-3" width="35" height="35"
             x="383.00131856757406" y="201.04408894117424"></image>
           <image data-index="9" fill="grey" stroke="#505050" fill-opacity="1" stroke-width="1" stroke-opacity="1" r="5"
-            class="jvectormap-marker jvectormap-element blue3" href="../../assets/images/6.png" width="35" height="35"
+            class="jvectormap-marker jvectormap-element image-4" width="35" height="35"
             x="313.60829994533833" y="174.34640958249776"></image>
           <image data-index="10" fill="grey" stroke="#505050" fill-opacity="1" stroke-width="1" stroke-opacity="1" r="5"
-            class="jvectormap-marker jvectormap-element blue2" href="../../assets/images/6.png" width="35" height="35"
+            class="jvectormap-marker jvectormap-element image-5" width="35" height="35"
             x="364.7513298283196" y="218.88940165306045"></image>
           <image data-index="11" fill="grey" stroke="#505050" fill-opacity="1" stroke-width="1" stroke-opacity="1" r="5"
-            class="jvectormap-marker jvectormap-element blue3" href="../../assets/images/6.png" width="35" height="35"
+            class="jvectormap-marker jvectormap-element image-6" width="35" height="35"
             x="152.990988943731" y="206.12918929531648"></image>
           <image data-index="14" fill="grey" stroke="#505050" fill-opacity="1" stroke-width="1" stroke-opacity="1" r="5"
-            class="jvectormap-marker jvectormap-element blue1" href="../../assets/images/6.png" width="35" height="35"
+            class="jvectormap-marker jvectormap-element image-7" width="35" height="35"
             x="155.63802803968545" y="194.46087328533156"></image>
           <image data-index="15" fill="grey" stroke="#505050" fill-opacity="1" stroke-width="1" stroke-opacity="1" r="5"
-            class="jvectormap-marker jvectormap-element blue4" href="../../assets/images/6.png" width="35" height="35"
+            class="jvectormap-marker jvectormap-element image-8" width="35" height="35"
             x="67.8921808757991" y="188.90494921458713" cursor="pointer"></image>
           <image data-index="20" fill="grey" stroke="#505050" fill-opacity="1" stroke-width="1" stroke-opacity="1" r="5"
-            class="jvectormap-marker jvectormap-element blue5" href="../../assets/images/6.png" width="35" height="35"
+            class="jvectormap-marker jvectormap-element image-9" width="35" height="35"
             x="564.23014" y="341.91507625556955"></image>
           <image data-index="49" fill="grey" stroke="#505050" fill-opacity="1" stroke-width="1" stroke-opacity="1" r="5"
-            class="jvectormap-marker jvectormap-element blue2" href="../../assets/images/6.png" width="35" height="35"
+            class="jvectormap-marker jvectormap-element image-10" width="35" height="35"
             x="101.13737372592306" y="167.9898624827323" cursor="pointer"></image>
         </g>
         <g></g>
@@ -592,13 +594,22 @@
   </div>
 </template>
 
+<script>
+  import slider from '../../assets/js/slider'
+  export default {
+    beforeMount() {
+      slider()
+    },
+  };
+</script>
+
 <style lang="scss" csoped>
   .home-page {
     width: 100%;
     height: 100%;
     position: relative;
     height: 100vh;
-    background-image: url('../../assets/images/homepage.jpg');
+    background-image: url('../../assets/images/slider/slider.png');
 
     .map {
       width: 100%;
@@ -653,6 +664,7 @@
 
         .content {
           padding-right: 20px;
+          font-size: 13px;
 
           p {
             text-transform: uppercase;
@@ -687,5 +699,4 @@
 
     }
   }
-
 </style>
