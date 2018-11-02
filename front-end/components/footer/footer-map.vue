@@ -44,11 +44,6 @@
 
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';
-  .statusworker {
-      position: absolute;
-      left: 5%;
-      bottom: 12%;
-    }
   .footer {
     width: 100%;
     height: 50px;
