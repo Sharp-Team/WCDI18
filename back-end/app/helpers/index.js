@@ -1,9 +1,6 @@
-const jwtHelper = require('./jwtHelper');
-const jsonHelper = require('./jsonHelper');
-const timeNow = require('./timeNow');
-
+const jwtHelper = require('./jwtHelper')
+const routerHelper = require('./routerHelper')
 module.exports = {
-	jsonHelper,
 	jwtHelper,
-	timeNow,
+	routerHelper
 }
