@@ -2,11 +2,12 @@
   <div>
     <div class="image">
     </div>
-    <div class="footer">
+    <status class="statusworker"/>
+    <div class="my-footer">
       <div class="action">
         <div class="icon status">
           <a href="#">
-            <i class="fas fa-street-view"></i>
+            <i class="fas fa-street-view" id="showStatusWorker"></i>
           </a>
           <span class="tooltip-status">
             Trạng thái
@@ -43,8 +44,7 @@
 
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';
-
-  .footer {
+  .my-footer {
     width: 100%;
     height: 50px;
     background-color: #232b2b;
@@ -60,7 +60,7 @@
         padding-right: 15px;
         padding-left: 15px;
         position: relative;
-
+        margin-left: 10px;
         i {
           font-size: 25px;
           color: #ffffff;
@@ -111,4 +111,14 @@
 
 </style>
 <script>
+  import Status from "../../components/status-worker/status.vue"
+  import status from '../../assets/js/status.js';
+  export default {
+    components: {
+      Status
+    },
+    beforeMount() {
+      status()
+    },
+  }
 </script>

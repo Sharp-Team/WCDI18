@@ -1,107 +1,51 @@
 <template>
-  <div class="button">
-    <span class="button__mask"></span>
-    <span class="button__text">{{ content }}</span>
-    <span class="button__text button__text--bis">{{ content }}</span>
-  </div>
+    <section>
+        <p class="content"><b>Selected:</b> {{ selected }}</p>
+        <b-field label="Find a JS framework">
+            <b-autocomplete
+                rounded
+                v-model="name"
+                :data="filteredDataArray"
+                placeholder="e.g. jQuery"
+                icon="magnify"
+                @select="option => selected = option">
+                <template slot="empty">No results found</template>
+            </b-autocomplete>
+        </b-field>
+    </section>
 </template>
 
 <script>
-export default {
-  props: {
-    content: String
-  }
-};
-
+    export default {
+        data() {
+            return {
+                data: [
+                    'Angular',
+                    'Angular 2',
+                    'Aurelia',
+                    'Backbone',
+                    'Ember',
+                    'jQuery',
+                    'Meteor',
+                    'Node.js',
+                    'Polymer',
+                    'React',
+                    'RxJS',
+                    'Vue.js'
+                ],
+                name: '',
+                selected: null
+            }
+        },
+        computed: {
+            filteredDataArray() {
+                return this.data.filter((option) => {
+                    return option
+                        .toString()
+                        .toLowerCase()
+                        .indexOf(this.name.toLowerCase()) >= 0
+                })
+            }
+        }
+    }
 </script>
-
-<style lang="scss" scoped>
-@import '../assets/scss/variable.scss';
-$anim-text-offset: 1em;
-.button{
-  user-select: none;
-  display: inline-block;
-  border: 0;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  opacity: 1;
-  color: #FFF;
-  background-color: $color-main;
-  border-radius: 4px;
-  &__text{
-    display: block;
-        padding: 8px 25px;
-    font-weight: 500;
-    &:before{
-      content: attr(title);
-    }
-    &--bis{
-      display: block;
-      position: absolute;
-      top: 0; left:0; right: 0; bottom: 0;
-      transform: translateX(-1 * $anim-text-offset);
-      opacity: 0;
-      background-color: rgb(22, 173, 52);
-    }
-  }
-  &__mask{
-    display: block;
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: white;
-    transform: translateX(-100%) rotate(45deg);
-    transition: all 0.3s;
-  }
-}
-
-.button:hover{
-  opacity: 1;
-  .button__text{
-    animation: fx-text .3s ease-out;
-    &--bis{
-      animation: fx-text-bis .3s ease-out;
-    }
-  }
-  .button__mask{
-    animation: fx-mask .3s ease-out;
-  }
-}
-
-.button:active{
-  opacity: 1;
-  background: white;
-  color: inherit;
-}
-
-@keyframes fx-mask {
-  0%{
-    transform: translateX(-100%) rotate(45deg);
-  }
-  100%{
-    transform: translateX(100%) rotate(45deg);
-  }
-}
-
-@keyframes fx-text {
-  0%{
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100%{
-    transform: translateX($anim-text-offset);
-    opacity: 0;
-  }
-}
-@keyframes fx-text-bis {
-  0%{
-    transform: translateX(-1 * $anim-text-offset);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-</style>
-

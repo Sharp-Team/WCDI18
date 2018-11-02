@@ -7,9 +7,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/">
-              Trang chủ
-            </a>
+            <nuxt-link to="/" class="nav-link">Trang chủ</nuxt-link>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
@@ -30,8 +28,24 @@
         <div class="nav-button">
           <img src="~/assets/images/icon-navbar/local.png" alt="local" class="market-image" />
           <div class="market-text">{{ address }}</div>
-          <login v-if="username === ''" class="d-none d-sm-block ml-4" />
-          <register v-if="username === ''" class="d-none d-sm-block ml-2" />
+          <nuxt-link v-if="username === ''" to="/login" class="ml-2" >
+            <my-button
+              class="is-btn-login ml-4"
+              content="Đăng nhập"
+              background="white"
+              backgroundHover="grey"
+              color="black"
+            />
+          </nuxt-link>
+          <nuxt-link v-if="username === ''" to="/register" class="ml-2" >
+            <my-button
+              content="Đăng ký"
+              background="#28a745"
+              backgroundHover="grey"
+              color="white"
+              class="is-btn-register"
+            />
+          </nuxt-link>
           <nuxt-link v-else to="/profile" class="ml-4">
             <div class="wrap-profile">
               <div class="wrap-img-profile">
@@ -46,30 +60,31 @@
         </div>
       </div>
     </nav>
-    <navmenu />
+    <navmenu
+      :username="username"
+      :imgProfile="imgProfile"
+    />
   </div>
 </template>
 
 <script>
-  import Login from '../../components/share/login.vue'
-  import Register from '../../components/share/register.vue'
   import Notification from '../../components/share/notification.vue'
   import Navmenu from '../../components/header/navmenu.vue'
-  import navbar from '../../assets/js/navbar';
+  import navbar from '../../assets/js/navbar'
+  import MyButton from '~/components/share/button.vue'
   export default {
     name: 'Navbar',
     data() {
       return {
-        username: '',
+        username: 'Flame',
         imgProfile: '/images/flame.jpg',
         address: 'Phòng D413, FPT university'
       }
     },
     components: {
-      Login,
-      Register,
       Notification,
-      Navmenu
+      Navmenu,
+      MyButton
     },
     beforeMount() {
       navbar()
