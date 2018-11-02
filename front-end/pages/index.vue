@@ -1,5 +1,6 @@
 <template>
   <div>
+    <slider></slider>
     <section class="container">
       <div>
         <h2 class="title">
@@ -21,9 +22,8 @@
             </tr>
           </tbody>
         </table>
-        <h5 class="title-small">Modal</h5>
         <h5 class="title-small">Test back-end</h5>
-        <back-end />
+        <back-end class="is-back-end"/>
       </div>
     </section>
   </div>
@@ -34,6 +34,7 @@
   import MyFooter from '../components/footer/footer.vue'
   import Navbar from '../components/header/navbar.vue'
   import Notification from '../components/share/notification.vue'
+  import Slider from '../components/header/slider.vue';
   export default {
     data () {
       return {
@@ -51,7 +52,8 @@
       BackEnd,
       MyFooter,
       Navbar,
-      Notification
+      Notification,
+      Slider
     },
     layout: 'user'
   }
@@ -76,5 +78,7 @@
   word-spacing: 5px;
   padding-bottom: 15px;
 }
-
+.is-back-end {
+  margin-bottom: 50px;
+}
 </style>
