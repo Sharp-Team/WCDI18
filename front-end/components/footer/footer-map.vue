@@ -3,7 +3,7 @@
     <div class="image">
     </div>
     <status class="statusworker"/>
-    <div class="footer">
+    <div class="my-footer">
       <div class="action">
         <div class="icon status">
           <a href="#">
@@ -44,12 +44,7 @@
 
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';
-  .statusworker {
-      position: absolute;
-      left: 5%;
-      bottom: 12%;
-    }
-  .footer {
+  .my-footer {
     width: 100%;
     height: 50px;
     background-color: #232b2b;
@@ -65,7 +60,7 @@
         padding-right: 15px;
         padding-left: 15px;
         position: relative;
-
+        margin-left: 10px;
         i {
           font-size: 25px;
           color: #ffffff;
