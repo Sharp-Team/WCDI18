@@ -571,7 +571,7 @@
       </svg>
     </div>
     <div class="page-info">
-      <div class="row">
+      <div class="row text">
         <div class="col-md-6 left">
           <div class="content">
             <p>users online: <span class="number">13</span></p>
@@ -634,28 +634,28 @@
       }
     }
     .page-info{
-      position: absolute;
-      bottom: 60px;
-      right: 30%;
-      .left{
-        border-right: 1px solid #ededee;
-        .content{
+      width: 100%;
+      .text{
+        position: absolute;
+        .left{
+          border-right: 1px solid #ededee;
+          .content{
           padding-top: 20px;
           padding-right: 20px;
           p{
-            text-transform: uppercase;
-            text-align: right;
-            color:#ededee;
-            margin-bottom: 6px;
+              text-transform: uppercase;
+              text-align: right;
+              color:#ededee;
+              margin-bottom: 6px;
           }
           .number{
-            color: #eafbfa;
-            font-weight: bold;
+              color: #eafbfa;
+              font-weight: bold;
+          }
           }
         }
-      }
-      .right{
-        .content{
+        .right{
+          .content{
             padding-top: 35px;
             padding-left: 20px;
             min-width: 300px;
@@ -663,8 +663,10 @@
             color:#ededee;
             margin-bottom: 6px;
           }
+          } 
         } 
       }
+      
       
     }
   }
