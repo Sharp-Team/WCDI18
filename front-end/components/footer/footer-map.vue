@@ -3,6 +3,7 @@
     <div class="image">
     </div>
     <status class="statusworker"/>
+    <noti/>
     <div class="my-footer">
       <div class="action">
         <div class="icon status">
@@ -31,7 +32,7 @@
         </div>
         <div class="icon noti">
           <a href="#">
-            <i class="fas fa-dot-circle"></i>
+            <i class="fas fa-dot-circle" id="showNotiWorker"></i>
           </a>
           <span class="tooltip-noti">
             Thông báo
@@ -113,12 +114,16 @@
 <script>
   import Status from "../../components/status-worker/status.vue"
   import status from '../../assets/js/status.js';
+  import Noti from "../../components/noti-worker/noti-worker.vue"
+  import noti from '../../assets/js/noti.js';
   export default {
     components: {
-      Status
+      Status,
+      Noti
     },
     beforeMount() {
-      status()
+      status(),
+      noti()
     },
   }
 </script>
