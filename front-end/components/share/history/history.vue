@@ -14,7 +14,7 @@
         <card-right></card-right>
         <!-- Tab-List -->
         <div class="tab-list d-block d-sm-none">
-            <tab-list></tab-list>
+            <tab-list active="history"></tab-list>
         </div>
       </div>
     </div>

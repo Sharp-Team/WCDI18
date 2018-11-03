@@ -9,7 +9,7 @@
         <cart-right></cart-right>
         <!-- TabList -->
         <div class="tab-list d-block d-sm-none">
-          <tab-list></tab-list>
+          <tab-list active="profile"></tab-list>
         </div>
       </div>
     </div>

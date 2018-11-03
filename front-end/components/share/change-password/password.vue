@@ -9,7 +9,7 @@
         <card-right></card-right>
         <!-- Tab-List -->
         <div class="tab-list d-block d-sm-none">
-          <tab-list></tab-list>
+          <tab-list active='password'></tab-list>
         </div>
       </div>
     </div>
