@@ -55,7 +55,7 @@
       Notification,
       Slider
     },
-    layout: 'user'
+    layout: 'home'
   }
 
 </script>
