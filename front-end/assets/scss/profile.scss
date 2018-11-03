@@ -1,27 +1,6 @@
 .profile{
     background-color: $color-background;
-    height: 100vh;
-    .breadcrumb{
-      background-color:  $color-background;
-      .breadcrumb-item:first-child::after{
-        display: inline-block;
-        color: $font-color-dark;
-        content: ">";
-        padding-left: 10px;
-        padding-right: 0px;
-      }
-      .breadcrumb-item:last-child::before{
-        display: inline-block;
-        color: $font-color-dark;
-        content: "";
-      }
-      li{
-          color: $font-color-dark;
-      }
-      a{
-        color: $font-color-dark;
-      }
-    }
+    padding-top: 45px;
     .content{
       padding-bottom: 50px;
       .left{
@@ -67,7 +46,7 @@
           border-top: 1px solid $color-border;
           text-align: left;
           ul{
-            margin-left: -30px;
+            margin-left: 0;
           }
           ul li{
             list-style: none;
