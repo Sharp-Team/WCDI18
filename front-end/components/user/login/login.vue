@@ -1,12 +1,6 @@
 <template>
 <div class="wrap-login">
   <div class="container">
-    <div class="crumb d-none d-md-block">
-      <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
-        <li class="breadcrumb-item active">Đăng nhập</li>
-      </ul>
-    </div>
     <div class="row">
       <div class="wrap-content col-md-10 offset-md-1">
         <div class="title">
@@ -87,6 +81,7 @@ import MyButton from '~/components/share/button.vue';
   .wrap-login {
     background-color: $color-background;
     padding-bottom: 4rem;
+    padding-top:45px;
     .breadcrumb{
       background-color:  $color-background;
       .breadcrumb-item:first-child::after{
