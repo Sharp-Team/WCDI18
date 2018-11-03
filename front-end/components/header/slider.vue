@@ -614,7 +614,7 @@
     .map {
       width: 100%;
       position: absolute;
-      margin-top: 20px;
+      margin-top: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -634,7 +634,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 30px;
+      margin-top: 50px;
 
       .btn-home {
         text-transform: uppercase;
