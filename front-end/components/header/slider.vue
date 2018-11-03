@@ -597,7 +597,7 @@
 <script>
   import slider from '../../assets/js/slider'
   export default {
-    beforeMount() {
+    mounted() {
       slider()
     },
   };
