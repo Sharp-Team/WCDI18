@@ -23,7 +23,9 @@
           </tbody>
         </table>
         <h5 class="title-small">Test back-end</h5>
-        <back-end class="is-back-end"/>
+        <back-end class="is-back-end" />
+        <button @click="showPosition">Posision current</button>
+        <div id="out"></div>
       </div>
     </section>
   </div>
@@ -36,15 +38,39 @@
   import Notification from '../components/share/notification.vue'
   import Slider from '../components/header/slider.vue';
   export default {
-    data () {
+    data() {
       return {
-        pages: [
-          { no: '1', name: 'Thông tin tài khoản', link: '/profile' },
-          { no: '2', name: 'Đổi mật khẩu', link: '/change-password' },
-          { no: '3', name: 'Lịch sử giao dịch',link: '/history'},
-          { no: '4', name: 'Map', link: '/map'},
-          { no: '5', name: 'Đăng nhập ver 2',link: '/login'},
-          { no: '6', name: 'Đăng kí ver 2',link: '/register'}
+        posistionCurren: '',
+        pages: [{
+            no: '1',
+            name: 'Thông tin tài khoản',
+            link: '/profile'
+          },
+          {
+            no: '2',
+            name: 'Đổi mật khẩu',
+            link: '/change-password'
+          },
+          {
+            no: '3',
+            name: 'Lịch sử giao dịch',
+            link: '/history'
+          },
+          {
+            no: '4',
+            name: 'Map',
+            link: '/map'
+          },
+          {
+            no: '5',
+            name: 'Đăng nhập ver 2',
+            link: '/login'
+          },
+          {
+            no: '6',
+            name: 'Đăng kí ver 2',
+            link: '/register'
+          }
         ]
       }
     },
@@ -55,30 +81,52 @@
       Notification,
       Slider
     },
-    layout: 'home'
+    layout: 'home',
+    methods: {
+      showPosition() {
+        var output = document.getElementById("out");
+        if (!navigator.geolocation) {
+          output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+          return;
+        }
+        function success(position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+
+          output.innerHTML = '<p>Latitude is ' + latitude + ' <br>Longitude is ' + longitude + '</p>';
+
+        }
+        function error() {
+          output.innerHTML = "Unable to retrieve your location";
+        }
+        navigator.geolocation.getCurrentPosition(success, error);
+      }
+    }
   }
 
 </script>
 
 <style lang="scss" scope>
-.title {
-  margin: 0 auto;
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  .title {
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 42px;
+    color: #526488;
+    word-spacing: 5px;
+    padding-bottom: 15px;
+  }
 
-.title-small {
-  margin-top: 25px;
-  font-weight: 300;
-  font-size: 30px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-.is-back-end {
-  margin-bottom: 50px;
-}
+  .title-small {
+    margin-top: 25px;
+    font-weight: 300;
+    font-size: 30px;
+    color: #526488;
+    word-spacing: 5px;
+    padding-bottom: 15px;
+  }
+
+  .is-back-end {
+    margin-bottom: 50px;
+  }
+
 </style>

@@ -1,7 +1,11 @@
 <template>
   <div>
     <no-ssr>
-    <GmapMap :center="{lat:10, lng:10}" :zoom="7" map-type-id="terrain" id="map">
+    <GmapMap
+      :center="{lat: this.latCurrent, lng: this.lngCurrent}"
+      :zoom="12"
+      map-type-id="terrain"
+      id="map">
       <GmapMarker
         :key="index"
         v-for="(m, index) in markers"
@@ -25,17 +29,36 @@
     layout: 'map',
     data() {
       return {
+        latCurrent: 0,
+        lngCurrent: 0,
         markers: [
           {position: { lng: 10.2, lat: 10 }},
-          {position: { lng: 10.1, lat: 10 }}
-        ]
+          {position: { lng: 10.1, lat: 10 }},
+          {position: { lng: 10.5, lat: 10.2 }},
+          {position: { lng: 11.5, lat: 12.2 }}
+        ],
+        error: null
       }
     },
     methods: {
       ready() {
         this.$refs.map.resize()
       }
-    }
+    },
+    mounted() {
+      if (!navigator.geolocation) {
+          console.log('Geolocation is not supported by your browser')
+          return
+        }
+        const success = (position) => {
+          this.latCurrent = position.coords.latitude
+          this.lngCurrent = position.coords.longitude
+        }
+        function error() {
+          console.log('Unable to retrieve your location')
+        }
+        navigator.geolocation.getCurrentPosition(success, error)
+    },
   }
 
 </script>
