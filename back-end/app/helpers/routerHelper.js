@@ -13,7 +13,6 @@ module.exports = {
       next();
     }
   },
-
   schemas: {
     authSchema: Joi.object().keys({
       username: Joi.string().min(6).max(50).required(),

@@ -1,6 +1,6 @@
 <template>
   <div class="navbar-section">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbarBox">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light section-empty" id="navbarBox">
       <button class="navbar-toggler" type="button" id="showMarkMenu">
         <span class="navbar-toggler-icon" />
       </button>
@@ -61,7 +61,7 @@
     name: 'Navbar',
     data() {
       return {
-        username: 'Flame',
+        username: '',
         imgProfile: '/images/flame.jpg',
         address: 'Phòng D413, FPT university'
       }
@@ -70,12 +70,60 @@
       Notification,
       Navmenu,
       MyButton
+    },
+    methods: {
+      getOffsetTop() {
+        return window.scrollY
+      },
+      handleScroll() {
+        console.log('object')
+        const narbar = document.getElementsByClassName('navbar')[0]
+        if (this.getOffsetTop() > 50) {
+          narbar.classList.remove('section-empty')
+        } else {
+          narbar.classList.add('section-empty')
+        }
+      }
+    },
+    beforeMount() {
+      navbar()
+      window.addEventListener('scroll', this.handleScroll)
     }
   }
 
 </script>
 
 <style lang="scss" scoped>
+  .section-empty {
+    background-color: rgba(255, 255, 255, 0) !important;
+
+    .nav-img {
+      visibility: hidden;
+    }
+
+    .market-text {
+      color: #2ebe4a !important;
+    }
+
+    .wrap-username {
+      color: #a7a7a7 !important;
+    }
+
+    .wrap-icon-noti {
+      color: #a7a7a7 !important;
+      background-color: #5d5d5d !important;
+    }
+
+    .nav-item {
+      .nav-link {
+        color: #8c8c8c !important;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
   .navbar-section {
     position: fixed;
     width: 100%;
