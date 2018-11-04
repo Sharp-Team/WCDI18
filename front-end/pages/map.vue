@@ -32,10 +32,10 @@
         latCurrent: 0,
         lngCurrent: 0,
         markers: [
-          {position: { lng: 10.2, lat: 10 }},
-          {position: { lng: 10.1, lat: 10 }},
-          {position: { lng: 10.5, lat: 10.2 }},
-          {position: { lng: 11.5, lat: 12.2 }}
+          {position: { lat: 21.03, lng: 105.54 }},
+          {position: { lat: 21.04, lng: 105.55 }},
+          {position: { lat: 21.05, lng: 105.50 }},
+          {position: { lat: 20.98, lng: 105.57 }}
         ],
         error: null
       }
@@ -53,6 +53,8 @@
         const success = (position) => {
           this.latCurrent = position.coords.latitude
           this.lngCurrent = position.coords.longitude
+          console.log(this.latCurrent)
+          console.log(this.lngCurrent)
         }
         function error() {
           console.log('Unable to retrieve your location')
