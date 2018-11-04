@@ -6,7 +6,7 @@
     "name": "Elisa Kajima Team"
   },
   "scripts": {
-    "dev": "nodemon index.js"
+    "server-dev": "nodemon index.js"
   },
   "keyword": [
     "node",
