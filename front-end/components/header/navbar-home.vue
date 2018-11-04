@@ -61,7 +61,7 @@
     name: 'Navbar',
     data() {
       return {
-        username: 'Flame',
+        username: '',
         imgProfile: '/images/flame.jpg',
         address: 'Phòng D413, FPT university'
       }

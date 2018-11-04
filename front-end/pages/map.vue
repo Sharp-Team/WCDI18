@@ -1,7 +1,15 @@
 <template>
   <div>
     <no-ssr>
-    <GmapMap :center="{lat:14.058324, lng:108.277199}" :zoom="7" map-type-id="terrain" id="map">
+    <GmapMap :center="{lat:10, lng:10}" :zoom="7" map-type-id="terrain" id="map">
+      <GmapMarker
+        :key="index"
+        v-for="(m, index) in markers"
+        :position="m.position"
+        :clickable="true"
+        :draggable="true"
+        @click="center=m.position"
+      />
     </GmapMap>
     </no-ssr>
     <footer-map></footer-map>
@@ -17,10 +25,10 @@
     layout: 'map',
     data() {
       return {
-        center: {
-          lat: 0,
-          lng: 0
-        }
+        markers: [
+          {position: { lng: 10.2, lat: 10 }},
+          {position: { lng: 10.1, lat: 10 }}
+        ]
       }
     },
     methods: {
