@@ -91,7 +91,15 @@ passport.use('facebookToken', new FacebookTokenStrategy({
 // LOCAL STRATEGY
 passport.use(new LocalStrategy({
   usernameField: 'username'
-}, async (username, password, done) => {
+}, async (username, password, full_name,
+				phone_number,
+				province,
+				district,
+				address_detail,
+				object,
+				career,
+				indentify_card,
+				type_address, done) => {
   try {
     // Find the user given the email
     const user = await User.findOne({ "local.username": username });

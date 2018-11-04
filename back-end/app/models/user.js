@@ -16,7 +16,41 @@ const userSchema = new Schema({
     },
     password: {
       type: String
-    }
+    },
+		email: {
+			type: String
+		},
+		full_name: {
+			type: String,
+		},
+		phone_number: {
+			type: String
+		},
+		province: {
+			type: String,
+		},
+		district: {
+			type: String,
+		},
+		address_detail: {
+			type: String,
+		},
+		object: {
+			type: String,
+			enum: ['customer', 'worker']
+		},
+		career: {
+			type: String,
+			required: false
+		},
+		indentify_card: {
+			type: String,
+			required: false
+		},
+		type_address: {
+			type: String,
+			enum: ['home/apartment', 'organ/company']
+		}
   },
   google: {
     id: {
