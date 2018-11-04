@@ -1,143 +1,104 @@
-const {
-	jwtHelper
-} = require('../helpers')
-const passport = require('passport')
-const JWT = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
-const {
-	UserModel
-} = require('../models')
-require('dotenv').config()
+const JWT = require('jsonwebtoken');
+const User = require('../models/user');
+require('dotenv').config();
+
+signToken = user => {
+  return JWT.sign({
+    iss: process.env.ISS,
+    sub: user.id,
+    iat: new Date().getTime(), // current time
+    exp: new Date().setDate(new Date().getDate() + 1) // current time + 1 day ahead
+  }, process.env.JWT_SECRET);
+}
 
 module.exports = {
-	signUp: async (req, res) => {
-		const {
-			username,
-			password
-		} = req.body;
-		// Check existed user
-		const foundUser = await UserModel.findOne({
-			username
-		})
-		if (foundUser) {
-			return res.status(403).json({
-				data: null,
-				error: `User ${foundUser.username} is already in use`
-			})
-		}
-		// Create a new user
-		const newUser = await UserModel.create({
-			username,
-			password,
-		})
-		await newUser.save()
-		const token = await jwtHelper.encode(newUser)
-		res.status(200).json({
-			data: newUser,
-			token: token,
-			err: null
-		})
-	},
-	signIn: async (req, res) => {
-		try {
-			const {
-				username,
-				password
-			} = req.body
-			const user = await UserModel.findOne({ username })
-			if (!user) {
-				res.status(404).json({
-					data: null,
-					error: `Username ${username} not exist ! Try again !`
-				})
-				return
-			}
-			const passwordUser = user.password
-			const isPasswordCorrect = (passwordUser === password) ? 1 : 0
-			if (isPasswordCorrect) {
-				res.status(200).json({
-					data: `Login success ! ` + `Hello ${user.username}`,
-					error: null
-				})
-				// next(null)
-			} else {
-				res.status(404).json({
-					data: null,
-					error: `Invalid password, pls try again`
-				})
-			}
-		} catch (error) {
-			res.status(500).json(error.message)
-		}
-	},
-	signOut: async (req, res) => {
-		await delete req.session
-		if (req.session == null) {
-			res.status(200).json({
-			data: 'logout success !',
-			error: null
-			})
-		} else {
-			res.status(200).json({
-			data: null,
-			error: `Can't logout ....`
-			})
-		}
-	},
-	// oauthGoogle: async (req, res, next) => {
-	// 	//Generate token
-	// 	const token = jwtHelper.encode(req.user);
-	//   res.status(200).json({ token });
-	// },
-	// update: async (req, res) => {
-	// 	try {
-	// 		const {
-	// 			password
-	// 		} = req.body;
-	// 		const id = req.params.id
-	// 		await User.update({
-	// 			password
-	// 		}, {
-	// 			where: {
-	// 				id
-	// 			},
-	// 			raw: true
-	// 		});
-	// 		res.status(200).json({
-	// 			status: `Updated id ${id}`
-	// 		});
-	// 	} catch (error) {
-	// 		res.status(500).json({
-	// 			message: error
-	// 		});
-	// 	}
-	// },
-	// changePassword: async (req, res) => {
-	//   try {
-	//     const { username, oldPassword, newPassword, confirmPassword } = req.body
-	//     const { password } = await User.findOne({ where: { username }, raw: true })
-	//     const isPasswordCorrect = await bcrypt.compare(oldPassword, password)
-	//     if (!isPasswordCorrect) {
-	//       const result = jsonHelper(null, 'Wrong Old Password', 401)
-	//       res.status(401).json(result)
-	//       return
-	//     }
-	//     if (newPassword === confirmPassword) {
-	//       const salt = await bcrypt.genSalt(process.env.SALT_ROUND)
-	//       const hashedPassword = await bcrypt.hash(newPassword, salt)
-	//       await User.update({ password: hashedPassword }, { where: { username } })
-	//       const result = jsonHelper({ status: true }, null, 200)
-	//       res.status(200).json(result)
-	//     }
-	//     else {
-	//       const result = jsonHelper(null, 'Incorrect new password', 400)
-	//       res.status(200).json(result)
-	//     }
-	//   }
-	//   catch (error) {
-	//     const result = jsonHelper(null, error.message, 500)
-	//     res.status(500).json(result)
-	//   }
-	// },
+  signUp: async (req, res, next) => {
+    const { username, password } = req.body;
+    // Check if there is a user with the same email
+    const foundUser = await User.findOne({ "local.username": username });
+    if (foundUser) {
+      return res.status(403).json({
+        data: null,
+        error: `${username} is already in use`});
+    }
+    // Create a new user
+    const newUser = new User({
+      method: 'local',
+      local: {
+        username,
+        password
+      }
+    });
+    await newUser.save();
+    // Generate the token
+    const token = signToken(newUser);
+    // Respond with token
+    res.status(200).json({
+      data: {
+          value: `Sign up success, Welcom ${username} to our web`,
+          error: null
+        },
+        token: token
+      });
+  },
 
+  signIn: async (req, res, next) => {
+    // Generate token
+    const { username, password } = req.body
+    const findUser = await User.findOne({ "local.username": username })
+    if (!findUser) {
+      return res.status(403).json({
+        data: {
+          value: `User ${username} not exist in system, pls try again`,
+          error: null
+        },
+      })
+    }
+    const isValidPass = findUser.isValidPassword(password)
+    if (!isValidPass) {
+      return res.status(404).json({
+      data: {
+        value: `Password is not valid`,
+        error: null
+      },
+      })
+    }
+    const token = signToken(req.user);
+    if (token) {
+      return res.status(200).json({
+        data: {
+          value: `log in success, Welcom ${username} to our web`,
+          error: null
+        },
+        token: token
+      })
+    }
+  },
+	signOut: async (req, res, next) => {
+		delete req.session
+		if (req.session == null) {
+			return res.status(200).json({
+        data: {
+          value: `Log out success !`,
+          error: null
+        },
+      })
+		}
+	}
+	,
+  googleOAuth: async (req, res, next) => {
+    // Generate token
+    const token = signToken(req.user);
+    res.status(200).json({ token });
+  },
+
+  facebookOAuth: async (req, res, next) => {
+    // Generate token
+    const token = signToken(req.user);
+    res.status(200).json({ token });
+  },
+  secret: async (req, res, next) => {
+    console.log('I managed to get here!');
+    res.json({ secret: "resource" });
+  }
 }
