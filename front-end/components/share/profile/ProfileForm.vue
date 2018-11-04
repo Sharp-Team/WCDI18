@@ -82,15 +82,6 @@
       </div>
 
       <div class="form-group row">
-        <label for="" class="col-sm-12 col-md-3 col-form-label">Phường/Xã</label>
-        <div class="col-sm-12 col-md-7">
-          <select class="form-control" disabled>
-            <option>{{ ward }}</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-group row">
         <label for="" class="col-sm-12 col-md-3 col-form-label">Địa chỉ</label>
         <div class="col-sm-12 col-md-7">
           <textarea class="form-control" rows="3" disabled v-model="address">
@@ -126,7 +117,6 @@
         groupUser: 'Khách hàng',
         province: 'Hà Nội',
         district: 'Chương Mỹ',
-        ward: 'Hoàng Diệu',
         address: 'Xóm Đình, thôn Cốc Thượng, xã Hoàng Diệu, huyện Chương Mỹ, thành phố Hà Nội',
         groupAddress: 'Nhà riêng'
       }

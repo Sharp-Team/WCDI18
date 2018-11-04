@@ -1,12 +1,6 @@
 <template>
 <div class="wrap-register">
   <div class="container">
-    <div class="crumb d-none d-md-block">
-      <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
-        <li class="breadcrumb-item active">Đăng ký</li>
-      </ul>
-    </div>
     <div class="row">
       <div class="wrap-content col-md-10 offset-md-1">
         <div class="title">
@@ -94,8 +88,12 @@
               <label for="province" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Tỉnh/ Thành phố</label>
               <div class="col-sm-12 col-md-7 col-lg-7">
                 <select v-model="provinceSelected"  class="form-control">
-                  <option v-for="province in provinces" :key=province.id>
-                    {{ province.name }}
+                  <option 
+                    v-for="province in listProvinces"
+                    :key=province.id
+                    :value="province"
+                  >
+                    {{ province }}
                   </option>
                 </select>
               </div>
@@ -104,18 +102,11 @@
               <label for="district" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Quận/ Huyện</label>
               <div class="col-sm-12 col-md-7 col-lg-7">
                 <select v-model="districtSelected" class="form-control">
-                  <option v-for="district in districts" :key=district.id>
-                    {{ district.name }}
-                  </option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="ward" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Phường/ Xã</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <select v-model="wardSelected" class="form-control">
-                  <option v-for="ward in wards" :key=ward.id>
-                    {{ ward.name }}
+                  <option
+                    v-for="district in listDistricts"
+                    :key=district.id
+                  >
+                    {{ district.properties.Ten_Huyen }}
                   </option>
                 </select>
               </div>
@@ -251,10 +242,12 @@
 
 <script>
 import MyButton from '~/components/share/button.vue';
+const data = require('~/assets/json/dataVietNam.json')
 export default {
   name: 'Register',
   data () {
     return {
+      data,
       fullname: '',
       useremail: '',
       userphone: '',
@@ -262,39 +255,8 @@ export default {
       password: '',
       rePassword: '',
       addressdetail: '',
-      provinceSelected: 'Hưng Yên',
-      districtSelected: 'Văn Lâm',
-      wardSelected: 'Đình Dù',
-      provinces: [{
-          name: 'Hồ Chí Minh'
-        },
-        {
-          name: 'Hưng Yên'
-        },
-        {
-          name: 'Hà Nội'
-        },
-      ],
-      districts: [{
-          name: 'Vĩnh Khúc'
-        },
-        {
-          name: 'Văn Lâm'
-        },
-        {
-          name: 'Văn Giang'
-        },
-      ],
-      wards: [{
-          name: 'Đình Dù'
-        },
-        {
-          name: 'Lạc Hồng'
-        },
-        {
-          name: 'Chỉ Đạo'
-        },
-      ],
+      provinceSelected: '',
+      districtSelected: '',
       jobs: [{
           name: 'Sửa xe máy'
         },
@@ -310,10 +272,21 @@ export default {
       jobSelected: 'Sửa quạt, điều hòa,...'
     }
   },
+  computed: {
+    listProvinces: function () {
+      return [...new Set(this.data.features.map(i=>i.properties.Ten_Tinh))]
+    },
+    listDistricts: function() {
+      return [...new Set(this.data.features.filter(i=>i.properties.Ten_Tinh===this.provinceSelected))]
+    }
+  },
   components: {
     MyButton
   },
   methods: {
+    printcheck() {
+      console.log(listProvinces)
+    },
     onFilePicked (event) {
       const files = event.target.files
       let fileName = files[0].name
@@ -340,7 +313,10 @@ export default {
       fileReader.readAsDataURL(files[0])
       this.image = files[0]
     }
-  }
+  },
+  beforeMount() {
+    console.log(data.features)
+  },
 }
 </script>
 
@@ -349,6 +325,7 @@ export default {
   .wrap-register {
     background-color: $color-background;
     padding-bottom: 4rem;
+    padding-top: 45px;
     .breadcrumb{
       background-color:  $color-background;
       .breadcrumb-item:first-child::after{

@@ -2,11 +2,24 @@
   <div class="menu-section">
     <div class="modal mark-menu" id="markMenuModal">
       <div class="modal-menu-content flex-column modal-menu-content-1" id="markModalMenuContent">
-        <div class="menu-header">
-          <img src="~/assets/images/icon-navbar/user.jpg" alt="UserAvatar" class="user-image" />
-          <a href="#" class="user-login">Đăng nhập</a>
-          <span class="flat-line">/</span>
-          <a href="#" class="user-register">Đăng ký</a>
+        <div class="menu-header" id="showContact">
+          <nuxt-link v-if="username === ''" to="/login" class="user-login">
+            Đăng nhập
+          </nuxt-link>
+          <span v-if="username === ''" class="flat-line">/</span>
+          <nuxt-link v-if="username === ''" to="/register" class="user-register">
+            Đăng ký
+          </nuxt-link>
+          <nuxt-link v-else to="/profile">
+            <div class="wrap-profile">
+              <div class="wrap-img-profile">
+                <img :src="imgProfile" alt="image-profile">
+              </div>
+              <div class="wrap-username">
+                {{ username }}
+              </div>
+            </div>
+          </nuxt-link>
         </div>
         <div class="navbar-horizontal">
           <ul class="list-menu">
@@ -45,7 +58,17 @@
   </div>
 </template>
 <script>
-  export default {}
+  import navbar from '../../assets/js/navbar'
+  export default {
+    props: {
+      username: {
+        type: String
+      },
+      imgProfile: {
+        type: String
+      }
+    }
+  }
 
 </script>
 
@@ -90,20 +113,36 @@
       color: #fff;
       font-size: 16px;
 
-      a {
+      .user-login {
         font-size: $font-title-small-mobile;
         cursor: pointer;
         color: #fff;
+        text-decoration: underline;
+      }
+      .user-register {
+        font-size: $font-title-small-mobile;
+        cursor: pointer;
+        color: #fff;
+        text-decoration: underline;
+      }
+      .wrap-profile {
+          display: flex;
 
-        &:hover {
-          text-decoration: underline;
+          .wrap-img-profile {
+            img {
+              margin-right: 0.4em;
+              width: 1.9em;
+              height: 1.9em;
+              border-radius: 100%;
+            }
+          }
+
+          .wrap-username {
+            padding-top: 3px;
+            color: #333;
+            font-weight: 500;
+          }
         }
-      }
-
-      .user-image {
-        margin-right: 0.8em;
-        width: 2.6em;
-      }
 
       .flat-line {
         margin: 0 0.45em;
