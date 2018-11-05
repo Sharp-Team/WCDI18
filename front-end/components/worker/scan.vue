@@ -27,6 +27,7 @@
                   </div>
                   <b-autocomplete
                     v-model="name"
+                    icon="magnify"
                     placeholder="Chọn công việc"
                     :keep-first="keepFirst"
                     :open-on-focus="openOnFocus"
