@@ -87,7 +87,11 @@ module.exports = {
     // See https://github.com/nuxt-community/axios-module#options
   },
   proxy: {
-    '/api/': 'http://localhost:5000'
+    '/api': {
+      target: 'http://localhost:5000/',
+      changeOrigin: true,
+      pathRewrite: { '^/api': '' }
+    }
   },
   /*
   ** Build configuration
