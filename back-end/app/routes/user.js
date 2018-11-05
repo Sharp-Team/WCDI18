@@ -1,30 +1,27 @@
-const express = require('express')
-const userRouter = express()
-const bodyParser = require('body-parser')
-const { userController } = require('../controllers')
-const { routerHelper } = require('../helpers')
-const passport = require('passport')
-require('../passport') // TO load token
-
-const passportSignIn = passport.authenticate('local', { session: false })
-userRouter.use(bodyParser.urlencoded({ extended: false }))
-userRouter.use(bodyParser.json())
-const passportJWT = passport.authenticate('jwt', { session: false })
-
+const userRouter = require('express-promise-router')();
+const passport = require('passport');
+const { validateBody, schemas } = require('../helpers/routerHelper');
+const { userController } = require('../controllers');
+const passportSignIn = passport.authenticate('local', { session: false });
+require('../passport');
 
 userRouter.route('/signup')
-	.post(routerHelper.validateBody(routerHelper.schemas.authSchema), userController.signUp)
+  .post(validateBody(schemas.authSchema), userController.signUp);
 
 userRouter.route('/signin')
-  .post(routerHelper.validateBody(routerHelper.schemas.authSchema), userController.signIn);
+  .post(userController.signIn);
 
 userRouter.route('/signout')
 	.get(userController.signOut)
-	
-// userRouter.route('/oauth/google')
-//   .post(passport.authenticate('googleToken', { session: false }), userController.googleOAuth);
 
-// userRouter.route('/oauth/facebook')
-//   .post(passport.authenticate('facebookToken', { session: false }), userController.facebookOAuth);
+userRouter.route('/oauth/google')
+  .post(passport.authenticate('googleToken', { session: false,scope: [
+    'https://www.googleapis.com/auth/userinfo.email',
+    'https://www.googleapis.com/auth/userinfo.profile'
+  ] }), userController.oauthGoogle);
 
-module.exports = userRouter
+userRouter.route('/oauth/facebook')
+  .post(passport.authenticate('facebookToken', { session: false }), userController.oauthFacebook);
+
+
+module.exports = userRouter;

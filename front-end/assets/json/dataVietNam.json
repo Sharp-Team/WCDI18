@@ -221,7 +221,7 @@
       "properties": {
         "OBJECTID": 15,
         "Ten_Tinh": "Sóc Trăng",
-        "Ten_Huyen": "Huyện My Xuyen",
+        "Ten_Huyen": "Huyện Mỹ Xuyên",
         "Dan_So": 150003,
         "Nam_TK": 2009,
         "Code_vung": "94947"
@@ -236,7 +236,7 @@
       "properties": {
         "OBJECTID": 16,
         "Ten_Tinh": "Sóc Trăng",
-        "Ten_Huyen": "Huyện Tran De",
+        "Ten_Huyen": "Huyện Trần Đề",
         "Dan_So": 130077,
         "Nam_TK": 2009,
         "Code_vung": "94951"
@@ -266,7 +266,7 @@
       "properties": {
         "OBJECTID": 18,
         "Ten_Tinh": "Bạc Liêu",
-        "Ten_Huyen": "Huyện Hong Dan",
+        "Ten_Huyen": "Huyện Hồng Dân",
         "Dan_So": 105177,
         "Nam_TK": 2009,
         "Code_vung": "95956"
@@ -281,7 +281,7 @@
       "properties": {
         "OBJECTID": 19,
         "Ten_Tinh": "Sóc Trăng",
-        "Ten_Huyen": "Huyện Soc Trang",
+        "Ten_Huyen": "Huyện Sóc Trăng",
         "Dan_So": 136018,
         "Nam_TK": 2009,
         "Code_vung": "94941"
@@ -446,7 +446,7 @@
       "properties": {
         "OBJECTID": 30,
         "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Go Quao",
+        "Ten_Huyen": "Huyện Gò Quao",
         "Dan_So": 138547,
         "Nam_TK": 2009,
         "Code_vung": "91907"
@@ -476,7 +476,7 @@
       "properties": {
         "OBJECTID": 32,
         "Ten_Tinh": "Hậu Giang",
-        "Ten_Huyen": "Huyện Nga Bay",
+        "Ten_Huyen": "Huyện Ngã Bảy",
         "Dan_So": 57847,
         "Nam_TK": 2009,
         "Code_vung": "93931"
@@ -521,7 +521,7 @@
       "properties": {
         "OBJECTID": 35,
         "Ten_Tinh": "Hậu Giang",
-        "Ten_Huyen": "Huyện Vi Thuy",
+        "Ten_Huyen": "Huyện Vị Thủy",
         "Dan_So": 99476,
         "Nam_TK": 2009,
         "Code_vung": "93935"
@@ -536,7 +536,7 @@
       "properties": {
         "OBJECTID": 36,
         "Ten_Tinh": "Hậu Giang",
-        "Ten_Huyen": "Huyện Phung Hiep",
+        "Ten_Huyen": "Huyện Phụng Hiệp",
         "Dan_So": 190578,
         "Nam_TK": 2009,
         "Code_vung": "93934"
@@ -656,7 +656,7 @@
       "properties": {
         "OBJECTID": 44,
         "Ten_Tinh": "Cần Thơ",
-        "Ten_Huyen": "Huyện Phong Dien",
+        "Ten_Huyen": "Huyện Phong Điền",
         "Dan_So": 99328,
         "Nam_TK": 2009,
         "Code_vung": "92926"
@@ -671,7 +671,7 @@
       "properties": {
         "OBJECTID": 45,
         "Ten_Tinh": "Bến Tre",
-        "Ten_Huyen": "Huyện Thanh Phu",
+        "Ten_Huyen": "Huyện Thạnh Phú",
         "Dan_So": 128116,
         "Nam_TK": 2009,
         "Code_vung": "83837"
@@ -686,7 +686,7 @@
       "properties": {
         "OBJECTID": 46,
         "Ten_Tinh": "Cần Thơ",
-        "Ten_Huyen": "Huyện Ninh Kieu",
+        "Ten_Huyen": "Huyện Ninh Kiều",
         "Dan_So": 243794,
         "Nam_TK": 2009,
         "Code_vung": "92916"
@@ -716,7 +716,7 @@
       "properties": {
         "OBJECTID": 48,
         "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Giong Rieng",
+        "Ten_Huyen": "Huyện Giồng Riềng",
         "Dan_So": 211496,
         "Nam_TK": 2009,
         "Code_vung": "91906"
@@ -791,7 +791,7 @@
       "properties": {
         "OBJECTID": 53,
         "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Rach Gia",
+        "Ten_Huyen": "Huyện Rạch Giá",
         "Dan_So": 226316,
         "Nam_TK": 2009,
         "Code_vung": "91899"
@@ -806,7 +806,7 @@
       "properties": {
         "OBJECTID": 54,
         "Ten_Tinh": "Cần Thơ",
-        "Ten_Huyen": "Huyện Thoi Lai",
+        "Ten_Huyen": "Huyện Thới Lai",
         "Dan_So": 120964,
         "Nam_TK": 2009,
         "Code_vung": "92927"
@@ -836,7 +836,7 @@
       "properties": {
         "OBJECTID": 56,
         "Ten_Tinh": "Bến Tre",
-        "Ten_Huyen": "Huyện Mo Cay Nam",
+        "Ten_Huyen": "Huyện Mỏ Cày Nam",
         "Dan_So": 166474,
         "Nam_TK": 2009,
         "Code_vung": "83833"
@@ -881,7 +881,7 @@
       "properties": {
         "OBJECTID": 59,
         "Ten_Tinh": "Cần Thơ",
-        "Ten_Huyen": "Huyện O Mon",
+        "Ten_Huyen": "Huyện Ô Môn",
         "Dan_So": 129683,
         "Nam_TK": 2009,
         "Code_vung": "92917"
@@ -911,7 +911,7 @@
       "properties": {
         "OBJECTID": 61,
         "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Tan Hiep",
+        "Ten_Huyen": "Huyện Tân Hiệp",
         "Dan_So": 142405,
         "Nam_TK": 2009,
         "Code_vung": "91904"
@@ -956,7 +956,7 @@
       "properties": {
         "OBJECTID": 64,
         "Ten_Tinh": "Bến Tre",
-        "Ten_Huyen": "Huyện Mo Cay Bac",
+        "Ten_Huyen": "Huyện Mỏ Cày Bắc",
         "Dan_So": 124377,
         "Nam_TK": 2009,
         "Code_vung": "83838"
@@ -971,7 +971,7 @@
       "properties": {
         "OBJECTID": 65,
         "Ten_Tinh": "Bến Tre",
-        "Ten_Huyen": "Huyện Giong Trom",
+        "Ten_Huyen": "Huyện Giồng Trôm",
         "Dan_So": 168744,
         "Nam_TK": 2009,
         "Code_vung": "83834"
@@ -1076,7 +1076,7 @@
       "properties": {
         "OBJECTID": 72,
         "Ten_Tinh": "Cần Thơ",
-        "Ten_Huyen": "Huyện Vinh Thanh",
+        "Ten_Huyen": "Huyện Vĩnh Thạch",
         "Dan_So": 112529,
         "Nam_TK": 2009,
         "Code_vung": "92924"
@@ -1106,7 +1106,7 @@
       "properties": {
         "OBJECTID": 74,
         "Ten_Tinh": "Cần Thơ",
-        "Ten_Huyen": "Huyện Thot Not",
+        "Ten_Huyen": "Huyện Thốt Nốt",
         "Dan_So": 158225,
         "Nam_TK": 2009,
         "Code_vung": "92923"
@@ -1151,7 +1151,7 @@
       "properties": {
         "OBJECTID": 77,
         "Ten_Tinh": "Đồng Tháp",
-        "Ten_Huyen": "Huyện Sa Dec",
+        "Ten_Huyen": "Huyện Sa Đéc",
         "Dan_So": 152237,
         "Nam_TK": 2009,
         "Code_vung": "87867"
@@ -1166,7 +1166,7 @@
       "properties": {
         "OBJECTID": 78,
         "Ten_Tinh": "An Giang",
-        "Ten_Huyen": "Huyện Thoai Son",
+        "Ten_Huyen": "Huyện Thoại Sơn",
         "Dan_So": 180551,
         "Nam_TK": 2009,
         "Code_vung": "89894"
@@ -1211,7 +1211,7 @@
       "properties": {
         "OBJECTID": 81,
         "Ten_Tinh": "Đồng Tháp",
-        "Ten_Huyen": "Huyện Lap Vo",
+        "Ten_Huyen": "Huyện Lấp Vò",
         "Dan_So": 180024,
         "Nam_TK": 2009,
         "Code_vung": "87875"
@@ -1226,7 +1226,7 @@
       "properties": {
         "OBJECTID": 82,
         "Ten_Tinh": "An Giang",
-        "Ten_Huyen": "Huyện Long Xuyen",
+        "Ten_Huyen": "Huyện Long Xuyên",
         "Dan_So": 278658,
         "Nam_TK": 2009,
         "Code_vung": "89883"
@@ -1241,7 +1241,7 @@
       "properties": {
         "OBJECTID": 83,
         "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Hon Dat",
+        "Ten_Huyen": "Huyện Hòn Đất",
         "Dan_So": 166860,
         "Nam_TK": 2009,
         "Code_vung": "91903"
@@ -1301,7 +1301,7 @@
       "properties": {
         "OBJECTID": 87,
         "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Long Dien",
+        "Ten_Huyen": "Huyện Long Điền",
         "Dan_So": 125179,
         "Nam_TK": 2009,
         "Code_vung": "77752"
@@ -1331,7 +1331,7 @@
       "properties": {
         "OBJECTID": 89,
         "Ten_Tinh": "Đồng Tháp",
-        "Ten_Huyen": "TP Cao Lanh",
+        "Ten_Huyen": "TP Cao Lãnh",
         "Dan_So": 161292,
         "Nam_TK": 2009,
         "Code_vung": "87866"
@@ -1421,7 +1421,7 @@
       "properties": {
         "OBJECTID": 95,
         "Ten_Tinh": "An Giang",
-        "Ten_Huyen": "Huyện Tri Ton",
+        "Ten_Huyen": "Huyện Tri Tôn",
         "Dan_So": 133109,
         "Nam_TK": 2009,
         "Code_vung": "89891"
@@ -1436,7 +1436,7 @@
       "properties": {
         "OBJECTID": 96,
         "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Giang Thanh",
+        "Ten_Huyen": "Huyện Giang Thành",
         "Dan_So": 28910,
         "Nam_TK": 2009,
         "Code_vung": "91914"
@@ -1451,7 +1451,7 @@
       "properties": {
         "OBJECTID": 97,
         "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Dat Do",
+        "Ten_Huyen": "Huyện Đất Đỏ",
         "Dan_So": 69502,
         "Nam_TK": 2009,
         "Code_vung": "77753"
@@ -1466,7 +1466,7 @@
       "properties": {
         "OBJECTID": 98,
         "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Tan An",
+        "Ten_Huyen": "Huyện Tân An",
         "Dan_So": 132570,
         "Nam_TK": 2009,
         "Code_vung": "80794"
@@ -1511,7 +1511,7 @@
       "properties": {
         "OBJECTID": 101,
         "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Tan Tru",
+        "Ten_Huyen": "Huyện Tân Trụ",
         "Dan_So": 60278,
         "Nam_TK": 2009,
         "Code_vung": "80805"
@@ -1519,21 +1519,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [106.50159638639172, 10.538498173697198]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 102,
-        "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Huyện Cần Duộc",
-        "Dan_So": 168730,
-        "Nam_TK": 2009,
-        "Code_vung": "80806"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.59717390650179, 10.533333672826165]
       }
     },
     {
@@ -1571,7 +1556,7 @@
       "properties": {
         "OBJECTID": 105,
         "Ten_Tinh": "An Giang",
-        "Ten_Huyen": "Huyện Tinh Bien",
+        "Ten_Huyen": "Huyện Tịnh Biên",
         "Dan_So": 120781,
         "Nam_TK": 2009,
         "Code_vung": "89890"
@@ -1586,7 +1571,7 @@
       "properties": {
         "OBJECTID": 106,
         "Ten_Tinh": "Đồng Tháp",
-        "Ten_Huyen": "Huyện Thanh Binh",
+        "Ten_Huyen": "Huyện Thanh Bình",
         "Dan_So": 154192,
         "Nam_TK": 2009,
         "Code_vung": "87874"
@@ -1616,7 +1601,7 @@
       "properties": {
         "OBJECTID": 108,
         "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Tan Thanh",
+        "Ten_Huyen": "Huyện Tân Thành",
         "Dan_So": 128205,
         "Nam_TK": 2009,
         "Code_vung": "77754"
@@ -1646,7 +1631,7 @@
       "properties": {
         "OBJECTID": 110,
         "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Tan Thanh",
+        "Ten_Huyen": "Huyện Tân Thạch",
         "Dan_So": 75551,
         "Nam_TK": 2009,
         "Code_vung": "80799"
@@ -1721,7 +1706,7 @@
       "properties": {
         "OBJECTID": 115,
         "Ten_Tinh": "Đồng Tháp",
-        "Ten_Huyen": "Huyện Thap Muoi",
+        "Ten_Huyen": "Huyện Tháp Mười",
         "Dan_So": 137481,
         "Nam_TK": 2009,
         "Code_vung": "87872"
@@ -1781,7 +1766,7 @@
       "properties": {
         "OBJECTID": 119,
         "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Thu Thua",
+        "Ten_Huyen": "Huyện Thủ Thừa",
         "Dan_So": 89235,
         "Nam_TK": 2009,
         "Code_vung": "80804"
@@ -1811,7 +1796,7 @@
       "properties": {
         "OBJECTID": 121,
         "Ten_Tinh": "An Giang",
-        "Ten_Huyen": "Huyện Phu Tan",
+        "Ten_Huyen": "Huyện Phú Tân",
         "Dan_So": 227070,
         "Nam_TK": 2009,
         "Code_vung": "89888"
@@ -1826,7 +1811,7 @@
       "properties": {
         "OBJECTID": 122,
         "Ten_Tinh": "Đồng Nai",
-        "Ten_Huyen": "Huyện Nhon Trach",
+        "Ten_Huyen": "Huyện Nhơn Trạch",
         "Dan_So": 158256,
         "Nam_TK": 2009,
         "Code_vung": "75742"
@@ -1886,7 +1871,7 @@
       "properties": {
         "OBJECTID": 126,
         "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Xuyen Moc",
+        "Ten_Huyen": "Huyện Xuyên Mộc",
         "Dan_So": 134401,
         "Nam_TK": 2009,
         "Code_vung": "77751"
@@ -1931,7 +1916,7 @@
       "properties": {
         "OBJECTID": 129,
         "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Thanh Hoa",
+        "Ten_Huyen": "Huyện Thạch Hóa",
         "Dan_So": 53597,
         "Nam_TK": 2009,
         "Code_vung": "80800"
@@ -2006,7 +1991,7 @@
       "properties": {
         "OBJECTID": 134,
         "Ten_Tinh": "Đồng Tháp",
-        "Ten_Huyen": "Huyện Tam Nong",
+        "Ten_Huyen": "Huyện Tam Nông",
         "Dan_So": 105290,
         "Nam_TK": 2009,
         "Code_vung": "87871"
@@ -2051,7 +2036,7 @@
       "properties": {
         "OBJECTID": 137,
         "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Moc Hoa",
+        "Ten_Huyen": "Huyện Mộc Hóa",
         "Dan_So": 29853,
         "Nam_TK": 2009,
         "Code_vung": "80798"
@@ -2081,7 +2066,7 @@
       "properties": {
         "OBJECTID": 139,
         "Ten_Tinh": "Đồng Nai",
-        "Ten_Huyen": "Huyện Long Thanh",
+        "Ten_Huyen": "Huyện Long Thành",
         "Dan_So": 188594,
         "Nam_TK": 2009,
         "Code_vung": "75740"
@@ -2156,7 +2141,7 @@
       "properties": {
         "OBJECTID": 144,
         "Ten_Tinh": "Đồng Tháp",
-        "Ten_Huyen": "Huyện Hong Ngu",
+        "Ten_Huyen": "Huyện Hồng Ngự",
         "Dan_So": 77735,
         "Nam_TK": 2009,
         "Code_vung": "87868"
@@ -2171,7 +2156,7 @@
       "properties": {
         "OBJECTID": 145,
         "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Ham Tan",
+        "Ten_Huyen": "Huyện Hàm Tân",
         "Dan_So": 69487,
         "Nam_TK": 2009,
         "Code_vung": "60601"
@@ -2186,7 +2171,7 @@
       "properties": {
         "OBJECTID": 146,
         "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Kien Tuong",
+        "Ten_Huyen": "Huyện Kiến Tường",
         "Dan_So": 64589,
         "Nam_TK": 2009,
         "Code_vung": "80795"
@@ -2216,7 +2201,7 @@
       "properties": {
         "OBJECTID": 148,
         "Ten_Tinh": "Đồng Tháp",
-        "Ten_Huyen": "TP. Hong Ngu",
+        "Ten_Huyen": "TP. Hồng Ngự",
         "Dan_So": 144232,
         "Nam_TK": 2009,
         "Code_vung": "87870"
@@ -2231,7 +2216,7 @@
       "properties": {
         "OBJECTID": 149,
         "Ten_Tinh": "An Giang",
-        "Ten_Huyen": "Huyện Tan Chau",
+        "Ten_Huyen": "Huyện Tân Châu",
         "Dan_So": 184129,
         "Nam_TK": 2009,
         "Code_vung": "89887"
@@ -2246,7 +2231,7 @@
       "properties": {
         "OBJECTID": 150,
         "Ten_Tinh": "Bình Dương",
-        "Ten_Huyen": "Huyện Di An",
+        "Ten_Huyen": "Huyện Dĩ An",
         "Dan_So": 298515,
         "Nam_TK": 2009,
         "Code_vung": "74724"
@@ -2276,7 +2261,7 @@
       "properties": {
         "OBJECTID": 152,
         "Ten_Tinh": "Đồng Tháp",
-        "Ten_Huyen": "Huyện Tan Hong",
+        "Ten_Huyen": "Huyện Tân Hồng",
         "Dan_So": 90994,
         "Nam_TK": 2009,
         "Code_vung": "87869"
@@ -2291,7 +2276,7 @@
       "properties": {
         "OBJECTID": 153,
         "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Tan Hung",
+        "Ten_Huyen": "Huyện Tân Hưng",
         "Dan_So": 47742,
         "Nam_TK": 2009,
         "Code_vung": "80796"
@@ -2306,7 +2291,7 @@
       "properties": {
         "OBJECTID": 154,
         "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Duc Hue",
+        "Ten_Huyen": "Huyện Đức Huế",
         "Dan_So": 59034,
         "Nam_TK": 2009,
         "Code_vung": "80801"
@@ -2336,7 +2321,7 @@
       "properties": {
         "OBJECTID": 156,
         "Ten_Tinh": "Bình Dương",
-        "Ten_Huyen": "Huyện Thuan An",
+        "Ten_Huyen": "Huyện Thuận An",
         "Dan_So": 375571,
         "Nam_TK": 2009,
         "Code_vung": "74725"
@@ -2351,7 +2336,7 @@
       "properties": {
         "OBJECTID": 157,
         "Ten_Tinh": "Đồng Nai",
-        "Ten_Huyen": "Huyện Long Khanh",
+        "Ten_Huyen": "Huyện Long Khánh",
         "Dan_So": 130704,
         "Nam_TK": 2009,
         "Code_vung": "75732"
@@ -2366,7 +2351,7 @@
       "properties": {
         "OBJECTID": 158,
         "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Duc Hoa",
+        "Ten_Huyen": "Huyện Đức Hòa",
         "Dan_So": 215716,
         "Nam_TK": 2009,
         "Code_vung": "80802"
@@ -2381,7 +2366,7 @@
       "properties": {
         "OBJECTID": 159,
         "Ten_Tinh": "Long An",
-        "Ten_Huyen": "Huyện Vinh Hung",
+        "Ten_Huyen": "Huyện Vĩnh Hưng",
         "Dan_So": 49371,
         "Nam_TK": 2009,
         "Code_vung": "80797"
@@ -2396,7 +2381,7 @@
       "properties": {
         "OBJECTID": 160,
         "Ten_Tinh": "Đồng Nai",
-        "Ten_Huyen": "Huyện Xuan Loc",
+        "Ten_Huyen": "Huyện Xuân Lộc",
         "Dan_So": 205547,
         "Nam_TK": 2009,
         "Code_vung": "75741"
@@ -2411,7 +2396,7 @@
       "properties": {
         "OBJECTID": 161,
         "Ten_Tinh": "Đồng Nai",
-        "Ten_Huyen": "Huyện Thong Nhat",
+        "Ten_Huyen": "Huyện Thống Nhất",
         "Dan_So": 146932,
         "Nam_TK": 2009,
         "Code_vung": "75738"
@@ -2426,7 +2411,7 @@
       "properties": {
         "OBJECTID": 162,
         "Ten_Tinh": "Đồng Nai",
-        "Ten_Huyen": "Huyện Trang Bom",
+        "Ten_Huyen": "Huyện Trảng Bom",
         "Dan_So": 245729,
         "Nam_TK": 2009,
         "Code_vung": "75737"
@@ -2441,7 +2426,7 @@
       "properties": {
         "OBJECTID": 163,
         "Ten_Tinh": "Bình Dương",
-        "Ten_Huyen": "TT. Thu Dau Mot",
+        "Ten_Huyen": "TT. Thủ Dầu Một",
         "Dan_So": 222845,
         "Nam_TK": 2009,
         "Code_vung": "74718"
@@ -2501,7 +2486,7 @@
       "properties": {
         "OBJECTID": 167,
         "Ten_Tinh": "Bình Dương",
-        "Ten_Huyen": "Huyện Tan Uyen",
+        "Ten_Huyen": "Huyện Tân Uyên",
         "Dan_So": 204825,
         "Nam_TK": 2009,
         "Code_vung": "74723"
@@ -2546,7 +2531,7 @@
       "properties": {
         "OBJECTID": 170,
         "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Ham Thuan Bac",
+        "Ten_Huyen": "Huyện Ham Thuận Bắc",
         "Dan_So": 167646,
         "Nam_TK": 2009,
         "Code_vung": "60597"
@@ -2561,7 +2546,7 @@
       "properties": {
         "OBJECTID": 171,
         "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Tanh Linh",
+        "Ten_Huyen": "Huyện Tánh Linh",
         "Dan_So": 102026,
         "Nam_TK": 2009,
         "Code_vung": "60599"
@@ -2576,7 +2561,7 @@
       "properties": {
         "OBJECTID": 172,
         "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Duc Linh",
+        "Ten_Huyen": "Huyện Đức Linh",
         "Dan_So": 125033,
         "Nam_TK": 2009,
         "Code_vung": "60600"
@@ -2606,7 +2591,7 @@
       "properties": {
         "OBJECTID": 174,
         "Ten_Tinh": "Đồng Nai",
-        "Ten_Huyen": "Huyện Dinh Quan",
+        "Ten_Huyen": "Huyện Định Quán",
         "Dan_So": 191340,
         "Nam_TK": 2009,
         "Code_vung": "75736"
@@ -2666,7 +2651,7 @@
       "properties": {
         "OBJECTID": 178,
         "Ten_Tinh": "Bình Dương",
-        "Ten_Huyen": "Huyện Phu Giao",
+        "Ten_Huyen": "Huyện Phú Giáo",
         "Dan_So": 83555,
         "Nam_TK": 2009,
         "Code_vung": "74722"
@@ -2681,7 +2666,7 @@
       "properties": {
         "OBJECTID": 179,
         "Ten_Tinh": "Bình Dương",
-        "Ten_Huyen": "Huyện Dau Tieng",
+        "Ten_Huyen": "Huyện Dầu Tiếng",
         "Dan_So": 103421,
         "Nam_TK": 2009,
         "Code_vung": "74720"
@@ -2696,7 +2681,7 @@
       "properties": {
         "OBJECTID": 180,
         "Ten_Tinh": "Đồng Nai",
-        "Ten_Huyen": "Huyện Vinh Cuu",
+        "Ten_Huyen": "Huyện Vĩnh Cửu",
         "Dan_So": 124912,
         "Nam_TK": 2009,
         "Code_vung": "75735"
@@ -2741,7 +2726,7 @@
       "properties": {
         "OBJECTID": 183,
         "Ten_Tinh": "Đồng Nai",
-        "Ten_Huyen": "Huyện Tan Phu",
+        "Ten_Huyen": "Huyện Tân Phú",
         "Dan_So": 155926,
         "Nam_TK": 2009,
         "Code_vung": "75734"
@@ -8771,7 +8756,7 @@
       "properties": {
         "OBJECTID": 585,
         "Ten_Tinh": "Lai Châu",
-        "Ten_Huyen": "Huyện Tan Uyen",
+        "Ten_Huyen": "Huyện Tân Uyên",
         "Dan_So": 45162,
         "Nam_TK": 2009,
         "Code_vung": "12111"
@@ -9701,7 +9686,7 @@
       "properties": {
         "OBJECTID": 961,
         "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
+        "Ten_Huyen": "Huyện Phú Quốc",
         "Dan_So": 91241,
         "Nam_TK": 2009,
         "Code_vung": "91911"
@@ -9709,441 +9694,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [103.98891119845577, 10.275940978225419]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 962,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.43715741675643, 9.26618538031677]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 963,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.46055443999012, 9.291602337741743]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 964,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.47819645456627, 9.304935787695085]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 965,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.42184237272757, 9.311789795281593]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 966,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.48886987877199, 9.32313067812731]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 967,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.45494345302916, 9.313073859798084]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 968,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.50084718783954, 9.324571466733691]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 969,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.02703514031336, 9.799400948697501]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 970,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.04495624652152, 9.82252598584633]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 971,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.09417156257038, 9.848721863378115]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 972,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.991303655647, 9.904097005400823]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 973,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.02054575340652, 9.908770306208885]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 974,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.01293444680284, 9.91286544000543]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 975,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.98821636772439, 9.912726561650052]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 976,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.02153081084623, 9.918951453113465]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 977,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.97973301661919, 9.920239306701777]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 978,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.99820734799768, 9.920696877624128]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 979,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.99169683172107, 9.929679973077532]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 980,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.01761303595893, 9.932051986499793]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 981,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.01596811775633, 9.955637083735569]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 982,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.01819683801855, 9.978568789895917]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 983,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.03774481167197, 9.99519738029043]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 984,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.00843544301262, 9.996566257632914]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 985,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.03057126812611, 10.003789137335103]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 986,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.81208438441162, 10.3601226614037]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 987,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.07430602432976, 10.389075525858242]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 988,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.06087615929394, 10.40855018675048]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 989,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.05226848924949, 10.414855211625328]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 990,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Phu Quoc",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91911"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.04667630309719, 10.417014056635558]
       }
     },
     {
@@ -10159,201 +9709,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [106.60827199724312, 8.699926727468514]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 992,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.08074200184149, 8.580181791895898]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 993,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.14991622114603, 8.60881834907447]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 994,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.13748189039873, 8.613660600557653]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 995,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.55546501368663, 8.629035937401016]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 996,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.6293581476797, 8.636032997908256]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 997,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.61669873867254, 8.63692961355563]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 998,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.5539550986939, 8.64822987815143]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 999,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.68101834996907, 8.670097011097269]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1000,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.55541458723521, 8.686151233523798]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1001,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.73725473456783, 8.690993569066146]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1002,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.54032450954068, 8.706896050523536]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1003,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.58466164065081, 8.736327548547713]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1004,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "Huyện Côn Đảo",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77755"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.71348397271065, 8.783866850351499]
       }
     },
     {
@@ -10376,7 +9731,7 @@
       "properties": {
         "OBJECTID": 1009,
         "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
+        "Ten_Huyen": "Huyện Kiên Hải",
         "Dan_So": 20807,
         "Nam_TK": 2009,
         "Code_vung": "91912"
@@ -10389,294 +9744,9 @@
     {
       "type": "Feature",
       "properties": {
-        "OBJECTID": 1010,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.392263236394, 9.639390510888937]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1011,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.35779996394101, 9.645345426500754]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1012,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.3923629557013, 9.649636782987773]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1013,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.35370040692969, 9.650060985753768]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1014,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.356219493604, 9.655675321587738]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1015,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.38212530042759, 9.655163399268327]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1016,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.3933196068147, 9.670006970722376]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1017,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.37852135427163, 9.679410833902876]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1018,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.39532677779039, 9.681421743320488]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1019,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.3969369764867, 9.686131141025157]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1020,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.38373807106846, 9.687896728988624]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1021,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.37764947830054, 9.705225445248454]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1022,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.34770185994469, 9.681859649407034]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1023,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.3584616439794, 9.71091163317357]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1024,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.33652248500144, 9.708595838241314]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1025,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.34663879961457, 9.724784903850109]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1026,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.33538600825034, 9.73019540067906]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1027,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.35600005131784, 9.740138775655542]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1028,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Hai",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91912"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.83583889969992, 9.964750955879181]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "OBJECTID": 1029,
         "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
+        "Ten_Huyen": "Huyện Kiên Lương",
         "Dan_So": 74750,
         "Nam_TK": 2009,
         "Code_vung": "91902"
@@ -10689,414 +9759,9 @@
     {
       "type": "Feature",
       "properties": {
-        "OBJECTID": 1030,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.49389185338879, 9.977962062612564]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1031,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.55082038322419, 10.027869504040705]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1032,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.50340034699867, 10.087112755431018]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1033,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.50897415910948, 10.090840743323477]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1034,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.51140478600973, 10.102670775209997]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1035,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.49833564161986, 10.109216176036822]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1036,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.49500443741151, 10.12716411273842]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1037,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.54133069826959, 10.129599205918932]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1038,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.55196541414402, 10.13489245929196]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1039,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.49367713599935, 10.137286204062796]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1040,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.54413045416719, 10.137421316319209]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1041,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.4963637733015, 10.140317453945249]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1042,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.5303832524576, 10.142343504002477]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1043,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.4923537922966, 10.141964095584415]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1044,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.51906531990028, 10.141572795535467]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1045,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.54842665711681, 10.143778153208469]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1046,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.55017226870979, 10.151317786018756]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1047,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.5042920393296, 10.152634551918419]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1048,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.58715583168753, 10.154416704172204]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1049,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.57509376391039, 10.155861835556134]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1050,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.52049864010844, 10.154786676409358]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1051,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.52851776147837, 10.162990463827212]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1052,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.57686265126713, 10.170189985620844]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1053,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.57643373824925, 10.175143190688598]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1054,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.59038501295589, 10.178976043263461]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1055,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.56994101007375, 10.180489423451158]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1056,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Kien Luong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91902"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.52855400303073, 10.181397381244464]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "OBJECTID": 1057,
         "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
+        "Ten_Huyen": "Huyện Hà Tiên",
         "Dan_So": 44721,
         "Nam_TK": 2009,
         "Code_vung": "91900"
@@ -11109,114 +9774,9 @@
     {
       "type": "Feature",
       "properties": {
-        "OBJECTID": 1058,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.32657275852954, 10.287051216869822]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1059,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.31272131503751, 10.292449869349484]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1060,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.33862799250552, 10.294508944437196]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1061,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.34751746154025, 10.29909050512175]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1062,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.31656909416682, 10.304499416514027]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1063,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.32022531763955, 10.313936767067963]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1064,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.32895611952215, 10.319109675745398]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "OBJECTID": 1065,
         "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
+        "Ten_Huyen": "Huyện Phú Quý",
         "Dan_So": 25738,
         "Nam_TK": 2009,
         "Code_vung": "60602"
@@ -11224,171 +9784,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [108.94299706610775, 10.529888606740633]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1066,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60602"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [109.08016277173407, 9.968681050989142]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1067,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60602"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [109.05198260441779, 9.984756699644615]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1068,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60602"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [108.973162010397, 10.043635969330493]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1069,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60602"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [108.90401164841333, 10.049494512349311]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1070,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60602"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [108.96795031993356, 10.484402851886665]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1071,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60602"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [108.96391036995036, 10.493056858123683]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1072,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60602"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [108.9613576148061, 10.502631833991174]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1073,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60602"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [108.95620454718212, 10.555449043492789]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1074,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60602"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [108.95053864020467, 10.555739526334866]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1075,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60602"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [108.95075289861312, 10.559669528021917]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1076,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Phu Quy",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60602"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [108.87029459311833, 10.62252377607256]
       }
     },
     {
@@ -16061,7 +14456,7 @@
       "properties": {
         "OBJECTID": 1388,
         "Ten_Tinh": "Cà Mau",
-        "Ten_Huyen": "Huyện Phu Tan",
+        "Ten_Huyen": "Huyện Phú Tân",
         "Dan_So": 103885,
         "Nam_TK": 2009,
         "Code_vung": "96972"
@@ -16069,36 +14464,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [104.56401588190757, 8.882727878166556]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1389,
-        "Ten_Tinh": "Cà Mau",
-        "Ten_Huyen": "Huyện Phu Tan",
-        "Dan_So": 103885,
-        "Nam_TK": 2009,
-        "Code_vung": "96972"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.52544024460617, 8.951424177364787]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1390,
-        "Ten_Tinh": "Cà Mau",
-        "Ten_Huyen": "Huyện Phu Tan",
-        "Dan_So": 103885,
-        "Nam_TK": 2009,
-        "Code_vung": "96972"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.88111423636857, 8.891947831181165]
       }
     },
     {
@@ -16121,7 +14486,7 @@
       "properties": {
         "OBJECTID": 1393,
         "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "TP. Vung Tau",
+        "Ten_Huyen": "TP. Vũng Tàu",
         "Dan_So": 296237,
         "Nam_TK": 2009,
         "Code_vung": "77747"
@@ -16166,7 +14531,7 @@
       "properties": {
         "OBJECTID": 1396,
         "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "TP. Phan Thiet",
+        "Ten_Huyen": "TP. Phan Thiết",
         "Dan_So": 216327,
         "Nam_TK": 2009,
         "Code_vung": "60593"
@@ -16179,24 +14544,9 @@
     {
       "type": "Feature",
       "properties": {
-        "OBJECTID": 1397,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "TP. Phan Thiet",
-        "Dan_So": 216327,
-        "Nam_TK": 2009,
-        "Code_vung": "60593"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [108.17040329133751, 10.93875573722965]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "OBJECTID": 1398,
         "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Ham Thuan Nam",
+        "Ten_Huyen": "Huyện Hàm Thuận Nam",
         "Dan_So": 98632,
         "Nam_TK": 2009,
         "Code_vung": "60598"
@@ -17664,156 +16014,6 @@
     {
       "type": "Feature",
       "properties": {
-        "OBJECTID": 1509,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Tuy Phong",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60595"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [108.82598006109048, 11.227197099503311]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1510,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện La Gi",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60594"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [107.8005176629534, 10.652706704706928]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1511,
-        "Ten_Tinh": "Bình Thuận",
-        "Ten_Huyen": "Huyện Ham Thuan Nam",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "60598"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [107.99070783072904, 10.696121896531876]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1512,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "TP. Vung Tau",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77747"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [107.07329028700289, 10.380676788199169]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1513,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "TP. Vung Tau",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77747"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [107.09523583183237, 10.400718552868268]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1514,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "TP. Vung Tau",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77747"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [107.10141843130472, 10.412552889770762]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1515,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "TP. Vung Tau",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77747"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [107.15371981414103, 10.452024498308774]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1516,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "TP. Vung Tau",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77747"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [107.13195423195066, 10.438901864915003]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1517,
-        "Ten_Tinh": "Bà Rịa - Vũng Tàu",
-        "Ten_Huyen": "TP. Vung Tau",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "77747"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [107.07865036916451, 10.459579728550532]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1518,
-        "Ten_Tinh": "TP. Hồ Chí Minh",
-        "Ten_Huyen": "Huyện Cần Giờ",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "79787"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.97211148679149, 10.463703074201719]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "OBJECTID": 1519,
         "Ten_Tinh": "Quảng Ngãi",
         "Ten_Huyen": "Huyện Ly Son",
@@ -18319,141 +16519,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [106.83695403131325, 20.772463829944549]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1553,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.27360629243505, 10.355889628513617]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1554,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.31854626544239, 10.358089810196926]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1555,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.30668157467231, 10.363786627616191]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1556,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.32774444243225, 10.398311666825009]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1557,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.33402424886836, 10.403702198220287]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1558,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.32914036736859, 10.406185973769189]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1559,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.34181857136022, 10.425834895183206]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1560,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.32301803295111, 10.437074891809912]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 1561,
-        "Ten_Tinh": "Kiên Giang",
-        "Ten_Huyen": "Huyện Ha Tien",
-        "Dan_So": 0,
-        "Nam_TK": 2009,
-        "Code_vung": "91900"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [104.33124857276086, 10.452776612278353]
       }
     },
     {
