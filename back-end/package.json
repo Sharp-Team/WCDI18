@@ -2,44 +2,14 @@
   "name": "back-end",
   "version": "1.0.0",
   "main": "index.js",
-  "author": {
-    "name": "Elisa Kajima Team"
-  },
-  "scripts": {
-    "dev": "nodemon app.js"
-  },
-  "keyword": [
-    "node",
-    "express",
-    "jsonwebtoken",
-    "passport",
-    "sequelize"
-  ],
-  "bugs": {
-    "url": "https://github.com/Sharp-Team/WCDI18/issues"
-  },
-  "homepage": "https://github.com/Sharp-Team/WCDI18#README",
   "license": "MIT",
-  "private": false,
   "dependencies": {
-    "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
-    "cors": "^2.8.4",
-    "dotenv": "^6.1.0",
     "express": "^4.16.4",
-    "express-promise-router": "^3.0.3",
-    "joi": "^14.0.3",
-    "jsonwebtoken": "^8.3.0",
-    "moment": "^2.22.2",
-    "mongoose": "^5.3.8",
-    "morgan": "^1.9.1",
-    "passport": "^0.4.0",
-    "passport-facebook-token": "^3.3.0",
-    "passport-google-plus-token": "^2.1.0",
-    "passport-jwt": "^4.0.0",
-    "passport-local": "^1.0.0"
+    "express-generator": "^4.16.0",
+    "mongoose": "^5.3.9"
   },
   "devDependencies": {
-    "nodemon": "^1.18.5"
+    "nodemon": "^1.18.6"
   }
 }
