@@ -1,5 +1,22 @@
-const app = require('./app')
+const bodyParser = require('body-parser')
+const express = require('express')
+const mongoose = require('mongoose')
+const User = require('./testServer/src/components/user/userRouter')
 require('dotenv').config()
+
+const app = express()
+
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+
+mongoose.Promise = global.Promise
+mongoose.connect(process.env.CONNECT_MONGO, {
+  useNewUrlParser: true
+}).then(() => {
+	console.log('Connect Db')
+})
+
+app.use('/api/user', User)
 
 const port = process.env.PORT
 app.listen(port, () => {
