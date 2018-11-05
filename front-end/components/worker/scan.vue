@@ -34,8 +34,14 @@
                     field="name"
                     @select="option => selected.push(option)">
                   </b-autocomplete>
-                  <b-tag v-for="item in selected" :key="item.name" v-if="item !== null" track-by="name" class="mt-2" type="is-success"
-                    attached @close="isTag1Active = true" closable>{{ item.name }}</b-tag>
+                  <b-field grouped group-multiline>
+                    <div v-for="(item) in selected" :key="item.id"
+                      v-if="item !== null" track-by="name" class="mt-2 control">
+                      <!-- FIXME: v-if="isTag1Active"  -->
+                      <b-tag type="is-success" size="is-medium" closable
+                       @close="isTag1Active = false">{{ item.name }}</b-tag>
+                    </div>
+                  </b-field>
                 </div>
               </div>
             </div>
@@ -91,6 +97,7 @@ export default {
       name: '',
       selected: [],
       data,
+      isTag1Active: true,
       sides: defaultSides
     }
   },
