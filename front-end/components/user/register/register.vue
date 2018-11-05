@@ -7,80 +7,192 @@
             <h3>Đăng ký tài khoản</h3>
           </div>
           <div class="form-info">
-            <form action="" @submit.prevent="signup">
+            <form @submit.prevent="changeValue">
               <div class="form-group row">
-                <label for="fullname" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Họ tên</label>
+                <label
+                  for="fullname"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Họ tên
+                </label>
                 <div class="col-sm-12 col-md-7 col-lg-7">
-                  <input v-model="fullname" type="text" class="form-control" id="fullname">
+                  <input
+                    v-model="fullname"
+                    type="text"
+                    class="form-control"
+                    id="fullname"
+                  >
                 </div>
               </div>
               <div class="form-group row">
-                <label for="email" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Email</label>
+                <label
+                  for="email"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Email
+                </label>
                 <div class="col-sm-12 col-md-7 col-lg-7">
-                  <input v-model="email" type="text" class="form-control" id="useremail">
+                  <input
+                    v-model="email"
+                    type="text"
+                    class="form-control"
+                    id="useremail"
+                  >
                 </div>
               </div>
               <div class="form-group row">
-                <label for="phone" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Số điện thoại</label>
+                <label
+                  for="phone"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Số điện thoại
+                </label>
                 <div class="col-sm-12 col-md-7 col-lg-7">
-                  <input v-model="phone" type="number" class="form-control" id="userphone">
+                  <input
+                    v-model="phone"
+                    type="number"
+                    class="form-control"
+                    id="userphone"
+                  >
                 </div>
               </div>
               <div class="form-group row">
-                <label for="username" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Tên đăng nhập</label>
+                <label
+                  for="username"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Tên đăng nhập
+                </label>
                 <div class="col-sm-12 col-md-7 col-lg-7">
-                  <input v-model="username" type="text" class="form-control" id="username">
+                  <input
+                    v-model="username"
+                    type="text"
+                    class="form-control"
+                    id="username"
+                  >
                 </div>
               </div>
               <div class="form-group row">
-                <label for="password" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Mật khẩu</label>
+                <label
+                  for="password"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Mật khẩu
+                </label>
                 <div class="col-sm-12 col-md-7 col-lg-7">
-                  <input v-model="password" type="password" class="form-control" id="password" value="">
+                  <input
+                    v-model="password"
+                    type="password"
+                    class="form-control"
+                    id="password"
+                  >
                 </div>
               </div>
               <div class="form-group row">
-                <label for="re-password" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Nhập lại Mật khẩu</label>
+                <label
+                  for="re-password"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Nhập lại Mật khẩu
+                </label>
                 <div class="col-sm-12 col-md-7 col-lg-7">
-                  <input v-model="rePassword" type="password" class="form-control" id="re-password" value="">
+                  <input
+                    v-model="rePassword"
+                    type="password"
+                    class="form-control"
+                    id="re-password"
+                  >
                 </div>
               </div>
               <div class="form-group row">
-                <label for="avatar" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Ảnh cá nhân</label>
+                <label
+                  for="avatar"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Ảnh cá nhân
+                </label>
                 <div class="col-sm-12 col-md-7 col-lg-7">
                   <div class="file">
-                    <input type="file" name="file" id="avatar" ref="fileInput" accept="image/*" @change="onFilePicked">
-                    <label for="file">Tải ảnh lên</label>
+                    <input
+                      type="file"
+                      name="file"
+                      id="avatar"
+                      ref="fileInput"
+                      accept="image/*"
+                      @change="onFilePicked"
+                    >
+                    <label for="file">
+                      Tải ảnh lên
+                    </label>
                   </div>
                 </div>
               </div>
               <div class="form-group row">
-                <label for="province" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Tỉnh/ Thành phố</label>
+                <label
+                  for="province"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Tỉnh/ Thành phố
+                </label>
                 <div class="col-sm-12 col-md-7 col-lg-7">
-                  <select v-model="provinceSelected" class="form-control">
-                    <option v-for="province in listProvinces" :key=province.id :value="province">
+                  <select
+                    v-model="provinceSelected"
+                    class="form-control"
+                  >
+                    <option
+                      v-for="province in listProvinces"
+                      :key=province.id
+                      :value="province">
                       {{ province }}
                     </option>
                   </select>
                 </div>
               </div>
               <div class="form-group row">
-                <label for="district" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Quận/ Huyện</label>
+                <label
+                  for="district"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Quận/ Huyện
+                </label>
                 <div class="col-sm-12 col-md-7 col-lg-7">
-                  <select v-model="districtSelected" class="form-control">
-                    <option v-for="district in listDistricts" :key=district.id>
+                  <select
+                    v-model="districtSelected"
+                    class="form-control"
+                  >
+                    <option
+                      v-for="district in listDistricts"
+                      :key=district.id>
                       {{ district.properties.Ten_Huyen }}
                     </option>
                   </select>
                 </div>
               </div>
               <div class="form-group row">
-                <label for="addressdetail" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Địa chỉ cụ thể</label>
+                <label
+                  for="addressdetail"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Địa chỉ cụ thể
+                </label>
                 <div class="col-sm-12 col-md-7 col-lg-7">
-                  <textarea v-model="address" type="text" class="form-control" placeholder="Số nhà, ngõ, phố" rows="3" />
+                  <textarea
+                    v-model="address"
+                    type="text" class="form-control"
+                    placeholder="Số nhà, ngõ, phố"
+                    rows="3"
+                  >
+                    Đây là địa chỉ
+                  </textarea>
                   </div>
             </div>
             <div class="form-group row">
-              <label for="isuser" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Đối tượng</label>
+              <label
+                for="isuser"
+                class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+              >
+                Đối tượng
+              </label>
               <div class="col-sm-12 col-md-7 col-lg-7 mt-2">
                 <div class="custom-control custom-radio custom-control-inline">
                   <input
@@ -88,9 +200,14 @@
                     value="Khách hàng"
                     id="checkisuser1"
                     name="typeuser"
-                    v-model="pickUser"
+                    v-model="object"
                     class="custom-control-input">
-                  <label class="custom-control-label" for="checkisuser1">Khách hàng</label>
+                  <label
+                    class="custom-control-label"
+                    for="checkisuser1"
+                  >
+                    Khách hàng
+                  </label>
                 </div>
                 <div class="custom-control custom-radio">
                   <input
@@ -98,14 +215,24 @@
                     value="Người làm việc"
                     id="checkisuser2"
                     name="typeuser"
-                    v-model="pickUser"
+                    v-model="object"
                     class="custom-control-input">
-                  <label class="custom-control-label" for="checkisuser2">Người làm việc</label>
+                  <label
+                    class="custom-control-label"
+                    for="checkisuser2">Người làm việc</label>
                 </div>
               </div>
             </div>
-            <div v-if="pickUser ==='Người làm việc'" class="form-group row">
-              <label for="cmnd" class="col-sm-12 col-md-4 col-lg-3 col-form-label">CMND</label>
+            <div
+              v-if="object ==='Người làm việc'"
+              class="form-group row"
+            >
+              <label
+                for="cmnd"
+                class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+              >
+                CMND
+              </label>
               <div class="col-sm-12 col-md-7 col-lg-7">
                 <div class="file">
                   <input type="file"
@@ -114,15 +241,30 @@
                     ref="fileInput"
                     accept="image/*"
                     @change="onFileCMNDPicked">
-                  <label for="fileCMND">Tải ảnh lên</label>
+                  <label for="fileCMND">
+                    Tải ảnh lên
+                  </label>
                 </div>
               </div>
             </div>
-            <div v-if="pickUser ==='Người làm việc'" class="form-group row">
-              <label for="jobuser" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Nghề nghiệp</label>
+            <div
+              v-if="object ==='Người làm việc'"
+              class="form-group row"
+            >
+              <label
+                for="jobuser"
+                class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+              >
+                Nghề nghiệp
+              </label>
               <div class="col-sm-12 col-md-7 col-lg-7">
-                <select v-model="jobSelected"  class="form-control">
-                  <option v-for="job in jobs" :key=job.id>
+                <select
+                  v-model="jobSelected"
+                  class="form-control">
+                  <option
+                    v-for="job in jobs"
+                    :key="job.id"
+                  >
                     {{ job.name }}
                   </option>
                 </select>
@@ -180,19 +322,18 @@ export default {
   data () {
     return {
       data,
-      username: '',
-      password: '',
-      email: '',
-      fullname: '',
-      phone: '',
-      rePassword: '',
-      address: '',
-      provinceSelected: '',
-      districtSelected: '',
-      object: '',
+      username: 'thaycacac',
+      password: '123456',
+      email: 'thaycacac@gmail.com',
+      fullname: 'Pham ngoc hoa',
+      phone: '0968038714',
+      rePassword: '1234567',
+      address: 'day la dia chi',
+      provinceSelected: 'Ninh Bình',
+      districtSelected: 'Huyên Yên Khánh',
       imageAvatarUrl: '',
       imageCardUrl: '',
-      pickUser: '',
+      object: 'Khách hàng',
       jobSelected: 'Sửa quạt, điều hòa,...',
       jobs: [{
           name: 'Sửa xe máy'
@@ -218,8 +359,34 @@ export default {
     MyButton
   },
   methods: {
+    changeValue() {
+      this.$axios.get(`/api`)
+      .then(result => {
+        console.log(result)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },
     signup () {
-
+      this.$axios.post(`/api/users/signup`, {
+        username: this.username,
+        password: this.password,
+        avatar: this.imageAvatarUrl,
+        email: this.email,
+        fill_name: this.fullname,
+        phone_number: this.phone,
+        province: this.provinceSelected,
+        district: this.districtSelected,
+        address_detail: this.address,
+        object: this.object
+      })
+      .then(result => {
+        console.log(result)
+      })
+      .catch(err => {
+        console.log(err)
+      })
     },
     onFilePicked (event) {
       const files = event.target.files
