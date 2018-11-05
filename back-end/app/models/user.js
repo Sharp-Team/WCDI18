@@ -17,6 +17,9 @@ const userSchema = new Schema({
     password: {
       type: String
     },
+		avatar: {
+			type: String
+		},
 		email: {
 			type: String
 		},
@@ -47,10 +50,6 @@ const userSchema = new Schema({
 			type: String,
 			required: false
 		},
-		type_address: {
-			type: String,
-			enum: ['home/apartment', 'organ/company']
-		}
   },
   google: {
     id: {
