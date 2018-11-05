@@ -26,7 +26,8 @@ module.exports = {
 					return 'Mật khẩu chứa ít nhất 6 kí tư'
 				}
 				return password
-			}),  
+			}),
+			avatar: Joi.string().required(),  
 			email: Joi.string().email().required().error(() => 'Email không hợp lệ'),
 			full_name: Joi.string().required().error(() => 'Tên không hợp lệ'),
 			phone_number: Joi.string().max(10).required().error((phone_number) => {
@@ -62,7 +63,6 @@ module.exports = {
 				return career
 			}),
 			indentify_card: Joi.string(),
-			type_address: Joi.string().required().error(() => 'Vui lòng chọn 1 trong 2 [Nhà riêng/Công ty, Cơ Quan/Chung Cư]')
     })
   }
 }
