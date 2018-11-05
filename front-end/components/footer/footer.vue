@@ -50,7 +50,7 @@
                 <div class="form-group">
                   <input
                     type="email"
-                    class="form-control"
+                    class="form-control button-mail"
                     id="inputEmail"
                     placeholder="E-mail"
                   />
@@ -80,6 +80,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
+.button-mail {
+  border-radius: 4px !important;
+}
 .is-footer {
   margin-top: 0 !important;
 }
@@ -156,6 +159,7 @@ export default {
         .form-group {
           margin-bottom: 5px;
           width: 100%;
+          margin-left: 4px;
           .form-control {
             min-width: 100%;
           }

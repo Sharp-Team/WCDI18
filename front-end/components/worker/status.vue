@@ -61,7 +61,7 @@ export default {
           position: relative;
           flex-basis: 50%;
           .text-title-relax {
-            color: #f9ff32db;
+            color: #d49100db;
             position: absolute;
             top: 15%;
             left: 5%;

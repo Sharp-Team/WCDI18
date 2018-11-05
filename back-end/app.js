@@ -1,26 +1,25 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
-
+const mongoose = require('mongoose');
+const cors = require('cors');
+const { userRoutes } = require('./app/routes')
 require('dotenv').config()
 
+mongoose.Promise = global.Promise
+mongoose.connect(process.env.CONNECT_MONGO, {
+	useNewUrlParser: true
+})
+
 const app = express()
+
+app.use(cors())
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-
-const user = {
-  name: 'Hoa Mat Lol',
-  age: -20
-}
-
-app.use('/users', require('./app/routes/users'))
-
-app.get('/', (req, res) => {
-  res.status(200).json(user)
-})
+app.use('/users', userRoutes)
 
 let port = process.env.PORT
 app.listen(port, () => {
-  console.log(`Ahihi, Server is running on port ${port} !`)
+  console.log(`Server is running on port ${port} !`)
 })
