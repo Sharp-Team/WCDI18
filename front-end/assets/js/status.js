@@ -5,7 +5,6 @@ export default () => {
   var modalContent = $('#status-ModalContent')
 
   btnStatus.click(() => {
-    console.log('xxx')
     modal.css('visibility', 'visible')
     modalContent.removeClass('modal-menu-content-1')
     modalContent.addClass('modal-menu-content-2')

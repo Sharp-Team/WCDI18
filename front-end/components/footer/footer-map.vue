@@ -3,6 +3,7 @@
     <div class="image">
     </div>
     <status class="statusworker"/>
+    <scan />
     <div class="my-footer">
       <div class="action">
         <div class="icon status">
@@ -23,7 +24,7 @@
         </div>
         <div class="icon search">
           <a href="#">
-            <i class="fas fa-map-marker-alt"></i>
+            <i class="fas fa-map-marker-alt" id="showScanWorker"></i>
           </a>
           <span class="tooltip-search">
             Quét
@@ -111,14 +112,18 @@
 
 </style>
 <script>
-  import Status from "../../components/status-worker/status.vue"
+  import Status from "../../components/worker/status.vue"
+  import Scan from "../../components/worker/scan.vue"
   import status from '../../assets/js/status.js';
+  import scan from '../../assets/js/scan.js';
   export default {
     components: {
-      Status
+      Status,
+      Scan
     },
     beforeMount() {
-      status()
+      status(),
+      scan()
     },
   }
 </script>
