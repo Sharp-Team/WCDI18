@@ -12,7 +12,8 @@
     "express": "^4.16.4",
     "express-generator": "^4.16.0",
     "joi": "^14.0.4",
-    "mongoose": "^5.3.9"
+    "mongoose": "^5.3.9",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.6"
