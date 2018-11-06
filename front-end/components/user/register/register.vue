@@ -322,7 +322,7 @@ export default {
   data () {
     return {
       data,
-      username: 'thaycacac10',
+      username: 'thaycacac13',
       password: '123456',
       email: 'thaycacac@gmail.com',
       fullname: 'Pham ngoc hoa',
@@ -333,8 +333,8 @@ export default {
       districtSelected: 'Huyên Yên Khánh',
       imageAvatarUrl: 'zxczxczx',
       imageCardUrl: 'zxczxcc',
-      object: 'Khách hàng',
-      jobs: 'Sửa xe máy'
+      object: 'Người làm việc',
+      jobs: 'Sửa ống nước'
     }
   },
   computed: {
@@ -381,6 +381,7 @@ export default {
       console.log(this.districtSelected)
       console.log(this.address)
       console.log(this.object)
+      console.log(this.jobs)
       this.$axios.post(`api/user/signup`, {
         username: this.username,
         password: this.password,
@@ -391,7 +392,8 @@ export default {
         province: this.provinceSelected,
         district: this.districtSelected,
         address_detail: this.address,
-        object: this.object
+        object: this.object,
+        career: this.jobs
       })
       .then(result => {
         console.log(result)

@@ -20,33 +20,38 @@ module.exports = {
 			username
 		})
 		if (findUser) {
-			return res.status(403).json({
+			res.status(403).json({
 				data: null,
 				error: `Tài khoản ${findUser.username} đã có người sử dụng`
 			})
+		} else {
+			const newUser = await User.create({
+				username,
+				password,
+				avatar,
+				email,
+				full_name,
+				phone_number,
+				province,
+				district,
+				address_detail,
+				object,
+				career,
+				indentify_card,
+			})
+			await newUser.save()
+			res.status(200).json({
+				data: newUser,
+				err: null
+			})
 		}
-		const newUser = await User.create({
-			username,
-			password,
-			avatar,
-			email,
-			full_name,
-			phone_number,
-			province,
-			district,
-			address_detail,
-			object,
-			career,
-			indentify_card,
-		})
-		await newUser.save()
-		res.status(200).json({
-			data: newUser,
-			err: null
-		})
+
 	},
 	signIn: async (req, res) => {
-		const { username, password } = req.body
+		const {
+			username,
+			password
+		} = req.body
 		const findUser = await User.findOne({
 			username
 		})
@@ -59,13 +64,13 @@ module.exports = {
 		const isValidPass = (password === findUser.password) ? 1 : 0
 		if (!isValidPass) {
 			return res.status(404).json({
-					data: `Mật khẩu không hợp lệ`,
-					error: null
+				data: `Mật khẩu không hợp lệ`,
+				error: null
 			})
 		}
 		return res.status(200).json({
-				data: `Đăng nhập thành công, Xin chào ${findUser.full_name}`,
-				error: null
+			data: `Đăng nhập thành công, Xin chào ${findUser.full_name}`,
+			error: null
 		})
 	},
 	signOut: async (req, res) => {
@@ -84,7 +89,9 @@ module.exports = {
 	},
 	getProfile: async (req, res) => {
 		try {
-			const { username } = req.body
+			const {
+				username
+			} = req.body
 			const findUser = await User.findOne({
 				username
 			})
