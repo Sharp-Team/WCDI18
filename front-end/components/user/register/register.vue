@@ -322,19 +322,29 @@ export default {
   data () {
     return {
       data,
-      username: 'thaycacac10',
+      username: 'thaycacac',
       password: '123456',
       email: 'thaycacac@gmail.com',
       fullname: 'Pham ngoc hoa',
       phone: '0968038714',
-      rePassword: '123456',
+      rePassword: '1234567',
       address: 'day la dia chi',
       provinceSelected: 'Ninh Bình',
       districtSelected: 'Huyên Yên Khánh',
-      imageAvatarUrl: 'zxczxczx',
-      imageCardUrl: 'zxczxcc',
+      imageAvatarUrl: 'abcd',
+      imageCardUrl: 'abcd',
       object: 'Khách hàng',
-      jobs: 'Sửa xe máy'
+      jobSelected: 'Sửa quạt, điều hòa,...',
+      jobs: [{
+          name: 'Sửa xe máy'
+        },
+        {
+          name: 'Sửa quạt, điều hòa,...'
+        },
+        {
+          name: 'Sửa máy tính'
+        },
+      ],
     }
   },
   computed: {
@@ -349,39 +359,8 @@ export default {
     MyButton
   },
   methods: {
-    signin() {
-      this.$axios.post(`api/user/signin`, {
-        username: 'thaycacac',
-        password: 'camonem123'
-      })
-      .then(result => {
-        console.log(result)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-    },
-    changeValue() {
-      this.$axios.get(`/api`)
-      .then(result => {
-        console.log(result)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-    },
     signup () {
-      console.log(this.username)
-      console.log(this.password)
-      console.log(this.fullname)
-      console.log(this.imageAvatarUrl)
-      console.log(this.email)
-      console.log(this.phone)
-      console.log(this.provinceSelected)
-      console.log(this.districtSelected)
-      console.log(this.address)
-      console.log(this.object)
-      this.$axios.post(`api/user/signup`, {
+      this.$axios.post(`api/users/signup`, {
         username: this.username,
         password: this.password,
         avatar: this.imageAvatarUrl,
