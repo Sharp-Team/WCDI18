@@ -56,13 +56,8 @@ module.exports = {
 				return address_detail
 			}),
 			object: Joi.string().required().error(() => 'Vui lòng chọn 1 trong 2 [Khách Hàng, Người Làm Việc]'),
-			career: Joi.string().error((career) => {
-				if (career.length <= 0) {
-					return 'Nghề nghiệp không hợp lệ'
-				}
-				return career
-			}),
-			indentify_card: Joi.string(),
+			career: Joi.string().allow('', null),
+			indentify_card: Joi.string().allow('', null)
     })
   }
 }

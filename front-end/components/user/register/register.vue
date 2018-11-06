@@ -7,7 +7,7 @@
             <h3>Đăng ký tài khoản</h3>
           </div>
           <div class="form-info">
-            <form @submit.prevent="changeValue">
+            <form @submit.prevent="signup">
               <div class="form-group row">
                 <label
                   for="fullname"
@@ -322,19 +322,19 @@ export default {
   data () {
     return {
       data,
-      username: 'thaycacac',
-      password: '123456',
-      email: 'thaycacac@gmail.com',
-      fullname: 'Pham ngoc hoa',
-      phone: '0968038714',
-      rePassword: '1234567',
-      address: 'day la dia chi',
-      provinceSelected: 'Ninh Bình',
-      districtSelected: 'Huyên Yên Khánh',
+      username: '',
+      password: '',
+      email: '',
+      fullname: '',
+      phone: '',
+      rePassword: '',
+      address: '',
+      provinceSelected: '',
+      districtSelected: '',
       imageAvatarUrl: '',
       imageCardUrl: '',
-      object: 'Khách hàng',
-      jobSelected: 'Sửa quạt, điều hòa,...',
+      object: '',
+      jobSelected: '',
       jobs: [{
           name: 'Sửa xe máy'
         },
@@ -359,17 +359,8 @@ export default {
     MyButton
   },
   methods: {
-    changeValue() {
-      this.$axios.get(`/api`)
-      .then(result => {
-        console.log(result)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-    },
     signup () {
-      this.$axios.post(`/api/users/signup`, {
+      this.$axios.post(`api/user/signup`, {
         username: this.username,
         password: this.password,
         avatar: this.imageAvatarUrl,
@@ -379,7 +370,9 @@ export default {
         province: this.provinceSelected,
         district: this.districtSelected,
         address_detail: this.address,
-        object: this.object
+        indentify_card: this.imageCardUrl,
+        object: this.object,
+        career: this.jobSelected
       })
       .then(result => {
         console.log(result)
