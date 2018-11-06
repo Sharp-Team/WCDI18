@@ -42,7 +42,7 @@ const userSchema = new Schema({
 	},
 	object: {
 		type: String,
-		enum: ['customer', 'worker']
+		enum: ['Khách hàng', 'Người làm việc']
 	},
 	career: {
 		type: String,

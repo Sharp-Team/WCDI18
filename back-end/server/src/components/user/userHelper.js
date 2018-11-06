@@ -62,7 +62,6 @@ module.exports = {
 				}
 				return career
 			}),
-			indentify_card: Joi.string(),
     })
   }
 }

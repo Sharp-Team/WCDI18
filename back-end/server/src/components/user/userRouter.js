@@ -1,5 +1,5 @@
 const express = require('express')
-const userRouter = express.Router()
+const userRouter = express()
 const userController = require('./userController')
 const { schemas, validateBody } = require('./userHelper');
 
