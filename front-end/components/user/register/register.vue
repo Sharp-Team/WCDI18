@@ -316,12 +316,15 @@
 
 <script>
 import MyButton from '~/components/share/button.vue';
-const data = require('~/assets/json/dataVietNam.json')
+const vietnam = require('~/assets/json/data-viet-nam.json')
+const jobs = require('~/assets/json/data-job.json')
+
 export default {
   name: 'Register',
   data () {
     return {
-      data,
+      vietnam,
+      jobs,
       username: '',
       password: '',
       email: '',
@@ -334,25 +337,15 @@ export default {
       imageAvatarUrl: '',
       imageCardUrl: '',
       object: '',
-      jobSelected: '',
-      jobs: [{
-          name: 'Sửa xe máy'
-        },
-        {
-          name: 'Sửa quạt, điều hòa,...'
-        },
-        {
-          name: 'Sửa máy tính'
-        },
-      ],
+      jobSelected: ''
     }
   },
   computed: {
     listProvinces: function () {
-      return [...new Set(this.data.features.map(i=>i.properties.Ten_Tinh))]
+      return [...new Set(this.vietnam.features.map(i=>i.properties.Ten_Tinh))]
     },
     listDistricts: function() {
-      return [...new Set(this.data.features.filter(i=>i.properties.Ten_Tinh===this.provinceSelected))]
+      return [...new Set(this.vietnam.features.filter(i=>i.properties.Ten_Tinh===this.provinceSelected))]
     }
   },
   components: {
@@ -407,6 +400,9 @@ export default {
       fileReader.readAsDataURL(files[0])
       this.imageCard = files[0]
     }
+  },
+  beforeMount() {
+    console.log(this.jobs);
   },
 }
 </script>
