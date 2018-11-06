@@ -332,9 +332,9 @@ export default {
       provinceSelected: 'Ninh Bình',
       districtSelected: 'Huyên Yên Khánh',
       imageAvatarUrl: 'zxczxczx',
-      imageCardUrl: 'zxczxcc',
-      object: 'Người làm việc',
-      jobs: 'Sửa ống nước'
+      imageCardUrl: '',
+      object: 'Khách hàng',
+      jobs: ''
     }
   },
   computed: {
@@ -381,6 +381,7 @@ export default {
       console.log(this.districtSelected)
       console.log(this.address)
       console.log(this.object)
+      console.log(this.imageCardUrl)
       console.log(this.jobs)
       this.$axios.post(`api/user/signup`, {
         username: this.username,
@@ -393,7 +394,8 @@ export default {
         district: this.districtSelected,
         address_detail: this.address,
         object: this.object,
-        career: this.jobs
+        indentify_card: this.imageCardUrl,
+        career: this.jobs,
       })
       .then(result => {
         console.log(result)
