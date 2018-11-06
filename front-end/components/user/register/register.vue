@@ -322,24 +322,19 @@ export default {
   data () {
     return {
       data,
-<<<<<<< HEAD
-      username: 'thaycacac',
-=======
-      username: 'thaycacac13',
->>>>>>> 91d11136be692ee669a237ea5446b20a76cd3e7e
-      password: '123456',
-      email: 'thaycacac@gmail.com',
-      fullname: 'Pham ngoc hoa',
-      phone: '0968038714',
-      rePassword: '1234567',
-      address: 'day la dia chi',
-      provinceSelected: 'Ninh Bình',
-      districtSelected: 'Huyên Yên Khánh',
-<<<<<<< HEAD
-      imageAvatarUrl: 'abcd',
-      imageCardUrl: 'abcd',
-      object: 'Khách hàng',
-      jobSelected: 'Sửa quạt, điều hòa,...',
+      username: '',
+      password: '',
+      email: '',
+      fullname: '',
+      phone: '',
+      rePassword: '',
+      address: '',
+      provinceSelected: '',
+      districtSelected: '',
+      imageAvatarUrl: '',
+      imageCardUrl: '',
+      object: '',
+      jobSelected: '',
       jobs: [{
           name: 'Sửa xe máy'
         },
@@ -350,12 +345,6 @@ export default {
           name: 'Sửa máy tính'
         },
       ],
-=======
-      imageAvatarUrl: 'zxczxczx',
-      imageCardUrl: 'zxczxcc',
-      object: 'Người làm việc',
-      jobs: 'Sửa ống nước'
->>>>>>> 91d11136be692ee669a237ea5446b20a76cd3e7e
     }
   },
   computed: {
@@ -371,7 +360,7 @@ export default {
   },
   methods: {
     signup () {
-      this.$axios.post(`api/users/signup`, {
+      this.$axios.post(`api/user/signup`, {
         username: this.username,
         password: this.password,
         avatar: this.imageAvatarUrl,
@@ -381,8 +370,9 @@ export default {
         province: this.provinceSelected,
         district: this.districtSelected,
         address_detail: this.address,
+        indentify_card: this.imageCardUrl,
         object: this.object,
-        career: this.jobs
+        career: this.jobSelected
       })
       .then(result => {
         console.log(result)
