@@ -322,7 +322,11 @@ export default {
   data () {
     return {
       data,
+<<<<<<< HEAD
       username: 'thaycacac',
+=======
+      username: 'thaycacac13',
+>>>>>>> 91d11136be692ee669a237ea5446b20a76cd3e7e
       password: '123456',
       email: 'thaycacac@gmail.com',
       fullname: 'Pham ngoc hoa',
@@ -331,6 +335,7 @@ export default {
       address: 'day la dia chi',
       provinceSelected: 'Ninh Bình',
       districtSelected: 'Huyên Yên Khánh',
+<<<<<<< HEAD
       imageAvatarUrl: 'abcd',
       imageCardUrl: 'abcd',
       object: 'Khách hàng',
@@ -345,6 +350,12 @@ export default {
           name: 'Sửa máy tính'
         },
       ],
+=======
+      imageAvatarUrl: 'zxczxczx',
+      imageCardUrl: 'zxczxcc',
+      object: 'Người làm việc',
+      jobs: 'Sửa ống nước'
+>>>>>>> 91d11136be692ee669a237ea5446b20a76cd3e7e
     }
   },
   computed: {
@@ -370,7 +381,8 @@ export default {
         province: this.provinceSelected,
         district: this.districtSelected,
         address_detail: this.address,
-        object: this.object
+        object: this.object,
+        career: this.jobs
       })
       .then(result => {
         console.log(result)
