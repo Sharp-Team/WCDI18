@@ -1,11 +1,29 @@
 [
   {
-      "name" : "Sửa xe máy"
+    "name" : "Thợ sửa điện tử"
   },
   {
-      "name" : "Sửa ô tô"
+    "name" : "Thợ sửa điện lạnh"
   },
   {
-      "name" : "Sửa đồ điện tử điện lạnh"
+    "name" : "Thợ sủa điện thoại"
+  },
+  {
+    "name": "Thợ sửa xe máy"
+  },
+  {
+    "name": "Thợ sửa ô tô"
+  },
+  {
+    "name": "Thu mua phế liệu"
+  },
+  {
+    "name": "Bác sĩ"
+  },
+  {
+    "name": "Thợ sửa máy tính/ laptop"
+  },
+  {
+    "name": "Thợ sửa đồ gia dụng"
   }
 ]

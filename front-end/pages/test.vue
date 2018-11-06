@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="map"></div>
-    <div id="legend"><h3>Legend</h3></div>
+    <div id="legend"><h3>Chú thích</h3></div>
   </div>
 </template>
 
@@ -14,7 +14,7 @@
        */
       var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 21.0086188 , lng: 105.5298639},
-          zoom: 8
+          zoom: 9
       });
 
       /**
@@ -28,79 +28,97 @@
       /**
        * Modifier marker
        */
-      var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+      /**
+       * Modifier marker
+       */
+      var iconBase = '/images/icon/';
       var icons = {
-        parking: {
-          name: 'Parking',
-          icon: iconBase + 'parking_lot_maps.png'
+        electric: {
+          name: 'Thợ sửa điện tử',
+          icon: iconBase + 'electric.png'
         },
-        library: {
-          name: 'Library',
-          icon: iconBase + 'library_maps.png'
+        fridge: {
+          name: 'Thợ sửa điện lạnh',
+          icon: iconBase + 'fridge.png'
         },
-        info: {
-          name: 'Info',
-          icon: iconBase + 'info-i_maps.png'
+        phone: {
+          name: 'Thợ sửa điện thoại',
+          icon: iconBase + 'phone.png'
+        },
+        motorcycle: {
+          name: 'Thợ sửa xe máy',
+          icon: iconBase + 'motorcycle.png'
+        },
+        car: {
+          name: 'Thợ sửa ô tô',
+          icon: iconBase + 'car.png'
+        },
+        waste: {
+          name: 'Thu mua phế liệu',
+          icon: iconBase + 'waste.png'
+        },
+        doctor: {
+          name: 'Bác sĩ',
+          icon: iconBase + 'doctor.png'
+        },
+        laptop: {
+          name: 'Thợ sửa máy tính/ laptop',
+          icon: iconBase + 'laptop.png'
+        },
+        fan: {
+          name: 'Thợ sửa đồ gia dụng',
+          icon: iconBase + 'fan.png'
         }
       };
       var features = [
         {
-          position: new google.maps.LatLng(21.0186188, 105.5698639),
-          type: 'info'
+          position: new google.maps.LatLng(21.1186188, 105.5698639),
+          type: 'electric'
         }, {
-          position: new google.maps.LatLng(21.0186188, 105.5408639),
-          type: 'info'
+          position: new google.maps.LatLng(21.2186188, 105.1408639),
+          type: 'car'
         }, {
-          position: new google.maps.LatLng(21.0186188, 105.5418639),
-          type: 'info'
+          position: new google.maps.LatLng(21.3186188, 105.2418639),
+          type: 'doctor'
         }, {
-          position: new google.maps.LatLng(21.0186188, 105.5428639),
-          type: 'info'
+          position: new google.maps.LatLng(21.4186188, 105.4428639),
+          type: 'motorcycle'
         }, {
-          position: new google.maps.LatLng(21.0186188, 105.5438639),
-          type: 'info'
+          position: new google.maps.LatLng(21.5186188, 105.3438639),
+          type: 'fridge'
         }, {
-          position: new google.maps.LatLng(21.0186188, 105.5448639),
-          type: 'info'
+          position: new google.maps.LatLng(21.6186188, 105.9448639),
+          type: 'laptop'
         }, {
-          position: new google.maps.LatLng(21.0186188, 105.5458639),
-          type: 'info'
+          position: new google.maps.LatLng(21.7186188, 105.7458639),
+          type: 'fan'
         }, {
-          position: new google.maps.LatLng(21.0106188, 105.5468639),
-          type: 'info'
+          position: new google.maps.LatLng(21.8106188, 105.8468639),
+          type: 'phone'
         }, {
-          position: new google.maps.LatLng(21.0196188, 105.5478639),
-          type: 'info'
+          position: new google.maps.LatLng(21.9196188, 105.6478639),
+          type: 'waste'
         }, {
-          position: new google.maps.LatLng(21.0186188, 105.5488639),
-          type: 'info'
+          position: new google.maps.LatLng(20.0186188, 105.0488639),
+          type: 'doctor'
         }, {
-          position: new google.maps.LatLng(21.0176188, 105.5488639),
-          type: 'info'
+          position: new google.maps.LatLng(20.8176188, 105.5488639),
+          type: 'car'
         }, {
-          position: new google.maps.LatLng(21.0166188, 105.5498639),
-          type: 'parking'
+          position: new google.maps.LatLng(20.7166188, 105.5498639),
+          type: 'phone'
         }, {
-          position: new google.maps.LatLng(21.0156188, 105.5498639),
-          type: 'parking'
+          position: new google.maps.LatLng(20.6156188, 105.5498639),
+          type: 'laptop'
         }, {
-          position: new google.maps.LatLng(21.0146188, 105.5498639),
-          type: 'parking'
+          position: new google.maps.LatLng(21.5146188, 105.5498639),
+          type: 'electric'
         }, {
-          position: new google.maps.LatLng(21.0136188, 105.5498639),
-          type: 'parking'
+          position: new google.maps.LatLng(21.4136188, 105.5498639),
+          type: 'laptop'
         }, {
           position: new google.maps.LatLng(21.0126188, 105.5498639),
-          type: 'parking'
-        }, {
-          position: new google.maps.LatLng(21.0116188, 105.5498639),
-          type: 'parking'
-        }, {
-          position: new google.maps.LatLng(21.0886188, 105.5498639),
-          type: 'parking'
-        }, {
-          position: new google.maps.LatLng(21.0886188, 105.5498639),
-          type: 'library'
+          type: 'laptop'
         }
       ]
       // Create markers.
