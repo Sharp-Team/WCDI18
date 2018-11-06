@@ -369,7 +369,7 @@ export default {
       })
     },
     signup () {
-      this.$axios.post(`api/users/signup`, {
+      this.$axios.post(`/api/users/signup`, {
         username: this.username,
         password: this.password,
         avatar: this.imageAvatarUrl,
