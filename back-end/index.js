@@ -2,7 +2,7 @@ const bodyParser = require('body-parser')
 const express = require('express')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
-const User = require('./testServer/src/components/user/userRouter')
+const User = require('./server/src/components/user/userRouter')
 require('dotenv').config()
 
 const app = express()
