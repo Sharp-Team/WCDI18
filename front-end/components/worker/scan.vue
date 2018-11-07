@@ -10,22 +10,23 @@
                   <div class="d-flex justify-content-between">
                     <h5 class="mt-0 mb-1 title-notification">Vị trí của bạn</h5>
                   </div>
-                  <p class="my-0 is-content">
-                    <img src="~/assets/images/icon-navbar/local.png" alt="local" class="market-image" />
+                  <p class="my-0 mt-1 is-content">
+                    <img src="~/assets/images/icon-navbar/local.png" alt="local" class="noti-image" />
                     {{ address }}
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="one-notification mt-2">
+          <div class="one-notification mt-2 pb-2">
             <div class="notification-container py-3">
               <div class="media">
                 <div class="media-body">
                   <div class="d-flex justify-content-between">
-                    <h5 class="mt-0 mb-1 title-notification">Chọn công việc</h5>
+                    <h5 class="mt-0 mb-3 title-notification">Chọn công việc</h5>
                   </div>
                   <b-autocomplete
+                    class="pb-2 b-complete-cus"
                     v-model="name"
                     icon="magnify"
                     placeholder="Chọn công việc"
@@ -37,7 +38,7 @@
                   </b-autocomplete>
                   <b-field grouped group-multiline>
                     <div v-for="(item) in selected" :key="item.id"
-                      v-if="item !== null" track-by="name" class="mt-2 control">
+                      v-if="item !== null" track-by="name" class="control">
                       <!-- FIXME: v-if="isTag1Active"  -->
                       <b-tag type="is-success" size="is-medium" closable
                        @close="isTag1Active = false">{{ item.name }}</b-tag>
@@ -52,7 +53,7 @@
               <div class="media">
                 <div class="media-body">
                   <div class="d-flex justify-content-between">
-                    <h5 class="mt-0 mb-1 title-notification">Phạm vi quét: {{ sides }} Km</h5>
+                    <h5 class="mt-0 mb-2 title-notification">Phạm vi quét: {{ sides }} Km</h5>
                   </div>
                   <input
                     type="range"
@@ -118,8 +119,6 @@ export default {
     visibility: hidden;
     position: fixed;
     z-index: 1000;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
@@ -129,7 +128,8 @@ export default {
 
   .notification-content {
     position: fixed;
-    right: 20px;
+    left: 0;
+    height: 86vh;
     top: 20px;
     bottom: 20px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -146,7 +146,7 @@ export default {
 
   .modal-content-1 {
     background-color: rgba(255, 255, 255, 0.9);
-    transform: translateX(120%);
+    transform: translateX(-120%);
   }
 
   .notification-title {
@@ -204,6 +204,10 @@ export default {
             .title-notification,
             .is-content {
               font-size: 0.9rem;
+              .noti-image {
+                width: 4%;
+                padding-bottom: 5px;
+              }
             }
 
             .is-content {
