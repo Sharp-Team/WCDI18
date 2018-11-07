@@ -88,7 +88,10 @@
           };
 
           infoWindow.setPosition(pos);
-          infoWindow.setContent('Bạn đang ở đây.');
+          infoWindow.setContent(`
+            <p>Chào bạn đến với <span style="color: green; font-weight: bold; font-size: 15px">GoGreen</span></p>
+            <p>Bạn đang ở đây!!!</p>
+          `);
           infoWindow.open(map);
           map.setCenter(pos);
           var marker = new google.maps.Marker({
@@ -164,68 +167,100 @@
       var features = [
         {
           position: new google.maps.LatLng(21.1186188, 105.5698639),
-          type: 'electric'
+          type: 'electric',
+          fullname: 'Phan Văn Đức',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
         {
           position: new google.maps.LatLng(21.2186188, 105.1408639),
-          type: 'car'
+          type: 'car',
+          fullname: 'Phạm Ngọc Hòa',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
         {
           position: new google.maps.LatLng(21.3186188, 105.2418639),
-          type: 'doctor'
+          type: 'doctor',
+          fullname: 'Trần Quang Nhật',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
         {
           position: new google.maps.LatLng(21.4186188, 105.4428639),
-          type: 'motorcycle'
+          type: 'motorcycle',
+          fullname: 'Đỗ Quang Hiệp',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
         {
           position: new google.maps.LatLng(21.5186188, 105.3438639),
-          type: 'fridge'
+          type: 'fridge',
+          fullname: 'Nguyễn Xuân Cường',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
         {
           position: new google.maps.LatLng(21.6186188, 105.9448639),
-          type: 'laptop'
+          type: 'laptop',
+          fullname: 'Nguyễn Phương Hồng Thủy',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
         {
           position: new google.maps.LatLng(21.7186188, 105.7458639),
-          type: 'fan'
+          type: 'fan',
+          fullname: 'Nguyễn Hải Nam',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
         {
           position: new google.maps.LatLng(21.8106188, 105.8468639),
-          type: 'phone'
+          type: 'phone',
+          fullname: 'Phạm Quang Hiệp',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
         {
           position: new google.maps.LatLng(21.9196188, 105.6478639),
-          type: 'waste'
+          type: 'waste',
+          fullname: 'Lê Đức Anh Quân',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
         {
           position: new google.maps.LatLng(20.0186188, 105.0488639),
-          type: 'doctor'
+          type: 'doctor',
+          fullname: 'Nguyễn Minh Chiến',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
         {
           position: new google.maps.LatLng(20.8176188, 105.5488639),
-          type: 'car'
+          type: 'car',
+          fullname: 'Nguyễn Phương Anh',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
         {
           position: new google.maps.LatLng(20.7166188, 105.5498639),
-          type: 'phone'
+          type: 'phone',
+          fullname: 'Phạm Văn A',
+          phone: '0123456789',
+          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
+          content: 'Hỏng gương xe máy honda ABCDE'
         },
-        {
-          position: new google.maps.LatLng(20.6156188, 105.5498639),
-          type: 'laptop'
-        },
-        {
-          position: new google.maps.LatLng(21.5146188, 105.5498639),
-          type: 'electric'
-        },
-        {
-          position: new google.maps.LatLng(21.4136188, 105.5498639),
-          type: 'laptop'
-        },
-        {
-          position: new google.maps.LatLng(21.0126188, 105.5498639),
-          type: 'laptop'
-        }
       ]
 
       /**
@@ -240,7 +275,31 @@
         });
         google.maps.event.addListener(marker, 'click', function () {
           infowindow.close(); // Close previously opened infowindow
-          infowindow.setContent("<div id='infowindow'>" + icons[feature.type].icon + "</div>");
+          infowindow.setContent(`
+          <h6>Thông tin chi tiết</h6>
+          <table class="table">
+            <tr>
+              <td>Họ và tên</td>
+              <td style="font-weight: bold">` + feature.fullname + `</td>
+            </tr>
+            <tr class="table-success">
+              <td>Email</td>
+              <td style="font-weight: bold">` + feature.email + `</td>
+            </tr>
+            <tr>
+              <td>Số điện thoại</td>
+              <td style="font-weight: bold">` + feature.phone + `</td>
+            </tr>
+            <tr class="table-success">
+              <td>Địa chi</td>
+              <td style="font-weight: bold">` + feature.address + `</td>
+            </tr>
+            <tr>
+                <td>Nội dung</td>
+                <td style="font-weight: bold">` + feature.content + `</td>
+              </tr>
+          </table>
+          `);
           infowindow.open(map, marker);
         });
       });
@@ -313,7 +372,7 @@
     background: rgba(255, 255, 255, 0.8);
     padding: 10px;
     margin: 10px;
-    border: 1px solid #000;
+    border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 10px;
   }
 
