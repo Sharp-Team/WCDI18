@@ -10,7 +10,6 @@
 
 <script>
   import FooterMap from '../components/footer/footer-map'
-  import Initmap from '../map/init'
 
   export default {
     layout: 'map',
