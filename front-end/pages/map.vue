@@ -20,13 +20,14 @@
       CenterControl(controlDiv, map) {
         // Set CSS for the control border.
         var controlUI = document.createElement('div');
-        controlUI.style.backgroundColor = '#fff';
+        controlUI.style.backgroundColor = 'rgba(255,255,255,0.7)';
         controlUI.style.border = '2px solid #fff';
         controlUI.style.borderRadius = '3px';
         controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
         controlUI.style.cursor = 'pointer';
         controlUI.style.marginBottom = '22px';
         controlUI.style.textAlign = 'center';
+        controlUI.style.zIndex = 1000;
         controlUI.title = 'Click to recenter the map';
         controlDiv.appendChild(controlUI);
 
@@ -34,19 +35,29 @@
         var controlText = document.createElement('div');
         controlText.style.color = 'rgb(25,25,25)';
         controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
-        controlText.style.fontSize = '16px';
-        controlText.style.lineHeight = '38px';
-        controlText.style.paddingLeft = '5px';
-        controlText.style.paddingRight = '5px';
-        controlText.innerHTML = 'Trở về vị trí của bạn';
+        controlText.style.fontSize = '12px';
+        controlText.style.lineHeight = '20px';
+        controlText.style.paddingLeft = '2px';
+        controlText.style.paddingRight = '2px';
+        controlText.innerHTML = 'Vị trí của bạn';
         controlUI.appendChild(controlText);
 
-        // Setup the click event listeners: simply set the map to Chicago.
+        // Setup the click event listeners
         controlUI.addEventListener('click', function () {
-          map.setCenter({
-            lat: 41.85,
-            lng: -87.65
-          });
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+              var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+              map.setCenter(pos);
+            }, function () {
+              handleLocationError(true, infoWindow, map.getCenter());
+            });
+          } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+          }
         });
       }
     },
@@ -169,6 +180,7 @@
           position: new google.maps.LatLng(21.1186188, 105.5698639),
           type: 'electric',
           fullname: 'Phan Văn Đức',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -177,6 +189,7 @@
           position: new google.maps.LatLng(21.2186188, 105.1408639),
           type: 'car',
           fullname: 'Phạm Ngọc Hòa',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -185,6 +198,7 @@
           position: new google.maps.LatLng(21.3186188, 105.2418639),
           type: 'doctor',
           fullname: 'Trần Quang Nhật',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -193,6 +207,7 @@
           position: new google.maps.LatLng(21.4186188, 105.4428639),
           type: 'motorcycle',
           fullname: 'Đỗ Quang Hiệp',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -201,6 +216,7 @@
           position: new google.maps.LatLng(21.5186188, 105.3438639),
           type: 'fridge',
           fullname: 'Nguyễn Xuân Cường',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -209,6 +225,7 @@
           position: new google.maps.LatLng(21.6186188, 105.9448639),
           type: 'laptop',
           fullname: 'Nguyễn Phương Hồng Thủy',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -217,6 +234,7 @@
           position: new google.maps.LatLng(21.7186188, 105.7458639),
           type: 'fan',
           fullname: 'Nguyễn Hải Nam',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -225,6 +243,7 @@
           position: new google.maps.LatLng(21.8106188, 105.8468639),
           type: 'phone',
           fullname: 'Phạm Quang Hiệp',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -233,6 +252,7 @@
           position: new google.maps.LatLng(21.9196188, 105.6478639),
           type: 'waste',
           fullname: 'Lê Đức Anh Quân',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -241,6 +261,7 @@
           position: new google.maps.LatLng(20.0186188, 105.0488639),
           type: 'doctor',
           fullname: 'Nguyễn Minh Chiến',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -249,6 +270,7 @@
           position: new google.maps.LatLng(20.8176188, 105.5488639),
           type: 'car',
           fullname: 'Nguyễn Phương Anh',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -257,6 +279,7 @@
           position: new google.maps.LatLng(20.7166188, 105.5498639),
           type: 'phone',
           fullname: 'Phạm Văn A',
+          email: 'thaycacac@gmail.com',
           phone: '0123456789',
           address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
           content: 'Hỏng gương xe máy honda ABCDE'
@@ -316,31 +339,34 @@
       map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(legend);
 
       /**
-       * Draw circle
+       * VẼ BÁN PHẠM VI QUÉT
        */
-      var drawingManager = new google.maps.drawing.DrawingManager({
-        drawingMode: google.maps.drawing.OverlayType.MARKER,
-        drawingControl: true,
-        drawingControlOptions: {
-          position: google.maps.ControlPosition.LEFT_CENTER,
-          drawingModes: ['circle']
-        },
-        markerOptions: {
-          icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
-        },
-        circleOptions: {
-          fillColor: '#ffff00',
-          fillOpacity: 1,
-          strokeWeight: 5,
-          clickable: false,
-          editable: true,
-          zIndex: 1
-        }
-      });
-      drawingManager.setMap(map);
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          var drawCircle = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.4,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: map,
+            center: pos,
+            radius: 500 * 100
+          });
+        }, function () {
+          handleLocationError(true, infoWindow, map.getCenter());
+        });
+      } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, infoWindow, map.getCenter());
+      }
 
       /**
-       * Come back center
+       * QUAY TRỞ VỀ VỊ TRÍ HIỆN TẠI
        */
 
       var centerControlDiv = document.createElement('div');
@@ -350,7 +376,7 @@
     },
     head: {
       script: [{
-        src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBQjtj0TxFDfqm8uQbovjJ0pEVtkCgePCw&libraries=drawing&',
+        src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBQjtj0TxFDfqm8uQbovjJ0pEVtkCgePCw&',
         async: true,
         defer: true
       }]
@@ -361,7 +387,7 @@
 
 <style lang="scss" scoped>
   #map {
-    background-color: red;
+    background-color: #2EBE4A;
     width: 100%;
     height: 100vh;
     margin-top: 54px;
