@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="floating-panel">
-      <button id="drop" @click="showMarker(map, icons)" class="btn btn-success">Hiện marker</button>
+      <button id="drop" @click="showMarker(map, icons, job)" class="btn btn-success">Hiện marker</button>
     </div>
     <div id="map"></div>
     <div id="legend">
@@ -166,7 +166,8 @@
           }
         },
         markers: [],
-        map: null
+        map: null,
+        job: 'electric',
       }
     },
     layout: 'map',
@@ -226,46 +227,48 @@
         }
         markers = [];
       },
-      showMarker(mapCurrent, icons) {
+      showMarker(mapCurrent, icons, job) {
         // this.clearMarkers()
         var infowindow = new google.maps.InfoWindow()
         this.features.forEach((feature) => {
           window.setTimeout(() => {
-          var marker = new google.maps.Marker({
-            position: feature.position,
-            icon: icons[feature.type].icon,
-            animation: google.maps.Animation.DROP,
-            map: mapCurrent,
-          })
-          google.maps.event.addListener(marker, 'click', function () {
-            infowindow.close();
-            infowindow.setContent(`
-            <h6>Thông tin chi tiết</h6>
-            <table class="table">
-              <tr>
-                <td>Họ và tên</td>
-                <td style="font-weight: bold">` + feature.fullname + `</td>
-              </tr>
-              <tr class="table-success">
-                <td>Email</td>
-                <td style="font-weight: bold">` + feature.email + `</td>
-              </tr>
-              <tr>
-                <td>Số điện thoại</td>
-                <td style="font-weight: bold">` + feature.phone + `</td>
-              </tr>
-              <tr class="table-success">
-                <td>Địa chi</td>
-                <td style="font-weight: bold">` + feature.address + `</td>
-              </tr>
-              <tr>
-                  <td>Nội dung</td>
-                  <td style="font-weight: bold">` + feature.content + `</td>
+          if (feature.type === job) {
+            var marker = new google.maps.Marker({
+              position: feature.position,
+              icon: icons[feature.type].icon,
+              animation: google.maps.Animation.DROP,
+              map: mapCurrent,
+            })
+            google.maps.event.addListener(marker, 'click', function () {
+              infowindow.close();
+              infowindow.setContent(`
+              <h6>Thông tin chi tiết</h6>
+              <table class="table">
+                <tr>
+                  <td>Họ và tên</td>
+                  <td style="font-weight: bold">` + feature.fullname + `</td>
                 </tr>
-            </table>
-            `);
-            infowindow.open(map, marker);
-          });
+                <tr class="table-success">
+                  <td>Email</td>
+                  <td style="font-weight: bold">` + feature.email + `</td>
+                </tr>
+                <tr>
+                  <td>Số điện thoại</td>
+                  <td style="font-weight: bold">` + feature.phone + `</td>
+                </tr>
+                <tr class="table-success">
+                  <td>Địa chi</td>
+                  <td style="font-weight: bold">` + feature.address + `</td>
+                </tr>
+                <tr>
+                    <td>Nội dung</td>
+                    <td style="font-weight: bold">` + feature.content + `</td>
+                  </tr>
+              </table>
+              `);
+              infowindow.open(map, marker);
+            });
+          }
         }, 200);
         });
       }
