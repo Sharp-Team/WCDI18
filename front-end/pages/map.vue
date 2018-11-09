@@ -232,7 +232,7 @@
             var marker = new google.maps.Marker({
               position: feature.position,
               icon: icons[feature.type].icon,
-              animation: google.maps.Animation.DROP,
+              animation: google.maps.Animation.BOUNCE,
               map: mapCurrent,
             })
             google.maps.event.addListener(marker, 'click', function () {
@@ -415,6 +415,35 @@
       var centerControl = new this.CenterControl(centerControlDiv, this.map);
       centerControlDiv.index = 1;
       this.map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+
+      /**
+       * HIỆN VỊ TRÍ HIỆN TẠI
+       */
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          var geocoder = new google.maps.Geocoder;
+          geocoder.geocode({'location': pos}, (results, status) => {
+            if (status === 'OK') {
+              if (results[0]) {
+                this.$store.dispatch('SET_POSITION', results[0].formatted_address)
+                console.log(results[0])
+              } else {
+                window.alert('No results found');
+              }
+            } else {
+              window.alert('Geocoder failed due to: ' + status);
+            }
+          });
+        }, function () {
+          handleLocationError(true, infoWindow, this.map.getCenter());
+        });
+      } else {
+        handleLocationError(false, infoWindow, map.getCenter());
+      }
     },
     head: {
       script: [{

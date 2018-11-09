@@ -28,7 +28,7 @@
                     alt="local"
                     class="noti-image"
                   />
-                  {{ address }}
+                  {{ GET_POSITION }}
                 </p>
               </div>
             </div>
@@ -110,11 +110,11 @@
 
 <script>
   const data = require('~/assets/json/data-job.json')
+  import { mapGetters } from 'vuex'
 
   export default {
     data() {
       return {
-        address: 'Phòng D413, FPT university',
         keepFirst: true,
         openOnFocus: false,
         name: '',
@@ -136,7 +136,10 @@
         set (value) {
           this.$store.commit('setRange', value)
         }
-      }
+      },
+      ...mapGetters([
+        'GET_POSITION',
+      ]),
     }
   }
 
