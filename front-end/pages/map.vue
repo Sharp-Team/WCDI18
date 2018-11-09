@@ -12,7 +12,8 @@
 </template>
 
 <script>
-  import FooterMap from '../components/footer/footer-map'
+  import FooterMap from '~/components/footer/footer-map'
+  import { mapGetters } from 'vuex'
 
   export default {
     data() {
@@ -168,6 +169,7 @@
         markers: [],
         map: null,
         job: 'electric',
+        rangeScan: 500
       }
     },
     layout: 'map',
@@ -218,17 +220,11 @@
           }
         });
       },
-      clearMarkers() {
-        this.features.forEach(function (feature) {
-          // this.addMarkerWithTimeout(feature.position, icons[feature.type].icon, 200)
-        });
-        for (var i = 0; i < markers.length; i++) {
-          markers[i].setMap(null);
-        }
-        markers = [];
+      clearMarkers(mapCurrent) {
+        // markers = [];
       },
       showMarker(mapCurrent, icons, job) {
-        // this.clearMarkers()
+        this.clearMarkers(mapCurrent)
         var infowindow = new google.maps.InfoWindow()
         this.features.forEach((feature) => {
           window.setTimeout(() => {
@@ -272,6 +268,11 @@
         }, 200);
         });
       }
+    },
+    computed: {
+      ...mapGetters([
+        'GET_RANGE'
+      ])
     },
     mounted() {
       /**
@@ -318,7 +319,8 @@
           this.map.setCenter(pos);
           var marker = new google.maps.Marker({
             position: pos,
-            map: this.map
+            map: this.map,
+            label: 'U'
           });
         }, function () {
           handleLocationError(true, infoWindow, this.map.getCenter());
@@ -370,7 +372,7 @@
             fillOpacity: 0.35,
             map: this.map,
             center: pos,
-            radius: 500 * 100
+            radius: GET_RANGE * 1000
           });
         }, function () {
           handleLocationError(true, infoWindow, this.map.getCenter());
@@ -382,7 +384,6 @@
       /**
        * QUAY TRỞ VỀ VỊ TRÍ HIỆN TẠI
        */
-
       var centerControlDiv = document.createElement('div');
       var centerControl = new this.CenterControl(centerControlDiv, this.map);
       centerControlDiv.index = 1;
