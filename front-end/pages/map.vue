@@ -169,7 +169,7 @@
         markers: [],
         map: null,
         job: 'electric',
-        rangeScan: 500
+        drawRange: null
       }
     },
     layout: 'map',
@@ -270,9 +270,39 @@
       }
     },
     computed: {
-      ...mapGetters([
-        'GET_RANGE'
-      ])
+      rangeCurrent() {
+        return this.$store.getters.GET_RANGE
+      }
+    },
+    watch: {
+      rangeCurrent: function(val, oldVal) {
+        /**
+         * VẼ BÁN PHẠM VI QUÉT
+         */
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(position => {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            this.drawRange.setMap(null)
+            this.drawRange = new google.maps.Circle({
+              strokeColor: 'green',
+              strokeOpacity: 0.4,
+              strokeWeight: 2,
+              fillColor: 'red',
+              fillOpacity: 0.35,
+              map: this.map,
+              center: pos,
+              radius: val * 1000
+            });
+          }, function () {
+            handleLocationError(true, infoWindow, this.map.getCenter());
+          });
+        } else {
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
     },
     mounted() {
       /**
@@ -283,7 +313,7 @@
           lat: 21.1186188,
           lng: 105.5698639
         },
-        zoom: 9,
+        zoom: 10,
         /**
          * THAY ĐỔI VỊ TRÍ CÁC CÁC CHỨC NĂNG CỦA MAPS
          */
@@ -343,7 +373,6 @@
       //  });
 
       var legend = document.getElementById('legend');
-      console.log(this.icons)
       for (var key in this.icons) {
         var type = this.icons[key];
         var name = type.name;
@@ -354,7 +383,6 @@
       }
 
       this.map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(legend);
-
       /**
        * VẼ BÁN PHẠM VI QUÉT
        */
@@ -364,7 +392,7 @@
             lat: position.coords.latitude,
             lng: position.coords.longitude
           };
-          var drawCircle = new google.maps.Circle({
+          this.drawRange = new google.maps.Circle({
             strokeColor: 'green',
             strokeOpacity: 0.4,
             strokeWeight: 2,
@@ -372,7 +400,7 @@
             fillOpacity: 0.35,
             map: this.map,
             center: pos,
-            radius: GET_RANGE * 1000
+            radius: 0 * 1000
           });
         }, function () {
           handleLocationError(true, infoWindow, this.map.getCenter());
@@ -380,7 +408,6 @@
       } else {
         handleLocationError(false, infoWindow, map.getCenter());
       }
-
       /**
        * QUAY TRỞ VỀ VỊ TRÍ HIỆN TẠI
        */
