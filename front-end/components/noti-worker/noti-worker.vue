@@ -5,7 +5,7 @@
         <h6 class="notification-title">Thông báo (3) <i class="fas fa-times is-IconClose" id="notiCloseModal"></i></h6>
         <div class="wrapper-notification">
           <div class="one-notification">
-            <div class="notification-container py-3">
+            <div class="notification-container">
               <div class="media">
                 <div class="media-body">
                   <div class="d-flex justify-content-between">
@@ -29,7 +29,7 @@
             </div>
           </div>
           <div class="one-notification mt-2">
-            <div class="notification-container py-3">
+            <div class="notification-container">
               <div class="media">
                 <div class="media-body">
                   <div class="d-flex justify-content-between">
@@ -72,14 +72,15 @@
     display: block;
     cursor: pointer;
   }
-  
+
   .notification-content {
     position: fixed;
     right: 20px;
     top: 20px;
     bottom: 20px;
     background-color: rgba(255, 255, 255, 0.9);
-    width: 380px;
+    height: 86vh;
+    width: 310px;
     overflow-y: scroll;
     border-radius: 10px !important;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -105,23 +106,22 @@
       margin: auto;
       font-size: 14px;
       border-radius: 5px;
-      font-weight: bold;
       border: 1px solid $color-red;
     }
   }
-  
+
   .modal-content-1 {
     background-color: rgba(255, 255, 255, 0.9);
     transform: translateX(120%);
   }
-  
+
   .notification-title {
     font-size: 17px;
     background: $color-main;
     color: #fff;
-    padding: 1.2em 0 1.2em 1.2em;
+    padding: 0.6em 0 0.6em 1.2em;
     position: relative;
-  
+
     #notiCloseModal {
       position: absolute;
       right: 15px;
@@ -133,11 +133,11 @@
       background: #fff;
     }
   }
-  
+
   .is-close {
     color: $font-color-grey;
   }
-  
+
   .wrap-icon-noti {
     cursor: pointer;
     position: relative;
@@ -145,7 +145,7 @@
     .is-icon-noti {
       font-size: 30px;
     }
-  
+
     .noti-number {
       background-color: $color-main;
       padding: 0px 5px;
@@ -156,7 +156,7 @@
       margin-top: -35px;
     }
   }
-  
+
   .wrapper-notification {
     padding: 2px 15px 15px 15px;
     .one-notification {
@@ -164,6 +164,7 @@
       background-color: $color-grey-light;
       border-radius: 8px;
       .notification-container {
+        padding-top: 10px;
         .media {
           .media-body {
             padding: 0 15px;
@@ -171,7 +172,7 @@
             .is-content {
               font-size: 0.9rem;
             }
-  
+
             .is-content {
               color: #868686;
             }
@@ -180,10 +181,10 @@
       }
     }
   }
-  
+
   .reset-notification {
     padding: 15px 0;
-  
+
     .btn-reset-notification {
       background: $color-main;
       color: #fff;
@@ -194,15 +195,15 @@
       font-size: 14px;
     }
   }
-  
+
   @media (max-width: 576px) {
     .notification-content {
       width: 300px;
-  
+
       .notification-title {
         font-size: 14px !important;
       }
-  
+
       .wrapper-notification {
         .one-notification {
           font-size: 12px !important;
