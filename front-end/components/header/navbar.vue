@@ -27,24 +27,12 @@
       <div class="navbar-right">
         <div class="nav-button">
           <img src="~/assets/images/icon-navbar/local.png" alt="local" class="market-image" />
-          <div class="market-text">{{ address }}</div>
-          <nuxt-link v-if="username === ''" to="/login" class="ml-2" >
-            <my-button
-              class="is-btn-login ml-4"
-              content="Đăng nhập"
-              background="white"
-              backgroundHover="grey"
-              color="black"
-            />
+          <div class="market-text">{{ GET_POSITION }}</div>
+          <nuxt-link v-if="username === ''" to="/login" class="ml-2">
+            <my-button class="is-btn-login ml-4" content="Đăng nhập" background="white" backgroundHover="grey" color="black" />
           </nuxt-link>
-          <nuxt-link v-if="username === ''" to="/register" class="ml-2" >
-            <my-button
-              content="Đăng ký"
-              background="#28a745"
-              backgroundHover="grey"
-              color="white"
-              class="is-btn-register"
-            />
+          <nuxt-link v-if="username === ''" to="/register" class="ml-2">
+            <my-button content="Đăng ký" background="#28a745" backgroundHover="grey" color="white" class="is-btn-register" />
           </nuxt-link>
           <nuxt-link v-else to="/profile" class="ml-4">
             <div class="wrap-profile">
@@ -56,14 +44,11 @@
               </div>
             </div>
           </nuxt-link>
-          <notification v-if="username !== ''"/>
+          <notification v-if="username !== ''" />
         </div>
       </div>
     </nav>
-    <navmenu
-      :username="username"
-      :imgProfile="imgProfile"
-    />
+    <navmenu :username="username" :imgProfile="imgProfile" />
   </div>
 </template>
 
@@ -72,22 +57,25 @@
   import Navmenu from '../../components/header/navmenu.vue'
   import navbar from '../../assets/js/navbar'
   import MyButton from '~/components/share/button.vue'
+  import { mapGetters } from 'vuex'
+
   export default {
     name: 'Navbar',
     data() {
       return {
         username: 'Flame',
         imgProfile: '/images/flame.jpg',
-        address: 'Phòng D413, FPT university'
       }
+    },
+    computed: {
+      ...mapGetters([
+        'GET_POSITION',
+      ]),
     },
     components: {
       Notification,
       Navmenu,
       MyButton
-    },
-    beforeMount() {
-      navbar()
     }
   }
 
@@ -99,6 +87,7 @@
     width: 100%;
     top: 0;
     z-index: 999;
+
     .navbar {
       padding: 0.5em 1em !important;
       box-shadow: 0 5px 6px rgba(0, 0, 0, 0.05);

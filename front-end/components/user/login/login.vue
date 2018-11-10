@@ -1,19 +1,13 @@
 <template>
 <div class="wrap-login">
   <div class="container">
-    <div class="crumb d-none d-md-block">
-      <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
-        <li class="breadcrumb-item active">Đăng nhập</li>
-      </ul>
-    </div>
     <div class="row">
       <div class="wrap-content col-md-10 offset-md-1">
         <div class="title">
           <h3>Đăng nhập</h3>
         </div>
         <div class="form-info">
-          <form action="">
+          <form @submit.prevent="signin">
             <div class="form-group row">
               <label for="username" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Tên đăng nhập</label>
               <div class="col-sm-12 col-md-7 col-lg-7">
@@ -79,7 +73,21 @@ import MyButton from '~/components/share/button.vue';
     components: {
       MyButton
     },
-  }
+    methods: {
+      signin() {
+        this.$axios.post(`api/user/signin`, {
+          username: this.username,
+          password: this.password
+        })
+        .then(result => {
+          console.log(result)
+        })
+        .catch(err => {
+          console.log(err)
+        })
+      }
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -87,6 +95,7 @@ import MyButton from '~/components/share/button.vue';
   .wrap-login {
     background-color: $color-background;
     padding-bottom: 4rem;
+    padding-top:45px;
     .breadcrumb{
       background-color:  $color-background;
       .breadcrumb-item:first-child::after{

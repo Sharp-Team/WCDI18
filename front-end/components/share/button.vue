@@ -36,9 +36,11 @@ $anim-text-offset: 1em;
   overflow: hidden;
   opacity: 1;
   border-radius: 4px;
+  padding: 0 25px;
   &__text{
     display: block;
-        padding: 5px 25px;
+    padding: 5px 25px 0 25px;
+    height: 36px;
     font-weight: 500;
     &:before{
       content: attr(title);
@@ -54,6 +56,7 @@ $anim-text-offset: 1em;
   &__mask{
     display: block;
     position: absolute;
+    padding: 0 25px;
     top: 0; left: 0; right: 0; bottom: 0;
     background: white;
     transform: translateX(-100%) rotate(45deg);

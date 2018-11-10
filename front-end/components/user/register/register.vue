@@ -1,138 +1,198 @@
 <template>
-<div class="wrap-register">
-  <div class="container">
-    <div class="crumb d-none d-md-block">
-      <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
-        <li class="breadcrumb-item active">Đăng ký</li>
-      </ul>
-    </div>
-    <div class="row">
-      <div class="wrap-content col-md-10 offset-md-1">
-        <div class="title">
-          <h3>Đăng ký tài khoản</h3>
-        </div>
-        <div class="form-info">
-          <form action="">
-            <div class="form-group row">
-              <label for="fullname" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Họ tên</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <input
-                  v-model="fullname"
-                  type="text"
-                  class="form-control"
-                  id="fullname">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="useremail" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Email</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <input
-                  v-model="useremail"
-                  type="text"
-                  class="form-control"
-                  id="useremail">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="userphone" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Số điện thoại</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <input
-                  v-model="userphone"
-                  type="number"
-                  class="form-control"
-                  id="userphone">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="username" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Tên đăng nhập</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <input
-                  v-model="username"
-                  type="text"
-                  class="form-control"
-                  id="username">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="password" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Mật khẩu</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <input
-                  v-model="password"
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  value="" >
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="re-password" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Nhập lại Mật khẩu</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <input
-                  v-model="rePassword"
-                  type="password"
-                  class="form-control"
-                  id="re-password"
-                  value="" >
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="avatar" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Ảnh cá nhân</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <div class="file">
-                  <input type="file"
-                    name="file"
-                    id="avatar"
-                    ref="fileInput"
-                    accept="image/*"
-                    @change="onFilePicked">
-                  <label for="file">Tải ảnh lên</label>
+  <div class="wrap-register">
+    <div class="container">
+      <div class="row">
+        <div class="wrap-content col-md-10 offset-md-1">
+          <div class="title">
+            <h3>Đăng ký tài khoản</h3>
+          </div>
+          <div class="form-info">
+            <form @submit.prevent="signup">
+              <div class="form-group row">
+                <label
+                  for="fullname"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Họ tên
+                </label>
+                <div class="col-sm-12 col-md-7 col-lg-7">
+                  <input
+                    v-model="fullname"
+                    type="text"
+                    class="form-control"
+                    id="fullname"
+                  >
                 </div>
               </div>
-            </div>
-            <div class="form-group row">
-              <label for="province" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Tỉnh/ Thành phố</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <select v-model="provinceSelected"  class="form-control">
-                  <option v-for="province in provinces" :key=province.id>
-                    {{ province.name }}
-                  </option>
-                </select>
+              <div class="form-group row">
+                <label
+                  for="email"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Email
+                </label>
+                <div class="col-sm-12 col-md-7 col-lg-7">
+                  <input
+                    v-model="email"
+                    type="text"
+                    class="form-control"
+                    id="useremail"
+                  >
+                </div>
               </div>
-            </div>
-            <div class="form-group row">
-              <label for="district" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Quận/ Huyện</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <select v-model="districtSelected" class="form-control">
-                  <option v-for="district in districts" :key=district.id>
-                    {{ district.name }}
-                  </option>
-                </select>
+              <div class="form-group row">
+                <label
+                  for="phone"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Số điện thoại
+                </label>
+                <div class="col-sm-12 col-md-7 col-lg-7">
+                  <input
+                    v-model="phone"
+                    type="number"
+                    class="form-control"
+                    id="userphone"
+                  >
+                </div>
               </div>
-            </div>
-            <div class="form-group row">
-              <label for="ward" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Phường/ Xã</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <select v-model="wardSelected" class="form-control">
-                  <option v-for="ward in wards" :key=ward.id>
-                    {{ ward.name }}
-                  </option>
-                </select>
+              <div class="form-group row">
+                <label
+                  for="username"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Tên đăng nhập
+                </label>
+                <div class="col-sm-12 col-md-7 col-lg-7">
+                  <input
+                    v-model="username"
+                    type="text"
+                    class="form-control"
+                    id="username"
+                  >
+                </div>
               </div>
-            </div>
-            <div class="form-group row">
-              <label for="addressdetail" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Địa chỉ cụ thể</label>
-              <div class="col-sm-12 col-md-7 col-lg-7">
-                <textarea
-                  v-model="addressdetail"
-                  type="text"
-                  class="form-control"
-                  placeholder="Số nhà, ngõ, phố"
-                  rows="3" />
+              <div class="form-group row">
+                <label
+                  for="password"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Mật khẩu
+                </label>
+                <div class="col-sm-12 col-md-7 col-lg-7">
+                  <input
+                    v-model="password"
+                    type="password"
+                    class="form-control"
+                    id="password"
+                  >
+                </div>
               </div>
+              <div class="form-group row">
+                <label
+                  for="re-password"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Nhập lại Mật khẩu
+                </label>
+                <div class="col-sm-12 col-md-7 col-lg-7">
+                  <input
+                    v-model="rePassword"
+                    type="password"
+                    class="form-control"
+                    id="re-password"
+                  >
+                </div>
+              </div>
+              <div class="form-group row">
+                <label
+                  for="avatar"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Ảnh cá nhân
+                </label>
+                <div class="col-sm-12 col-md-7 col-lg-7">
+                  <div class="file">
+                    <input
+                      type="file"
+                      name="file"
+                      id="avatar"
+                      ref="fileInput"
+                      accept="image/*"
+                      @change="onFilePicked"
+                    >
+                    <label for="file">
+                      Tải ảnh lên
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label
+                  for="province"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Tỉnh/ Thành phố
+                </label>
+                <div class="col-sm-12 col-md-7 col-lg-7">
+                  <select
+                    v-model="provinceSelected"
+                    class="form-control"
+                  >
+                    <option
+                      v-for="province in listProvinces"
+                      :key=province.id
+                      :value="province">
+                      {{ province }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label
+                  for="district"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Quận/ Huyện
+                </label>
+                <div class="col-sm-12 col-md-7 col-lg-7">
+                  <select
+                    v-model="districtSelected"
+                    class="form-control"
+                  >
+                    <option
+                      v-for="district in listDistricts"
+                      :key=district.id>
+                      {{ district.properties.Ten_Huyen }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label
+                  for="addressdetail"
+                  class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+                >
+                  Địa chỉ cụ thể
+                </label>
+                <div class="col-sm-12 col-md-7 col-lg-7">
+                  <textarea
+                    v-model="address"
+                    type="text" class="form-control"
+                    placeholder="Số nhà, ngõ, phố"
+                    rows="3"
+                  >
+                    Đây là địa chỉ
+                  </textarea>
+                  </div>
             </div>
             <div class="form-group row">
-              <label for="isuser" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Đối tượng</label>
+              <label
+                for="isuser"
+                class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+              >
+                Đối tượng
+              </label>
               <div class="col-sm-12 col-md-7 col-lg-7 mt-2">
                 <div class="custom-control custom-radio custom-control-inline">
                   <input
@@ -140,9 +200,14 @@
                     value="Khách hàng"
                     id="checkisuser1"
                     name="typeuser"
-                    v-model="pickUser"
+                    v-model="object"
                     class="custom-control-input">
-                  <label class="custom-control-label" for="checkisuser1">Khách hàng</label>
+                  <label
+                    class="custom-control-label"
+                    for="checkisuser1"
+                  >
+                    Khách hàng
+                  </label>
                 </div>
                 <div class="custom-control custom-radio">
                   <input
@@ -150,14 +215,24 @@
                     value="Người làm việc"
                     id="checkisuser2"
                     name="typeuser"
-                    v-model="pickUser"
+                    v-model="object"
                     class="custom-control-input">
-                  <label class="custom-control-label" for="checkisuser2">Người làm việc</label>
+                  <label
+                    class="custom-control-label"
+                    for="checkisuser2">Người làm việc</label>
                 </div>
               </div>
             </div>
-            <div v-if="pickUser ==='Người làm việc'" class="form-group row">
-              <label for="cmnd" class="col-sm-12 col-md-4 col-lg-3 col-form-label">CMND</label>
+            <div
+              v-if="object ==='Người làm việc'"
+              class="form-group row"
+            >
+              <label
+                for="cmnd"
+                class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+              >
+                CMND
+              </label>
               <div class="col-sm-12 col-md-7 col-lg-7">
                 <div class="file">
                   <input type="file"
@@ -166,43 +241,33 @@
                     ref="fileInput"
                     accept="image/*"
                     @change="onFileCMNDPicked">
-                  <label for="fileCMND">Tải ảnh lên</label>
+                  <label for="fileCMND">
+                    Tải ảnh lên
+                  </label>
                 </div>
               </div>
             </div>
-            <div v-if="pickUser ==='Người làm việc'" class="form-group row">
-              <label for="jobuser" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Nghề nghiệp</label>
+            <div
+              v-if="object ==='Người làm việc'"
+              class="form-group row"
+            >
+              <label
+                for="jobuser"
+                class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+              >
+                Nghề nghiệp
+              </label>
               <div class="col-sm-12 col-md-7 col-lg-7">
-                <select v-model="jobSelected"  class="form-control">
-                  <option v-for="job in jobs" :key=job.id>
+                <select
+                  v-model="jobSelected"
+                  class="form-control">
+                  <option
+                    v-for="job in jobs"
+                    :key="job.id"
+                  >
                     {{ job.name }}
                   </option>
                 </select>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="isuser" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Loại địa chỉ</label>
-              <div class="col-sm-12 col-md-7 col-lg-7 mt-2">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input
-                    type="radio"
-                    value="Nhà riêng, chung cư"
-                    id="checkhomeuser1"
-                    name="typehome"
-                    v-model="pickHome"
-                    class="custom-control-input">
-                  <label class="custom-control-label" for="checkhomeuser1">Nhà riêng, chung cư</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    value="Cơ quan, Công ty"
-                    id="checkhomeuser2"
-                    name="typehome"
-                    v-model="pickHome"
-                    class="custom-control-input">
-                  <label class="custom-control-label" for="checkhomeuser2">Cơ quan, Công ty</label>
-                </div>
               </div>
             </div>
             <div class="form-group row">
@@ -251,69 +316,64 @@
 
 <script>
 import MyButton from '~/components/share/button.vue';
+const vietnam = require('~/assets/json/data-viet-nam.json')
+const jobs = require('~/assets/json/data-job.json')
+
 export default {
   name: 'Register',
   data () {
     return {
-      fullname: '',
-      useremail: '',
-      userphone: '',
+      vietnam,
+      jobs,
       username: '',
       password: '',
+      email: '',
+      fullname: '',
+      phone: '',
       rePassword: '',
-      addressdetail: '',
-      provinceSelected: 'Hưng Yên',
-      districtSelected: 'Văn Lâm',
-      wardSelected: 'Đình Dù',
-      provinces: [{
-          name: 'Hồ Chí Minh'
-        },
-        {
-          name: 'Hưng Yên'
-        },
-        {
-          name: 'Hà Nội'
-        },
-      ],
-      districts: [{
-          name: 'Vĩnh Khúc'
-        },
-        {
-          name: 'Văn Lâm'
-        },
-        {
-          name: 'Văn Giang'
-        },
-      ],
-      wards: [{
-          name: 'Đình Dù'
-        },
-        {
-          name: 'Lạc Hồng'
-        },
-        {
-          name: 'Chỉ Đạo'
-        },
-      ],
-      jobs: [{
-          name: 'Sửa xe máy'
-        },
-        {
-          name: 'Sửa quạt, điều hòa,...'
-        },
-        {
-          name: 'Sửa máy tính'
-        },
-      ],
-      pickUser: '',
-      pickHome: '',
-      jobSelected: 'Sửa quạt, điều hòa,...'
+      address: '',
+      provinceSelected: '',
+      districtSelected: '',
+      imageAvatarUrl: '',
+      imageCardUrl: '',
+      object: '',
+      jobSelected: ''
+    }
+  },
+  computed: {
+    listProvinces: function () {
+      return [...new Set(this.vietnam.features.map(i=>i.properties.Ten_Tinh))]
+    },
+    listDistricts: function() {
+      return [...new Set(this.vietnam.features.filter(i=>i.properties.Ten_Tinh===this.provinceSelected))]
     }
   },
   components: {
     MyButton
   },
   methods: {
+    signup () {
+      this.$axios.post(`api/user/signup`, {
+        username: this.username,
+        password: this.password,
+        avatar: this.imageAvatarUrl,
+        email: this.email,
+        full_name: this.fullname,
+        phone_number: this.phone,
+        province: this.provinceSelected,
+        district: this.districtSelected,
+        address_detail: this.address,
+        indentify_card: this.imageCardUrl,
+        object: this.object,
+        career: this.jobSelected
+      })
+      .then(result => {
+        console.log(result)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },
     onFilePicked (event) {
       const files = event.target.files
       let fileName = files[0].name
@@ -322,10 +382,10 @@ export default {
       }
       const fileReader = new FileReader()
       fileReader.addEventListener('load', () => {
-        this.imageUrl = fileReader.result
+        this.imageAvatarUrl = fileReader.result
       })
       fileReader.readAsDataURL(files[0])
-      this.image = files[0]
+      this.imageAvatar = files[0]
     },
     onFileCMNDPicked (event) {
       const files = event.target.files
@@ -335,12 +395,12 @@ export default {
       }
       const fileReader = new FileReader()
       fileReader.addEventListener('load', () => {
-        this.imageUrl = fileReader.result
+        this.imageCardUrl = fileReader.result
       })
       fileReader.readAsDataURL(files[0])
-      this.image = files[0]
+      this.imageCard = files[0]
     }
-  }
+  },
 }
 </script>
 
@@ -349,6 +409,7 @@ export default {
   .wrap-register {
     background-color: $color-background;
     padding-bottom: 4rem;
+    padding-top: 45px;
     .breadcrumb{
       background-color:  $color-background;
       .breadcrumb-item:first-child::after{

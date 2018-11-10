@@ -4,13 +4,25 @@
       <h3>Thông tin tài khoản</h3>
       <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" data-toggle="tab" href="#home">Thông tin cơ bản</a>
+          <a
+            class="nav-link"
+            data-toggle="tab"
+            href="#home"
+            :class="[active === 'profile' ? 'active' : '']">Thông tin cơ bản</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#menu1">Đổi mật khẩu</a>
+          <a
+            class="nav-link"
+            data-toggle="tab"
+            href="#menu1"
+            :class="[active === 'password' ? 'active' : '']">Đổi mật khẩu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#menu2">Lịch sử</a>
+          <a
+            class="nav-link"
+            data-toggle="tab"
+            href="#menu2"
+            :class="[active === 'history' ? 'active' : '']">Lịch sử</a>
         </li>
       </ul>
     </div>
@@ -36,6 +48,11 @@
   import PasswordForm from './../change-password/PasswordForm'
   import TableData from './../history/TableData'
   export default {
+    props: {
+      active: {
+        type: String
+      }
+    },
     components: {
       ProfileForm,
       PasswordForm,

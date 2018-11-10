@@ -1,12 +1,6 @@
 <template>
 <div class="profile">
   <div class="container">
-    <div class="crumb d-none d-md-block">
-      <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
-        <li class="breadcrumb-item active">Thông tin cá nhân</li>
-      </ul>
-    </div>
     <div class="row content">
       <div class="left col-md-3 col-sm-12">
         <card-left></card-left>
@@ -20,7 +14,7 @@
         <card-right></card-right>
         <!-- Tab-List -->
         <div class="tab-list d-block d-sm-none">
-            <tab-list></tab-list>
+            <tab-list active="history"></tab-list>
         </div>
       </div>
     </div>
