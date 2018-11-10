@@ -401,9 +401,6 @@ export default {
       this.imageCard = files[0]
     }
   },
-  beforeMount() {
-    console.log(this.jobs);
-  },
 }
 </script>
 

@@ -57,6 +57,7 @@
   import Navmenu from '../../components/header/navmenu.vue'
   import navbar from '../../assets/js/navbar'
   import MyButton from '~/components/share/button.vue'
+
   export default {
     name: 'Navbar',
     data() {

@@ -11,7 +11,31 @@ beforeMount() {
     $('[data-toggle="popover"]').popover({
         placement : 'top',
         html : true,
-        content : '<table><tr><td class="title_tr">Họ và tên</td><td class="content">Phan Văn Đức</td></tr><tr><td class="title_tr">Địa chỉ E-Mail</td><td class="content">phanduc0908@gmail.com</td></tr><tr><td class="title_tr">Số điện thoại</td><td class="content">0981131870</td></tr><tr><td class="title_tr">Địa chi</td><td class="content">Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội</td></tr></table>'
+        content : `
+          <h3>Thông tin chi tiết</h3>
+          <table class="table">
+            <tr>
+              <td>Họ và tên</td>
+              <td style="font-weight: bold">Phan Văn Đức</td>
+            </tr>
+            <tr class="table-success">
+              <td>Email</td>
+              <td style="font-weight: bold">phanduc0908@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Số điện thoại</td>
+              <td style="font-weight: bold">0981131870</td>
+            </tr>
+            <tr class="table-success">
+              <td>Địa chi</td>
+              <td style="font-weight: bold">Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội</td>
+            </tr>
+            <tr>
+                <td>Nội dung</td>
+                <td style="font-weight: bold">Hỏng gương xe máy honda ABCDE</td>
+              </tr>
+          </table>
+        `
     });
     $(document).on("click", ".popover .close" , function(){
         $(this).parents(".popover").popover('hide');

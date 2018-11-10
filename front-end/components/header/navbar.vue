@@ -27,7 +27,7 @@
       <div class="navbar-right">
         <div class="nav-button">
           <img src="~/assets/images/icon-navbar/local.png" alt="local" class="market-image" />
-          <div class="market-text">{{ address }}</div>
+          <div class="market-text">{{ GET_POSITION }}</div>
           <nuxt-link v-if="username === ''" to="/login" class="ml-2">
             <my-button class="is-btn-login ml-4" content="Đăng nhập" background="white" backgroundHover="grey" color="black" />
           </nuxt-link>
@@ -57,14 +57,20 @@
   import Navmenu from '../../components/header/navmenu.vue'
   import navbar from '../../assets/js/navbar'
   import MyButton from '~/components/share/button.vue'
+  import { mapGetters } from 'vuex'
+
   export default {
     name: 'Navbar',
     data() {
       return {
         username: 'Flame',
         imgProfile: '/images/flame.jpg',
-        address: 'Phòng D413, FPT university'
       }
+    },
+    computed: {
+      ...mapGetters([
+        'GET_POSITION',
+      ]),
     },
     components: {
       Notification,
