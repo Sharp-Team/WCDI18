@@ -462,7 +462,7 @@
   #map {
     background-color: #2EBE4A;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     margin-top: 54px;
   }
 

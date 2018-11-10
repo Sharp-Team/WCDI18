@@ -89,7 +89,7 @@
                 </div>
                 <input
                   type="range"
-                  min="10"
+                  min="0"
                   max=30
                   v-model.number="range">
               </div>
@@ -148,6 +148,19 @@
 <style lang="scss" scoped>
   @import '~assets/scss/variable.scss';
 
+  .noti-image {
+    margin-right: 7px;
+  }
+
+  .is-content {
+    font-size: 0.8rem !important;
+  }
+
+  .input {
+    background-color: #f9f9f9;
+    border-radius: 20px;
+  }
+
   .is-modal {
     visibility: hidden;
     position: fixed;
@@ -186,7 +199,7 @@
     font-size: 17px;
     background: $color-main;
     color: #fff;
-    padding: 1.2em 0 1.2em 1.2em;
+    padding: 0.6em 0 0.6em 1.2em;
     position: relative;
 
     #scanCloseModal {

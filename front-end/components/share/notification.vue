@@ -59,7 +59,7 @@
 </style>
 
 <script>
-  import notification from '../../assets/js/notification';
+  import notification from '~/assets/js/notification';
   export default {
     beforeMount() {
       notification()
