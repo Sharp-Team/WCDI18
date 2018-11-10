@@ -220,11 +220,13 @@
           }
         });
       },
-      clearMarkers(mapCurrent) {
-        // markers = [];
+      clearMarkers() {
+        for (var i = 0; i < this.markers.length; i++) {
+          this.markers[i].setMap(null);
+        }
       },
       showMarker(mapCurrent, icons, job) {
-        this.clearMarkers(mapCurrent)
+        this.clearMarkers()
         var infowindow = new google.maps.InfoWindow()
         this.features.forEach((feature) => {
           window.setTimeout(() => {
@@ -235,6 +237,7 @@
               animation: google.maps.Animation.BOUNCE,
               map: mapCurrent,
             })
+            this.markers.push(marker)
             google.maps.event.addListener(marker, 'click', function () {
               infowindow.close();
               infowindow.setContent(`
@@ -430,7 +433,6 @@
             if (status === 'OK') {
               if (results[0]) {
                 this.$store.dispatch('SET_POSITION', results[0].formatted_address)
-                console.log(results[0])
               } else {
                 window.alert('No results found');
               }
