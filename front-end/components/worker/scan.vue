@@ -166,7 +166,7 @@
     top: 20px;
     bottom: 20px;
     background-color: rgba(255, 255, 255, 0.9);
-    width: 380px;
+    width: 310px;
     overflow-y: scroll;
     border: 0 !important;
     border-radius: 10px !important;
