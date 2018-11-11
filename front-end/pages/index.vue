@@ -101,13 +101,6 @@
         }
         navigator.geolocation.getCurrentPosition(success, error);
       }
-    },
-    head: {
-      script: [{
-        src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBQjtj0TxFDfqm8uQbovjJ0pEVtkCgePCw&',
-        async: true,
-        defer: true
-      }]
     }
   }
 

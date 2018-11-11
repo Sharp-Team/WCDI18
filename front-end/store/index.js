@@ -6,8 +6,7 @@ import getters from '~/store/getters'
 const store = () =>
   new Vuex.Store({
     state: {
-      range: 5,
-      position: null
+      range: 5
     },
     getters,
     mutations,

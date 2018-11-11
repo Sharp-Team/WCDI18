@@ -27,7 +27,7 @@
       <div class="navbar-right">
         <div class="nav-button">
           <img src="~/assets/images/icon-navbar/local.png" alt="local" class="market-image" />
-          <div class="market-text">{{ GET_POSITION }}</div>
+          <div class="market-text">{{ address }}</div>
           <nuxt-link v-if="username === ''" to="/login" class="ml-2">
             <my-button class="is-btn-login ml-4" content="Đăng nhập" background="white" backgroundHover="grey" color="black" />
           </nuxt-link>
@@ -65,18 +65,45 @@
       return {
         username: 'Flame',
         imgProfile: '/images/flame.jpg',
+        address: 'Room D413, FPT University'
       }
-    },
-    computed: {
-      ...mapGetters([
-        'GET_POSITION',
-      ]),
     },
     components: {
       Notification,
       Navmenu,
       MyButton
-    }
+    },
+    mounted() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            }
+            var geocoder = new google.maps.Geocoder()
+            geocoder.geocode({
+              location: pos
+            }, (results, status) => {
+              if (status === 'OK') {
+                if (results[0]) {
+                  this.address = results[0].formatted_address
+                } else {
+                  window.alert('No results found')
+                }
+              } else {
+                window.alert('Geocoder failed due to: ' + status)
+              }
+            })
+          },
+          function () {
+            handleLocationError(true, infoWindow, this.map.getCenter())
+          }
+        )
+      } else {
+        handleLocationError(false, infoWindow, map.getCenter())
+      }
+    },
   }
 
 </script>

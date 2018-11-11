@@ -77,7 +77,6 @@
         return window.scrollY
       },
       handleScroll() {
-        console.log('object')
         const narbar = document.getElementsByClassName('navbar')[0]
         if (this.getOffsetTop() > 50) {
           narbar.classList.remove('section-empty')
@@ -89,7 +88,38 @@
     beforeMount() {
       navbar()
       window.addEventListener('scroll', this.handleScroll)
-    }
+    },
+    mounted() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            }
+            var geocoder = new google.maps.Geocoder()
+            geocoder.geocode({
+              location: pos
+            }, (results, status) => {
+              if (status === 'OK') {
+                if (results[0]) {
+                  this.address = results[0].formatted_address
+                } else {
+                  window.alert('No results found')
+                }
+              } else {
+                window.alert('Geocoder failed due to: ' + status)
+              }
+            })
+          },
+          function () {
+            handleLocationError(true, infoWindow, this.map.getCenter())
+          }
+        )
+      } else {
+        handleLocationError(false, infoWindow, map.getCenter())
+      }
+    },
   }
 
 </script>
@@ -118,6 +148,7 @@
     .nav-item {
       .nav-link {
         color: #8c8c8c !important;
+
         &:hover {
           opacity: 0.8;
         }
