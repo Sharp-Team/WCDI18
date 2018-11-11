@@ -60,37 +60,20 @@ module.exports = {
     ]
   },
 
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
+  loading: { color: '#ff0000' },
 
-  /*
-  ** Global CSS
-  */
   css: ['~/assets/scss/main.scss'],
 
-  /*
-  ** Plugins to load before mounting the App
-  */
   // plugins: [{ src: '~/plugins/positionCurrent.js', ssr: false }],
 
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     'nuxt-buefy'
   ],
-  /*
-  ** Axios module configuration
-  */
   axios: {
     proxy: true
-    // See https://github.com/nuxt-community/axios-module#options
   },
   proxy: {
     '/api': {
@@ -99,14 +82,9 @@ module.exports = {
       pathRewrite: { '^/api': '' }
     }
   },
-  /*
-  ** Build configuration
-  */
+
   build: {
     vendors: ['babel-polyfill'],
-    /*
-    ** You can extend webpack config here
-    */
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
@@ -117,16 +95,6 @@ module.exports = {
         //   exclude: /(node_modules)/
         // })
       }
-      // if (!ctx.isClient) {
-      //   // This instructs Webpack to include `vue2-google-maps`'s Vue files
-      //   config.externals.splice(0, 0, function(context, request, callback) {
-      //     if (/^vue2-google-maps($|\/)/.test(request)) {
-      //       callback(null, false)
-      //     } else {
-      //       callback()
-      //     }
-      //   })
-      // }
     },
     serverMiddleware: [
       // API middleware

@@ -615,7 +615,7 @@
     height: 100%;
     position: relative;
     height: 100vh;
-    background-image: url('../../assets/images/slider/slider.png');
+    background-image: url('/images/slider/slider.png');
 
     .map {
       width: 100%;

@@ -24,7 +24,7 @@
                 </div>
                 <p class="my-0 mt-1 is-content">
                   <img
-                    src="~/assets/images/icon-navbar/local.png"
+                    src="/images/icon-navbar/local.png"
                     alt="local"
                     class="noti-image"
                   />

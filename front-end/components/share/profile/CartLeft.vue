@@ -2,7 +2,7 @@
     <div>
         <div class="avata-img d-none d-md-block">
           <img
-            src="~/assets/images/icon-navbar/user.jpg"
+            src="/images/icon-navbar/user.jpg"
             alt="">
         </div>
         <div class="profile-score">

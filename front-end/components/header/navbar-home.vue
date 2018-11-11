@@ -42,14 +42,14 @@
         class="navbar-branch"
         id="idNavBranch">
         <img
-          src="~/assets/images/icon-navbar/logo-navbar.png"
+          src="/images/icon-navbar/logo-navbar.png"
           alt="nav-img"
           class="nav-img" />
       </div>
       <div class="navbar-right">
         <div class="nav-button">
           <img
-            src="~/assets/images/icon-navbar/local.png"
+            src="/images/icon-navbar/local.png"
             alt="local"
             class="market-image" />
           <div class="market-text">{{ address }}</div>

@@ -21,7 +21,6 @@
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.1.0",
     "sass-loader": "^7.1.0",
-    "vue2-google-maps": "^0.10.2",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
