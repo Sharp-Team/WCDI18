@@ -446,13 +446,6 @@
       } else {
         handleLocationError(false, infoWindow, map.getCenter());
       }
-    },
-    head: {
-      script: [{
-        src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBQjtj0TxFDfqm8uQbovjJ0pEVtkCgePCw&',
-        async: true,
-        defer: true
-      }]
     }
   }
 

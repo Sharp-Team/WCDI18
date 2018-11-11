@@ -50,6 +50,12 @@ module.exports = {
         integrity:
           'sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy',
         crossorigin: 'anonymous'
+      },
+      {
+        src:
+          'https://maps.googleapis.com/maps/api/js?key=AIzaSyBQjtj0TxFDfqm8uQbovjJ0pEVtkCgePCw&',
+        async: true,
+        defer: true
       }
     ]
   },
