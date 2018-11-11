@@ -1,7 +1,13 @@
 <template>
   <div>
     <div id="floating-panel">
-      <button id="drop" @click="showMarker(map, icons, job)" class="btn btn-success">Hiện marker</button>
+      <button
+        id="drop"
+        @click="showMarker(map, icons, job)"
+        class="btn btn-success"
+      >
+        Hiện marker
+      </button>
     </div>
     <div id="map"></div>
     <div id="legend">

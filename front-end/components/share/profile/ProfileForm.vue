@@ -3,7 +3,12 @@
     <form action="">
       <!-- Full Name -->
       <div class="form-group row">
-        <label for="fullname" class="col-sm-12 col-md-3 col-form-label">Họ tên đầy đủ</label>
+        <label
+          for="fullname"
+          class="col-sm-12 col-md-3 col-form-label"
+        >
+          Họ tên đầy đủ
+        </label>
         <div class="col-sm-12 col-md-7">
           <input
             type="text"
@@ -15,7 +20,12 @@
       </div>
       <!-- Username -->
       <div class="form-group row">
-        <label for="username" class="col-sm-12 col-md-3 col-form-label">Tên đăng nhập</label>
+        <label
+          for="username"
+          class="col-sm-12 col-md-3 col-form-label"
+        >
+          Tên đăng nhập
+        </label>
         <div class="col-sm-12 col-md-7">
           <input
             type="text"
@@ -27,7 +37,12 @@
       </div>
       <!-- Email -->
       <div class="form-group row">
-        <label for="email" class="col-sm-3 col-form-label">Địa chỉ E-mail</label>
+        <label
+          for="email"
+          class="col-sm-3 col-form-label"
+        >
+          Địa chỉ E-mail
+        </label>
         <div class="col-sm-12 col-md-7">
           <input
             type="text"
@@ -39,7 +54,12 @@
       </div>
       <!-- Mobile -->
       <div class="form-group row">
-        <label for="mobile" class="col-sm-12 col-md-3 col-form-label">Số điện thoại</label>
+        <label
+          for="mobile"
+          class="col-sm-12 col-md-3 col-form-label"
+        >
+          Số điện thoại
+        </label>
         <div class="col-sm-12 col-md-7">
           <input
             type="text"
@@ -55,27 +75,49 @@
       </div>
       <!-- Đối tượng -->
       <div class="form-group row">
-        <label for="" class="col-sm-12 col-md-3 col-form-label">Đối tượng</label>
+        <label
+          for=""
+          class="col-sm-12 col-md-3 col-form-label"
+        >
+          Đối tượng
+        </label>
         <div class="col-sm-12 col-md-7">
-          <select class="form-control" disabled>
+          <select
+            class="form-control"
+            disabled>
             <option>{{ groupUser }}</option>
           </select>
         </div>
       </div>
       <!-- Address -->
       <div class="form-group row">
-        <label for="" class="col-sm-12 col-md-3 col-form-label">Tỉnh/Thành phố</label>
+        <label
+          for=""
+          class="col-sm-12 col-md-3 col-form-label"
+        >
+          Tỉnh/Thành phố
+        </label>
         <div class="col-sm-12 col-md-7">
-          <select class="form-control" disabled>
+          <select
+            class="form-control"
+            disabled
+          >
             <option>{{ province }}</option>
           </select>
         </div>
       </div>
 
       <div class="form-group row">
-        <label for="" class="col-sm-12 col-md-3 col-form-label">Quận/Huyện</label>
+        <label
+          for=""
+          class="col-sm-12 col-md-3 col-form-label"
+        >
+          Quận/Huyện
+        </label>
         <div class="col-sm-12 col-md-7">
-          <select class="form-control" disabled>
+          <select
+            class="form-control"
+            disabled>
             <option>{{ district }}</option>
           </select>
         </div>
@@ -84,15 +126,26 @@
       <div class="form-group row">
         <label for="" class="col-sm-12 col-md-3 col-form-label">Địa chỉ</label>
         <div class="col-sm-12 col-md-7">
-          <textarea class="form-control" rows="3" disabled v-model="address">
+          <textarea
+            class="form-control"
+            rows="3"
+            disabled
+            v-model="address">
           </textarea>
         </div>
       </div>
 
       <div class="form-group row">
-        <label for="" class="col-sm-12 col-md-3 col-form-label">Loại địa chỉ</label>
+        <label
+          for=""
+          class="col-sm-12 col-md-3 col-form-label"
+        >
+          Loại địa chỉ
+        </label>
         <div class="col-sm-12 col-md-7">
-          <select class="form-control" disabled>
+          <select
+            class="form-control"
+            disabled>
             <option>{{ groupAddress }}</option>
           </select>
         </div>

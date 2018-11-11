@@ -1,16 +1,24 @@
 <template>
   <div>
-    <div class="modal is-modal" id="noti-Modal">
-      <div class="notification-content modal-content-1 ml-2" id="noti-ModalContent">
-        <h6 class="notification-title">Thông báo (3) <i class="fas fa-times is-IconClose" id="notiCloseModal"></i></h6>
+    <div
+      class="modal is-modal"
+      id="noti-Modal">
+      <div
+        class="notification-content modal-content-1 ml-2"
+        id="noti-ModalContent">
+        <h6 class="notification-title">
+          Thông báo (3)
+          <i class="fas fa-times is-IconClose" id="notiCloseModal"></i>
+        </h6>
         <div class="wrapper-notification">
           <div class="one-notification">
             <div class="notification-container">
               <div class="media">
                 <div class="media-body">
                   <div class="d-flex justify-content-between">
-                    <h5 class="mt-0 mb-1 title-notification">Yêu cầu sửa xe máy</h5>
-                    <!-- <i class="fas fa-times is-close"></i> -->
+                    <h5 class="mt-0 mb-1 title-notification">
+                      Yêu cầu sửa xe máy
+                    </h5>
                   </div>
                   <p class="my-0 is-content">
                     Km29 đại lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội
@@ -20,10 +28,20 @@
               <!-- Button action -->
               <div class="d-flex justify-content-end">
                 <div class="p-2">
-                  <button type="button" class="btn-confirm-noti">Xác nhận</button>
+                  <button
+                    type="button"
+                    class="btn-confirm-noti"
+                  >
+                    Xác nhận
+                  </button>
                 </div>
                 <div class="p-2">
-                    <button type="button" class="btn-cancel-noti">Huỷ</button>
+                  <button
+                    type="button"
+                    class="btn-cancel-noti"
+                  >
+                    Huỷ
+                  </button>
                 </div>
               </div>
             </div>
@@ -33,8 +51,9 @@
               <div class="media">
                 <div class="media-body">
                   <div class="d-flex justify-content-between">
-                    <h5 class="mt-0 mb-1 title-notification"> Yêu cầu sửa ô tô</h5>
-                    <!-- <i class="fas fa-times is-close"></i> -->
+                    <h5 class="mt-0 mb-1 title-notification">
+                      Yêu cầu sửa ô tô
+                    </h5>
                   </div>
                   <p class="my-0 is-content">
                     Giao dịch sửa xe đã hoàn thành xong. Cảm ơn bạn đã sử dụng dịch vụ
@@ -44,10 +63,20 @@
               <!-- Button Action -->
               <div class="d-flex justify-content-end">
                 <div class="p-2">
-                  <button type="button" class="btn-confirm-noti">Xác nhận</button>
+                  <button
+                    type="button"
+                    class="btn-confirm-noti"
+                  >
+                    Xác nhận
+                  </button>
                 </div>
                 <div class="p-2">
-                    <button type="button" class="btn-cancel-noti">Huỷ</button>
+                    <button
+                      type="button"
+                      class="btn-cancel-noti"
+                    >
+                      Huỷ
+                    </button>
                 </div>
               </div>
             </div>

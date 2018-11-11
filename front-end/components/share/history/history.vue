@@ -8,7 +8,10 @@
       <div class="right col-md-9">
         <div class="search d-none d-sm-block">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Tìm kiếm ...">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Tìm kiếm ...">
           </div>
         </div>
         <card-right></card-right>
@@ -27,11 +30,11 @@ import CardLeft from './../profile/CartLeft';
 import CardRight from './../history/CardRight';
 import TabList from './../common/TabList';
 export default {
-    components:{
-        CardLeft,
-        CardRight,
-        TabList
-    }
+  components:{
+      CardLeft,
+      CardRight,
+      TabList
+  }
 }
 </script>
 

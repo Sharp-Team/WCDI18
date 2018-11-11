@@ -1,16 +1,33 @@
 <template>
   <div>
-    <div class="modal status-modal" id="status-Modal">
-      <div class="status-content modal-content-1 ml-2" id="status-ModalContent">
+    <div
+      class="modal status-modal"
+      id="status-Modal">
+      <div
+        class="status-content modal-content-1 ml-2"
+        id="status-ModalContent">
         <div class="status-title">
-          <h6 v-if="!checked" class="text-title-relax">{{ status.relax }}</h6>
-          <h6 v-if="checked" class="text-title-ready">{{ status.ready }}</h6>
+          <h6
+            v-if="!checked"
+            class="text-title-relax"
+          >
+            {{ status.relax }}
+          </h6>
+          <h6
+            v-if="checked"
+            class="text-title-ready"
+          >
+            {{ status.ready }}
+          </h6>
         </div>
         <div class="setting-status">
           <h6 class="text-status ml-3">Cài đặt trạng thái</h6>
           <input type="checkbox" v-model="checked"
           class="check check2 ml-4">
-          <i class="fas fa-times is-IconClose ml-3" id="statusCloseModal"></i>
+          <i
+            class="fas fa-times is-IconClose ml-3"
+            id="statusCloseModal">
+          </i>
         </div>
       </div>
     </div>
@@ -34,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
- @import '~assets/scss/variable.scss';
+  @import '~assets/scss/variable.scss';
     .status-modal {
       position: fixed;
       visibility: hidden;

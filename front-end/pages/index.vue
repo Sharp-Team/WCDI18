@@ -14,7 +14,9 @@
               <th scope="col">Link</th>
             </tr>
           </thead>
-          <tbody v-for="page in pages" :key=page.no>
+          <tbody
+            v-for="page in pages"
+            :key=page.no>
             <tr>
               <th scope="row">{{ page.no }}</th>
               <td>{{ page.name }}</td>

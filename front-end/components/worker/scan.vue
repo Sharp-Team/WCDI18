@@ -28,7 +28,7 @@
                     alt="local"
                     class="noti-image"
                   />
-                  {{ GET_POSITION }}
+                  {{ address }}
                 </p>
               </div>
             </div>

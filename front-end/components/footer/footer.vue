@@ -4,8 +4,12 @@
         <div class="container">
           <div class="row">
             <div class="item-footer my-auto col-md-3">
-              <a href="#" class="logo-footer">
-                <img src="~/assets/images/logo.png" alt="" />
+              <a
+                href="#"
+                class="logo-footer">
+                <img
+                  src="~/assets/images/logo.png"
+                  alt="" />
               </a>
             </div>
             <div class="item-footer col-md-2">
@@ -25,25 +29,39 @@
             <div class="item-footer col-md-3">
               <h3>KẾT NỐI</h3>
               <div class="social-link">
-                <a href="#"><i class="fab fa-google"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#">
+                  <i class="fab fa-google"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-youtube"></i>
+                </a>
               </div>
             </div>
             <div class="item-footer col-md-4 col-footer-final">
               <div class="footer-info mb-1">
-                <img src="~/assets/images/icon-footer/icon-local.png" alt="" />
+                <img
+                  src="~/assets/images/icon-footer/icon-local.png"
+                  alt="" />
                 <span class="is-address">
                   Km29 - Đại Lộ Thăng Long - Thạch Hòa - Thạch Thất - Hà Nội
                 </span>
               </div>
               <div class="footer-info mb-1">
-                <img src="~/assets/images/icon-footer/icon-phone.png" alt="" />
+                <img
+                  src="~/assets/images/icon-footer/icon-phone.png"
+                  alt="" />
                 <span>0349088188</span>
               </div>
               <div class="footer-info mb-1">
-                <img src="~/assets/images/icon-footer/icon-contact.png" alt="" />
+                <img
+                  src="~/assets/images/icon-footer/icon-contact.png"
+                  alt="" />
                 <span>bacodekiller@gmail.com</span>
               </div>
               <form class="form-inline frm-contact">
@@ -55,7 +73,9 @@
                     placeholder="E-mail"
                   />
                 </div>
-                <button type="submit" class="btn btn-send uppercase ml-1">
+                <button
+                  type="submit"
+                  class="btn btn-send uppercase ml-1">
                   Gửi
                 </button>
               </form>

@@ -1,20 +1,35 @@
 <template>
   <div>
     <div class="wrap-icon-noti">
-      <i class="fas fa-globe-asia is-icon-noti" id="showCart"></i>
-      <span class="noti-number">3</span>
+      <i
+        class="fas fa-globe-asia is-icon-noti"
+        id="showCart"></i>
+      <span class="noti-number">
+        3
+      </span>
     </div>
 
-    <div class="modal is-modal" id="is-Modal">
-      <div class="notification-content modal-content-1 ml-2" id="is-ModalContent">
-        <h6 class="notification-title">Thông báo (3) <i class="fas fa-times is-IconClose" id="iconCloseModal"></i></h6>
+    <div
+      class="modal is-modal"
+      id="is-Modal">
+      <div
+        class="notification-content modal-content-1 ml-2"
+        id="is-ModalContent">
+        <h6 class="notification-title">
+          Thông báo (3)
+          <i
+            class="fas fa-times is-IconClose"
+            id="iconCloseModal"></i>
+        </h6>
         <div class="wrapper-notification">
           <div class="one-notification">
             <div class="notification-container py-3">
               <div class="media">
                 <div class="media-body">
                   <div class="d-flex justify-content-between">
-                    <h5 class="mt-0 mb-1 title-notification">Đã hoàn thành</h5>
+                    <h5 class="mt-0 mb-1 title-notification">
+                      Đã hoàn thành
+                    </h5>
                     <i class="fas fa-times is-close"></i>
                   </div>
                   <p class="my-0 is-content">
@@ -29,7 +44,9 @@
               <div class="media">
                 <div class="media-body">
                   <div class="d-flex justify-content-between">
-                    <h5 class="mt-0 mb-1 title-notification">Đã hủy</h5>
+                    <h5 class="mt-0 mb-1 title-notification">
+                      Đã hủy
+                    </h5>
                     <i class="fas fa-times is-close"></i>
                   </div>
                   <p class="my-0 is-content">
@@ -65,5 +82,4 @@
       notification()
     },
   }
-
 </script>

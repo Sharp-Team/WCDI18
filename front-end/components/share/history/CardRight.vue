@@ -16,7 +16,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';
   @import '~/assets/scss/profile.scss';

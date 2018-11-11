@@ -26,17 +26,21 @@
         </li>
       </ul>
     </div>
-
-
     <!-- Tab panes -->
     <div class="tab-content">
-      <div id="home" class="tab-pane active"><br>
+      <div
+        id="home"
+        class="tab-pane active"><br>
         <profile-form></profile-form>
       </div>
-      <div id="menu1" class="tab-pane fade"><br>
+      <div
+        id="menu1"
+        class="tab-pane fade"><br>
         <password-form></password-form>
       </div>
-      <div id="menu2" class="tab-pane fade"><br>
+      <div
+        id="menu2"
+        class="tab-pane fade"><br>
         <table-data></table-data>
       </div>
     </div>

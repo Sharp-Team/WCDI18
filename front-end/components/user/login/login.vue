@@ -9,15 +9,34 @@
         <div class="form-info">
           <form @submit.prevent="signin">
             <div class="form-group row">
-              <label for="username" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Tên đăng nhập</label>
+              <label
+                for="username"
+                class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+              >
+                Tên đăng nhập
+              </label>
               <div class="col-sm-12 col-md-7 col-lg-7">
-                <input v-model="username" type="text" class="form-control" id="username">
+                <input
+                  v-model="username"
+                  type="text"
+                  class="form-control"
+                  id="username">
               </div>
             </div>
             <div class="form-group row">
-              <label for="password" class="col-sm-12 col-md-4 col-lg-3 col-form-label">Mật khẩu</label>
+              <label
+                for="password"
+                class="col-sm-12 col-md-4 col-lg-3 col-form-label"
+              >
+                Mật khẩu
+              </label>
               <div class="col-sm-12 col-md-7 col-lg-7">
-                <input v-model="password" type="password" class="form-control" id="password" value="" >
+                <input
+                  v-model="password"
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  value="" >
                 <div class="pt-2 pb-3 text-right">
                   <a href="#">Quên mật khẩu?</a>
                 </div>
@@ -25,8 +44,15 @@
             </div>
             <div class="form-group row">
               <div class="col-sm-12 col-md-7 col-lg-7 offset-md-4 offset-lg-3">
-                <my-button class="btn-block" content="Đăng nhập" background="#28a745" backgroundHover="grey" color="white" />
-                <div class="or-text text-center py-2">Hoặc</div>
+                <my-button
+                  class="btn-block"
+                  content="Đăng nhập"
+                  background="#28a745"
+                  backgroundHover="grey"
+                  color="white" />
+                <div class="or-text text-center py-2">
+                  Hoặc
+                </div>
               </div>
             </div>
             <div class="form-group row">
@@ -35,7 +61,9 @@
                   <div class="social-btn text-right mb-2">
                     <button class="btn-block">
                       <a href="#">
-                        <img src="~/assets/images/facebook.png" alt="facebook" />
+                        <img
+                          src="~/assets/images/facebook.png"
+                          alt="facebook" />
                         <span class="text">Đăng nhập bằng Facebook</span>
                       </a>
                     </button>
@@ -44,7 +72,9 @@
                     <button class="btn-block">
                       <div class="right-social">
                         <a href="#">
-                          <img src="~/assets/images/google.png" alt="google" />
+                          <img
+                            src="~/assets/images/google.png"
+                            alt="google" />
                           <span class="text">Đăng nhập bằng Google</span>
                         </a>
                       </div>

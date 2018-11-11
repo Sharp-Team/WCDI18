@@ -6,7 +6,9 @@
     :data-target="dataTarget">
     <span class="button__mask"></span>
     <span class="button__text">{{ content }}</span>
-    <span class="button__text button__text--bis" :style="{ backgroundColor: backgroundHover }">{{ content }}</span>
+    <span class="button__text button__text--bis" :style="{ backgroundColor: backgroundHover }">
+      {{ content }}
+    </span>
   </button>
 </template>
 
@@ -25,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/scss/variable.scss';
+@import '~/assets/scss/variable.scss';
 $anim-text-offset: 1em;
 .button{
   user-select: none;

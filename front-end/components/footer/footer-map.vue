@@ -9,7 +9,9 @@
       <div class="action">
         <div class="icon status">
           <a href="#">
-            <i class="fas fa-street-view" id="showStatusWorker"></i>
+            <i
+              class="fas fa-street-view"
+              id="showStatusWorker"></i>
           </a>
           <span class="tooltip-status">
             Trạng thái
@@ -25,7 +27,9 @@
         </div>
         <div class="icon search">
           <a href="#">
-            <i class="fas fa-map-marker-alt" id="showScanWorker"></i>
+            <i
+              class="fas fa-map-marker-alt"
+              id="showScanWorker"></i>
           </a>
           <span class="tooltip-search">
             Quét
@@ -33,7 +37,9 @@
         </div>
         <div class="icon noti">
           <a href="#">
-            <i class="fas fa-dot-circle" id="showNotiWorker"></i>
+            <i
+              class="fas fa-dot-circle"
+              id="showNotiWorker"></i>
           </a>
           <span class="tooltip-noti">
             Thông báo
@@ -113,12 +119,12 @@
 
 </style>
 <script>
-  import Status from "../../components/worker/status.vue"
-  import Scan from "../../components/worker/scan.vue"
-  import status from '../../assets/js/status.js';
-  import scan from '../../assets/js/scan.js';
-  import Noti from "../../components/noti-worker/noti-worker.vue"
-  import noti from '../../assets/js/noti.js';
+  import Status from "~/components/worker/status.vue"
+  import Scan from "~/components/worker/scan.vue"
+  import status from '~/assets/js/status.js';
+  import scan from '~/assets/js/scan.js';
+  import Noti from "~/components/noti-worker/noti-worker.vue"
+  import noti from '~/assets/js/noti.js';
   export default {
     components: {
       Status,

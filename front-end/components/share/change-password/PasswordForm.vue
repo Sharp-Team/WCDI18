@@ -3,7 +3,12 @@
       <form action="">
         <!-- Full Name -->
         <div class="form-group row">
-            <label for="password" class="col-sm-12 col-md-3 col-form-label">Mật khẩu cũ</label>
+            <label
+              for="password"
+              class="col-sm-12 col-md-3 col-form-label"
+            >
+              Mật khẩu cũ
+            </label>
             <div class="col-sm-12 col-md-7">
             <input
               type="password"
@@ -13,7 +18,12 @@
         </div>
 
         <div class="form-group row">
-          <label for="confirm-password" class="col-sm-12 col-md-3 col-form-label">Mật khẩu mới</label>
+          <label
+            for="confirm-password"
+            class="col-sm-12 col-md-3 col-form-label"
+          >
+            Mật khẩu mới
+          </label>
           <div class="col-sm-12 col-md-7">
           <input
             type="password"
@@ -23,7 +33,12 @@
         </div>
 
         <div class="form-group row">
-          <label for="confirm-password" class="col-sm-12 col-md-3 col-form-label">Nhập lại mật khẩu</label>
+          <label
+            for="confirm-password"
+            class="col-sm-12 col-md-3 col-form-label"
+          >
+            Nhập lại mật khẩu
+          </label>
           <div class="col-sm-12 col-md-7">
           <input
             type="password"
@@ -32,12 +47,13 @@
           </div>
         </div>
         <div class="update">
-            <my-button
-              content="Cập nhật"
-              background="#2EBE4A"
-              backgroundHover="gray"
-              color="white"
-              data-toggle="modal"></my-button>
+          <my-button
+            content="Cập nhật"
+            background="#2EBE4A"
+            backgroundHover="gray"
+            color="white"
+            data-toggle="modal">
+          </my-button>
         </div>
       </form>
     </div>
