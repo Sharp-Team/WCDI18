@@ -71,11 +71,6 @@
             name: 'Đăng kí ver 2',
             link: '/register'
           },
-          {
-            no: '7',
-            name: 'Click lấy thông tin',
-            link: '/popover-info'
-          }
         ]
       }
     },
@@ -106,6 +101,13 @@
         }
         navigator.geolocation.getCurrentPosition(success, error);
       }
+    },
+    head: {
+      script: [{
+        src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBQjtj0TxFDfqm8uQbovjJ0pEVtkCgePCw&',
+        async: true,
+        defer: true
+      }]
     }
   }
 

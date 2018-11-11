@@ -1,10 +1,11 @@
 <template>
   <div class="home-page d-flex">
-    <!-- <img src="/image/slider/slider/homepage.jpg" class="bg"/> -->
     <no-ssr>
-    <div class="my-button">
-      <button type="my-button" class="btn btn-home">Bắt đầu với maps </button>
-    </div>
+      <div class="my-button">
+        <nuxt-link to="/map">
+          <button type="button" class="btn btn-home">Bắt đầu với maps </button>
+        </nuxt-link>
+      </div>
     </no-ssr>
     <!-- Add Map SVG -->
     <div class="map">
@@ -635,6 +636,7 @@
       align-items: center;
       justify-content: center;
       margin-top: 50px;
+      z-index: 999;
 
       .btn-home {
         text-transform: uppercase;
@@ -645,12 +647,12 @@
         color: #e4f7f7b5;
         border: 2px solid #e4f7f7b5;
         transition: transform .2s;
-      }
-
-      .btn-home:hover {
-        -ms-transform: scale(1.5);
-        -webkit-transform: scale(1.5);
-        transform: scale(1.5);
+        cursor: pointer;
+        &:hover {
+          -ms-transform: scale(1.3);
+          -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+        }
       }
     }
 
