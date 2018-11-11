@@ -13,7 +13,10 @@ export default {
   components: {
     Navbar,
     MyFooter
-  }
+  },
+  beforeMount() {
+    navbar()
+  },
 }
 </script>
 

@@ -7,10 +7,14 @@
 
 <script>
 import Navbar from '~/components/header/navbar';
+import navbar from '../assets/js/navbar';
 export default {
   components: {
     Navbar
-  }
+  },
+  beforeMount() {
+    navbar()
+  },
 }
 </script>
 
