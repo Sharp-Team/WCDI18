@@ -64,7 +64,7 @@
       return {
         username: '',
         imgProfile: '/images/flame.jpg',
-        address: 'Phòng D413, FPT university'
+        address: 'Room D413, FPT university'
       }
     },
     components: {

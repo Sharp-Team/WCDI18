@@ -120,7 +120,8 @@
         name: '',
         selected: [],
         data,
-        isTag1Active: true
+        isTag1Active: true,
+        address: 'Room D413, FPT University'
       }
     },
     computed: {
@@ -137,9 +138,6 @@
           this.$store.commit('setRange', value)
         }
       },
-      ...mapGetters([
-        'GET_POSITION',
-      ]),
     }
   }
 
