@@ -26,8 +26,6 @@
         </table>
         <h5 class="title-small">Test back-end</h5>
         <back-end class="is-back-end" />
-        <button @click="showPosition">Posision current</button>
-        <div id="out"></div>
       </div>
     </section>
   </div>
@@ -84,26 +82,6 @@
       Slider
     },
     layout: 'home',
-    methods: {
-      showPosition() {
-        var output = document.getElementById("out");
-        if (!navigator.geolocation) {
-          output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-          return;
-        }
-        function success(position) {
-          var latitude = position.coords.latitude;
-          var longitude = position.coords.longitude;
-
-          output.innerHTML = '<p>Latitude is ' + latitude + ' <br>Longitude is ' + longitude + '</p>';
-
-        }
-        function error() {
-          output.innerHTML = "Unable to retrieve your location";
-        }
-        navigator.geolocation.getCurrentPosition(success, error);
-      }
-    }
   }
 
 </script>
