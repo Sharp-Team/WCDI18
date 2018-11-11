@@ -137,6 +137,7 @@
         }
 
         .market-text {
+          width: 30em;
           font-size: 12px;
           color: rgba(0, 0, 0, 0.5);
           font-weight: 500;
