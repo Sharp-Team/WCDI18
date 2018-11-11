@@ -1,11 +1,13 @@
 <template>
   <div class="home-page d-flex">
     <!-- <img src="/image/slider/slider/homepage.jpg" class="bg"/> -->
-    <no-ssr>
-    <div class="my-button">
-      <button type="my-button" class="btn btn-home">Bắt đầu với maps </button>
-    </div>
-    </no-ssr>
+    <!-- <no-ssr> -->
+      <nuxt-link to="/map">
+        <div class="my-button">
+          <button type="my-button" class="btn btn-home">Bắt đầu với maps </button>
+        </div>
+      </nuxt-link>
+    <!-- </no-ssr> -->
     <!-- Add Map SVG -->
     <div class="map">
       <svg id="world-map" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 384">

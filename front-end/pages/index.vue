@@ -71,11 +71,6 @@
             name: 'Đăng kí ver 2',
             link: '/register'
           },
-          {
-            no: '7',
-            name: 'Click lấy thông tin',
-            link: '/popover-info'
-          }
         ]
       }
     },
