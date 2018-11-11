@@ -1,43 +1,89 @@
 <template>
   <div class="navbar-section">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light section-empty" id="navbarBox">
-      <button class="navbar-toggler" type="button" id="showMarkMenu">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light section-empty"
+      id="navbarBox">
+      <button
+        class="navbar-toggler"
+        type="button"
+        id="showMarkMenu">
         <span class="navbar-toggler-icon" />
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div
+        class="collapse navbar-collapse"
+        id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <nuxt-link to="/" class="nav-link">Trang chủ</nuxt-link>
+            <nuxt-link
+              to="/"
+              class="nav-link"
+            >
+              Trang chủ
+            </nuxt-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a
+              class="nav-link"
+              href="#"
+            >
               Tôi cần trợ giúp
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a
+              class="nav-link"
+              href="#">
               Feedback
             </a>
           </li>
         </ul>
       </div>
-      <div class="navbar-branch" id="idNavBranch">
-        <img src="~/assets/images/icon-navbar/logo-navbar.png" alt="nav-img" class="nav-img" />
+      <div
+        class="navbar-branch"
+        id="idNavBranch">
+        <img
+          src="~/assets/images/icon-navbar/logo-navbar.png"
+          alt="nav-img"
+          class="nav-img" />
       </div>
       <div class="navbar-right">
         <div class="nav-button">
-          <img src="~/assets/images/icon-navbar/local.png" alt="local" class="market-image" />
+          <img
+            src="~/assets/images/icon-navbar/local.png"
+            alt="local"
+            class="market-image" />
           <div class="market-text">{{ address }}</div>
-          <nuxt-link v-if="username === ''" to="/login" class="ml-2">
-            <my-button class="is-btn-login ml-4" content="Đăng nhập" background="white" backgroundHover="grey" color="black" />
+          <nuxt-link
+            v-if="username === ''"
+            to="/login"
+            class="ml-2">
+            <my-button
+              class="is-btn-login ml-4"
+              content="Đăng nhập"
+              background="white"
+              backgroundHover="grey"
+              color="black" />
           </nuxt-link>
-          <nuxt-link v-if="username === ''" to="/register" class="ml-2">
-            <my-button content="Đăng ký" background="#28a745" backgroundHover="grey" color="white" class="is-btn-register" />
+          <nuxt-link
+            v-if="username === ''"
+            to="/register"
+            class="ml-2">
+            <my-button
+              content="Đăng ký"
+              background="#28a745"
+              backgroundHover="grey"
+              color="white"
+              class="is-btn-register" />
           </nuxt-link>
-          <nuxt-link v-else to="/profile" class="ml-4">
+          <nuxt-link
+            v-else
+            to="/profile"
+            class="ml-4">
             <div class="wrap-profile">
               <div class="wrap-img-profile">
-                <img :src="imgProfile" alt="image-profile">
+                <img
+                  :src="imgProfile"
+                  alt="image-profile">
               </div>
               <div class="wrap-username">
                 {{ username }}
@@ -48,14 +94,16 @@
         </div>
       </div>
     </nav>
-    <navmenu :username="username" :imgProfile="imgProfile" />
+    <navmenu
+      :username="username"
+      :imgProfile="imgProfile" />
   </div>
 </template>
 
 <script>
-  import Notification from '../../components/share/notification.vue'
-  import Navmenu from '../../components/header/navmenu.vue'
-  import navbar from '../../assets/js/navbar'
+  import Notification from '~/components/share/notification.vue'
+  import Navmenu from '~/components/header/navmenu.vue'
+  import navbar from '~/assets/js/navbar'
   import MyButton from '~/components/share/button.vue'
 
   export default {

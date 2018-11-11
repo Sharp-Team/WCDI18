@@ -3,7 +3,12 @@
     <no-ssr>
       <div class="my-button">
         <nuxt-link to="/map">
-          <button type="button" class="btn btn-home">Bắt đầu với maps </button>
+          <button
+            type="button"
+            class="btn btn-home"
+          >
+            Bắt đầu với maps
+          </button>
         </nuxt-link>
       </div>
     </no-ssr>

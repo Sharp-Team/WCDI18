@@ -1,19 +1,38 @@
 <template>
   <div class="menu-section">
-    <div class="modal mark-menu" id="markMenuModal">
-      <div class="modal-menu-content flex-column modal-menu-content-1" id="markModalMenuContent">
-        <div class="menu-header" id="showContact">
-          <nuxt-link v-if="username === ''" to="/login" class="user-login">
+    <div
+      class="modal mark-menu"
+      id="markMenuModal">
+      <div
+        class="modal-menu-content flex-column modal-menu-content-1"
+        id="markModalMenuContent">
+        <div
+          class="menu-header"
+          id="showContact">
+          <nuxt-link
+            v-if="username === ''"
+            to="/login"
+            class="user-login"
+          >
             Đăng nhập
           </nuxt-link>
-          <span v-if="username === ''" class="flat-line">/</span>
-          <nuxt-link v-if="username === ''" to="/register" class="user-register">
+          <span
+            v-if="username === ''"
+            class="flat-line">/</span>
+          <nuxt-link
+            v-if="username === ''"
+            to="/register"
+            class="user-register">
             Đăng ký
           </nuxt-link>
-          <nuxt-link v-else to="/profile">
+          <nuxt-link
+            v-else
+            to="/profile">
             <div class="wrap-profile">
               <div class="wrap-img-profile">
-                <img :src="imgProfile" alt="image-profile">
+                <img
+                  :src="imgProfile"
+                  alt="image-profile">
               </div>
               <div class="wrap-username">
                 {{ username }}
@@ -58,7 +77,7 @@
   </div>
 </template>
 <script>
-  import navbar from '../../assets/js/navbar'
+  import navbar from '~/assets/js/navbar'
   export default {
     props: {
       username: {
@@ -69,7 +88,6 @@
       }
     }
   }
-
 </script>
 
 <style lang="scss" scoped>
@@ -185,5 +203,4 @@
       flex-direction: column;
     }
   }
-
 </style>
