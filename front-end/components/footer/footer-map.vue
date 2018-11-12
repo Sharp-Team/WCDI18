@@ -6,7 +6,7 @@
     <noti/>
     <scan />
     <div class="my-footer">
-      <div class="action">
+      <div class="action" v-if="object==='Người làm việc'">
         <div class="icon status">
           <a href="#">
             <i
@@ -40,6 +40,46 @@
             <i
               class="fas fa-dot-circle"
               id="showNotiWorker"></i>
+          </a>
+          <span class="tooltip-noti">
+            Thông báo
+          </span>
+        </div>
+      </div>
+      <div class="action" v-else>
+        <div class="icon status">
+          <a href="#">
+            <i
+              class="fas fa-broadcast-tower"
+              id="showStatusCustomer"></i>
+          </a>
+          <span class="tooltip-status">
+            Phát thông báo
+          </span>
+        </div>
+        <div class="icon history">
+          <nuxt-link to="/history">
+            <i class="fas fa-map-marked"></i>
+          </nuxt-link>
+          <span class="tooltip-history">
+            Lịch sử
+          </span>
+        </div>
+        <div class="icon search">
+          <a href="#">
+            <i
+              class="fab fa-cloudscale"
+              id="showScanCustomer"></i>
+          </a>
+          <span class="tooltip-search">
+            Quét
+          </span>
+        </div>
+        <div class="icon noti">
+          <a href="#">
+            <i
+              class="fas fa-bell"
+              id="showNotiCustomer"></i>
           </a>
           <span class="tooltip-noti">
             Thông báo
@@ -126,6 +166,11 @@
   import Noti from "~/components/noti-worker/noti-worker.vue"
   import noti from '~/assets/js/noti.js';
   export default {
+    data() {
+      return {
+        object: 'Khách hàng'
+      }
+    },
     components: {
       Status,
       Scan,
