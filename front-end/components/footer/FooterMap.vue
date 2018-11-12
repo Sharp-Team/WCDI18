@@ -169,12 +169,13 @@
 
 </style>
 <script>
-  import Status from "~/components/worker/status.vue"
-  import Scan from "~/components/worker/scan.vue"
-  import status from '~/assets/js/status.js';
-  import scan from '~/assets/js/scan.js';
-  import Noti from "~/components/noti-worker/noti-worker.vue"
-  import noti from '~/assets/js/noti.js';
+  import Status from "~/components/worker/Status"
+  import Scan from "~/components/worker/Scan"
+  import Noti from "~/components/worker/Notification"
+  import status from '~/assets/js/status'
+  import scan from '~/assets/js/scan'
+  import noti from '~/assets/js/noti'
+
   export default {
     data() {
       return {

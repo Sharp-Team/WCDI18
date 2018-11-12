@@ -48,9 +48,9 @@
 </template>
 
 <script>
-  import ProfileForm from './../profile/ProfileForm'
-  import PasswordForm from './../change-password/PasswordForm'
-  import TableData from './../history/TableData'
+  import ProfileForm from '~/components/profile/ProfileForm'
+  import PasswordForm from '~/components/change-password/PasswordForm'
+  import TableData from '~/components/history/TableData'
   export default {
     props: {
       active: {
@@ -69,5 +69,4 @@
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';
   @import '~/assets/scss/profile.scss';
-
 </style>

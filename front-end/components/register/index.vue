@@ -315,7 +315,7 @@
 </template>
 
 <script>
-import MyButton from '~/components/share/button.vue';
+import MyButton from '~/components/share/Button'
 const vietnam = require('~/assets/json/data-viet-nam.json')
 const jobs = require('~/assets/json/data-job.json')
 

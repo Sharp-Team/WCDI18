@@ -32,11 +32,12 @@
 </template>
 
 <script>
-  import BackEnd from '~/components/TestBackEnd.vue'
-  import MyFooter from '../components/footer/footer.vue'
-  import Navbar from '../components/header/navbar.vue'
-  import Notification from '../components/share/notification.vue'
-  import Slider from '../components/header/slider.vue';
+  import BackEnd from '~/components/TestBackEnd'
+  import MyFooter from '~/components/footer/Footer'
+  import Navbar from '~/components/header/Navbar'
+  import Notification from '~/components/share/Notification'
+  import Slider from '~/components/header/Slider'
+
   export default {
     data() {
       return {

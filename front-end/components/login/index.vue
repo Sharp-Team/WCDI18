@@ -92,7 +92,7 @@
 </template>
 
 <script>
-import MyButton from '~/components/share/button.vue';
+import MyButton from '~/components/share/Button';
   export default {
     data () {
       return {

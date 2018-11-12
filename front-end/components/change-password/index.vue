@@ -3,13 +3,13 @@
   <div class="container">
     <div class="row content">
       <div class="left col-md-3 col-sm-12">
-        <card-left />
+        <card-left></card-left>
       </div>
-      <div class="right col-md-9 col-sm-12">
-        <cart-right></cart-right>
-        <!-- TabList -->
+      <div class="right col-md-9">
+        <card-right></card-right>
+        <!-- Tab-List -->
         <div class="tab-list d-block d-sm-none">
-          <tab-list active="profile"></tab-list>
+          <tab-list active='password'></tab-list>
         </div>
       </div>
     </div>
@@ -18,13 +18,14 @@
 </template>
 
 <script>
-import CardLeft from './CartLeft';
-import CartRight from './CartRight';
-import TabList from './../common/TabList'
+import CardLeft from '~/components/user/CartLeft'
+import TabList from '~/components/user/TabList'
+import CardRight from './CartRight'
+
 export default {
   components:{
     CardLeft,
-    CartRight,
+    CardRight,
     TabList
   }
 }

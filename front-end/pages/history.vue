@@ -1,9 +1,9 @@
 <template>
-    <history></history>
+  <history></history>
 </template>
 
 <script>
-import History from './../components/share/history/history'
+import History from '~/components/history'
 export default {
   components:{
     History

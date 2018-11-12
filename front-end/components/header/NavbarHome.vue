@@ -101,10 +101,10 @@
 </template>
 
 <script>
-  import Notification from '~/components/share/notification.vue'
-  import Navmenu from '~/components/header/navmenu.vue'
+  import Notification from '~/components/share/Notification'
+  import MyButton from '~/components/share/Button'
+  import Navmenu from './Navmenu'
   import navbar from '~/assets/js/navbar'
-  import MyButton from '~/components/share/button.vue'
 
   export default {
     name: 'Navbar',

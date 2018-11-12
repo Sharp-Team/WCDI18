@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import MyButton from './../button'
+import MyButton from '~/components/share/Button'
 export default {
   data () {
     return {
@@ -74,7 +74,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="scss">
   @import '~/assets/scss/variable.scss';

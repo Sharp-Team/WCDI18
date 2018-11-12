@@ -11,7 +11,7 @@
 import TableData from './TableData';
 export default {
   components:{
-      TableData
+    TableData
   }
 }
 </script>

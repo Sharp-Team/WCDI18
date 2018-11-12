@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import FooterMap from '~/components/footer/footer-map'
+  import FooterMap from '~/components/footer/FooterMap'
   import { mapGetters } from 'vuex'
 
   export default {

@@ -601,7 +601,7 @@
 </template>
 
 <script>
-  import slider from '../../assets/js/slider'
+  import slider from '~/assets/js/slider'
   export default {
     mounted() {
       slider()

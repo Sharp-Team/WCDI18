@@ -72,11 +72,11 @@
 <style lang="scss" scoped>
   @import '~assets/scss/variable.scss';
   @import '~assets/scss/share/notification.scss';
-
 </style>
 
 <script>
-  import notification from '~/assets/js/notification';
+  import notification from '~/assets/js/notification'
+
   export default {
     beforeMount() {
       notification()
