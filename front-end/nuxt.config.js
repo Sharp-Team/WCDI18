@@ -62,7 +62,10 @@ module.exports = {
 
   loading: { color: '#ff0000' },
 
-  css: ['~/assets/scss/main.scss'],
+  css: [
+    { src: '~/assets/scss/main.scss' },
+    { src: '~/assets/scss/buefy-overrides.scss', lang: 'sass' }
+  ],
 
   // plugins: [{ src: '~/plugins/positionCurrent.js', ssr: false }],
 

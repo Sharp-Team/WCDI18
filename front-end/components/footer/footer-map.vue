@@ -85,6 +85,16 @@
             Thông báo
           </span>
         </div>
+        <div class="icon noti">
+          <a href="#">
+            <i
+              class="fas fa-check-circle"
+              @click="confirm"></i>
+          </a>
+          <span class="tooltip-noti">
+            Confirm
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -175,6 +185,14 @@
       Status,
       Scan,
       Noti
+    },
+    methods: {
+      confirm() {
+        this.$dialog.confirm({
+            message: 'Bạn có muốn tiếp tục không?',
+            onConfirm: () => this.$toast.open('Bạn đã đồng ý')
+        })
+      },
     },
     beforeMount() {
       status(),
