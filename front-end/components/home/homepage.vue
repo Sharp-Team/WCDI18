@@ -6,7 +6,7 @@
           <h1 class="title is-3 my-title">Điều gì đã giúp chúng tôi có ý tưởng</h1>
         </div>
         <div class="col-md-6">
-          <p>
+          <p class="text-para">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
             The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
             Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
@@ -22,7 +22,7 @@
             <h1 class="title is-3 my-title">Các tính năng nổi bật</h1>
             <p class="sub-description">Dưới đây là một số tính năng nổi bật của project</p>
             <div class="list-function">
-              <ul>
+              <ul class="flex-column">
                 <!-- Đa dạng -->
                 <li class="d-flex justify-content-start">
                   <i class="fas fa-globe p-2 my-icon"></i>
@@ -33,7 +33,7 @@
                 </li>
                 <!-- Phù hợp -->
                 <li class="d-flex justify-content-start">
-                  <i class="far fa-envelope my-icon"></i>
+                  <i class="fas fa-globe p-2 my-icon"></i>
                   <span class="p-2">
                     <h5>Tìm được người phù hợp chỉ với bài thao tác</h5>
                     <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
@@ -41,7 +41,7 @@
                 </li>
                 <!-- Phù hợp -->
                 <li class="d-flex justify-content-start">
-                  <i class="fas fa-file-contract my-icon"></i>
+                  <i class="fas fa-globe p-2 my-icon"></i>
                   <span class="p-2">
                     <h5>Mọi nhu cầu mọi lúc mọi nơi</h5>
                     <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
@@ -58,9 +58,9 @@
         <div class="title-button">
           <h3 class="title is-3 text">HƯỚNG DẪN ĐĂNG KÝ</h3>
           <p class="text description">Bạn không hiểu đăng ký thế nào? Để tôi giúp bạn nhé</p>
-          <div class="group-btn">
-            <button type="button" class="btn my-button">TÌM NGƯỜI</button>
-            <button type="button" class="btn my-button">TÌM VIỆC</button>
+          <div class="group-btn d-flex justify-content-center">
+            <button type="button" class="btn my-button p-2">TÌM NGƯỜI</button>
+            <button type="button" class="btn my-button p-2">TÌM VIỆC</button>
           </div>
         </div>
         <div class="container">
@@ -261,6 +261,10 @@ export default {
           border-radius: 0px;
           font-family: 'Montserrat';
         }
+        .my-button:hover{
+          background: rgba(255, 255, 255, 0.1);
+          color: #fff !important;
+        }
         a:active{
           background-color: #fff;
         }
@@ -353,6 +357,7 @@ export default {
       }
 
       #speakers span {
+        color: #fff;
         padding: 8px 20px;
         position: relative;
         top: -64px;
@@ -376,5 +381,34 @@ export default {
       }
     }
   }
+  // For responsive
+  @media(max-width: 545px){
+    .homepage{
+      .title-border{
+        .my-title{
+          padding-bottom: 20px;
+          font-size: 30px;
+        }
+      }
+      .text-para{
+        font-size: 13px !important;
+      }
+      .guide-register{
+        .text{
+          font-size: 30px;
+        }
+        .description{
+          font-size: 13px;
+        }
+        .img-huong-dan-dk{
+          .cril{
+            margin-bottom: 20px;
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+  }
+
 </style>
 
