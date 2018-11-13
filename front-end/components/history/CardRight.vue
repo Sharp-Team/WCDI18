@@ -1,5 +1,5 @@
 <template>
-  <div class="container d-none d-sm-block is-content">
+  <div class="d-none d-sm-block is-content">
     <div class="title">
       <h3>Lịch sử giao dịch</h3>
     </div>
