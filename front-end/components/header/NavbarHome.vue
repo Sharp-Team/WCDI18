@@ -30,11 +30,11 @@
             </a>
           </li>
           <li class="nav-item">
-            <a
+            <nuxt-link
               class="nav-link"
-              href="#">
+              to="feedback">
               Feedback
-            </a>
+            </nuxt-link>
           </li>
         </ul>
       </div>
