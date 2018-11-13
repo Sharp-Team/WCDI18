@@ -22,27 +22,27 @@
             <h1 class="title is-3 my-title">Các tính năng nổi bật</h1>
             <p class="sub-description">Dưới đây là một số tính năng nổi bật của project</p>
             <div class="list-function">
-              <ul class="flex-column">
+              <ul>
                 <!-- Đa dạng -->
-                <li class="d-flex justify-content-start">
+                <li>
                   <i class="fas fa-globe p-2 my-icon"></i>
-                  <span class="p-2">
+                  <span>
                     <h5>Đa dạng các loại nhu cầu</h5>
                     <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
                   </span>
                 </li>
                 <!-- Phù hợp -->
-                <li class="d-flex justify-content-start">
-                  <i class="fas fa-globe p-2 my-icon"></i>
-                  <span class="p-2">
-                    <h5>Tìm được người phù hợp chỉ với bài thao tác</h5>
+                <li>
+                  <i class="far fa-envelope my-icon"></i>
+                  <span>
+                    <h5>Tìm được người phù hợp</h5>
                     <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
                   </span>
                 </li>
                 <!-- Phù hợp -->
-                <li class="d-flex justify-content-start">
+                <li>
                   <i class="fas fa-globe p-2 my-icon"></i>
-                  <span class="p-2">
+                  <span>
                     <h5>Mọi nhu cầu mọi lúc mọi nơi</h5>
                     <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
                   </span>
@@ -103,8 +103,8 @@
     </div>
     <div class="container team-page">
       <section id="speakers">
-        <div class="row">
-          <div class="col-md-3">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-4 col-sm-6">
             <a href="#" class="member-profile">
               <div class="unhover_img">
               <img src="../../static/images/homepage/speaker-1.png" alt="" />
@@ -122,7 +122,7 @@
             </ul>
           </div>
           
-          <div class="col-md-3">
+          <div class="col-md-4 col-sm-6">
             <a href="#" class="member-profile">
               <div class="unhover_img">
               <img src="../../static/images/homepage/speaker-2.png" alt="" />
@@ -140,7 +140,7 @@
             </ul>
           </div>
           
-          <div class="col-md-3">
+          <div class="col-md-4 col-sm-6">
             <a href="#" class="member-profile">
               <div class="unhover_img">
               <img src="../../static/images/homepage/speaker-3.png" alt="" />
@@ -158,7 +158,26 @@
             </ul>					
           </div>
           
-          <div class="col-md-3">
+          <div class="col-md-4 col-sm-6">
+            <a href="#" class="member-profile">
+              <div class="unhover_img">
+              <img src="../../static/images/homepage/speaker-4.png" alt="" />
+              </div>
+              <div class="hover_img">
+              <img src="../../static/images/homepage/speaker-4-hover.png" alt="" />
+              </div>
+              <span>SEO Expert</span>
+              <h4><span>Kathy</span> Watkins</h4>
+            </a>					
+            <ul class="d-flex justify-content-center">
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              <li class="p-2"><a href="#"  target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-foursquare"></i></a></li>
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-google-plus"></i></a></li>
+            </ul>						
+          </div>
+
+          <div class="col-md-4 col-sm-6">
             <a href="#" class="member-profile">
               <div class="unhover_img">
               <img src="../../static/images/homepage/speaker-4.png" alt="" />
@@ -223,13 +242,15 @@ export default {
           ul{
             margin-left: 30px;
             li{
-              padding-top: 15px;
+              padding-top: 35px;
               .my-icon{
                 color: white;
                 background-color: $color-main;
                 border-radius: 50%;
-                margin-bottom: 20px;
                 padding:15px !important;
+                margin-right: 20px;
+                float: left;
+                clear: both;
               }
             }
           }
