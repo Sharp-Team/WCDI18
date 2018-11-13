@@ -6,7 +6,7 @@
         <card-left />
       </div>
       <div class="right col-md-9 col-sm-12">
-        <cart-right />>
+        <cart-right />
         <!-- TabList -->
         <div class="tab-list d-block d-sm-none">
           <tab-list active="profile" />

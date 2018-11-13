@@ -640,7 +640,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 50px;
+      margin-top: 65px;
       z-index: 999;
 
       .btn-home {
