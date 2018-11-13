@@ -72,6 +72,12 @@
             name: 'Đăng kí ver 2',
             link: '/register'
           },
+          {
+            no: '7',
+            name: 'Trang chủ',
+            link: '/homepage'
+            
+          }
         ]
       }
     },
