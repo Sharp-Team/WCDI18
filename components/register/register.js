@@ -13,7 +13,6 @@ export default function(
   career,
   indentify_card
 ) {
-  this.$store.dispatch('SET_ERROR', '')
   const regexEmail = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   window.scrollTo(0, top)
   if (!full_name.trim() || full_name === undefined) {
@@ -118,6 +117,7 @@ export default function(
         }
         this.$toast.open({
           message: 'Đăng ký thành công!',
+          position: 'is-bottom',
           type: 'is-success'
         })
         this.$nuxt.$loading.finish()

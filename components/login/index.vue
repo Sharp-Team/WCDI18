@@ -7,7 +7,7 @@
           <h3>Đăng nhập</h3>
         </div>
         <div class="form-info">
-          <form @submit.prevent="signin">
+          <form @submit.prevent="USER_SIGNIN(username, password)">
             <div class="form-group row">
               <label
                 for="username"
@@ -93,6 +93,7 @@
 
 <script>
 import MyButton from '~/components/share/Button';
+import USER_SIGNIN from './login'
   export default {
     data () {
       return {
@@ -104,18 +105,7 @@ import MyButton from '~/components/share/Button';
       MyButton
     },
     methods: {
-      signin() {
-        this.$axios.post(`api/user/signin`, {
-          username: this.username,
-          password: this.password
-        })
-        .then(result => {
-          console.log(result)
-        })
-        .catch(err => {
-          console.log(err)
-        })
-      }
+      USER_SIGNIN
     }
 }
 </script>

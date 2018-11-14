@@ -355,28 +355,6 @@ export default {
   },
   methods: {
     USER_SIGNUP,
-    signup () {
-      this.$axios.post(`api/user/signup`, {
-        username: this.username,
-        password: this.password,
-        avatar: this.imageAvatarUrl,
-        email: this.email,
-        full_name: this.fullname,
-        phone_number: this.phone,
-        province: this.provinceSelected,
-        district: this.districtSelected,
-        address_detail: this.address,
-        indentify_card: this.imageCardUrl,
-        object: this.object,
-        career: this.jobSelected
-      })
-      .then(result => {
-        console.log(result)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-    },
     onFilePicked (event) {
       const files = event.target.files
       let fileName = files[0].name

@@ -75,7 +75,8 @@ router.post('/signin', async (req, res) => {
       console.log(err)
       res.status(200).json({
         data: null,
-        error: `Tài khoản ${user.username} không tồn tại, vui lòng đăng ký`
+        error: `Tài khoản
+        ${user.username} không tồn tại, vui lòng đăng ký. Hoặc mật khẩu sai`
       })
     })
 })
