@@ -11,7 +11,7 @@
         </div>
         <div class="main-menu">
           <ul id="side-main-menu" class="side-menu list-unstyled">
-            <li><a href="index.html"> <i class="icon-home"></i>Home</a></li>
+            <li><a href="#"> <i class="icon-home"></i>Home</a></li>
           </ul>
         </div>
       </div>
@@ -22,7 +22,7 @@
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn">
-                  <i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
+                  <i class="icon-bars"> </i></a><a href="#" class="navbar-brand">
                   <div class="brand-text d-none d-md-inline-block">
                     <span>Go Green</span></div>
                 </a></div>
@@ -243,6 +243,7 @@
   }
 
   .side-navbar li a {
+    display: block;
     position: relative;
     font-size: .9rem;
     font-weight: 300;
