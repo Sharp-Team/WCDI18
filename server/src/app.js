@@ -1,20 +1,21 @@
-const DBConfig = require('./configuration/config')
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+require('dotenv').config()
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-app.listen(5000, () => {
-  console.log(`Server started on port 5000`)
+const port = process.env.PORT
+app.listen(port, () => {
+  console.log(`Server is running on port ${port} !`)
 })
 
 mongoose.Promise = global.Promise
 mongoose
   .connect(
-    DBConfig.dbconfig.nameDB,
+    process.env.CONNECT_MONGO,
     {
       useNewUrlParser: true
     }
