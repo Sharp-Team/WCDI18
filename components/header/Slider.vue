@@ -641,7 +641,7 @@
       align-items: center;
       justify-content: center;
       margin-top: 65px;
-      z-index: 999;
+      z-index: 10;
 
       .btn-home {
         text-transform: uppercase;
