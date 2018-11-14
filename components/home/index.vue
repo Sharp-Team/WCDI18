@@ -115,8 +115,8 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-1-hover.png" alt="" />
               </div>
-              <span>Creative Director</span>
-              <h4><span>Patrick </span> Flame</h4>
+              <span class="position">FontEnd</span>
+              <h4><span>HiepDQ </span> Flame</h4>
             </a>
             <ul class="d-flex justify-content-center">
               <li class="p-2"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -133,7 +133,7 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-2-hover.png" alt="" />
               </div>
-              <span>Web Designer</span>
+              <span class="position">FontEnd</span>
               <h4><span>Teresa</span> Crawford</h4>
             </a>
             <ul class="d-flex justify-content-center">
@@ -151,8 +151,8 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-3-hover.png" alt="" />
               </div>
-              <span>Photographer</span>
-              <h4><span>Joseph</span> Reynolds</h4>
+              <span class="position">BackEnd</span>
+              <h4><span>HoaPn</span> Thaycacac</h4>
             </a>
             <ul class="d-flex justify-content-center">
               <li class="p-2"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -169,7 +169,7 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-4-hover.png" alt="" />
               </div>
-              <span>SEO Expert</span>
+              <span class="position">FontEnd</span>
               <h4><span>Kathy</span> Watkins</h4>
             </a>
             <ul class="d-flex justify-content-center">
@@ -188,7 +188,7 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-4-hover.png" alt="" />
               </div>
-              <span>SEO Expert</span>
+              <span class="position">FontEnd</span>
               <h4><span>Kathy</span> Watkins</h4>
             </a>
             <ul class="d-flex justify-content-center">
@@ -209,6 +209,15 @@
 
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';
+  .position {
+    color: #fff !important;
+  }
+  .member-profile {
+    color: #6f7071;
+    &:hover {
+      color: $color-main;
+    }
+  }
   .container-fluid {
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -401,20 +410,20 @@
       }
 
       #speakers img:hover {
-        border: 10px solid #3980C9;
+        border: 10px solid $color-main;
         position: relative;
         z-index: 10;
         transition: all 0.1s ease-in;
       }
 
       #speakers span {
-        color: #fff;
+        color: rgb(107, 107, 107);
         padding: 8px 20px;
         position: relative;
         top: -64px;
         left: -42px;
         display: inline-block;
-        background: #4593e3;
+        background: $color-main;
         border-radius: 0 16px 16px 0;
         font-size: 12px;
       }
