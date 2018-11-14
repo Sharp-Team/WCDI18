@@ -27,7 +27,7 @@
         </div>
         <div class="modal-body" v-if="checked">
           <h6 class="title is-6">Nội dung công việc</h6>
-          <textarea class="form-control" id="message-text" rows="3" placeholder="Nhập chi tiết công việc"></textarea>
+          <textarea v-model="detailwork" class="form-control" id="message-text" rows="3" placeholder="Nhập chi tiết công việc"></textarea>
         </div>
         <div class="modal-body" v-if="checked">
           <h6 class="title is-6">Phạm vi quét: {{ range }} Km</h6>
@@ -59,6 +59,7 @@ export default {
       keepFirst: true,
       openOnFocus: false,
       name: '',
+      detailwork: '',
       data,
       selected: null
     }
