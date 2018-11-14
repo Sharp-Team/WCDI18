@@ -35,6 +35,7 @@ export default function(username, password) {
           position: 'is-bottom',
           type: 'is-success'
         })
+        this.$store.dispatch('SET_USERNAME', username)
         this.$nuxt.$loading.finish()
         this.$router.push('/')
       })
