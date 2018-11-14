@@ -4,30 +4,8 @@ const mongoose = require('mongoose')
 const User = mongoose.model('User')
 
 router.post('/signup', async (req, res) => {
-  const {
-    username,
-    password,
-    avatar,
-    email,
-    full_name,
-    phone_number,
-    province,
-    district,
-    address_detail,
-    object,
-    career,
-    indentify_card
-  } = req.body
-  const findUser = await User.findOne({
-    username
-  })
-  if (findUser) {
-    res.status(200).json({
-      data: null,
-      error: `Tài khoản ${findUser.username} đã có người sử dụng`
-    })
-  } else {
-    const newUser = await User.create({
+  try {
+    const {
       username,
       password,
       avatar,
@@ -40,12 +18,38 @@ router.post('/signup', async (req, res) => {
       object,
       career,
       indentify_card
+    } = req.body
+    const findUser = await User.findOne({
+      username
     })
-    await newUser.save()
-    res.status(200).json({
-      data: newUser,
-      error: null
-    })
+    if (findUser) {
+      res.status(200).json({
+        data: null,
+        error: `Tài khoản ${findUser.username} đã có người sử dụng`
+      })
+    } else {
+      const newUser = await User.create({
+        username,
+        password,
+        avatar,
+        email,
+        full_name,
+        phone_number,
+        province,
+        district,
+        address_detail,
+        object,
+        career,
+        indentify_card
+      })
+      await newUser.save()
+      res.status(200).json({
+        data: newUser,
+        error: null
+      })
+    }
+  } catch (e) {
+    console.log(e)
   }
 })
 

@@ -7,7 +7,7 @@
             <h3>Đăng ký tài khoản</h3>
           </div>
           <div class="form-info">
-            <form @submit.prevent="signup">
+            <form @submit.prevent="USER_SIGNUP(username, password, rePassword, imageAvatarUrl, email, fullname, phone, provinceSelected, districtSelected, address, object, jobSelected, imageCardUrl)">
               <div class="form-group row">
                 <label
                   for="fullname"
@@ -316,6 +316,8 @@
 
 <script>
 import MyButton from '~/components/share/Button'
+import USER_SIGNUP from './register'
+import { mapGetters } from 'vuex'
 const vietnam = require('~/assets/json/data-viet-nam.json')
 const jobs = require('~/assets/json/data-job.json')
 
@@ -336,7 +338,7 @@ export default {
       districtSelected: '',
       imageAvatarUrl: '',
       imageCardUrl: '',
-      object: '',
+      object: 'Khách hàng',
       jobSelected: ''
     }
   },
@@ -352,6 +354,7 @@ export default {
     MyButton
   },
   methods: {
+    USER_SIGNUP,
     signup () {
       this.$axios.post(`api/user/signup`, {
         username: this.username,
@@ -406,6 +409,7 @@ export default {
 
 <style lang="scss" scoped>
   @import '~assets/scss/variable.scss';
+
   .wrap-register {
     background-color: $color-background;
     padding-bottom: 4rem;
