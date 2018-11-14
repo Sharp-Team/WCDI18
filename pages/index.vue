@@ -3,84 +3,29 @@
     <slider></slider>
     <section class="container">
       <div>
-        <h2 class="title">
+        <h2 class="title title-home text-center">
           Coding Project 2018
         </h2>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">STT</th>
-              <th scope="col">Trang</th>
-              <th scope="col">Link</th>
-            </tr>
-          </thead>
-          <tbody
-            v-for="page in pages"
-            :key=page.no>
-            <tr>
-              <th scope="row">{{ page.no }}</th>
-              <td>{{ page.name }}</td>
-              <td><a :href="page.link">{{ page.link }}</a></td>
-            </tr>
-          </tbody>
-        </table>
-        <h5 class="title-small">Test back-end</h5>
-        <back-end class="is-back-end" />
       </div>
     </section>
+    <home-page />
   </div>
 </template>
 
 <script>
-  import BackEnd from '~/components/TestBackEnd'
   import MyFooter from '~/components/footer/Footer'
   import Navbar from '~/components/header/Navbar'
   import Notification from '~/components/share/Notification'
   import Slider from '~/components/header/Slider'
+  import HomePage from '~/components/home'
 
   export default {
-    data() {
-      return {
-        posistionCurren: '',
-        pages: [{
-            no: '1',
-            name: 'Thông tin tài khoản',
-            link: '/profile'
-          },
-          {
-            no: '2',
-            name: 'Đổi mật khẩu',
-            link: '/change-password'
-          },
-          {
-            no: '3',
-            name: 'Lịch sử giao dịch',
-            link: '/history'
-          },
-          {
-            no: '4',
-            name: 'Map',
-            link: '/map'
-          },
-          {
-            no: '5',
-            name: 'Đăng nhập ver 2',
-            link: '/login'
-          },
-          {
-            no: '6',
-            name: 'Đăng kí ver 2',
-            link: '/register'
-          },
-        ]
-      }
-    },
     components: {
-      BackEnd,
       MyFooter,
       Navbar,
       Notification,
-      Slider
+      Slider,
+      HomePage
     },
     layout: 'home',
   }
@@ -89,7 +34,7 @@
 
 <style lang="scss" scope>
   .title {
-    margin: 0 auto;
+    margin: 35px auto;
     font-weight: 300;
     font-size: 42px;
     color: #526488;

@@ -7,9 +7,12 @@
         </div>
         <div class="col-md-6">
           <p class="text-para">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
-            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout.
+            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+            using 'Content here, content here', making it look like readable English.
+            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and
+            a search for 'lorem ipsum' will uncover many web sites still in their infancy.
           </p>
         </div>
         <div class="col-md-6 function-row">
@@ -107,93 +110,93 @@
           <div class="col-md-4 col-sm-6">
             <a href="#" class="member-profile">
               <div class="unhover_img">
-              <img src="/images/homepage/speaker-1.png" alt="" />
+                <img src="/images/homepage/speaker-1.png" alt="" />
               </div>
               <div class="hover_img">
-              <img src="/images/homepage/speaker-1-hover.png" alt="" />
+                <img src="/images/homepage/speaker-1-hover.png" alt="" />
               </div>
               <span>Creative Director</span>
               <h4><span>Patrick </span> Simpson</h4>
-            </a>	
+            </a>
             <ul class="d-flex justify-content-center">
               <li class="p-2"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-              <li class="p-2"><a href="#"  target="_blank"><i class="fab fa-linkedin"></i></a></li>
-              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-foursquare"></i></a></li>						
-            </ul>
-          </div>
-          
-          <div class="col-md-4 col-sm-6">
-            <a href="#" class="member-profile">
-              <div class="unhover_img">
-              <img src="/images/homepage/speaker-2.png" alt="" />
-              </div>
-              <div class="hover_img">
-              <img src="/images/homepage/speaker-2-hover.png" alt="" />
-              </div>
-              <span>Web Designer</span>
-              <h4><span>Teresa</span> Crawford</h4>
-            </a>	
-            <ul class="d-flex justify-content-center">
-              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
-              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-              <li class="p-2"><a href="#"  target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-          
-          <div class="col-md-4 col-sm-6">
-            <a href="#" class="member-profile">
-              <div class="unhover_img">
-              <img src="/images/homepage/speaker-3.png" alt="" />
-              </div>
-              <div class="hover_img">
-              <img src="/images/homepage/speaker-3-hover.png" alt="" />
-              </div>
-              <span>Photographer</span>
-              <h4><span>Joseph</span> Reynolds</h4>
-            </a>					
-            <ul class="d-flex justify-content-center">
-              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-vimeo-square"></i></a></li>						
-              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-pinterest"></i></a></li>						
-            </ul>					
-          </div>
-          
-          <div class="col-md-4 col-sm-6">
-            <a href="#" class="member-profile">
-              <div class="unhover_img">
-              <img src="/images/homepage/speaker-4.png" alt="" />
-              </div>
-              <div class="hover_img">
-              <img src="/images/homepage/speaker-4-hover.png" alt="" />
-              </div>
-              <span>SEO Expert</span>
-              <h4><span>Kathy</span> Watkins</h4>
-            </a>					
-            <ul class="d-flex justify-content-center">
-              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-              <li class="p-2"><a href="#"  target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
               <li class="p-2"><a href="#" target="_blank"><i class="fab fa-foursquare"></i></a></li>
-              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-google-plus"></i></a></li>
-            </ul>						
+            </ul>
           </div>
 
           <div class="col-md-4 col-sm-6">
             <a href="#" class="member-profile">
               <div class="unhover_img">
-              <img src="/images/homepage/speaker-4.png" alt="" />
+                <img src="/images/homepage/speaker-2.png" alt="" />
               </div>
               <div class="hover_img">
-              <img src="/images/homepage/speaker-4-hover.png" alt="" />
+                <img src="/images/homepage/speaker-2-hover.png" alt="" />
+              </div>
+              <span>Web Designer</span>
+              <h4><span>Teresa</span> Crawford</h4>
+            </a>
+            <ul class="d-flex justify-content-center">
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <a href="#" class="member-profile">
+              <div class="unhover_img">
+                <img src="/images/homepage/speaker-3.png" alt="" />
+              </div>
+              <div class="hover_img">
+                <img src="/images/homepage/speaker-3-hover.png" alt="" />
+              </div>
+              <span>Photographer</span>
+              <h4><span>Joseph</span> Reynolds</h4>
+            </a>
+            <ul class="d-flex justify-content-center">
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-vimeo-square"></i></a></li>
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-pinterest"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <a href="#" class="member-profile">
+              <div class="unhover_img">
+                <img src="/images/homepage/speaker-4.png" alt="" />
+              </div>
+              <div class="hover_img">
+                <img src="/images/homepage/speaker-4-hover.png" alt="" />
               </div>
               <span>SEO Expert</span>
               <h4><span>Kathy</span> Watkins</h4>
-            </a>					
+            </a>
             <ul class="d-flex justify-content-center">
               <li class="p-2"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-              <li class="p-2"><a href="#"  target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
               <li class="p-2"><a href="#" target="_blank"><i class="fab fa-foursquare"></i></a></li>
               <li class="p-2"><a href="#" target="_blank"><i class="fab fa-google-plus"></i></a></li>
-            </ul>						
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <a href="#" class="member-profile">
+              <div class="unhover_img">
+                <img src="/images/homepage/speaker-4.png" alt="" />
+              </div>
+              <div class="hover_img">
+                <img src="/images/homepage/speaker-4-hover.png" alt="" />
+              </div>
+              <span>SEO Expert</span>
+              <h4><span>Kathy</span> Watkins</h4>
+            </a>
+            <ul class="d-flex justify-content-center">
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-foursquare"></i></a></li>
+              <li class="p-2"><a href="#" target="_blank"><i class="fab fa-google-plus"></i></a></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -202,79 +205,98 @@
 </template>
 
 <script>
-export default {
-
-}
 </script>
 
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';
-  .homepage{
+  .text-para {
+    margin-top: 45px;
+  }
+  .container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .homepage {
+    color: #6f7071;
     padding-top: 30px;
-    .my-title::after{
-        display: block;
-        content: "";
-        width: 100px;
-        height: 3px;
-        background: linear-gradient(to right,$color-main,$color-main);
-        margin: 0px auto 0;
-        top: 0;
-        position: absolute;
+
+    .my-title::after {
+      display: block;
+      content: "";
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(to right, $color-main, $color-main);
+      margin: 0px auto 0;
+      top: 0;
+      position: absolute;
     }
-    .title-border{
+
+    .title-border {
       position: relative;
-        .my-title{
+
+      .my-title {
         padding-top: 1rem !important;
         display: block;
       }
     }
-    .function-row{
+
+    .function-row {
       padding-top: 8rem;
-      .mb-image{
+
+      .mb-image {
         display: block;
         margin: auto;
       }
-      .title-border{
-        .sub-description{
+
+      .title-border {
+        .sub-description {
           font-size: 12px;
         }
-        .list-function{
-          ul{
+
+        .list-function {
+          ul {
             margin-left: 30px;
-            li{
+
+            li {
               padding-top: 35px;
-              .my-icon{
+
+              .my-icon {
                 color: white;
                 background-color: $color-main;
                 border-radius: 50%;
-                padding:15px !important;
+                padding: 15px !important;
                 margin-right: 20px;
                 float: left;
                 clear: both;
               }
             }
           }
-          
+
         }
       }
     }
-    .guide-register{
+
+    .guide-register {
       background-image: url('/images/homepage/background-guide.jpg');
       text-align: center;
       margin-top: 5rem;
-      .title-button{
+
+      .title-button {
         padding-top: 50px;
       }
-      .text{
+
+      .text {
         color: #ffffff !important;
       }
-      .description{
+
+      .description {
         font-style: italic;
-        font-size:12px;
+        font-size: 12px;
         padding-bottom: 22px;
       }
-      .group-btn{
-        .my-button{
+
+      .group-btn {
+        .my-button {
           color: #23716a;
           border: 2px solid #fff;
           padding: 10px 35px;
@@ -282,21 +304,26 @@ export default {
           border-radius: 0px;
           font-family: 'Montserrat';
         }
-        .my-button:hover{
+
+        .my-button:hover {
           background: rgba(255, 255, 255, 0.1);
           color: #fff !important;
         }
-        a:active{
+
+        a:active {
           background-color: #fff;
         }
       }
-      .element6{
+
+      .element6 {
         border-top: 2px solid #fff;
         margin-top: 50px;
       }
-      .img-huong-dan-dk{
+
+      .img-huong-dan-dk {
         position: static;
-        .cril{
+
+        .cril {
           height: 50px;
           width: 50px;
           background-image: url('/images/homepage/Untitled-1.png');
@@ -310,29 +337,32 @@ export default {
           font-weight: bold;
           margin-top: -25px;
         }
-        p{
+
+        p {
           font-family: 'Roboto-ThinItalic';
           color: #fff;
           margin-bottom: 10px;
         }
       }
-      .my-tab-content{
+
+      .my-tab-content {
         padding-bottom: 50px;
       }
     }
-    .team-page{
-      a:hover{
+
+    .team-page {
+      a:hover {
         text-decoration: unset;
       }
 
       #speakers {
-      padding: 60px 0;
-      text-align: center;	
+        padding: 60px 0;
+        text-align: center;
       }
 
       #speakers p {
         padding: 20px 0 60px;
-        color: rgba(255,255,255, 0.85);
+        color: rgba(255, 255, 255, 0.85);
         font-family: 'Open Sans', sans-serif;
         font-size: 16px;
         letter-spacing: 0.2px;
@@ -345,7 +375,7 @@ export default {
         text-transform: uppercase;
       }
 
-      #speakers h4  {
+      #speakers h4 {
         margin-top: -20px;
         font-size: 32px;
         font-weight: 700;
@@ -364,17 +394,17 @@ export default {
       #speakers img {
         width: 100%;
         max-width: 240px;
-        border-radius: 50%; 
-        border: 15px solid transparent; 
-        box-shadow: 2px 2px 0px rgba(0,0,0, 0.18);
+        border-radius: 50%;
+        border: 15px solid transparent;
+        box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.18);
         transition: all 0.1s ease-in;
       }
-        
+
       #speakers img:hover {
         border: 15px solid #3980C9;
         position: relative;
         z-index: 10;
-        transition: all 0.1s ease-in;	
+        transition: all 0.1s ease-in;
       }
 
       #speakers span {
@@ -393,7 +423,7 @@ export default {
         display: none
       }
 
-      .member-profile:hover .unhover_img{
+      .member-profile:hover .unhover_img {
         display: none;
       }
 
@@ -402,27 +432,32 @@ export default {
       }
     }
   }
+
   // For responsive
-  @media(max-width: 545px){
-    .homepage{
-      .title-border{
-        .my-title{
+  @media(max-width: 545px) {
+    .homepage {
+      .title-border {
+        .my-title {
           padding-bottom: 20px;
           font-size: 30px;
         }
       }
-      .text-para{
+
+      .text-para {
         font-size: 13px !important;
       }
-      .guide-register{
-        .text{
+
+      .guide-register {
+        .text {
           font-size: 30px;
         }
-        .description{
+
+        .description {
           font-size: 13px;
         }
-        .img-huong-dan-dk{
-          .cril{
+
+        .img-huong-dan-dk {
+          .cril {
             margin-bottom: 20px;
             margin-top: 25px;
           }
@@ -432,4 +467,3 @@ export default {
   }
 
 </style>
-
