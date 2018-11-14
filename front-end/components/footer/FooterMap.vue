@@ -5,6 +5,7 @@
     <status class="statusworker"/>
     <noti/>
     <scan />
+    <scan-user />
     <div class="my-footer">
       <div class="action" v-if="object==='Người làm việc'">
         <div class="icon status">
@@ -69,7 +70,9 @@
           <a href="#">
             <i
               class="fab fa-cloudscale"
-              id="showScanCustomer"></i>
+              id="showScanCustomer"
+              data-toggle="modal"
+              data-target="#scanUserModal"></i>
           </a>
           <span class="tooltip-search">
             Quét
@@ -175,6 +178,7 @@
   import status from '~/assets/js/status'
   import scan from '~/assets/js/scan'
   import noti from '~/assets/js/noti'
+  import ScanUser from "~/components/user/ScanUser"
 
   export default {
     data() {
@@ -185,7 +189,8 @@
     components: {
       Status,
       Scan,
-      Noti
+      Noti,
+      ScanUser
     },
     methods: {
       confirm() {
