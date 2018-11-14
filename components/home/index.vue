@@ -17,7 +17,7 @@
         </div>
         <div class="col-md-6 function-row">
           <div class="mb-image">
-            <img src="/images/homepage/mobile.png" alt="">
+            <img src="/images/homepage/iphone.jpg" alt="">
           </div>
         </div>
         <div class="col-md-6 function-row">
@@ -75,28 +75,28 @@
                     <div class="cril">1</div>
                   </center>
                   <p>Chọn chức năng</p>
-                  <img src="/images/homepage/chucnang1.jpg" alt="">
+                  <img src="/images/homepage/1.png" alt="">
                 </div>
                 <div class="col-sm-3 col-md-3 img-huong-dan-dk">
                   <center>
                     <div class="cril">2</div>
                   </center>
                   <p>Chọn ứng viên</p>
-                  <img src="/images/homepage/2 chọn ứng viên.jpg" alt="">
+                  <img src="/images/homepage/2.png" alt="">
                 </div>
                 <div class="col-sm-3 col-md-3 img-huong-dan-dk">
                   <center>
                     <div class="cril">3</div>
                   </center>
                   <p>Chọn nhu cầu</p>
-                  <img src="/images/homepage/3 đăng nhu cầu.jpg" alt="">
+                  <img src="/images/homepage/3.png" alt="">
                 </div>
                 <div class="col-sm-3 col-md-3 img-huong-dan-dk">
                   <center>
                     <div class="cril">4</div>
                   </center>
                   <p>Hoàn thành</p>
-                  <img src="/images/homepage/4hoanthanh.jpg" alt="">
+                  <img src="/images/homepage/4.png" alt="">
                 </div>
               </div>
             </div>
@@ -277,7 +277,7 @@
     }
 
     .guide-register {
-      background-image: url('/images/homepage/background-guide.jpg');
+      background-image: url('/images/homepage/background.jpg');
       text-align: center;
       margin-top: 5rem;
 
@@ -326,7 +326,7 @@
         .cril {
           height: 50px;
           width: 50px;
-          background-image: url('/images/homepage/Untitled-1.png');
+          background-image: url('/images/homepage/location.png');
           background-position: center;
           background-repeat: no-repeat;
           border-radius: 100%;
