@@ -175,6 +175,19 @@ export default {
         text-transform: uppercase;
         border-radius: none;
       }
+      @media (max-width: 1441px) {
+        .form-group {
+          margin-bottom: 5px;
+          width: 100%;
+          margin-left: 4px;
+          .form-control {
+            min-width: 100%;
+          }
+        }
+        .btn-send {
+          width: 100%;
+        }
+      }
       @media (max-width: 1200px) {
         .form-group {
           margin-bottom: 5px;
