@@ -54,7 +54,7 @@
             class="market-image" />
           <div class="market-text">{{ address }}</div>
           <nuxt-link
-            v-if="username === ''"
+            v-if="!username"
             to="/login"
             class="ml-2">
             <my-button
@@ -65,7 +65,7 @@
               color="black" />
           </nuxt-link>
           <nuxt-link
-            v-if="username === ''"
+            v-if="!username"
             to="/register"
             class="ml-2">
             <my-button
@@ -90,7 +90,7 @@
               </div>
             </div>
           </nuxt-link>
-          <notification v-if="username !== ''" />
+          <notification v-if="username" />
         </div>
       </div>
     </nav>
@@ -105,14 +105,12 @@
   import MyButton from '~/components/share/Button'
   import Navmenu from './Navmenu'
   import navbar from '~/assets/js/navbar'
-  import { mapGetters } from 'vuex'
 
   export default {
     name: 'Navbar',
     data() {
       return {
-        username: 'Flame',
-        imgProfile: '/images/flame.jpg',
+        imgProfile: '/images/user.jpg',
         address: 'Room D413, FPT University'
       }
     },
@@ -120,6 +118,11 @@
       Notification,
       Navmenu,
       MyButton
+    },
+    computed: {
+      username() {
+        return this.$store.getters.GET_USERNAME
+      }
     },
     mounted() {
       if (navigator.geolocation) {
