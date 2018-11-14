@@ -2,7 +2,18 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const session = require('express-session')
 require('dotenv').config()
+
+app.set('trust proxy', 1) // trust first proxy
+app.use(
+  session({
+    secret: 'thaycacac',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 600000 }
+  })
+)
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())

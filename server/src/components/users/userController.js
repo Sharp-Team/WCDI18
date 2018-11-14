@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 const User = mongoose.model('User')
+var session = require('express-session')
 
 router.post('/signup', async (req, res) => {
   try {
@@ -60,6 +61,8 @@ router.post('/signin', async (req, res) => {
   })
     .then(result => {
       if (result.password === user.password) {
+        req.session.username = user.username
+        console.log(req.session)
         res.status(200).json({
           data: `Đăng nhập thành công`,
           error: null
