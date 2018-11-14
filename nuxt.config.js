@@ -1,4 +1,6 @@
 const pkg = require('./package')
+import bodyParser from 'body-parser'
+const session = require('express-session')
 
 module.exports = {
   mode: 'universal',
@@ -100,6 +102,15 @@ module.exports = {
       }
     },
     serverMiddleware: [
+      // body-parser middleware
+      bodyParser.json(),
+      // session middleware
+      session({
+        secret: 'thaycacac',
+        resave: false,
+        saveUninitialized: false,
+        cookie: { maxAge: 600000 }
+      })
       // API middleware
       // '~/server/server.js'
     ]
