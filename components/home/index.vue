@@ -107,7 +107,7 @@
     <div class="container team-page">
       <section id="speakers">
         <div class="row d-flex justify-content-center">
-          <div class="col-md-4 col-sm-6">
+          <div class="wrap-img-profile">
             <a href="#" class="member-profile">
               <div class="unhover_img">
                 <img src="/images/homepage/speaker-1.png" alt="" />
@@ -116,7 +116,7 @@
                 <img src="/images/homepage/speaker-1-hover.png" alt="" />
               </div>
               <span>Creative Director</span>
-              <h4><span>Patrick </span> Simpson</h4>
+              <h4><span>Patrick </span> Flame</h4>
             </a>
             <ul class="d-flex justify-content-center">
               <li class="p-2"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -125,7 +125,7 @@
             </ul>
           </div>
 
-          <div class="col-md-4 col-sm-6">
+          <div class="wrap-img-profile">
             <a href="#" class="member-profile">
               <div class="unhover_img">
                 <img src="/images/homepage/speaker-2.png" alt="" />
@@ -143,7 +143,7 @@
             </ul>
           </div>
 
-          <div class="col-md-4 col-sm-6">
+          <div class="wrap-img-profile">
             <a href="#" class="member-profile">
               <div class="unhover_img">
                 <img src="/images/homepage/speaker-3.png" alt="" />
@@ -161,7 +161,7 @@
             </ul>
           </div>
 
-          <div class="col-md-4 col-sm-6">
+          <div class="wrap-img-profile">
             <a href="#" class="member-profile">
               <div class="unhover_img">
                 <img src="/images/homepage/speaker-4.png" alt="" />
@@ -180,7 +180,7 @@
             </ul>
           </div>
 
-          <div class="col-md-4 col-sm-6">
+          <div class="wrap-img-profile">
             <a href="#" class="member-profile">
               <div class="unhover_img">
                 <img src="/images/homepage/speaker-4.png" alt="" />
@@ -364,7 +364,7 @@
         padding: 20px 0 60px;
         color: rgba(255, 255, 255, 0.85);
         font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
+        font-size: 12px;
         letter-spacing: 0.2px;
       }
 
@@ -392,16 +392,16 @@
       }
 
       #speakers img {
-        width: 100%;
+        width: 85%;
         max-width: 240px;
         border-radius: 50%;
-        border: 15px solid transparent;
+        border: 10px solid transparent;
         box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.18);
         transition: all 0.1s ease-in;
       }
 
       #speakers img:hover {
-        border: 15px solid #3980C9;
+        border: 10px solid #3980C9;
         position: relative;
         z-index: 10;
         transition: all 0.1s ease-in;
@@ -416,7 +416,7 @@
         display: inline-block;
         background: #4593e3;
         border-radius: 0 16px 16px 0;
-        font-size: 16px;
+        font-size: 12px;
       }
 
       .hover_img {
