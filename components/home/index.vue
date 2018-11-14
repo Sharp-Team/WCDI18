@@ -152,7 +152,7 @@
                 <img src="/images/homepage/speaker-3-hover.png" alt="" />
               </div>
               <span class="position">BackEnd</span>
-              <h4><span>HoaPn</span> Thaycacac</h4>
+              <h4><span>HoaPN</span> Thaycacac</h4>
             </a>
             <ul class="d-flex justify-content-center">
               <li class="p-2"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
