@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 title-border">
-          <h1 class="title is-3 my-title">Điều gì đã giúp chúng tôi có ý tưởng</h1>
+          <h1 class="title is-3 my-title head">Điều gì đã giúp chúng tôi có ý tưởng</h1>
         </div>
         <div class="col-md-6">
           <p class="text-para">
@@ -209,9 +209,6 @@
 
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';
-  .text-para {
-    margin-top: 45px;
-  }
   .container-fluid {
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -237,6 +234,9 @@
       .my-title {
         padding-top: 1rem !important;
         display: block;
+      }
+      .head{
+        margin-top: 0px !important;
       }
     }
 
