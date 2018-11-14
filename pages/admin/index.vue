@@ -76,12 +76,12 @@
             <div class="col-12">
               <div id="new-updates" class="card updates recent-updated">
                 <div id="updates-header" class="card-header d-flex justify-content-between align-items-center">
-                  <h2 class="h5 display"><a data-toggle="collapse" data-parent="#new-updates" href="#updates-box"
-                      aria-expanded="true" aria-controls="updates-box">Feedback</a></h2><a data-toggle="collapse"
-                    data-parent="#new-updates" href="#updates-box" aria-expanded="true" aria-controls="updates-box"><i
+                  <h2 class="h5 display"><a data-toggle="collapse" data-parent="#new-updates" href="#list-feedback"
+                      aria-expanded="true" aria-controls="list-feedback">Feedback</a></h2><a data-toggle="collapse"
+                    data-parent="#new-updates" href="#list-feedback" aria-expanded="true" aria-controls="list-feedback"><i
                       class="fa fa-angle-down"></i></a>
                 </div>
-                <div id="updates-box" role="tabpanel" class="collapse show">
+                <div id="list-feedback" role="tabpanel" class="collapse show">
                   <table class="table table-hover">
                     <thead>
                       <tr>
@@ -91,23 +91,10 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Some quick example text to build on the card title and make up the bulk of the card's
-                          content.</td>
-                        <td>@thaycacac</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Some quick example text to build on the card title and make up the bulk of the card's
-                          content.</td>
-                        <td>@thaycacac</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Some quick example text to build on the card title and make up the bulk of the card's
-                          content.</td>
-                        <td>@thaycacac</td>
+                      <tr v-for="(feedback, index) in listFeedBack" :key="feedback.user">
+                        <th scope="row">{{ index+=1 }}</th>
+                        <td>{{ feedback.content }}</td>
+                        <td>{{ feedback.user }}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -123,12 +110,12 @@
             <div class="col-12">
               <div id="new-updates" class="card updates recent-updated">
                 <div id="updates-header" class="card-header d-flex justify-content-between align-items-center">
-                  <h2 class="h5 display"><a data-toggle="collapse" data-parent="#new-updates" href="#updates-box"
-                      aria-expanded="true" aria-controls="updates-box">Manage User</a></h2><a data-toggle="collapse"
-                    data-parent="#new-updates" href="#updates-box" aria-expanded="true" aria-controls="updates-box"><i
+                  <h2 class="h5 display"><a data-toggle="collapse" data-parent="#new-updates" href="#list-user"
+                      aria-expanded="true" aria-controls="list-user">Manage User</a></h2><a data-toggle="collapse"
+                    data-parent="#new-updates" href="#list-user" aria-expanded="true" aria-controls="list-user"><i
                       class="fa fa-angle-down"></i></a>
                 </div>
-                <div id="updates-box" role="tabpanel" class="collapse show">
+                <div id="list-user" role="tabpanel" class="collapse show">
                   <table class="table table-hover">
                     <thead>
                       <tr>
@@ -138,20 +125,10 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Thaycacac</td>
-                        <td>123456</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Thaycacac</td>
-                        <td>123456</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Thaycacac</td>
-                        <td>123456</td>
+                      <tr v-for="(user, index) in listUser" :key="user.username">
+                        <th scope="row">{{ index +=1 }}</th>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.password }}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -164,6 +141,44 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      listFeedBack: [
+        {
+          content: 'Rất dễ sử dụng',
+          user: 'Flame'
+        },
+        {
+          content: 'Tiện lợi',
+          user: 'thaycacac'
+        },
+        {
+          content: 'Khó sử dụng :/',
+          user: 'Trần Quang Nhạt'
+        },
+      ],
+      listUser: [
+        {
+          username: 'bacodekiller',
+          password: 'bacode'
+        },
+        {
+          username: 'thaycacac',
+          password: 'hongthuydeoyeu'
+        },
+        {
+          username: 'NhatTQ',
+          password: 'nhattq'
+        },
+      ]
+    }
+  }
+}
+</script>
+
 
 <style lang="scss" scoped>
   .statistics {
