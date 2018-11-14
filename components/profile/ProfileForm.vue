@@ -13,7 +13,6 @@
           <input
             type="text"
             class="form-control"
-            id="fullname"
             v-model="name"
             disabled>
         </div>
@@ -30,7 +29,6 @@
           <input
             type="text"
             class="form-control"
-            id="username"
             v-model="username"
             disabled>
         </div>
@@ -47,7 +45,6 @@
           <input
             type="text"
             class="form-control"
-            id="email"
             v-model="email"
             disabled>
         </div>
@@ -64,7 +61,6 @@
           <input
             type="text"
             class="form-control"
-            id="mobile"
             v-model="phone"
             disabled>
           <div class="confirm">
