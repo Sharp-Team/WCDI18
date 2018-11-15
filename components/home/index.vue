@@ -9,7 +9,7 @@
           <p class="text-para">
             - Thường xuyên thấy hình ảnh những người dân khổ cực tìm phế liệu tại các thùng rác, bãi rác hay lượng chai lọ rác thải nhựa tràn lan ngoài biển, chúng tôi nhận thấy việc phân loại rác thải tại Việt Nam đã triển khai nhưng chưa hiệu quả, triệt để.
             <br />
-            - Việc này trực tiếp gây ra sự khó khăn trong việc xử lý rác thải tại Việt Nam, dẫn đến ô nhiễm môi trường nặng nề đặc biệt là biển và không khí. 
+            - Việc này trực tiếp gây ra sự khó khăn trong việc xử lý rác thải tại Việt Nam, dẫn đến ô nhiễm môi trường nặng nề đặc biệt là biển và không khí.
             <br />
             - Từ đó chúng tôi đã nghĩ đến nền tảng kết nối người đi mua và có phế liệu giúp họ tiết kiệm thời gian công sức, việc tái chế rác thải hiệu quả hơn.
           </p>
@@ -114,7 +114,7 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-1-hover.png" alt="" />
               </div>
-              <span class="position">FontEnd</span>
+              <span class="position">FrontEnd</span>
               <h4><span>HiepDQ </span> Flame</h4>
             </a>
             <ul class="d-flex justify-content-center">
@@ -132,7 +132,7 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-2-hover.png" alt="" />
               </div>
-              <span class="position">FontEnd</span>
+              <span class="position">Designer</span>
               <h4><span>Teresa</span> Crawford</h4>
             </a>
             <ul class="d-flex justify-content-center">
@@ -187,7 +187,7 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-4-hover.png" alt="" />
               </div>
-              <span class="position">FontEnd</span>
+              <span class="position">FrontEnd</span>
               <h4><span>Kathy</span> Watkins</h4>
             </a>
             <ul class="d-flex justify-content-center">

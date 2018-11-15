@@ -24,6 +24,12 @@ export default function(username, oldpassword, password, repassword) {
       position: 'is-bottom',
       type: 'is-danger'
     })
+  } else if (password.length < 8) {
+    this.$toast.open({
+      message: `Mật khẩu phải chưa ít nhất 8 ký tự`,
+      position: 'is-bottom',
+      type: 'is-danger'
+    })
   } else {
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
