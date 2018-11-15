@@ -36,6 +36,10 @@ mongoose
   })
 
 require('./components/users/user')
+require('./components/deals/deal')
 
 const userController = require('./components/users/userController')
+const dealController = require('./components/deals/dealController')
+
 app.use('/user', userController)
+app.use('/deal', dealController)
