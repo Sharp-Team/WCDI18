@@ -7,12 +7,11 @@
         </div>
         <div class="col-md-6">
           <p class="text-para">
-            It is a long established fact that a reader will be distracted by the readable content of a page when
-            looking at its layout.
-            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-            using 'Content here, content here', making it look like readable English.
-            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and
-            a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+            - Thường xuyên thấy hình ảnh những người dân khổ cực tìm phế liệu tại các thùng rác, bãi rác hay lượng chai lọ rác thải nhựa tràn lan ngoài biển, chúng tôi nhận thấy việc phân loại rác thải tại Việt Nam đã triển khai nhưng chưa hiệu quả, triệt để.
+            <br />
+            - Việc này trực tiếp gây ra sự khó khăn trong việc xử lý rác thải tại Việt Nam, dẫn đến ô nhiễm môi trường nặng nề đặc biệt là biển và không khí. 
+            <br />
+            - Từ đó chúng tôi đã nghĩ đến nền tảng kết nối người đi mua và có phế liệu giúp họ tiết kiệm thời gian công sức, việc tái chế rác thải hiệu quả hơn.
           </p>
         </div>
         <div class="col-md-6 function-row">
@@ -209,6 +208,10 @@
 
 <style lang="scss" scoped>
   @import '~/assets/scss/variable.scss';
+  .text-para {
+    margin-top: 25px;
+  }
+
   .position {
     color: #fff !important;
   }
@@ -250,7 +253,7 @@
     }
 
     .function-row {
-      padding-top: 8rem;
+      padding-top: 3rem;
 
       .mb-image {
         display: block;
@@ -259,7 +262,7 @@
 
       .title-border {
         .sub-description {
-          font-size: 12px;
+          font-size: 0.9rem;
         }
 
         .list-function {
@@ -342,7 +345,7 @@
           margin-bottom: 30px;
           line-height: 50px;
           color: #ffffff;
-          font-size: 20px;
+          font-size: 18px;
           font-weight: bold;
           margin-top: -25px;
         }
