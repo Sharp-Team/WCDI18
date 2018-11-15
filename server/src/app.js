@@ -3,7 +3,6 @@ const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const session = require('express-session')
-require('dotenv').config()
 
 app.set('trust proxy', 1) // trust first proxy
 app.use(
@@ -18,9 +17,8 @@ app.use(
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-const port = process.env.PORT
-app.listen(port, () => {
-  console.log(`Server is running on port ${port} !`)
+app.listen(5000, () => {
+  console.log(`Server is running on port 5000 !`)
 })
 
 mongoose.Promise = global.Promise
