@@ -6,7 +6,7 @@
     <th>Thời gian</th>
     <th>Công việc</th>
     <th>Trạng thái</th>
-    <th class="d-none d-sm-block">Ngày đặt</th>
+    <th class="d-none d-sm-block">Người làm việc</th>
     </tr>
   </thead>
   <tbody>
@@ -56,11 +56,11 @@ export default {
   data () {
     return {
       list: [
-        { time: '16:42:18', name: 'Sửa điện thoại Nokia', status: 'Hủy', date: '28/08/2018' },
-        { time: '16:42:18', name: 'Sửa điện tủ lạnh Sharp', status: 'Hoàn thành', date: '28/08/2018' },
-        { time: '16:42:18', name: 'Mua bán phế liệu', status: 'Hủy', date: '28/08/2018' },
-        { time: '16:42:18', name: 'Hỏng xay máy Honda', status: 'Hoàn thành', date: '28/08/2018' },
-        { time: '16:42:18', name: 'Chữa bệnh ỉa chảy', status: 'Hoàn thành', date: '28/08/2018' },
+        { time: '16:42:18', name: 'Sửa điện thoại Nokia', status: 'Hủy', date: 'Phạm Ngọc Hòa' },
+        { time: '16:42:18', name: 'Sửa điện tủ lạnh Sharp', status: 'Hoàn thành', date: 'Phạm Ngọc Hòa' },
+        { time: '16:42:18', name: 'Mua bán phế liệu', status: 'Hủy', date: 'Phạm Ngọc Hòa' },
+        { time: '16:42:18', name: 'Hỏng xay máy Honda', status: 'Hoàn thành', date: 'Phạm Ngọc Hòa' },
+        { time: '16:42:18', name: 'Chữa bệnh ỉa chảy', status: 'Hoàn thành', date: 'Phạm Ngọc Hòa' },
       ]
     }
   }

@@ -103,7 +103,6 @@
   import navbar from '~/assets/js/navbar'
 
   export default {
-    name: 'Navbar',
     data() {
       return {
         imgProfile: '/images/user.jpg',
@@ -165,6 +164,7 @@
     .navbar {
       padding: 0.3em 1em 0.5em 1em!important;
       box-shadow: 0 5px 6px rgba(0, 0, 0, 0.05);
+      background-color: rgba(255, 255, 255, 0.95) !important;
     }
     .navbar-collapse {
       .market-image {
@@ -298,5 +298,4 @@
       }
     }
   }
-
 </style>

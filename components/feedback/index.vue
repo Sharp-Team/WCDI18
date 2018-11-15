@@ -3,7 +3,7 @@
     <div class="imagebg"></div>
     <div class="row wrap-feedback">
       <div class="col-12 form-container">
-        <h2 
+        <h2
           class="title is-3 has-text-centered"
           v-show="!send"
         >
@@ -12,7 +12,7 @@
         <p
           class="title is-6"
           v-show="!send"
-        > 
+        >
           Vui lòng cung cấp phản hồi của bạn bên dưới:
         </p>
         <form
@@ -92,7 +92,7 @@
                 class="btn btn-lg btn-success btn-block"
                 @click="send=!send"
               >
-                Gửi phản hồi 
+                Gửi phản hồi
               </button>
             </div>
           </div>
@@ -101,7 +101,7 @@
           id="success_message"
           style="width:100%; height:100%;"
           class="has-text-centered has-text-success"
-          v-show="send"  
+          v-show="send"
         >
           <h3>Bạn đã gửi phản hồi thành công!</h3>
         </div>
@@ -122,8 +122,8 @@
 
 <style lang="scss" scoped>
   .wrap-feedback {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 200px;
+    margin-bottom: 200px;
   }
 
   .imagebg {

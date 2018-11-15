@@ -183,7 +183,7 @@
   export default {
     data() {
       return {
-        object: 'Khách hàng'
+        object: 'Người làm việc'
       }
     },
     components: {
