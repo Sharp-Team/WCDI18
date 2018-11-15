@@ -59,14 +59,21 @@
               <div class="col-sm-12 col-md-7 col-lg-7 offset-md-4 offset-lg-3">
                 <div class="custom-btn-login">
                   <div class="social-btn text-right mb-2">
-                    <button class="btn-block">
-                      <a href="#">
-                        <img
-                          src="/images/facebook.png"
-                          alt="facebook" />
-                        <span class="text">Đăng nhập bằng Facebook</span>
-                      </a>
-                    </button>
+                    <no-ssr>
+                      <fb-signin-button
+                        :params="fbSignInParams"
+                        @success="onSignInSuccess"
+                        @error="onSignInError">
+                        <button class="btn-block">
+                          <a href="#">
+                            <img
+                              src="/images/facebook.png"
+                              alt="facebook" />
+                            <span class="text">Đăng nhập bằng Facebook</span>
+                          </a>
+                        </button>
+                      </fb-signin-button>
+                    </no-ssr>
                   </div>
                   <div class="social-btn">
                     <no-ssr>
@@ -108,6 +115,10 @@ import USER_SIGNIN from './login'
         password: '',
         googleSignInParams: {
           client_id: '53490202765-8lksegphfnljv8tn64c5hnl6nacsnate.apps.googleusercontent.com'
+        },
+        fbSignInParams: {
+          scope: 'email,user_likes',
+          return_scopes: true
         }
       }
     },
@@ -159,8 +170,33 @@ import USER_SIGNIN from './login'
       },
       onSignInError (error) {
         console.log('Không thể đăng nhập!!! ', error)
+      },
+      onSignInSuccess (response) {
+        FB.api('/me', dude => {
+          console.log(`Good to see you, ${dude.name}.`)
+        })
+      },
+      onSignInError (error) {
+        console.log('OH NOES', error)
       }
-    }
+    },
+    beforeMount() {
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '118289005758060',
+          cookie     : true,  // enable cookies to allow the server to access the session
+          xfbml      : true,  // parse social plugins on this page
+          version    : 'v2.8' // use graph api version 2.8
+        });
+      };
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    },
 }
 </script>
 

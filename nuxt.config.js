@@ -74,7 +74,13 @@ module.exports = {
     { src: '~/assets/scss/buefy-overrides.scss', lang: 'sass' }
   ],
 
-  plugins: [{ src: '~/plugins/google-authen.js', ssr: false }],
+  plugins: [
+    {
+      src: '~/plugins/google-authen.js',
+      ssr: false
+    },
+    { src: '~/plugins/facebook-authen.js', ssr: false }
+  ],
 
   modules: [
     '@nuxtjs/axios',
