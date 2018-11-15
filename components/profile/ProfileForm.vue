@@ -143,14 +143,14 @@
   export default {
     data () {
       return {
-        name: 'Phan Văn Đức',
-        username: 'phanduc0908',
-        email: 'phanduc0908@gmail.com',
-        phone: '0981131870',
-        groupUser: 'Khách hàng',
-        province: 'Hà Nội',
-        district: 'Chương Mỹ',
-        address: 'Xóm Đình, thôn Cốc Thượng, xã Hoàng Diệu, huyện Chương Mỹ, thành phố Hà Nội'
+        name: '',
+        username: '',
+        email: '',
+        phone: '',
+        groupUser: '',
+        province: '',
+        district: '',
+        address: ''
       }
     },
     beforeMount() {

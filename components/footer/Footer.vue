@@ -56,13 +56,13 @@
                 <img
                   src="/images/icon-footer/icon-phone.png"
                   alt="" />
-                <span>0349088188</span>
+                <span>0123456789</span>
               </div>
               <div class="footer-info mb-1">
                 <img
                   src="/images/icon-footer/icon-contact.png"
                   alt="" />
-                <span>bacodekiller@gmail.com</span>
+                <span>sharpteam.fpt@gmail.com</span>
               </div>
               <form class="form-inline frm-contact">
                 <div class="form-group">

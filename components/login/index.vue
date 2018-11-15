@@ -61,9 +61,9 @@
                   <div class="social-btn text-right mb-2">
                     <no-ssr>
                       <fb-signin-button
-                        :params="fbSignInParams"
-                        @success="onSignInSuccess"
-                        @error="onSignInError">
+                        :params="fbSignInFBParams"
+                        @success="onSignInFBSuccess"
+                        @error="onSignInFBError">
                         <button class="btn-block">
                           <a href="#">
                             <img
@@ -171,12 +171,12 @@ import USER_SIGNIN from './login'
       onSignInError (error) {
         console.log('Không thể đăng nhập!!! ', error)
       },
-      onSignInSuccess (response) {
+      onSignInFBSuccess (response) {
         FB.api('/me', dude => {
           console.log(`Good to see you, ${dude.name}.`)
         })
       },
-      onSignInError (error) {
+      onSignInFBError (error) {
         console.log('OH NOES', error)
       }
     },

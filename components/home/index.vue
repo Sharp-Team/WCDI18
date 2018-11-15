@@ -133,7 +133,7 @@
                 <img src="/images/homepage/speaker-2-hover.png" alt="" />
               </div>
               <span class="position">Designer</span>
-              <h4><span>Teresa</span> Crawford</h4>
+              <h4><span>ThachDN</span> Baby Kajima</h4>
             </a>
             <ul class="d-flex justify-content-center">
               <li class="p-2"><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
