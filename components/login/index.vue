@@ -61,7 +61,7 @@
                   <div class="social-btn text-right mb-2">
                     <no-ssr>
                       <fb-signin-button
-                        :params="fbSignInFBParams"
+                        :params="fbSignInParams"
                         @success="onSignInFBSuccess"
                         @error="onSignInFBError">
                         <button class="btn-block">
