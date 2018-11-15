@@ -130,22 +130,6 @@
           </textarea>
         </div>
       </div>
-
-      <div class="form-group row">
-        <label
-          for=""
-          class="col-sm-12 col-md-3 col-form-label"
-        >
-          Loại địa chỉ
-        </label>
-        <div class="col-sm-12 col-md-7">
-          <select
-            class="form-control"
-            disabled>
-            <option>{{ groupAddress }}</option>
-          </select>
-        </div>
-      </div>
     </form>
   </div>
 </template>
@@ -166,9 +150,35 @@
         groupUser: 'Khách hàng',
         province: 'Hà Nội',
         district: 'Chương Mỹ',
-        address: 'Xóm Đình, thôn Cốc Thượng, xã Hoàng Diệu, huyện Chương Mỹ, thành phố Hà Nội',
-        groupAddress: 'Nhà riêng'
+        address: 'Xóm Đình, thôn Cốc Thượng, xã Hoàng Diệu, huyện Chương Mỹ, thành phố Hà Nội'
       }
-    }
+    },
+    beforeMount() {
+      this.$axios
+      .post(`/api/user/profile`, {
+        username: this.$store.getters.GET_USERNAME
+      })
+      .then(response => {
+        if (response.data.error) {
+          this.$toast.open({
+            message: response.data.error,
+            position: 'is-bottom',
+            type: 'is-danger'
+          })
+          return
+        }
+        this.name = response.data.full_name
+        this.username = response.data.username
+        this.email = response.data.email
+        this.phone = response.data.phone_number
+        this.groupUser = response.data.object
+        this.province = response.data.province
+        this.district = response.data.district
+        this.address = response.data.address_detail
+      })
+      .catch(function(error) {
+        console.log(error)
+      })
+    },
   }
 </script>

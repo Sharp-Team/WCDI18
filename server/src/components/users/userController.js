@@ -62,7 +62,6 @@ router.post('/signin', async (req, res) => {
     .then(result => {
       if (result.password === user.password) {
         req.session.username = user.username
-        console.log(req.session)
         res.status(200).json({
           data: `Đăng nhập thành công`,
           error: null
@@ -98,9 +97,10 @@ router.get('/signout', async (req, res) => {
   }
 })
 
-router.get('/profile', async (req, res) => {
+router.post('/profile', async (req, res) => {
   try {
     const { username } = req.body
+    console.log(username)
     const findUser = await User.findOne({
       username
     })
