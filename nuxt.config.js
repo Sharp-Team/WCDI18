@@ -126,9 +126,13 @@ module.exports = {
       cookie: { maxAge: 600000 }
     }),
     // setup mongoose
-    mongoose.connect(DBConfig.dbconfig.nameDB, {
-      useNewUrlParser: true
-    })
+    mongoose
+      .connect(
+        DBConfig.dbconfig.nameDB,
+        {
+          useNewUrlParser: true
+        }
+      )
       .then(() => {
         console.log('Database connected')
       }),
