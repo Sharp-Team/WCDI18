@@ -9,5 +9,8 @@ export default {
   },
   SET_USERNAME({ commit }, username) {
     commit('setUsername', username)
+  },
+  SET_AVATAR({ commit }, avatar) {
+    commit('setAvatar', avatar)
   }
 }

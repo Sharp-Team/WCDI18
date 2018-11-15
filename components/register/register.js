@@ -95,7 +95,7 @@ export default function(
       .post(`/api/user/signup`, {
         username: username,
         password: password,
-        avatar: avatar,
+        avatar: '/images/user.jpg',
         email: email,
         full_name: full_name,
         phone_number: phone_number,

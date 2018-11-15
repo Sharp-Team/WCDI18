@@ -4,5 +4,8 @@ export default {
   },
   GET_USERNAME: state => {
     return state.username
+  },
+  GET_AVATAR: state => {
+    return state.avatar
   }
 }

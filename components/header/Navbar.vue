@@ -72,13 +72,13 @@
               class="is-btn-register" />
           </nuxt-link>
           <nuxt-link
-            v-else
+            v-if="username"
             to="/profile"
             class="ml-4">
             <div class="wrap-profile">
               <div class="wrap-img-profile">
                 <img
-                  :src="imgProfile"
+                  :src="avatar"
                   alt="image-profile">
               </div>
               <div class="wrap-username">
@@ -86,13 +86,19 @@
               </div>
             </div>
           </nuxt-link>
+          <nuxt-link
+            v-if="username"
+            to="/"
+            class="ml-2">
+            <button class="button my-button"> Đăng xuất </button>
+          </nuxt-link>
           <notification v-if="username" />
         </div>
       </div>
     </nav>
     <navmenu
       :username="username"
-      :imgProfile="imgProfile" />
+      :imgProfile="avatar" />
   </div>
 </template>
 
@@ -105,7 +111,6 @@
   export default {
     data() {
       return {
-        imgProfile: '/images/user.jpg',
         address: 'Room D413, FPT University'
       }
     },
@@ -117,6 +122,9 @@
     computed: {
       username() {
         return this.$store.getters.GET_USERNAME
+      },
+      avatar() {
+        return this.$store.getters.GET_AVATAR
       }
     },
     mounted() {
@@ -155,6 +163,10 @@
 </script>
 
 <style lang="scss" scoped>
+  .my-button {
+    background: none;
+    border: none;
+  }
   .navbar-section {
     position: fixed;
     width: 100%;

@@ -63,7 +63,7 @@ router.post('/signin', async (req, res) => {
       if (result.password === user.password) {
         req.session.username = user.username
         res.status(200).json({
-          data: `Đăng nhập thành công`,
+          data: result.avatar,
           error: null
         })
       } else {

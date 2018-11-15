@@ -7,7 +7,8 @@ const store = () =>
   new Vuex.Store({
     state: {
       range: 5,
-      username: null
+      username: null,
+      avatar: null
     },
     getters,
     mutations,

@@ -36,6 +36,7 @@ export default function(username, password) {
           type: 'is-success'
         })
         this.$store.dispatch('SET_USERNAME', username)
+        this.$store.dispatch('SET_AVATAR', response.data.data)
         this.$nuxt.$loading.finish()
         this.$router.push('/')
       })

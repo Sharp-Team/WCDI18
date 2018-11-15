@@ -157,6 +157,7 @@ import USER_SIGNIN from './login'
                 type: 'is-success'
               })
               this.$store.dispatch('SET_USERNAME', profile.ig)
+              this.$store.dispatch('SET_AVATAR', response.data.data)
               this.$nuxt.$loading.finish()
               this.$router.push('/')
             })
