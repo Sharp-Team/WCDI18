@@ -54,5 +54,10 @@
   .is-back-end {
     margin-bottom: 50px;
   }
-
+  
+  @media(max-width: 768px) {
+    .title-home {
+      margin-top: 54px;
+    }
+  }
 </style>

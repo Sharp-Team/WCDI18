@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page d-flex">
+  <div class="home-page d-flex is-hidden-mobile">
     <no-ssr>
       <div class="my-button">
         <nuxt-link to="/map">
@@ -704,6 +704,12 @@
         }
       }
 
+    }
+  }
+
+  @media(max-width: 992px) {
+    .home-page {
+      height: 350px;
     }
   }
 </style>
