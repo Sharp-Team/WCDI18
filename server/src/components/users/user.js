@@ -9,48 +9,38 @@ const User = new Schema({
     required: true
   },
   password: {
-    type: String,
-    required: true
+    type: String
   },
   avatar: {
-    type: String,
-    required: false
+    type: String
   },
   email: {
-    type: String,
-    required: true
+    type: String
   },
   full_name: {
-    type: String,
-    required: true
+    type: String
   },
   phone_number: {
-    type: String,
-    required: true
+    type: String
   },
   province: {
-    type: String,
-    required: true
+    type: String
   },
   district: {
-    type: String,
-    required: true
+    type: String
   },
   address_detail: {
-    type: String,
-    required: true
+    type: String
   },
   object: {
     type: String,
     enum: ['Khách hàng', 'Người làm việc']
   },
   career: {
-    type: String,
-    required: false
+    type: String
   },
   indentify_card: {
-    type: String,
-    required: false
+    type: String
   }
 })
 
