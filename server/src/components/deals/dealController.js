@@ -5,8 +5,9 @@ const Deal = mongoose.model('Deal')
 
 router.post('/create', async (req, res) => {
   try {
-    const { time, job, status, object } = req.body
+    const { username, time, job, status, object } = req.body
     const newDeal = await Deal.create({
+      username,
       time,
       job,
       status,
@@ -22,9 +23,10 @@ router.post('/create', async (req, res) => {
   }
 })
 
-router.get('/list', async (req, res) => {
+router.post('/list', async (req, res) => {
   try {
-    await Deal.find({}, function(err, deals) {
+    const { username } = req.body
+    await Deal.find({ username: username }, function(err, deals) {
       var dealMap = {}
       deals.forEach(function(deal) {
         dealMap[deal._id] = deal

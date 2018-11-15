@@ -7,17 +7,17 @@
         </div>
         <div class="profile-score">
           <div class="info text-center">
-            <p class="name">{{ name }}</p>
+            <p class="name">{{ username }}</p>
             <p>Điểm tích luỹ:
-              <span class="score">100 điểm</span>
+              <span class="score">0 điểm</span>
             </p>
           </div>
           <div class="money text-center">
             <p>Tổng tiền sử dụng:
-              <span class="total">3.000.000đ</span>
+              <span class="total">0đ</span>
             </p>
             <p>Bạn tiết kiệm được:
-              <span class="income">500.000đ</span>
+              <span class="income">0đ</span>
             </p>
           </div>
         </div>
@@ -41,12 +41,13 @@
 </style>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  data () {
-    return {
-      name: 'Phan Văn Đức'
+  computed: {
+    username() {
+      return this.$store.getters.GET_USERNAME
     }
   }
-};
-
+}
 </script>

@@ -11,17 +11,16 @@
   </thead>
   <tbody>
     <tr
-      v-for="item in list"
+      v-for="item in data"
       :key="item.id">
       <td class="d-none d-sm-block">{{ item.time }}</td>
       <!-- Display in Mobile -->
       <td class="d-block d-sm-none">
-          {{ item.time }}<br>
-          {{ item.date }}
+          {{ item.time }}
       </td>
-      <td class="employee">{{ item.name }}</td>
+      <td class="employee">{{ item.job }}</td>
       <td :class="{'done': item.status === 'Hoàn thành', 'fail': item.status === 'Hủy'}" >{{ item.status }}</td>
-      <td class="d-none d-sm-block">{{ item.date }}</td>
+      <td class="d-none d-sm-block">{{ item.object }}</td>
     </tr>
   </tbody>
   </table>
@@ -53,16 +52,29 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      list: [
-        { time: '16:42:18', name: 'Sửa điện thoại Nokia', status: 'Hủy', date: 'Phạm Ngọc Hòa' },
-        { time: '16:42:18', name: 'Sửa điện tủ lạnh Sharp', status: 'Hoàn thành', date: 'Phạm Ngọc Hòa' },
-        { time: '16:42:18', name: 'Mua bán phế liệu', status: 'Hủy', date: 'Phạm Ngọc Hòa' },
-        { time: '16:42:18', name: 'Hỏng xay máy Honda', status: 'Hoàn thành', date: 'Phạm Ngọc Hòa' },
-        { time: '16:42:18', name: 'Chữa bệnh ỉa chảy', status: 'Hoàn thành', date: 'Phạm Ngọc Hòa' },
-      ]
+      data: null
     }
+  },
+  computed: {
+    username() {
+      return this.$store.getters.GET_USERNAME
+    }
+  },
+  beforeMount() {
+    const username = this.$store.getters.GET_USERNAME
+    this.$axios
+      .post(`/api/deal/list`, {
+        username: username
+      })
+      .then(response => {
+        console.log(response.data)
+        this.data = response.data
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
-};
+}
 </script>
