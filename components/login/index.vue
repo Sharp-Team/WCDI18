@@ -69,16 +69,23 @@
                     </button>
                   </div>
                   <div class="social-btn">
-                    <button class="btn-block">
-                      <div class="right-social">
-                        <a href="#">
-                          <img
-                            src="/images/google.png"
-                            alt="google" />
-                          <span class="text">Đăng nhập bằng Google</span>
-                        </a>
-                      </div>
-                    </button>
+                    <no-ssr>
+                      <g-signin-button
+                      :params="googleSignInParams"
+                      @success="onSignInSuccess"
+                      @error="onSignInError">
+                        <button class="btn-block">
+                          <div class="right-social">
+                            <a href="#">
+                              <img
+                                src="/images/google.png"
+                                alt="google" />
+                              <span class="text">Đăng nhập bằng Google</span>
+                            </a>
+                          </div>
+                        </button>
+                      </g-signin-button>
+                    </no-ssr>
                   </div>
                 </div>
               </div>
@@ -98,14 +105,61 @@ import USER_SIGNIN from './login'
     data () {
       return {
         username: '',
-        password: ''
+        password: '',
+        googleSignInParams: {
+          client_id: '53490202765-8lksegphfnljv8tn64c5hnl6nacsnate.apps.googleusercontent.com'
+        }
       }
     },
     components: {
       MyButton
     },
     methods: {
-      USER_SIGNIN
+      USER_SIGNIN,
+      onSignInSuccess (googleUser) {
+      const profile = googleUser.getBasicProfile()
+      this.$axios
+        .post(`/api/user/signup`, {
+          username: profile.Eea,
+          password: null,
+          avatar: profile.Paa,
+          email: profile.U3,
+          full_name: profile.ig,
+          phone_number: null,
+          province: null,
+          district: null,
+          address_detail: null,
+          indentify_card: null,
+          object: 'Khách hàng',
+          career: null
+        })
+        .then(response => {
+          this.$axios
+            .post(`/api/user/signin`, {
+              username: profile.Eea,
+              password: null
+            })
+            .then(response => {
+              this.$toast.open({
+                message: 'Đăng nhập thành công!',
+                position: 'is-bottom',
+                type: 'is-success'
+              })
+              this.$store.dispatch('SET_USERNAME', profile.ig)
+              this.$nuxt.$loading.finish()
+              this.$router.push('/')
+            })
+            .catch(function(error) {
+              console.log(error)
+            })
+        })
+        .catch(function(error) {
+          console.log(error)
+        })
+      },
+      onSignInError (error) {
+        console.log('Không thể đăng nhập!!! ', error)
+      }
     }
 }
 </script>

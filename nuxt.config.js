@@ -58,6 +58,11 @@ module.exports = {
           'https://maps.googleapis.com/maps/api/js?key=AIzaSyBQjtj0TxFDfqm8uQbovjJ0pEVtkCgePCw&',
         async: true,
         defer: true
+      },
+      {
+        src: 'https://apis.google.com/js/platform.js',
+        async: true,
+        defer: true
       }
     ]
   },
@@ -69,7 +74,7 @@ module.exports = {
     { src: '~/assets/scss/buefy-overrides.scss', lang: 'sass' }
   ],
 
-  // plugins: [{ src: '~/plugins/positionCurrent.js', ssr: false }],
+  plugins: [{ src: '~/plugins/google-authen.js', ssr: false }],
 
   modules: [
     '@nuxtjs/axios',
