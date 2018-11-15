@@ -32,7 +32,7 @@
           <li class="nav-item">
             <nuxt-link
               class="nav-link"
-              to="feedback">
+              to="/feedback">
               Feedback
             </nuxt-link>
           </li>

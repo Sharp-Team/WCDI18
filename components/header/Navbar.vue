@@ -25,7 +25,7 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="#">
+              href="/feedback">
               Feedback
             </a>
           </li>
@@ -39,10 +39,13 @@
       <div
         class="navbar-branch"
         id="idNavBranch">
-        <img
-          src="/images/icon-navbar/logo-navbar.png"
-          alt="nav-img"
-          class="nav-img" />
+        <nuxt-link to="/">
+          <img
+            src="/images/icon-navbar/logo-navbar.png"
+            alt="nav-img"
+            class="nav-img"
+          />
+        </nuxt-link>
       </div>
       <div class="navbar-right">
         <div class="nav-button">
@@ -160,7 +163,7 @@
     z-index: 999;
 
     .navbar {
-      padding: 0.5em 1em !important;
+      padding: 0.3em 1em 0.5em 1em!important;
       box-shadow: 0 5px 6px rgba(0, 0, 0, 0.05);
     }
     .navbar-collapse {

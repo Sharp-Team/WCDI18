@@ -3,23 +3,50 @@
     <div class="imagebg"></div>
     <div class="row wrap-feedback">
       <div class="col-12 form-container">
-        <h2 class="title is-3 has-text-centered">Feedback</h2>
-        <p class="title is-6"> Vui lòng cung cấp phản hồi của bạn bên dưới: </p>
-        <form role="form" method="post" id="reused_form">
+        <h2 
+          class="title is-3 has-text-centered"
+          v-show="!send"
+        >
+          Feedback
+        </h2>
+        <p
+          class="title is-6"
+          v-show="!send"
+        > 
+          Vui lòng cung cấp phản hồi của bạn bên dưới:
+        </p>
+        <form
+          role="form"
+          method="post"
+          id="reused_form"
+          v-show="!send"
+        >
           <div class="row">
             <div class="col-sm-12 form-group">
               <label>Bạn đánh giá thế nào về trải nghiệm tổng thể của mình?</label>
               <p>
                 <label class="radio-inline">
-                  <input type="radio" name="experience" id="radio_experience" value="bad">
+                  <input
+                    type="radio"
+                    name="experience"
+                    id="radio_experience"
+                    value="bad">
                   Tệ
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" name="experience" id="radio_experience" value="average">
+                  <input
+                    type="radio"
+                    name="experience"
+                    id="radio_experience"
+                    value="average">
                   Trung bình
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" name="experience" id="radio_experience" value="good">
+                  <input
+                    type="radio"
+                    name="experience"
+                    id="radio_experience"
+                    value="good">
                   Tốt
                 </label>
               </p>
@@ -28,36 +55,70 @@
           <div class="row">
             <div class="col-sm-12 form-group">
               <label for="comments"> Nội dung phản hồi:</label>
-              <textarea class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comments"
-                maxlength="6000" rows="7"></textarea>
+              <textarea
+                class="form-control"
+                type="textarea"
+                name="comments"
+                id="comments"
+                placeholder="Your Comments"
+                maxlength="6000"
+                rows="7"></textarea>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-6 form-group">
               <label for="name"> Tên của bạn:</label>
-              <input type="text" class="form-control" id="name" name="name" required>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                required>
             </div>
             <div class="col-sm-6 form-group">
               <label for="email"> Email:</label>
-              <input type="email" class="form-control" id="email" name="email" required>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-12 form-group">
-              <button type="submit" class="btn btn-lg btn-success btn-block">Gửi phản hồi </button>
+              <button
+                type="submit"
+                class="btn btn-lg btn-success btn-block"
+                @click="send=!send"
+              >
+                Gửi phản hồi 
+              </button>
             </div>
           </div>
         </form>
-        <div id="success_message" style="width:100%; height:100%; display:none; ">
-          <h3>Posted your feedback successfully!</h3>
-        </div>
-        <div id="error_message" style="width:100%; height:100%; display:none; ">
-          <h3>Error</h3> Sorry there was an error sending your form.
+        <div
+          id="success_message"
+          style="width:100%; height:100%;"
+          class="has-text-centered has-text-success"
+          v-show="send"  
+        >
+          <h3>Bạn đã gửi phản hồi thành công!</h3>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        send: false
+      }
+    }
+  };
+</script>
 
 <style lang="scss" scoped>
   .wrap-feedback {
