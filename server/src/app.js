@@ -26,7 +26,7 @@ app.listen(port, () => {
 mongoose.Promise = global.Promise
 mongoose
   .connect(
-    process.env.CONNECT_MONGO,
+    'mongodb://demonslight:demonslight123@ds253203.mlab.com:53203/cdi2018',
     {
       useNewUrlParser: true
     }

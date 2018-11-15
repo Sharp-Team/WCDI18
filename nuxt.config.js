@@ -111,19 +111,17 @@ module.exports = {
         //   exclude: /(node_modules)/
         // })
       }
-    },
-    serverMiddleware: [
-      // body-parser middleware
-      bodyParser.json(),
-      // session middleware
-      session({
-        secret: 'thaycacac',
-        resave: false,
-        saveUninitialized: false,
-        cookie: { maxAge: 600000 }
-      })
-      // API middleware
-      // '~/server/server.js'
-    ]
-  }
+    }
+  },
+  serverMiddleware: [
+    // body-parser middleware
+    bodyParser.json(),
+    // session middleware
+    session({
+      secret: 'thaycacac',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 600000 }
+    })
+  ]
 }
