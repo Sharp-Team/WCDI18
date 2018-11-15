@@ -69,7 +69,6 @@ export default {
         username: username
       })
       .then(response => {
-        console.log(response.data)
         this.data = response.data
       })
       .catch(error => {

@@ -100,13 +100,41 @@ router.get('/signout', async (req, res) => {
 router.post('/profile', async (req, res) => {
   try {
     const { username } = req.body
-    console.log(username)
     const findUser = await User.findOne({
       username
     })
     res.status(200).json(findUser)
   } catch (error) {
     console.log(error.message)
+  }
+})
+
+router.post('/password', async (req, res) => {
+  const { username, oldpassword, newpassword } = req.body
+  try {
+    await User.findOne({
+      username: username
+    }).then(result => {
+      if (result.password !== oldpassword) {
+        res.status(200).json({
+          data: '',
+          error: 'Mật khẩu cũ không chính xác'
+        })
+      }
+    })
+    await User.findOneAndUpdate(
+      { username: username },
+      {
+        password: newpassword
+      }
+    ).then(response => {
+      res.status(200).json({
+        data: `Cập nhật mật khẩu thành công`,
+        error: null
+      })
+    })
+  } catch (error) {
+    console.log(error)
   }
 })
 

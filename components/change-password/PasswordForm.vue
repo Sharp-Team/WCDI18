@@ -1,7 +1,6 @@
 <template>
     <div class="form-info">
-      <form action="">
-        <!-- Full Name -->
+      <form @submit.prevent="CHANGE_PASSWORD(username, oldpassword, password, repassword)">
         <div class="form-group row">
             <label
               for="password"
@@ -13,7 +12,7 @@
             <input
               type="password"
               class="form-control"
-              v-model="password">
+              v-model="oldpassword">
             </div>
         </div>
 
@@ -28,7 +27,7 @@
           <input
             type="password"
             class="form-control"
-            v-model="newPass">
+            v-model="password">
           </div>
         </div>
 
@@ -43,7 +42,7 @@
           <input
             type="password"
             class="form-control"
-            v-model="newPassConfirm">
+            v-model="repassword">
           </div>
         </div>
         <div class="update">
@@ -52,7 +51,7 @@
             background="#2EBE4A"
             backgroundHover="gray"
             color="white"
-            data-toggle="modal">
+            type="submit">
           </my-button>
         </div>
       </form>
@@ -61,17 +60,26 @@
 
 <script>
 import MyButton from '~/components/share/Button'
+import CHANGE_PASSWORD from './password'
+
 export default {
-  data () {
+  data() {
     return {
+      username: null,
+      oldpassword: '',
       password: '',
-      newPass: '',
-      newPassConfirm: ''
+      repassword: ''
     }
   },
   components:{
     MyButton
-  }
+  },
+  methods: {
+    CHANGE_PASSWORD
+  },
+  beforeMount() {
+    this.username = this.$store.getters.GET_USERNAME
+  },
 }
 </script>
 
