@@ -1,6 +1,8 @@
 const pkg = require('./package')
-import bodyParser from 'body-parser'
+const bodyParser = require('body-parser')
 const session = require('express-session')
+const mongoose = require('mongoose')
+const DBConfig = require('./server/configuration/mongoDB')
 
 module.exports = {
   mode: 'universal',
@@ -91,13 +93,13 @@ module.exports = {
   axios: {
     proxy: true
   },
-  proxy: {
-    '/api': {
-      target: 'http://localhost:5000/',
-      changeOrigin: true,
-      pathRewrite: { '^/api': '' }
-    }
-  },
+  // proxy: {
+  //   '/api': {
+  //     target: 'http://localhost:5000/',
+  //     changeOrigin: true,
+  //     pathRewrite: { '^/api': '' }
+  //   }
+  // },
 
   build: {
     vendors: ['babel-polyfill'],
@@ -111,19 +113,27 @@ module.exports = {
         //   exclude: /(node_modules)/
         // })
       }
-    },
-    serverMiddleware: [
-      // body-parser middleware
-      bodyParser.json(),
-      // session middleware
-      session({
-        secret: 'thaycacac',
-        resave: false,
-        saveUninitialized: false,
-        cookie: { maxAge: 600000 }
-      })
-      // API middleware
-      // '~/server/server.js'
-    ]
-  }
+    }
+  },
+  serverMiddleware: [
+    // body-parser middleware
+    bodyParser.json(),
+    // session middleware
+    session({
+      secret: 'thaycacac',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 600000 }
+    }),
+    // setup mongoose
+    mongoose.connect(DBConfig.dbconfig.nameDB, {
+      useNewUrlParser: true
+    })
+      .then(() => {
+        console.log('Database connected')
+      }),
+    // API middleware
+    '~/server/users.js',
+    '~/server/deals.js'
+  ]
 }

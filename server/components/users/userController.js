@@ -4,6 +4,16 @@ const mongoose = require('mongoose')
 const User = mongoose.model('User')
 var session = require('express-session')
 
+// So we can use res.status() & res.json()
+const app = express()
+router.use((req, res, next) => {
+  Object.setPrototypeOf(req, app.request)
+  Object.setPrototypeOf(res, app.response)
+  req.res = res
+  res.req = req
+  next()
+})
+
 router.post('/signup', async (req, res) => {
   try {
     const {
