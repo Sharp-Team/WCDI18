@@ -26,17 +26,15 @@
             <a
               class="nav-link"
               href="#">
-              Tôi cần trợ giúp
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#">
               Feedback
             </a>
           </li>
         </ul>
+        <img
+          src="/images/icon-navbar/local.png"
+          alt="local"
+          class="market-image" />
+        <div class="market-text">{{ address }}</div>
       </div>
       <div
         class="navbar-branch"
@@ -48,11 +46,6 @@
       </div>
       <div class="navbar-right">
         <div class="nav-button">
-          <img
-            src="/images/icon-navbar/local.png"
-            alt="local"
-            class="market-image" />
-          <div class="market-text">{{ address }}</div>
           <nuxt-link
             v-if="!username"
             to="/login"
@@ -170,7 +163,18 @@
       padding: 0.5em 1em !important;
       box-shadow: 0 5px 6px rgba(0, 0, 0, 0.05);
     }
-
+    .navbar-collapse {
+      .market-image {
+        height: 20px;
+        margin-right: 4px;
+      }
+      .market-text {
+        width: 30em;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: 500;
+      }
+    }
     .navbar-toggler {
       border: none !important;
       outline: none !important;
@@ -208,18 +212,6 @@
       .nav-button {
         display: flex;
         align-items: center;
-
-        .market-image {
-          height: 20px;
-          margin-right: 4px;
-        }
-
-        .market-text {
-          width: 30em;
-          font-size: 12px;
-          color: rgba(0, 0, 0, 0.5);
-          font-weight: 500;
-        }
 
         .wrap-profile {
           display: flex;
