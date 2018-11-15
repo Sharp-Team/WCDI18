@@ -115,7 +115,7 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-1-hover.png" alt="" />
               </div>
-              <span class="position">FontEnd</span>
+              <span class="position">FrontEnd</span>
               <h4><span>HiepDQ </span> Flame</h4>
             </a>
             <ul class="d-flex justify-content-center">
@@ -133,7 +133,7 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-2-hover.png" alt="" />
               </div>
-              <span class="position">FontEnd</span>
+              <span class="position">FrontEnd</span>
               <h4><span>Teresa</span> Crawford</h4>
             </a>
             <ul class="d-flex justify-content-center">
@@ -169,7 +169,7 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-4-hover.png" alt="" />
               </div>
-              <span class="position">FontEnd</span>
+              <span class="position">FrontEnd</span>
               <h4><span>Kathy</span> Watkins</h4>
             </a>
             <ul class="d-flex justify-content-center">
@@ -188,7 +188,7 @@
               <div class="hover_img">
                 <img src="/images/homepage/speaker-4-hover.png" alt="" />
               </div>
-              <span class="position">FontEnd</span>
+              <span class="position">FrontEnd</span>
               <h4><span>Kathy</span> Watkins</h4>
             </a>
             <ul class="d-flex justify-content-center">

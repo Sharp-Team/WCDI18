@@ -69,12 +69,12 @@
                     </button>
                   </div>
                   <div class="social-btn">
-                    <button class="btn-block">
+                    <button class="btn-block" @click="login()" >
                       <div class="right-social">
                         <a href="#">
                           <img
                             src="/images/google.png"
-                            alt="google" />
+                            alt="google"/>
                           <span class="text">Đăng nhập bằng Google</span>
                         </a>
                       </div>
@@ -93,19 +93,30 @@
 
 <script>
 import MyButton from '~/components/share/Button';
+import AuthService from '~/auth/AuthService'
+const auth = new AuthService()
+const { login, logout, authenticated, authNotifier } = auth
+
 import USER_SIGNIN from './login'
   export default {
     data () {
+      authNotifier.on('authChange', authState => {
+        this.authenticated = authState.authenticated
+      })
       return {
         username: '',
-        password: ''
+        password: '',
+        auth,
+        authenticated
       }
     },
     components: {
       MyButton
     },
     methods: {
-      USER_SIGNIN
+      USER_SIGNIN,
+      login,
+      logout
     }
 }
 </script>
