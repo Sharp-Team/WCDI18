@@ -3,6 +3,9 @@ export default {
     if (req.session && req.session.username) {
       commit('setUsername', req.session.username)
     }
+    if (req.session && req.session.avatar) {
+      commit('setAvatar', req.session.avatar)
+    }
   },
   SET_RANGE({ commit }, range) {
     commit('setRange', range)

@@ -2,7 +2,7 @@
     <div>
         <div class="avata-img d-none d-md-block">
           <img
-            src="/images/icon-navbar/user.jpg"
+            :src="avatar"
             alt="">
         </div>
         <div class="profile-score">
@@ -47,6 +47,9 @@ export default {
   computed: {
     username() {
       return this.$store.getters.GET_USERNAME
+    },
+    avatar() {
+      return this.$store.getters.GET_AVATAR
     }
   }
 }

@@ -78,7 +78,7 @@
   import notification from '~/assets/js/notification'
 
   export default {
-    beforeCreate() {
+    mounted() {
       notification()
     },
   }
