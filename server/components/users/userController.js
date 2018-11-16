@@ -2,10 +2,10 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 const User = mongoose.model('User')
-var session = require('express-session')
 
 // So we can use res.status() & res.json()
 const app = express()
+
 router.use((req, res, next) => {
   Object.setPrototypeOf(req, app.request)
   Object.setPrototypeOf(res, app.response)
@@ -65,32 +65,35 @@ router.post('/signup', async (req, res) => {
 })
 
 router.post('/signin', async (req, res) => {
-  const user = req.body
-  await User.findOne({
-    username: user.username
-  })
-    .then(result => {
-      if (result.password === user.password) {
-        req.session.username = user.username
-        res.status(200).json({
-          data: result.avatar,
-          error: null
-        })
-      } else {
-        res.status(200).json({
-          data: '',
-          error: 'Mật khẩu không chính xác'
-        })
-      }
+  try {
+    const user = req.body
+    await User.findOne({
+      username: user.username
     })
-    .catch(err => {
-      console.log(err)
-      res.status(200).json({
-        data: null,
-        error: `Tài khoản
-        ${user.username} không tồn tại, vui lòng đăng ký. Hoặc mật khẩu sai`
+      .then(result => {
+        if (result.password === user.password) {
+          res.status(200).json({
+            data: result.avatar,
+            error: null
+          })
+        } else {
+          res.status(200).json({
+            data: '',
+            error: 'Mật khẩu không chính xác'
+          })
+        }
       })
-    })
+      .catch(err => {
+        console.log(err)
+        res.status(200).json({
+          data: null,
+          error: `Tài khoản
+          ${user.username} không tồn tại, vui lòng đăng ký. Hoặc mật khẩu sai`
+        })
+      })
+  } catch (error) {
+    console.log(error)
+  }
 })
 router.get('/signout', async (req, res) => {
   await delete req.session

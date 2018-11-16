@@ -1,5 +1,5 @@
 const DBConfig = {
-  nameDB: 'mongodb://hoapnse05740:Camonem123@ds149672.mlab.com:49672/typedb'
+  nameDB: 'mongodb://demonslight:demonslight123@ds253203.mlab.com:53203/cdi2018'
 }
 
 module.exports = {

@@ -102,7 +102,7 @@ module.exports = {
   // },
 
   build: {
-    vendors: ['babel-polyfill'],
+    vendor: ['axios'],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
@@ -133,7 +133,8 @@ module.exports = {
           useNewUrlParser: true
         }
       )
-      .then(() => {
+      .then(result => {
+        console.log(result)
         console.log('Database connected')
       }),
     // API middleware
