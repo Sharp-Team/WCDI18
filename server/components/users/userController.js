@@ -64,36 +64,33 @@ router.post('/signup', async (req, res) => {
   }
 })
 
-router.post('/signin', async (req, res) => {
-  try {
-    const user = req.body
-    await User.findOne({
-      username: user.username
-    })
-      .then(result => {
-        if (result.password === user.password) {
-          res.status(200).json({
-            data: result.avatar,
-            error: null
-          })
-        } else {
-          res.status(200).json({
-            data: '',
-            error: 'Mật khẩu không chính xác'
-          })
-        }
-      })
-      .catch(err => {
-        console.log(err)
+router.post('/signin', (req, res) => {
+  const { username, password } = req.body
+  User.findOne({
+    username: username
+  })
+    .then(result => {
+      console.log(result)
+      if (result.password === password) {
         res.status(200).json({
-          data: null,
-          error: `Tài khoản
-          ${user.username} không tồn tại, vui lòng đăng ký. Hoặc mật khẩu sai`
+          data: result.avatar,
+          error: null
         })
+      } else {
+        res.status(200).json({
+          data: '',
+          error: 'Mật khẩu không chính xác'
+        })
+      }
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(200).json({
+        data: null,
+        error: `Tài khoản
+        ${username} không tồn tại, vui lòng đăng ký. Hoặc mật khẩu sai`
       })
-  } catch (error) {
-    console.log(error)
-  }
+    })
 })
 router.get('/signout', async (req, res) => {
   await delete req.session

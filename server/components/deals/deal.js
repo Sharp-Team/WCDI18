@@ -26,4 +26,4 @@ const Deal = new Schema({
   }
 })
 
-module.exports = mongoose.model('Deal', Deal)
+module.exports = mongoose.model('Deal', Deal, 'Deal')

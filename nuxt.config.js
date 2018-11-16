@@ -116,26 +116,21 @@ module.exports = {
     }
   },
   serverMiddleware: [
-    // // body-parser middleware
+    // body-parser middleware
     bodyParser.json(),
-    // // session middleware
-    // session({
-    //   secret: 'thaycacac',
-    //   resave: false,
-    //   saveUninitialized: false,
-    //   cookie: { maxAge: 600000 }
-    // }),
+    // session middleware
+    session({
+      secret: 'thaycacac',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 600000 }
+    }),
     // setup mongoose
-    mongoose
-      .connect(
-        DBConfig.dbconfig.nameDB,
-        {
-          useNewUrlParser: true
-        }
-      )
-      .then(result => {
-        console.log(result)
-        console.log('Database connected')
+    mongoose.connect(DBConfig.dbconfig.nameDB, {
+      useNewUrlParser: true
+    })
+      .then(() => {
+        console.log(`Database connected`)
       }),
     // API middleware
     '~/server/users.js',
