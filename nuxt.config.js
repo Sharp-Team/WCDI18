@@ -116,15 +116,15 @@ module.exports = {
     }
   },
   serverMiddleware: [
-    // body-parser middleware
+    // // body-parser middleware
     bodyParser.json(),
-    // session middleware
-    session({
-      secret: 'thaycacac',
-      resave: false,
-      saveUninitialized: false,
-      cookie: { maxAge: 600000 }
-    }),
+    // // session middleware
+    // session({
+    //   secret: 'thaycacac',
+    //   resave: false,
+    //   saveUninitialized: false,
+    //   cookie: { maxAge: 600000 }
+    // }),
     // setup mongoose
     mongoose
       .connect(
