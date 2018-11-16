@@ -90,7 +90,7 @@
             v-if="username"
             to="/"
             class="ml-2">
-            <button class="button my-button"> Đăng xuất </button>
+            <button class="button my-button" @click="logout"> Đăng xuất </button>
           </nuxt-link>
           <notification v-if="username" />
         </div>
@@ -118,6 +118,28 @@
       Notification,
       Navmenu,
       MyButton
+    },
+    methods: {
+      logout() {
+        this.$nextTick(() => {
+          this.$nuxt.$loading.start()
+        })
+        this.$axios
+          .get(`/api/user/signout`)
+          .then(response => {
+            console.log(response)
+            this.$toast.open({
+              message: 'Đăng xuất thành công!',
+              position: 'is-bottom',
+              type: 'is-success'
+            })
+            this.$nuxt.$loading.finish()
+            location.reload()
+          })
+          .catch(function(error) {
+            console.log(error)
+          })
+        }
     },
     computed: {
       username() {

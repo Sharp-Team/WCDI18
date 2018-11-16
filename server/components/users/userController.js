@@ -92,18 +92,9 @@ router.post('/signin', async (req, res) => {
 })
 
 router.get('/signout', async (req, res) => {
-  await delete req.session
-  if (req.session == null) {
-    res.status(200).json({
-      data: 'Đăng xuất thành công !',
-      error: null
-    })
-  } else {
-    res.status(200).json({
-      data: null,
-      error: `Không thể đăng xuất`
-    })
-  }
+  await req.session.regenerate(error => {
+    console.log(error)
+  })
 })
 
 router.post('/profile', async (req, res) => {
