@@ -3,6 +3,15 @@ const router = express.Router()
 const mongoose = require('mongoose')
 const Deal = mongoose.model('Deal')
 
+const app = express()
+router.use((req, res, next) => {
+  Object.setPrototypeOf(req, app.request)
+  Object.setPrototypeOf(res, app.response)
+  req.res = res
+  res.req = req
+  next()
+})
+
 router.post('/create', async (req, res) => {
   try {
     const { username, time, job, status, object } = req.body

@@ -92,13 +92,6 @@ module.exports = {
   axios: {
     proxy: true
   },
-  // proxy: {
-  //   '/api': {
-  //     target: 'http://localhost:5000/',
-  //     changeOrigin: true,
-  //     pathRewrite: { '^/api': '' }
-  //   }
-  // },
 
   build: {
     vendor: ['babel-polyfill', 'axios'],
@@ -115,17 +108,14 @@ module.exports = {
     }
   },
   serverMiddleware: [
-    // // body-parser middleware
-    // bodyParser.json(),
-    // // session middleware
-    // session({
-    //   secret: 'thaycacac',
-    //   resave: false,
-    //   saveUninitialized: false,
-    //   cookie: { maxAge: 600000 }
-    // })
-    // API middleware
     bodyParser.json(),
-    '~/server/src/app.js'
+    session({
+      secret: 'thaycacac',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 600000 }
+    }),
+    '~/server/users.js',
+    '~/server/deals.js'
   ]
 }
