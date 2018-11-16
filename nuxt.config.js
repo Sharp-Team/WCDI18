@@ -1,5 +1,6 @@
 const pkg = require('./package')
 const bodyParser = require('body-parser')
+const mongoose = require('mongoose')
 const session = require('express-session')
 
 module.exports = {
@@ -91,13 +92,13 @@ module.exports = {
   axios: {
     proxy: true
   },
-  proxy: {
-    '/api': {
-      target: 'http://localhost:5000/',
-      changeOrigin: true,
-      pathRewrite: { '^/api': '' }
-    }
-  },
+  // proxy: {
+  //   '/api': {
+  //     target: 'http://localhost:5000/',
+  //     changeOrigin: true,
+  //     pathRewrite: { '^/api': '' }
+  //   }
+  // },
 
   build: {
     vendor: ['babel-polyfill', 'axios'],
@@ -112,18 +113,19 @@ module.exports = {
         // })
       }
     }
-  }
-  // serverMiddleware: [
-  //   // body-parser middleware
-  //   bodyParser.json(),
-  //   // session middleware
-  //   session({
-  //     secret: 'thaycacac',
-  //     resave: false,
-  //     saveUninitialized: false,
-  //     cookie: { maxAge: 600000 }
-  //   })
-  //   // API middleware
-  //   // '~/server/server.js'
-  // ]
+  },
+  serverMiddleware: [
+    // // body-parser middleware
+    // bodyParser.json(),
+    // // session middleware
+    // session({
+    //   secret: 'thaycacac',
+    //   resave: false,
+    //   saveUninitialized: false,
+    //   cookie: { maxAge: 600000 }
+    // })
+    // API middleware
+    bodyParser.json(),
+    '~/server/src/app.js'
+  ]
 }

@@ -4,6 +4,15 @@ const mongoose = require('mongoose')
 const User = mongoose.model('User')
 var session = require('express-session')
 
+const app = express()
+router.use((req, res, next) => {
+  Object.setPrototypeOf(req, app.request)
+  Object.setPrototypeOf(res, app.response)
+  req.res = res
+  res.req = req
+  next()
+})
+
 router.post('/signup', async (req, res) => {
   try {
     const {
@@ -55,13 +64,11 @@ router.post('/signup', async (req, res) => {
 })
 
 router.post('/signin', async (req, res) => {
-  const user = req.body
-  await User.findOne({
-    username: user.username
-  })
-    .then(result => {
-      if (result.password === user.password) {
-        req.session.username = user.username
+  const { username, password } = req.body
+  await User.findOne({ username: username }, (err, result) => {
+    if (result) {
+      if (result.password === password) {
+        // req.session.username = username
         res.status(200).json({
           data: result.avatar,
           error: null
@@ -72,16 +79,17 @@ router.post('/signin', async (req, res) => {
           error: 'Mật khẩu không chính xác'
         })
       }
-    })
-    .catch(err => {
+    } else {
       console.log(err)
       res.status(200).json({
         data: null,
         error: `Tài khoản
-        ${user.username} không tồn tại, vui lòng đăng ký. Hoặc mật khẩu sai`
+        ${username} không tồn tại, vui lòng đăng ký. Hoặc mật khẩu sai`
       })
-    })
+    }
+  })
 })
+
 router.get('/signout', async (req, res) => {
   await delete req.session
   if (req.session == null) {

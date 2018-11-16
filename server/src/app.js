@@ -5,7 +5,6 @@ const mongoose = require('mongoose')
 const session = require('express-session')
 require('dotenv').config()
 
-app.set('trust proxy', 1) // trust first proxy
 app.use(
   session({
     secret: 'thaycacac',
@@ -15,18 +14,16 @@ app.use(
   })
 )
 
-app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-const port = process.env.PORT
-app.listen(port, () => {
-  console.log(`Server is running on port ${port} !`)
-})
+// const port = process.env.PORT
+// app.listen(port, () => {
+//   console.log(`Server is running on port ${port} !`)
+// })
 
-mongoose.Promise = global.Promise
 mongoose
   .connect(
-    process.env.CONNECT_MONGO,
+    'mongodb://demonslight:demonslight123@ds253203.mlab.com:53203/cdi2018',
     {
       useNewUrlParser: true
     }
@@ -41,5 +38,10 @@ require('./components/deals/deal')
 const userController = require('./components/users/userController')
 const dealController = require('./components/deals/dealController')
 
-app.use('/user', userController)
-app.use('/deal', dealController)
+app.use('/api/user', userController)
+app.use('/api/deal', dealController)
+
+module.exports = {
+  path: '/api/user',
+  handler: userController
+}
