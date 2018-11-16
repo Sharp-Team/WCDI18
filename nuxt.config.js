@@ -1,5 +1,5 @@
 const pkg = require('./package')
-import bodyParser from 'body-parser'
+const bodyParser = require('body-parser')
 const session = require('express-session')
 
 module.exports = {
@@ -100,7 +100,7 @@ module.exports = {
   },
 
   build: {
-    vendors: ['babel-polyfill'],
+    vendor: ['babel-polyfill', 'axios'],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
@@ -111,19 +111,19 @@ module.exports = {
         //   exclude: /(node_modules)/
         // })
       }
-    },
-    serverMiddleware: [
-      // body-parser middleware
-      bodyParser.json(),
-      // session middleware
-      session({
-        secret: 'thaycacac',
-        resave: false,
-        saveUninitialized: false,
-        cookie: { maxAge: 600000 }
-      })
-      // API middleware
-      // '~/server/server.js'
-    ]
+    }
   }
+  // serverMiddleware: [
+  //   // body-parser middleware
+  //   bodyParser.json(),
+  //   // session middleware
+  //   session({
+  //     secret: 'thaycacac',
+  //     resave: false,
+  //     saveUninitialized: false,
+  //     cookie: { maxAge: 600000 }
+  //   })
+  //   // API middleware
+  //   // '~/server/server.js'
+  // ]
 }
