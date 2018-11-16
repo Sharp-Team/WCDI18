@@ -66,8 +66,9 @@ router.post('/signup', async (req, res) => {
 
 router.post('/signin', (req, res) => {
   const { username, password } = req.body
+  console.log(User)
   User.findOne({
-    username: username
+    username: 'thaycacac'
   })
     .then(result => {
       console.log(result)
