@@ -1,10 +1,10 @@
 const pkg = require('./package')
 const bodyParser = require('body-parser')
 const session = require('express-session')
+const mongoose = require('mongoose')
 
 module.exports = {
   mode: 'universal',
-
   /*
   ** Headers of the page
   */
@@ -112,18 +112,28 @@ module.exports = {
         // })
       }
     }
-  }
-  // serverMiddleware: [
-  //   // body-parser middleware
-  //   bodyParser.json(),
-  //   // session middleware
-  //   session({
-  //     secret: 'thaycacac',
-  //     resave: false,
-  //     saveUninitialized: false,
-  //     cookie: { maxAge: 600000 }
-  //   })
-  //   // API middleware
-  //   // '~/server/server.js'
-  // ]
+  },
+  serverMiddleware: [
+    // body-parser middleware
+    bodyParser.json(),
+    // session middleware
+    session({
+      secret: 'thaycacac',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 600000 }
+    }),
+    // set moongoose
+    mongoose
+      .connect(
+        'mongodb://demonslight:demonslight123@ds253203.mlab.com:53203/cdi2018',
+        {
+          useNewUrlParser: true
+        }
+      )
+      .then(() => {
+        console.log('Database connected')
+      }),
+    '~/api/users.js'
+  ]
 }
