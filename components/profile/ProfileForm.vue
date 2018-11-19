@@ -11,9 +11,9 @@
         </label>
         <div class="col-sm-12 col-md-7">
           <input
+            v-model="name"
             type="text"
             class="form-control"
-            v-model="name"
             disabled>
         </div>
       </div>
@@ -27,9 +27,9 @@
         </label>
         <div class="col-sm-12 col-md-7">
           <input
+            v-model="username"
             type="text"
             class="form-control"
-            v-model="username"
             disabled>
         </div>
       </div>
@@ -43,9 +43,9 @@
         </label>
         <div class="col-sm-12 col-md-7">
           <input
+            v-model="email"
             type="text"
             class="form-control"
-            v-model="email"
             disabled>
         </div>
       </div>
@@ -59,13 +59,13 @@
         </label>
         <div class="col-sm-12 col-md-7">
           <input
+            v-model="phone"
             type="text"
             class="form-control"
-            v-model="phone"
             disabled>
           <div class="confirm">
             <span>Đã xác thực</span>
-            <i class="fas fa-check"></i>
+            <i class="fas fa-check" />
           </div>
         </div>
       </div>
@@ -120,14 +120,19 @@
       </div>
 
       <div class="form-group row">
-        <label for="" class="col-sm-12 col-md-3 col-form-label">Địa chỉ</label>
+        <label
+          for=""
+          class="col-sm-12 col-md-3 col-form-label"
+        >
+          Địa chỉ
+        </label>
         <div class="col-sm-12 col-md-7">
           <textarea
+            v-model="address"
             class="form-control"
             rows="3"
             disabled
-            v-model="address">
-          </textarea>
+          />
         </div>
       </div>
     </form>
@@ -135,26 +140,26 @@
 </template>
 
 <style lang="scss" scoped>
-  @import '~/assets/scss/variable.scss';
-  @import '~/assets/scss/profile.scss';
+@import '~/assets/scss/variable.scss';
+@import '~/assets/scss/profile.scss';
 </style>
 
 <script>
-  export default {
-    data () {
-      return {
-        name: '',
-        username: '',
-        email: '',
-        phone: '',
-        groupUser: '',
-        province: '',
-        district: '',
-        address: ''
-      }
-    },
-    beforeMount() {
-      this.$axios
+export default {
+  data() {
+    return {
+      name: '',
+      username: '',
+      email: '',
+      phone: '',
+      groupUser: '',
+      province: '',
+      district: '',
+      address: ''
+    }
+  },
+  beforeMount() {
+    this.$axios
       .post(`/api/user/profile`, {
         username: this.$store.getters.GET_USERNAME
       })
@@ -179,6 +184,6 @@
       .catch(function(error) {
         console.log(error)
       })
-    },
   }
+}
 </script>

@@ -6,18 +6,14 @@
 </template>
 
 <script>
-import Navbar from '~/components/header/Navbar';
-import navbar from '~/assets/js/navbar';
+import Navbar from '~/components/header/Navbar'
+import navbar from '~/assets/js/navbar'
 export default {
   components: {
     Navbar
   },
   beforeMount() {
     navbar()
-  },
+  }
 }
 </script>
-
-<style lang="scss" scoped>
-</style>
-

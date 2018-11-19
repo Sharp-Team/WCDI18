@@ -1,11 +1,11 @@
 <template>
-  <history></history>
+  <history />
 </template>
 
 <script>
 import History from '~/components/history'
 export default {
-  components:{
+  components: {
     History
   },
   layout: 'user'

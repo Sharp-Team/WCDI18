@@ -1,11 +1,11 @@
 <template>
-    <change-password></change-password>
+  <change-password />
 </template>
 <script>
-import ChangePassword from "~/components/change-password"
+import ChangePassword from '~/components/change-password'
 
 export default {
-  components:{
+  components: {
     ChangePassword
   },
   layout: 'user'

@@ -8,8 +8,9 @@
             <strong class="text-primary">Green</strong>
           </div>
           <form
+            class="text-left form-validate"
             @submit.prevent="login"
-            class="text-left form-validate">
+          >
             <div class="form-group-material">
               <label
                 for="login-username"
@@ -19,11 +20,13 @@
               </label>
               <input
                 id="login-username"
+                v-model="username"
                 type="text"
                 name="loginUsername"
-                required data-msg="Please enter your username"
+                required
+                data-msg="Please enter your username"
                 class="input-material"
-                v-model="username">
+              >
             </div>
             <div class="form-group-material">
               <label
@@ -34,14 +37,19 @@
               </label>
               <input
                 id="login-password"
+                v-model="password"
                 type="password"
                 name="loginPassword"
-                required data-msg="Please enter your password"
+                required
+                data-msg="Please enter your password"
                 class="input-material"
-                v-model="password">
+              >
             </div>
             <div class="form-group text-center">
-              <a id="login" href="index.html" class="btn btn-primary">Login</a>
+              <a
+                id="login"
+                href="index.html"
+                class="btn btn-primary">Login</a>
             </div>
           </form>
         </div>
@@ -51,15 +59,14 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        username: '',
-        password: ''
-      }
+export default {
+  data() {
+    return {
+      username: '',
+      password: ''
     }
-  };
-
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -146,7 +153,8 @@
   color: #2ebe4a;
 }
 
-.login-page a.forgot-pass:hover, .login-page a.forgot-pass:focus,
+.login-page a.forgot-pass:hover,
+.login-page a.forgot-pass:focus,
 .login-page a.signup:hover,
 .login-page a.signup:focus,
 .register-page a.forgot-pass:hover,

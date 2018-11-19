@@ -3,20 +3,21 @@
     <div class="title">
       <h3>Lịch sử giao dịch</h3>
     </div>
-    <table-data></table-data>
+    <table-data />
   </div>
 </template>
 
 <script>
-import TableData from './TableData';
+import TableData from './TableData'
+
 export default {
-  components:{
+  components: {
     TableData
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  @import '~/assets/scss/variable.scss';
-  @import '~/assets/scss/profile.scss';
+@import '~/assets/scss/variable.scss';
+@import '~/assets/scss/profile.scss';
 </style>

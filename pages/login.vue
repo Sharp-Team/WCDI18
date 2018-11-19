@@ -8,7 +8,6 @@ export default {
   components: {
     Login
   },
-  layout: 'user',
-};
-
+  layout: 'user'
+}
 </script>

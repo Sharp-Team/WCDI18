@@ -18,9 +18,6 @@ export default {
   },
   beforeMount() {
     navbar
-  },
+  }
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

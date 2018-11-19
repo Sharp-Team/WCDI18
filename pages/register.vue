@@ -9,7 +9,6 @@ export default {
   components: {
     Register
   },
-  layout: 'user',
-};
-
+  layout: 'user'
+}
 </script>

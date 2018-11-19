@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Navbar from '~/components/header/Navbar';
-import MyFooter from '~/components/footer/Footer';
-import navbar from '~/assets/js/navbar';
+import Navbar from '~/components/header/Navbar'
+import MyFooter from '~/components/footer/Footer'
+import navbar from '~/assets/js/navbar'
 export default {
   components: {
     Navbar,
@@ -17,10 +17,6 @@ export default {
   },
   beforeMount() {
     navbar()
-  },
+  }
 }
 </script>
-
-<style lang="scss" scoped>
-</style>
-
