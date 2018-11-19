@@ -93,7 +93,7 @@ router.post('/signin', async (req, res) => {
 
 router.get('/signout', async (req, res) => {
   await req.session.regenerate(error => {
-    console.log(error)
+    res.redirect('/')
   })
 })
 
