@@ -33,7 +33,7 @@
                 <i class="fab fa-google" />
               </a>
               <a href="#">
-                <i class="fab fa-facebook-f" />>
+                <i class="fab fa-facebook-f" />
               </a>
               <a href="#">
                 <i class="fab fa-github" />

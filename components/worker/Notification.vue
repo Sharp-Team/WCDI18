@@ -9,79 +9,50 @@
         class="notification-content modal-content-1 ml-2"
       >
         <h6 class="notification-title">
-          Thông báo (3)
+          Thông báo ({{ numberNoti }})
           <i
             id="notiCloseModal"
             class="fas fa-times is-IconClose"
           />
         </h6>
         <div class="wrapper-notification">
-          <div class="one-notification">
-            <div class="notification-container">
-              <div class="media">
-                <div class="media-body">
-                  <div class="d-flex justify-content-between">
-                    <h5 class="mt-0 mb-1 title-notification">
-                      Yêu cầu sửa xe máy
-                    </h5>
+          <div
+            v-for="(item, index) in data"
+            :key="`${index}`"
+          >
+            <div class="one-notification">
+              <div class="notification-container">
+                <div class="media">
+                  <div class="media-body">
+                    <div class="d-flex justify-content-between">
+                      <h5 class="mt-0 mb-1 title-notification">
+                        {{ item.title }}
+                      </h5>
+                    </div>
+                    <p class="my-0 is-content">
+                      {{ item.content }}
+                    </p>
                   </div>
-                  <p class="my-0 is-content">
-                    Km29 đại lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội
-                  </p>
                 </div>
-              </div>
-              <!-- Button action -->
-              <div class="d-flex justify-content-end">
-                <div class="p-2">
-                  <button
-                    type="button"
-                    class="btn-confirm-noti"
-                  >
-                    Xác nhận
-                  </button>
-                </div>
-                <div class="p-2">
-                  <button
-                    type="button"
-                    class="btn-cancel-noti"
-                  >
-                    Huỷ
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="one-notification mt-2">
-            <div class="notification-container">
-              <div class="media">
-                <div class="media-body">
-                  <div class="d-flex justify-content-between">
-                    <h5 class="mt-0 mb-1 title-notification">
-                      Yêu cầu sửa ô tô
-                    </h5>
+                <div class="d-flex justify-content-end">
+                  <div class="p-2">
+                    <button
+                      type="button"
+                      class="btn-confirm-noti"
+                      @click="done(item.index)"
+                    >
+                      Xác nhận
+                    </button>
                   </div>
-                  <p class="my-0 is-content">
-                    Giao dịch sửa xe đã hoàn thành xong. Cảm ơn bạn đã sử dụng dịch vụ
-                  </p>
-                </div>
-              </div>
-              <!-- Button Action -->
-              <div class="d-flex justify-content-end">
-                <div class="p-2">
-                  <button
-                    type="button"
-                    class="btn-confirm-noti"
-                  >
-                    Xác nhận
-                  </button>
-                </div>
-                <div class="p-2">
-                  <button
-                    type="button"
-                    class="btn-cancel-noti"
-                  >
-                    Huỷ
-                  </button>
+                  <div class="p-2">
+                    <button
+                      type="button"
+                      class="btn-cancel-noti"
+                      @click="cancel(item.index)"
+                    >
+                      Huỷ
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -91,6 +62,42 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      data: [
+        {
+          title: 'Yêu cầu sửa xe máy',
+          content: 'Km29 đại lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội'
+        },
+        {
+          title: 'Yêu cầu sửa ô tô',
+          content: 'Đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội'
+        },
+        {
+          title: 'Yêu cầu sửa laptop',
+          content: 'FSchool, Thạch Hòa, Thạch Thất, Hà Nội'
+        }
+      ]
+    }
+  },
+  computed: {
+    numberNoti() {
+      return this.data.length
+    }
+  },
+  methods: {
+    done(index) {
+      this.data.splice(index, 1)
+    },
+    cancel(index) {
+      this.data.splice(index, 1)
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
@@ -185,6 +192,7 @@
 .wrapper-notification {
   padding: 2px 15px 15px 15px;
   .one-notification {
+    margin-top: 13px;
     font-size: 16px;
     background-color: $color-grey-light;
     border-radius: 8px;

@@ -132,12 +132,12 @@ export default {
   },
   beforeMount() {
     window.fbAsyncInit = (function() {
-      FB.init({
-        appId: '118289005758060',
-        cookie: true,
-        xfbml: true,
-        version: 'v2.8'
-      })
+      // FB.init({
+      //   appId: '118289005758060',
+      //   cookie: true,
+      //   xfbml: true,
+      //   version: 'v2.8'
+      // })
     })(
       (function(d, s, id) {
         var js,
@@ -198,9 +198,9 @@ export default {
       console.log('Không thể đăng nhập!!! ', error)
     },
     onSignInFBSuccess(response) {
-      FB.api('/me', dude => {
-        console.log(`Good to see you, ${dude.name}.`)
-      })
+      // FB.api('/me', dude => {
+      //   console.log(`Good to see you, ${dude.name}.`)
+      // })
     },
     onSignInFBError(error) {
       console.log('OH NOES', error)
