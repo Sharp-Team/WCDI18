@@ -7,5 +7,17 @@ export default {
   },
   GET_AVATAR: state => {
     return state.avatar
+  },
+  GET_ICONS: state => {
+    return state.icons
+  },
+  GET_FEATURES: state => {
+    return state.features
+  },
+  GET_MARKERS: state => {
+    return state.markers
+  },
+  GET_MAP: state => {
+    return state.map
   }
 }

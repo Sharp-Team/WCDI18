@@ -1,14 +1,5 @@
 <template>
   <div>
-    <div id="floating-panel">
-      <button
-        id="drop"
-        class="btn btn-success"
-        @click="showMarker(map, icons, job)"
-      >
-        Hiện marker
-      </button>
-    </div>
     <div id="map" />
     <div id="legend">
       <h3>Chú thích</h3>
@@ -20,163 +11,17 @@
 <script>
 import FooterMap from '~/components/footer/FooterMap'
 import { mapGetters } from 'vuex'
+
 export default {
   components: {
     FooterMap
   },
   data() {
     return {
-      features: [
-        {
-          position: { lat: 21.1186188, lng: 105.5698639 },
-          type: 'electric',
-          fullname: 'Phan Văn Đức',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        },
-        {
-          position: { lat: 21.2186188, lng: 105.1408639 },
-          type: 'car',
-          fullname: 'Phạm Ngọc Hòa',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        },
-        {
-          position: { lat: 21.3186188, lng: 105.2418639 },
-          type: 'doctor',
-          fullname: 'Trần Quang Nhật',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        },
-        {
-          position: { lat: 21.4186188, lng: 105.4428639 },
-          type: 'motorcycle',
-          fullname: 'Đỗ Quang Hiệp',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        },
-        {
-          position: { lat: 21.5186188, lng: 105.3438639 },
-          type: 'fridge',
-          fullname: 'Nguyễn Xuân Cường',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        },
-        {
-          position: { lat: 21.6186188, lng: 105.9448639 },
-          type: 'laptop',
-          fullname: 'Nguyễn Phương Hồng Thủy',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        },
-        {
-          position: { lat: 21.7186188, lng: 105.7458639 },
-          type: 'fan',
-          fullname: 'Nguyễn Hải Nam',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        },
-        {
-          position: { lat: 21.8106188, lng: 105.8468639 },
-          type: 'phone',
-          fullname: 'Phạm Quang Hiệp',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        },
-        {
-          position: { lat: 21.9196188, lng: 105.6478639 },
-          type: 'waste',
-          fullname: 'Lê Đức Anh Quân',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        },
-        {
-          position: { lat: 20.0186188, lng: 105.0488639 },
-          type: 'doctor',
-          fullname: 'Nguyễn Minh Chiến',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        },
-        {
-          position: { lat: 20.8176188, lng: 105.5488639 },
-          type: 'car',
-          fullname: 'Nguyễn Phương Anh',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        },
-        {
-          position: { lat: 20.7166188, lng: 105.5498639 },
-          type: 'phone',
-          fullname: 'Phạm Văn A',
-          email: 'thaycacac@gmail.com',
-          phone: '0123456789',
-          address: 'Km29 ĐạI lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội',
-          content: 'Hỏng gương xe máy honda ABCDE'
-        }
-      ],
-      icons: {
-        electric: {
-          name: 'Thợ sửa điện tử',
-          icon: '/images/icon/electric.png'
-        },
-        fridge: {
-          name: 'Thợ sửa điện lạnh',
-          icon: '/images/icon/fridge.png'
-        },
-        phone: {
-          name: 'Thợ sửa điện thoại',
-          icon: '/images/icon/phone.png'
-        },
-        motorcycle: {
-          name: 'Thợ sửa xe máy',
-          icon: '/images/icon/motorcycle.png'
-        },
-        car: {
-          name: 'Thợ sửa ô tô',
-          icon: '/images/icon/car.png'
-        },
-        waste: {
-          name: 'Thu mua phế liệu',
-          icon: '/images/icon/waste.png'
-        },
-        doctor: {
-          name: 'Bác sĩ',
-          icon: '/images/icon/doctor.png'
-        },
-        laptop: {
-          name: 'Thợ sửa máy tính/ laptop',
-          icon: '/images/icon/laptop.png'
-        },
-        fan: {
-          name: 'Thợ sửa đồ gia dụng',
-          icon: '/images/icon/fan.png'
-        }
-      },
-      markers: [],
+      features: null,
+      icons: null,
+      markers: null,
       map: null,
-      job: 'electric',
       drawRange: null
     }
   },
@@ -189,7 +34,7 @@ export default {
   watch: {
     rangeCurrent: function(val, oldVal) {
       /**
-       * VẼ BÁN PHẠM VI QUÉT
+       * DRAW AREA SCAN
        */
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -219,9 +64,13 @@ export default {
       }
     }
   },
+  beforeMount() {
+    this.icons = this.$store.getters.GET_ICONS
+    this.features = this.$store.getters.GET_FEATURES
+  },
   mounted() {
     /**
-     * KHỞI TẠO MAP
+     * INIT MAP
      */
     this.map = new google.maps.Map(document.getElementById('map'), {
       center: {
@@ -244,7 +93,7 @@ export default {
       fullscreenControl: true
     })
     /**
-     * SET CENTER VỊ TRÍ CỦA USER VÀ POPUP THÔNG BÁO VỊ TRÍ CỦA NGƯỜI DÙNG
+     * SET CENTER POSITION USER
      */
     var infoWindow = new google.maps.InfoWindow()
     if (navigator.geolocation) {
@@ -272,20 +121,9 @@ export default {
         }
       )
     } else {
-      // Browser doesn't support Geolocation
       handleLocationError(false, infoWindow, this.map.getCenter())
     }
-    /**
-     * ĐÁNH DẤU MỘT VỊ TRÍ
-     */
-    //  const position = {
-    //  lat: 21.0086188,
-    //  lng: 105.5598639
-    //  };
-    //  var marker = new google.maps.Marker({
-    //    position: position,
-    //    map: this.map
-    //  });
+
     var legend = document.getElementById('legend')
     for (var key in this.icons) {
       var type = this.icons[key]
@@ -297,7 +135,7 @@ export default {
     }
     this.map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(legend)
     /**
-     * VẼ BÁN PHẠM VI QUÉT
+     * DRAW AREA SCAN
      */
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -325,7 +163,7 @@ export default {
       handleLocationError(false, infoWindow, map.getCenter())
     }
     /**
-     * QUAY TRỞ VỀ VỊ TRÍ HIỆN TẠI
+     * COME BACK CURRENT POSITION
      */
     var centerControlDiv = document.createElement('div')
     var centerControl = new this.CenterControl(centerControlDiv, this.map)
@@ -333,40 +171,8 @@ export default {
     this.map.controls[google.maps.ControlPosition.TOP_CENTER].push(
       centerControlDiv
     )
-    /**
-     * HIỆN VỊ TRÍ HIỆN TẠI
-     */
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        position => {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          }
-          var geocoder = new google.maps.Geocoder()
-          // eslint-disable-next-line
-          geocoder.geocode({ 'location': pos }, (results, status) => {
-            if (status === 'OK') {
-              if (results[0]) {
-                this.$store.dispatch(
-                  'SET_POSITION',
-                  results[0].formatted_address
-                )
-              } else {
-                window.alert('No results found')
-              }
-            } else {
-              window.alert('Geocoder failed due to: ' + status)
-            }
-          })
-        },
-        function() {
-          handleLocationError(true, infoWindow, this.map.getCenter())
-        }
-      )
-    } else {
-      handleLocationError(false, infoWindow, map.getCenter())
-    }
+
+    this.$store.dispatch('SET_MAP', this.map)
   },
   methods: {
     CenterControl(controlDiv, map) {
@@ -412,67 +218,6 @@ export default {
           handleLocationError(false, infoWindow, map.getCenter())
         }
       })
-    },
-    clearMarkers() {
-      for (var i = 0; i < this.markers.length; i++) {
-        this.markers[i].setMap(null)
-      }
-    },
-    showMarker(mapCurrent, icons, job) {
-      this.clearMarkers()
-      var infowindow = new google.maps.InfoWindow()
-      this.features.forEach(feature => {
-        window.setTimeout(() => {
-          if (feature.type === job) {
-            var marker = new google.maps.Marker({
-              position: feature.position,
-              icon: icons[feature.type].icon,
-              animation: google.maps.Animation.BOUNCE,
-              map: mapCurrent
-            })
-            this.markers.push(marker)
-            google.maps.event.addListener(marker, 'click', function() {
-              infowindow.close()
-              infowindow.setContent(
-                `<h6>Thông tin chi tiết</h6>
-                <table class="table">
-                  <tr>
-                    <td>Họ và tên</td>
-                    <td style="font-weight: bold">` +
-                  feature.fullname +
-                  `</td>
-                  </tr>
-                  <tr class="table-success">
-                    <td>Email</td>
-                    <td style="font-weight: bold">` +
-                  feature.email +
-                  `</td>
-                  </tr>
-                  <tr>
-                    <td>Số điện thoại</td>
-                    <td style="font-weight: bold">` +
-                  feature.phone +
-                  `</td>
-                  </tr>
-                  <tr class="table-success">
-                    <td>Địa chi</td>
-                    <td style="font-weight: bold">` +
-                  feature.address +
-                  `</td>
-                  </tr>
-                  <tr>
-                      <td>Nội dung</td>
-                      <td style="font-weight: bold">` +
-                  feature.content +
-                  `</td>
-                    </tr>
-                </table>`
-              )
-              infowindow.open(map, marker)
-            })
-          }
-        }, 200)
-      })
     }
   }
 }
@@ -499,20 +244,5 @@ export default {
 }
 #legend img {
   vertical-align: middle;
-}
-#floating-panel {
-  position: absolute;
-  top: 60px;
-  background: none;
-  left: 17%;
-  z-index: 5;
-  padding: 5px;
-  text-align: center;
-  font-family: 'Roboto', 'sans-serif';
-  line-height: 30px;
-  padding-left: 10px;
-}
-#floating-panel {
-  margin-left: -52px;
 }
 </style>

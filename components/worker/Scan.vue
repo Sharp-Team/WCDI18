@@ -35,7 +35,7 @@
             </div>
           </div>
         </div>
-        <div class="one-notification mt-2 pb-2">
+        <div class="one-notification pb-2">
           <div class="notification-container py-3">
             <div class="media">
               <div class="media-body">
@@ -48,7 +48,7 @@
                   v-model="name"
                   :keep-first="keepFirst"
                   :open-on-focus="openOnFocus"
-                  :data="filteredDataObj"
+                  :data="filteredData"
                   class="pb-2 b-complete-cus"
                   icon="magnify"
                   placeholder="Chọn công việc"
@@ -59,28 +59,25 @@
                   grouped
                   group-multiline>
                   <div
-                    v-for="(item) in selected"
+                    v-for="(item, index) in selected"
                     v-if="item !== null"
-                    :key="item.id"
+                    :key="`${index}`"
                     track-by="name"
                     class="control"
                   >
-                    <!-- FIXME: v-if="isTag1Active"  -->
-                    <b-tag
-                      type="is-success"
-                      size="is-medium"
-                      closable
-                      @close="isTag1Active = false"
-                    >
+                    <span class="tag is-success">
                       {{ item.name }}
-                    </b-tag>
+                      <button
+                        class="delete is-small"
+                        @click="remove(index)" />
+                    </span>
                   </div>
                 </b-field>
               </div>
             </div>
           </div>
         </div>
-        <div class="one-notification mt-2">
+        <div class="one-notification">
           <div class="notification-container py-3">
             <div class="media">
               <div class="media-body">
@@ -101,7 +98,10 @@
         </div>
       </div>
       <div class="reset-notification text-center">
-        <button class="btn-reset-notification btn">
+        <button
+          class="btn-reset-notification btn"
+          @click="showMarker(icons, selected)"
+        >
           <i class="fas fa-search-location mr-2" />
           Quét
         </button>
@@ -116,17 +116,21 @@ import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
+      data,
       keepFirst: true,
       openOnFocus: false,
       name: '',
       selected: [],
-      data,
-      isTag1Active: true,
-      address: 'Room D413, FPT University'
+      address: 'Room D413, FPT University',
+      features: null,
+      markers: null,
+      map: null,
+      icons: null,
+      job: ['electric', 'fridge']
     }
   },
   computed: {
-    filteredDataObj() {
+    filteredData() {
       return this.data.filter(option => {
         return option.name.toLowerCase().indexOf(this.name.toLowerCase()) >= 0
       })
@@ -172,6 +176,82 @@ export default {
       )
     } else {
       handleLocationError(false, infoWindow, map.getCenter())
+    }
+  },
+  beforeMount() {
+    this.features = this.$store.getters.GET_FEATURES
+    this.markers = this.$store.getters.GET_MARKERS
+    this.icons = this.$store.getters.GET_ICONS
+  },
+  methods: {
+    remove(index) {
+      this.selected.splice(index, 1)
+    },
+    showMarker(icons, selected) {
+      let jobs = []
+      selected.forEach(element => {
+        if (element) {
+          jobs.push(element.type)
+        }
+      })
+      // remove all markers
+      for (var i = 0; i < this.markers.length; i++) {
+        this.markers[i].setMap(null)
+      }
+      var infowindow = new google.maps.InfoWindow()
+      this.features.forEach(feature => {
+        window.setTimeout(() => {
+          if (jobs.includes(feature.type)) {
+            var marker = new google.maps.Marker({
+              position: feature.position,
+              icon: icons[feature.type].icon,
+              animation: google.maps.Animation.BOUNCE,
+              map: this.$store.getters.GET_MAP
+            })
+            this.markers.push(marker)
+            this.$store.dispatch('SET_MARKERS', this.markers)
+            google.maps.event.addListener(marker, 'click', function() {
+              infowindow.close()
+              infowindow.setContent(
+                `<h6>Thông tin chi tiết</h6>
+                <table class="table">
+                  <tr>
+                    <td>Họ và tên</td>
+                    <td style="font-weight: bold">` +
+                  feature.fullname +
+                  `</td>
+                  </tr>
+                  <tr class="table-success">
+                    <td>Email</td>
+                    <td style="font-weight: bold">` +
+                  feature.email +
+                  `</td>
+                  </tr>
+                  <tr>
+                    <td>Số điện thoại</td>
+                    <td style="font-weight: bold">` +
+                  feature.phone +
+                  `</td>
+                  </tr>
+                  <tr class="table-success">
+                    <td>Địa chi</td>
+                    <td style="font-weight: bold">` +
+                  feature.address +
+                  `</td>
+                  </tr>
+                  <tr>
+                      <td>Nội dung</td>
+                      <td style="font-weight: bold">` +
+                  feature.content +
+                  `</td>
+                    </tr>
+                </table>`
+              )
+              infowindow.open(map, marker)
+            })
+          }
+        }, 400)
+      })
     }
   }
 }
@@ -263,6 +343,7 @@ export default {
     background-color: $color-grey-light;
     border-radius: 8px;
     .notification-container {
+      margin-top: 14px;
       .media {
         .media-body {
           padding: 0 15px;

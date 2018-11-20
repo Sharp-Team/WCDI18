@@ -7,5 +7,14 @@ export default {
   },
   setAvatar(state, avatar) {
     state.avatar = avatar
+  },
+  setFeatures(state, features) {
+    state.markers = features
+  },
+  setMarkers(state, markers) {
+    state.markers = markers
+  },
+  setMap(state, map) {
+    state.map = map
   }
 }

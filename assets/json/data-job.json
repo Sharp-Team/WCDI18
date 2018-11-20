@@ -1,29 +1,38 @@
 [
   {
-    "name" : "Thợ sửa điện tử"
+    "name": "Thợ sửa điện tử",
+    "type": "electric"
   },
   {
-    "name" : "Thợ sửa điện lạnh"
+    "name": "Thợ sửa điện lạnh",
+    "type": "fridge"
   },
   {
-    "name" : "Thợ sửa điện thoại"
+    "name": "Thợ sửa điện thoại",
+    "type": "phone"
   },
   {
-    "name": "Thợ sửa xe máy"
+    "name": "Thợ sửa xe máy",
+    "type": "motorcycle"
   },
   {
-    "name": "Thợ sửa ô tô"
+    "name": "Thợ sửa ô tô",
+    "type": "car"
   },
   {
-    "name": "Thu mua phế liệu"
+    "name": "Thu mua phế liệu",
+    "type": "waste"
   },
   {
-    "name": "Bác sĩ"
+    "name": "Bác sĩ",
+    "type": "doctor"
   },
   {
-    "name": "Thợ sửa máy tính/ laptop"
+    "name": "Thợ sửa máy tính/ laptop",
+    "type": "laptop"
   },
   {
-    "name": "Thợ sửa đồ gia dụng"
+    "name": "Thợ sửa đồ gia dụng",
+    "type": "fan"
   }
 ]
