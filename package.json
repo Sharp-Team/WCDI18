@@ -37,7 +37,22 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-vue": "^4.0.0",
+    "husky": "^1.1.4",
+    "lint-staged": "^8.0.5",
     "nodemon": "^1.11.0",
-    "prettier": "1.14.3"
+    "prettier": "1.14.3",
+    "pretty-quick": "^1.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "pretty-quick --staged",
+      "eslint . --fix --quiet --ignore-path .gitignore",
+      "git add"
+    ]
   }
 }
