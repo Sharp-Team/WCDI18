@@ -1,18 +1,21 @@
 <template>
   <div>
-    <div class="image">
-    </div>
+    <div class="image" />
     <status class="statusworker"/>
     <noti/>
     <scan />
     <scan-user />
     <div class="my-footer">
-      <div class="action" v-if="object==='Người làm việc'">
+      <div
+        v-if="object==='Người làm việc'"
+        class="action"
+      >
         <div class="icon status">
           <a href="#">
             <i
+              id="showStatusWorker"
               class="fas fa-street-view"
-              id="showStatusWorker"></i>
+            />
           </a>
           <span class="tooltip-status">
             Trạng thái
@@ -20,7 +23,7 @@
         </div>
         <div class="icon history">
           <nuxt-link to="/history">
-            <i class="fas fa-map-marked-alt"></i>
+            <i class="fas fa-map-marked-alt" />
           </nuxt-link>
           <span class="tooltip-history">
             Lịch sử
@@ -29,8 +32,9 @@
         <div class="icon search">
           <a href="#">
             <i
+              id="showScanWorker"
               class="fas fa-map-marker-alt"
-              id="showScanWorker"></i>
+            />
           </a>
           <span class="tooltip-search">
             Quét
@@ -39,20 +43,25 @@
         <div class="icon noti">
           <a href="#">
             <i
+              id="showNotiWorker"
               class="fas fa-dot-circle"
-              id="showNotiWorker"></i>
+            />
           </a>
           <span class="tooltip-noti">
             Thông báo
           </span>
         </div>
       </div>
-      <div class="action" v-else>
+      <div
+        v-else
+        class="action"
+      >
         <div class="icon status">
           <a href="#">
             <i
+              id="showStatusCustomer"
               class="fas fa-broadcast-tower"
-              id="showStatusCustomer"></i>
+            />
           </a>
           <span class="tooltip-status">
             Phát thông báo
@@ -60,7 +69,7 @@
         </div>
         <div class="icon history">
           <nuxt-link to="/history">
-            <i class="fas fa-map-marked"></i>
+            <i class="fas fa-map-marked" />
           </nuxt-link>
           <span class="tooltip-history">
             Lịch sử
@@ -69,10 +78,10 @@
         <div class="icon search">
           <a href="#">
             <i
-              class="fab fa-cloudscale"
               id="showScanCustomer"
+              class="fab fa-cloudscale"
               data-toggle="modal"
-              data-target="#scanUserModal"></i>
+              data-target="#scanUserModal" />
           </a>
           <span class="tooltip-search">
             Quét
@@ -81,8 +90,9 @@
         <div class="icon noti">
           <a href="#">
             <i
+              id="showNotiCustomer"
               class="fas fa-bell"
-              id="showNotiCustomer"></i>
+            />
           </a>
           <span class="tooltip-noti">
             Thông báo
@@ -92,7 +102,7 @@
           <a href="#">
             <i
               class="fas fa-check-circle"
-              @click="confirm"></i>
+              @click="confirm" />
           </a>
           <span class="tooltip-noti">
             Confirm
@@ -104,106 +114,93 @@
 </template>
 
 <style lang="scss" scoped>
-  @import '~/assets/scss/variable.scss';
-  .my-footer {
-    width: 100%;
-    height: 50px;
-    background-color: #232b2b;
-    position: absolute;
-    bottom: 0;
-
-    .action {
-      text-align: center;
-      padding-top: 10px;
-
-      .icon {
-        display: inline-flex;
-        padding-right: 15px;
-        padding-left: 15px;
-        position: relative;
-        margin-left: 10px;
-        i {
-          font-size: 25px;
-          color: #ffffff;
-          transition: transform .2s;
-        }
-
-        i:hover {
-          -ms-transform: scale(1.5);
-          -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-        }
-
-        span {
-          visibility: hidden;
-          width: 120px;
-          background-color: black;
-          color: #fff;
-          text-align: center;
-          border-radius: 6px;
-          padding: 5px 0;
-
-          /* Position the tooltip */
-          position: absolute;
-          z-index: 1;
-          bottom: 140%;
-          left: 50%;
-          margin-left: -60px;
-        }
+@import '~/assets/scss/variable.scss';
+.my-footer {
+  width: 100%;
+  height: 50px;
+  background-color: #232b2b;
+  position: absolute;
+  bottom: 0;
+  .action {
+    text-align: center;
+    padding-top: 10px;
+    .icon {
+      display: inline-flex;
+      padding-right: 15px;
+      padding-left: 15px;
+      position: relative;
+      margin-left: 10px;
+      i {
+        font-size: 25px;
+        color: #ffffff;
+        transition: transform 0.2s;
       }
-
-      .status:hover .tooltip-status {
-        visibility: visible;
+      i:hover {
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
       }
-
-      .history:hover .tooltip-history {
-        visibility: visible;
-      }
-
-      .search:hover .tooltip-search {
-        visibility: visible;
-      }
-
-      .noti:hover .tooltip-noti {
-        visibility: visible;
+      span {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        bottom: 140%;
+        left: 50%;
+        margin-left: -60px;
       }
     }
+    .status:hover .tooltip-status {
+      visibility: visible;
+    }
+    .history:hover .tooltip-history {
+      visibility: visible;
+    }
+    .search:hover .tooltip-search {
+      visibility: visible;
+    }
+    .noti:hover .tooltip-noti {
+      visibility: visible;
+    }
   }
-
+}
 </style>
 <script>
-  import Status from "~/components/worker/Status"
-  import Scan from "~/components/worker/Scan"
-  import Noti from "~/components/worker/Notification"
-  import status from '~/assets/js/status'
-  import scan from '~/assets/js/scan'
-  import noti from '~/assets/js/noti'
-  import ScanUser from "~/components/user/ScanUser"
-
-  export default {
-    data() {
-      return {
-        object: 'Người làm việc'
-      }
-    },
-    components: {
-      Status,
-      Scan,
-      Noti,
-      ScanUser
-    },
-    methods: {
-      confirm() {
-        this.$dialog.confirm({
-            message: 'Bạn có muốn tiếp tục không?',
-            onConfirm: () => this.$toast.open('Bạn đã đồng ý')
-        })
-      },
-    },
-    beforeMount() {
-      status(),
-      noti(),
-      scan()
-    },
+import Status from '~/components/worker/Status'
+import Scan from '~/components/worker/Scan'
+import Noti from '~/components/worker/Notification'
+import status from '~/assets/js/status'
+import scan from '~/assets/js/scan'
+import noti from '~/assets/js/noti'
+import ScanUser from '~/components/user/ScanUser'
+export default {
+  components: {
+    Status,
+    Scan,
+    Noti,
+    ScanUser
+  },
+  data() {
+    return {
+      object: 'Người làm việc'
+    }
+  },
+  beforeMount() {
+    status(), noti(), scan()
+  },
+  methods: {
+    confirm() {
+      this.$dialog.confirm({
+        message: 'Bạn có muốn tiếp tục không?',
+        onConfirm: () => this.$toast.open('Bạn đã đồng ý')
+      })
+    }
   }
+}
 </script>

@@ -1,18 +1,21 @@
 <template>
   <div class="navbar-section">
     <nav
+      id="navbarBox"
       class="navbar navbar-expand-lg navbar-light bg-light"
-      id="navbarBox">
+    >
       <button
+        id="showMarkMenu"
         class="navbar-toggler"
         type="button"
-        id="showMarkMenu">
+      >
         <span
           class="navbar-toggler-icon" />
       </button>
       <div
+        id="navbarNavDropdown"
         class="collapse navbar-collapse"
-        id="navbarNavDropdown">
+      >
         <ul class="navbar-nav">
           <li class="nav-item">
             <nuxt-link
@@ -33,18 +36,20 @@
         <img
           src="/images/icon-navbar/local.png"
           alt="local"
-          class="market-image" />
+          class="market-image"
+        >
         <div class="market-text">{{ address }}</div>
       </div>
       <div
+        id="idNavBranch"
         class="navbar-branch"
-        id="idNavBranch">
+      >
         <nuxt-link to="/">
           <img
             src="/images/icon-navbar/logo-navbar.png"
             alt="nav-img"
             class="nav-img"
-          />
+          >
         </nuxt-link>
       </div>
       <div class="navbar-right">
@@ -57,7 +62,7 @@
               class="is-btn-login ml-4"
               content="Đăng nhập"
               background="white"
-              backgroundHover="grey"
+              background-hover="grey"
               color="black" />
           </nuxt-link>
           <nuxt-link
@@ -67,7 +72,7 @@
             <my-button
               content="Đăng ký"
               background="#28a745"
-              backgroundHover="grey"
+              background-hover="grey"
               color="white"
               class="is-btn-register" />
           </nuxt-link>
@@ -90,7 +95,9 @@
             v-if="username"
             to="/"
             class="ml-2">
-            <button class="button my-button" @click="logout"> Đăng xuất </button>
+            <button
+              class="button my-button"
+              @click="logout"> Đăng xuất </button>
           </nuxt-link>
           <notification v-if="username" />
         </div>
@@ -98,69 +105,48 @@
     </nav>
     <navmenu
       :username="username"
-      :imgProfile="avatar" />
+      :img-profile="avatar" />
   </div>
 </template>
 
 <script>
-  import Notification from '~/components/share/Notification'
-  import MyButton from '~/components/share/Button'
-  import Navmenu from './Navmenu'
-  import navbar from '~/assets/js/navbar'
-
-  export default {
-    data() {
-      return {
-        address: 'Room D413, FPT University'
-      }
+import Notification from '~/components/share/Notification'
+import MyButton from '~/components/share/Button'
+import Navmenu from './Navmenu'
+import navbar from '~/assets/js/navbar'
+export default {
+  components: {
+    Notification,
+    Navmenu,
+    MyButton
+  },
+  data() {
+    return {
+      address: 'Room D413, FPT University'
+    }
+  },
+  computed: {
+    username() {
+      return this.$store.getters.GET_USERNAME
     },
-    components: {
-      Notification,
-      Navmenu,
-      MyButton
-    },
-    methods: {
-      logout() {
-        this.$nextTick(() => {
-          this.$nuxt.$loading.start()
-        })
-        this.$axios
-          .get(`/api/user/signout`)
-          .then(response => {
-            console.log(response)
-            this.$toast.open({
-              message: 'Đăng xuất thành công!',
-              position: 'is-bottom',
-              type: 'is-success'
-            })
-            this.$nuxt.$loading.finish()
-            location.reload()
-          })
-          .catch(function(error) {
-            console.log(error)
-          })
-        }
-    },
-    computed: {
-      username() {
-        return this.$store.getters.GET_USERNAME
-      },
-      avatar() {
-        return this.$store.getters.GET_AVATAR
-      }
-    },
-    mounted() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          position => {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            }
-            var geocoder = new google.maps.Geocoder()
-            geocoder.geocode({
+    avatar() {
+      return this.$store.getters.GET_AVATAR
+    }
+  },
+  mounted() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          }
+          var geocoder = new google.maps.Geocoder()
+          geocoder.geocode(
+            {
               location: pos
-            }, (results, status) => {
+            },
+            (results, status) => {
               if (status === 'OK') {
                 if (results[0]) {
                   this.address = results[0].formatted_address
@@ -170,166 +156,169 @@
               } else {
                 window.alert('Geocoder failed due to: ' + status)
               }
-            })
-          },
-          function () {
-            handleLocationError(true, infoWindow, this.map.getCenter())
-          }
-        )
-      } else {
-        handleLocationError(false, infoWindow, map.getCenter())
-      }
-    },
+            }
+          )
+        },
+        function() {
+          handleLocationError(true, infoWindow, this.map.getCenter())
+        }
+      )
+    } else {
+      handleLocationError(false, infoWindow, map.getCenter())
+    }
+  },
+  methods: {
+    logout() {
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start()
+      })
+      this.$axios
+        .get(`/api/user/signout`)
+        .then(response => {
+          console.log(response)
+          this.$toast.open({
+            message: 'Đăng xuất thành công!',
+            position: 'is-bottom',
+            type: 'is-success'
+          })
+          this.$nuxt.$loading.finish()
+          location.reload()
+        })
+        .catch(function(error) {
+          console.log(error)
+        })
+    }
   }
-
+}
 </script>
 
 <style lang="scss" scoped>
-  .my-button {
-    background: none;
-    border: none;
+.my-button {
+  background: none;
+  border: none;
+}
+.navbar-section {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  .navbar {
+    padding: 0.3em 1em 0.5em 1em !important;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.95) !important;
   }
-  .navbar-section {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 999;
-
-    .navbar {
-      padding: 0.3em 1em 0.5em 1em!important;
-      box-shadow: 0 5px 6px rgba(0, 0, 0, 0.05);
-      background-color: rgba(255, 255, 255, 0.95) !important;
+  .navbar-collapse {
+    .market-image {
+      height: 20px;
+      margin-right: 4px;
     }
-    .navbar-collapse {
-      .market-image {
-        height: 20px;
-        margin-right: 4px;
-      }
-      .market-text {
-        width: 30em;
-        font-size: 12px;
-        color: rgba(0, 0, 0, 0.5);
+    .market-text {
+      width: 30em;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.5);
+      font-weight: 500;
+    }
+  }
+  .navbar-toggler {
+    border: none !important;
+    outline: none !important;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
         font-weight: 500;
-      }
-    }
-    .navbar-toggler {
-      border: none !important;
-      outline: none !important;
-    }
-
-    .navbar-nav {
-      .nav-item {
-        .nav-link {
-          font-weight: 500;
-          color: #333;
-          font-size: 14px;
-          padding: 8px 16px;
-          letter-spacing: 0.6px;
-
-          &:hover {
-            opacity: 0.8;
-          }
+        color: #333;
+        font-size: 14px;
+        padding: 8px 16px;
+        letter-spacing: 0.6px;
+        &:hover {
+          opacity: 0.8;
         }
       }
     }
-
-    .navbar-branch {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-
-      .nav-img {
-        height: 42px;
-      }
+  }
+  .navbar-branch {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    .nav-img {
+      height: 42px;
     }
-
-    .navbar-right {
+  }
+  .navbar-right {
+    display: flex;
+    .nav-button {
       display: flex;
-
-      .nav-button {
+      align-items: center;
+      .wrap-profile {
         display: flex;
-        align-items: center;
-
-        .wrap-profile {
-          display: flex;
-
-          .wrap-img-profile {
-            img {
-              margin-right: 0.4em;
-              width: 1.9em;
-              height: 1.9em;
-              border-radius: 100%;
-            }
-          }
-
-          .wrap-username {
-            padding-top: 3px;
-            color: #333;
-            font-weight: 500;
+        .wrap-img-profile {
+          img {
+            margin-right: 0.4em;
+            width: 1.9em;
+            height: 1.9em;
+            border-radius: 100%;
           }
         }
-      }
-    }
-  }
-
-  @media (max-width: 1300px) {
-    .navbar {
-      padding: 0.6em 1em !important;
-    }
-
-    .navbar-branch {
-      .nav-img {
-        height: 34px;
-      }
-    }
-
-    .navbar-right {
-      .nav-button {
-
-        .market-image,
-        .market-text {
-          display: none;
+        .wrap-username {
+          padding-top: 3px;
+          color: #333;
+          font-weight: 500;
         }
       }
     }
   }
-
-  @media (max-width: 1110px) {
-    .navbar-nav {
-      .nav-item {
-        .nav-link {
-          padding: 8px 8px !important;
-        }
+}
+@media (max-width: 1300px) {
+  .navbar {
+    padding: 0.6em 1em !important;
+  }
+  .navbar-branch {
+    .nav-img {
+      height: 34px;
+    }
+  }
+  .navbar-right {
+    .nav-button {
+      .market-image,
+      .market-text {
+        display: none;
       }
     }
   }
-
-  @media (max-width: 992px) {
-    .navbar-right {
-      .nav-button {
-        a {
-          display: none;
-        }
+}
+@media (max-width: 1110px) {
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        padding: 8px 8px !important;
       }
     }
   }
-
-  @media (max-width: 576px) {
-    .navbar {
-      padding: 0.5em 1em !important;
-    }
-
-    .navbar-toggler {
-      .navbar-toggler-icon {
-        width: 1.1em;
-        height: 1.1em;
-      }
-    }
-
-    .navbar-branch {
-      .nav-img {
-        height: 24px;
+}
+@media (max-width: 992px) {
+  .navbar-right {
+    .nav-button {
+      a {
+        display: none;
       }
     }
   }
+}
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.5em 1em !important;
+  }
+  .navbar-toggler {
+    .navbar-toggler-icon {
+      width: 1.1em;
+      height: 1.1em;
+    }
+  }
+  .navbar-branch {
+    .nav-img {
+      height: 24px;
+    }
+  }
+}
 </style>

@@ -1,4 +1,3 @@
-/* eslint-disable */
 <template>
   <div>
     <div id="floating-panel">
@@ -345,6 +344,7 @@ export default {
             lng: position.coords.longitude
           }
           var geocoder = new google.maps.Geocoder()
+          // eslint-disable-next-line
           geocoder.geocode({ 'location': pos }, (results, status) => {
             if (status === 'OK') {
               if (results[0]) {
