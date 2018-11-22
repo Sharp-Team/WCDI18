@@ -3,9 +3,10 @@
     <div class="image" />
     <status-worker />
     <status-customer />
-    <noti />
-    <scan />
-    <scan-user />
+    <scan-worker />
+    <scan-customer />
+    <notification-worker />
+    <notification-customer />
     <div class="my-footer">
       <div
         v-if="object==='Người làm việc'"
@@ -174,31 +175,35 @@
   }
 }
 </style>
+
 <script>
 import StatusWorker from '~/components/worker/Status'
 import StatusCustomer from '~/components/customer/Status'
-import Scan from '~/components/worker/Scan'
-import Noti from '~/components/worker/Notification'
+import ScanWorker from '~/components/worker/Scan'
+import ScanCustomer from '~/components/customer/Scan'
+import NotificationWorker from '~/components/worker/Notification'
+import NotificationCustomer from '~/components/customer/Notification'
 import statusWorker from '~/assets/js/status-worker'
-import scan from '~/assets/js/scan'
-import noti from '~/assets/js/noti'
-import ScanUser from '~/components/user/ScanUser'
+import scanWorker from '~/assets/js/scan-worker'
+import notiWorker from '~/assets/js/notification-worker'
+import notiCustomer from '~/assets/js/notification-customer'
 
 export default {
   components: {
     StatusWorker,
     StatusCustomer,
-    Scan,
-    Noti,
-    ScanUser
+    ScanWorker,
+    ScanCustomer,
+    NotificationWorker,
+    NotificationCustomer
   },
   data() {
     return {
-      object: 'Người làm vi'
+      object: 'Người làm việ'
     }
   },
   beforeMount() {
-    statusWorker(), noti(), scan()
+    statusWorker(), scanWorker(), notiWorker(), notiCustomer()
   },
   methods: {
     confirm() {
