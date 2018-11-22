@@ -64,6 +64,7 @@ export default {
       }
     }
   },
+  middleware: 'authentication',
   beforeMount() {
     this.icons = this.$store.getters.GET_ICONS
     this.features = this.$store.getters.GET_FEATURES

@@ -9,6 +9,11 @@ export default {
   components: {
     Register
   },
-  layout: 'user'
+  layout: 'user',
+  beforeCreate() {
+    if (this.$store.getters.GET_USERNAME) {
+      this.$router.push('/')
+    }
+  }
 }
 </script>

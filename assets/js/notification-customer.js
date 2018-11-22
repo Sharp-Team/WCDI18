@@ -1,5 +1,4 @@
 export default () => {
-  console.log('acde')
   var modal = $('#noti-ModalCustomer')
   var btnNoti = $('#showNotiCustomer')
   var btnCloseNoi = $('#notiCloseModalCustomer')
