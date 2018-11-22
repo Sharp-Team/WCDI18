@@ -6,7 +6,7 @@
         class="fas fa-globe-asia is-icon-noti"
       />
       <span class="noti-number">
-        3
+        {{ numberNoti }}
       </span>
     </div>
 
@@ -19,51 +19,44 @@
         class="notification-content modal-content-1 ml-2"
       >
         <h6 class="notification-title">
-          Thông báo (3)
+          Thông báo ({{ numberNoti }})
           <i
             id="iconCloseModal"
             class="fas fa-times is-IconClose"
           />
         </h6>
         <div class="wrapper-notification">
-          <div class="one-notification">
-            <div class="notification-container py-3">
-              <div class="media">
-                <div class="media-body">
-                  <div class="d-flex justify-content-between">
-                    <h5 class="mt-0 mb-1 title-notification">
-                      Đã hoàn thành
-                    </h5>
-                    <i class="fas fa-times is-close" />
+          <div
+            v-for="(item, index) in data"
+            :key="`${index}`"
+          >
+            <div class="one-notification">
+              <div class="notification-container py-3">
+                <div class="media">
+                  <div class="media-body">
+                    <div class="d-flex justify-content-between">
+                      <h5 class="mt-0 mb-1 title-notification">
+                        {{ item.title }}
+                      </h5>
+                      <i
+                        class="fas fa-times is-close"
+                        @click="remove(item.index)"
+                      />
+                    </div>
+                    <p class="my-0 is-content">
+                      {{ item.content }}
+                    </p>
                   </div>
-                  <p class="my-0 is-content">
-                    Giao dịch sửa xe đã hoàn thành xong. Cảm ơn bạn đã sử dụng dịch vụ
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="one-notification mt-2">
-            <div class="notification-container py-3">
-              <div class="media">
-                <div class="media-body">
-                  <div class="d-flex justify-content-between">
-                    <h5 class="mt-0 mb-1 title-notification">
-                      Đã hủy
-                    </h5>
-                    <i class="fas fa-times is-close" />
-                  </div>
-                  <p class="my-0 is-content">
-                    Giao dịch sửa xe đã hoàn thành xong. Cảm ơn bạn đã sử dụng dịch vụ
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <div class="reset-notification text-center">
-          <button class="btn-reset-notification btn">
+          <button
+            class="btn-reset-notification btn"
+            @click="removeAll"
+          >
             <i class="far fa-trash-alt mr-2" />
             Xóa tất cả
           </button>
@@ -75,15 +68,176 @@
 
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
-@import '~assets/scss/share/notification.scss';
+.is-modal {
+  visibility: hidden;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: block;
+  cursor: pointer;
+}
+
+.notification-content {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  height: 86vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 310px;
+  overflow-y: scroll;
+  border: 0 !important;
+  border-radius: 10px !important;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  button {
+    border: none !important;
+  }
+}
+
+.modal-content-1 {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateX(120%);
+}
+
+.notification-title {
+  font-size: 17px;
+  background: $color-main;
+  color: #fff;
+  padding: 0.6em 0 0.6em 1.2em;
+  position: relative;
+
+  #iconCloseModal {
+    position: absolute;
+    right: 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 3px 5px;
+    color: $color-main;
+    background: #fff;
+  }
+}
+
+.is-close {
+  color: $font-color-grey;
+}
+
+.wrap-icon-noti {
+  cursor: pointer;
+  position: relative;
+  margin: 0 10px;
+  .is-icon-noti {
+    font-size: 30px;
+    color: #8c8c8c;
+  }
+
+  .noti-number {
+    background-color: $color-main;
+    padding: 0px 5px;
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: -35px;
+  }
+}
+
+.wrapper-notification {
+  padding: 2px 15px 15px 15px;
+  .one-notification {
+    margin-top: 14px;
+    font-size: 16px;
+    background-color: $color-grey-light;
+    border-radius: 8px;
+    .notification-container {
+      .media {
+        .media-body {
+          padding: 0 15px;
+          .title-notification,
+          .is-content {
+            font-size: 0.9rem;
+          }
+
+          .is-content {
+            color: #868686;
+          }
+        }
+      }
+    }
+  }
+}
+
+.reset-notification {
+  padding: 15px 0;
+
+  .btn-reset-notification {
+    background: $color-main;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    margin: auto;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .notification-content {
+    width: 300px;
+
+    .notification-title {
+      font-size: 14px !important;
+    }
+
+    .wrapper-notification {
+      .one-notification {
+        font-size: 12px !important;
+      }
+    }
+  }
+}
 </style>
 
 <script>
 import notification from '~/assets/js/notification'
 
 export default {
+  data() {
+    return {
+      data: [
+        {
+          title: 'Đã hoàn thành',
+          content:
+            'Giao dịch sửa xe đã hoàn thành xong. Cảm ơn bạn đã sử dụng dịch vụ'
+        },
+        {
+          title: 'Đã hủy',
+          content:
+            'Giao dịch sửa xe đã hoàn thành xong. Cảm ơn bạn đã sử dụng dịch vụ'
+        }
+      ]
+    }
+  },
+  computed: {
+    numberNoti() {
+      return this.data.length
+    }
+  },
   mounted() {
     notification()
+  },
+  methods: {
+    remove(index) {
+      this.data.splice(index, 1)
+    },
+    removeAll() {
+      this.data.splice(0, this.data.length)
+    }
   }
 }
 </script>
