@@ -27,27 +27,24 @@
             <p class="sub-description">Dưới đây là một số tính năng nổi bật của project</p>
             <div class="list-function">
               <ul>
-                <!-- Đa dạng -->
                 <li>
                   <i class="fas fa-globe p-2 my-icon" />
                   <span>
-                    <h5>Đa dạng các loại nhu cầu</h5>
+                    <p class="title-feature">Đa dạng các loại nhu cầu</p>
                     <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
                   </span>
                 </li>
-                <!-- Phù hợp -->
                 <li>
                   <i class="far fa-envelope my-icon" />
                   <span>
-                    <h5>Tìm được người phù hợp</h5>
+                    <p class="title-feature">Tìm được người phù hợp</p>
                     <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
                   </span>
                 </li>
-                <!-- Phù hợp -->
                 <li>
                   <i class="fas fa-globe p-2 my-icon" />
                   <span>
-                    <h5>Mọi nhu cầu mọi lúc mọi nơi</h5>
+                    <p class="title-feature">Mọi nhu cầu mọi lúc mọi nơi</p>
                     <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
                   </span>
                 </li>
@@ -60,20 +57,20 @@
     <div class="container-fluid">
       <div class="guide-register">
         <div class="title-button">
-          <h3 class="title is-3 text">HƯỚNG DẪN ĐĂNG KÝ</h3>
-          <p class="text description">Bạn không hiểu đăng ký thế nào? Để tôi giúp bạn nhé</p>
+          <h3 class="title is-3 text">HƯỚNG DẪN SỬ DỤNG APP</h3>
+          <p class="text description">Dưới đây là một vài bước và một vài tính năng có trong app.</p>
           <div class="group-btn d-flex justify-content-center">
             <button
               type="button"
               class="btn my-button p-2"
             >
-              TÌM NGƯỜI
+              KHÁCH HÀNG
             </button>
             <button
               type="button"
               class="btn my-button p-2"
             >
-              TÌM VIỆC
+              NGƯỜI LÀM VIỆC
             </button>
           </div>
         </div>
@@ -85,37 +82,41 @@
                   <center>
                     <div class="cril">1</div>
                   </center>
-                  <p>Chọn chức năng</p>
+                  <p class="text-description">Đăng ký tài khoản</p>
                   <img
-                    src="/images/homepage/1.png"
-                    alt="">
+                    src="/images/homepage/screen1.png"
+                    alt=""
+                    class="image-guide">
                 </div>
                 <div class="col-sm-3 col-md-3 img-huong-dan-dk">
                   <center>
                     <div class="cril">2</div>
                   </center>
-                  <p>Chọn ứng viên</p>
+                  <p class="text-description">Đăng nhập tài khoản</p>
                   <img
-                    src="/images/homepage/2.png"
-                    alt="">
+                    src="/images/homepage/screen2.png"
+                    alt=""
+                    class="image-guide">
                 </div>
                 <div class="col-sm-3 col-md-3 img-huong-dan-dk">
                   <center>
                     <div class="cril">3</div>
                   </center>
-                  <p>Chọn nhu cầu</p>
+                  <p class="text-description">Yêu cầu công việc</p>
                   <img
-                    src="/images/homepage/3.png"
-                    alt="">
+                    src="/images/homepage/screen3.png"
+                    alt=""
+                    class="image-guide">
                 </div>
                 <div class="col-sm-3 col-md-3 img-huong-dan-dk">
                   <center>
                     <div class="cril">4</div>
                   </center>
-                  <p>Hoàn thành</p>
+                  <p class="text-description">Quét xung quanh</p>
                   <img
-                    src="/images/homepage/4.png"
-                    alt="">
+                    src="/images/homepage/screen4.png"
+                    alt=""
+                    class="image-guide">
                 </div>
               </div>
             </div>
@@ -167,7 +168,6 @@
               </li>
             </ul>
           </div>
-
           <div class="wrap-img-profile">
             <a
               href="#"
@@ -250,7 +250,6 @@
               </li>
             </ul>
           </div>
-
           <div class="wrap-img-profile">
             <a
               href="#"
@@ -266,7 +265,7 @@
                   alt="">
               </div>
               <span class="position">FontEnd</span>
-              <h4><span>Kathy</span> Watkins</h4>
+              <h4><span>PhongPV</span> Phong Phạm</h4>
             </a>
             <ul class="d-flex justify-content-center">
               <li class="p-2">
@@ -306,16 +305,16 @@
               class="member-profile">
               <div class="unhover_img">
                 <img
-                  src="/images/homepage/speaker-4.png"
+                  src="/images/homepage/speaker-5.png"
                   alt="">
               </div>
               <div class="hover_img">
                 <img
-                  src="/images/homepage/speaker-4-hover.png"
+                  src="/images/homepage/speaker-5-hover.png"
                   alt="">
               </div>
               <span class="position">FrontEnd</span>
-              <h4><span>Kathy</span> Watkins</h4>
+              <h4><span>TuND</span> Mark Allen</h4>
             </a>
             <ul class="d-flex justify-content-center">
               <li class="p-2">
@@ -359,6 +358,16 @@
 
 <style lang="scss" scoped>
 @import '~/assets/scss/variable.scss';
+.title-feature {
+  font-size: 1.2rem;
+}
+.image-guide {
+  width: 87%;
+}
+.text-description {
+  font-family: $font-family-main !important;
+  font-size: 19px !important;
+}
 .text-para {
   margin-top: 25px;
 }
@@ -412,12 +421,12 @@
         ul {
           margin-left: 30px;
           li {
-            padding-top: 35px;
+            padding-top: 60px;
             .my-icon {
               color: white;
               background-color: $color-main;
               border-radius: 50%;
-              padding: 15px !important;
+              padding: 21px !important;
               margin-right: 20px;
               float: left;
               clear: both;
@@ -439,7 +448,7 @@
     }
     .description {
       font-style: italic;
-      font-size: 12px;
+      font-size: 15px;
       padding-bottom: 22px;
     }
     .group-btn {
@@ -486,7 +495,7 @@
       }
     }
     .my-tab-content {
-      padding-bottom: 50px;
+      padding-bottom: 100px;
     }
   }
   .team-page {
