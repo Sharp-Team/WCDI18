@@ -8,29 +8,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h6
-            id="myModalLabel"
-            class="modal-title"
-          >
-            Tìm người làm việc
-          </h6>
-          <input
-            v-model="checked"
-            type="checkbox"
-            class="check check2 ml-4">
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div
-          v-if="checked"
-          class="modal-body"
-        >
+        <div class="modal-body">
           <h6 class="title is-6">Công việc cần quét: {{ selected }}</h6>
           <b-autocomplete
             v-model="name"
@@ -45,7 +23,6 @@
           />
         </div>
         <div
-          v-if="checked"
           class="modal-body">
           <h6 class="title is-6">Nội dung công việc</h6>
           <textarea
@@ -56,7 +33,6 @@
             placeholder="Nhập chi tiết công việc" />
         </div>
         <div
-          v-if="checked"
           class="modal-body">
           <h6 class="title is-6">Phạm vi quét: {{ range }} Km</h6>
           <input
@@ -67,7 +43,6 @@
           >
         </div>
         <div
-          v-if="checked"
           class="modal-footer d-flex justify-content-center"
         >
           <button
@@ -89,7 +64,6 @@ import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
-      checked: true,
       keepFirst: true,
       openOnFocus: false,
       name: '',
@@ -127,8 +101,8 @@ export default {
   .modal-dialog {
     .modal-content {
       position: fixed;
-      width: 80% !important;
-      left: 10%;
+      width: 65% !important;
+      left: -80%;
       .modal-header {
         border-bottom: none !important;
         h6 {
@@ -174,10 +148,12 @@ export default {
         }
       }
       .modal-body {
-        margin-bottom: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 14px;
         background-color: #d6d6d6;
         border-radius: 10px;
-        width: 95% !important;
+        width: 92% !important;
         left: 2.5%;
         $track-w: 100%;
         $track-h: 0.1em;
