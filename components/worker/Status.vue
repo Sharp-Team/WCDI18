@@ -1,12 +1,12 @@
 <template>
   <div>
     <div
-      id="status-Modal"
+      id="status-worker-modal"
       class="modal status-modal"
     >
       <div
-        id="status-ModalContent"
-        class="status-content modal-content-1 ml-2"
+        id="status-worker-content"
+        class="status-content modal-worker-1 ml-2"
       >
         <div class="status-title">
           <h6
@@ -30,7 +30,7 @@
             class="check check2 ml-4"
           >
           <i
-            id="statusCloseModal"
+            id="status-close-modal-worker"
             class="fas fa-times is-IconClose ml-3"
           />
         </div>
@@ -147,10 +147,10 @@ export default {
   }
 }
 .modal-menu-content-1 {
-  transform: translateX(-220%);
+  transform: translateY(250%);
 }
 .modal-menu-content-2 {
-  transform: translateX(120);
+  transform: translateX(-120);
 }
 @media (max-width: 992px) {
   .status-modal .status-content {

@@ -1,8 +1,9 @@
 <template>
   <div>
     <div class="image" />
-    <status class="statusworker"/>
-    <noti/>
+    <status-worker />
+    <status-customer />
+    <noti />
     <scan />
     <scan-user />
     <div class="my-footer">
@@ -13,7 +14,7 @@
         <div class="icon status">
           <a href="#">
             <i
-              id="showStatusWorker"
+              id="show-status-worker"
               class="fas fa-street-view"
             />
           </a>
@@ -59,8 +60,10 @@
         <div class="icon status">
           <a href="#">
             <i
-              id="showStatusCustomer"
+              id="status-customer-modal"
               class="fas fa-broadcast-tower"
+              data-toggle="modal"
+              data-target="#status-customer-modal"
             />
           </a>
           <span class="tooltip-status">
@@ -172,27 +175,30 @@
 }
 </style>
 <script>
-import Status from '~/components/worker/Status'
+import StatusWorker from '~/components/worker/Status'
+import StatusCustomer from '~/components/customer/Status'
 import Scan from '~/components/worker/Scan'
 import Noti from '~/components/worker/Notification'
-import status from '~/assets/js/status'
+import statusWorker from '~/assets/js/status-worker'
 import scan from '~/assets/js/scan'
 import noti from '~/assets/js/noti'
 import ScanUser from '~/components/user/ScanUser'
+
 export default {
   components: {
-    Status,
+    StatusWorker,
+    StatusCustomer,
     Scan,
     Noti,
     ScanUser
   },
   data() {
     return {
-      object: 'Người làm việc'
+      object: 'Người làm vi'
     }
   },
   beforeMount() {
-    status(), noti(), scan()
+    statusWorker(), noti(), scan()
   },
   methods: {
     confirm() {

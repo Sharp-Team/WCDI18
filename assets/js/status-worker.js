@@ -1,8 +1,8 @@
 export default () => {
-  var modal = $('#status-Modal')
-  var btnStatus = $('#showStatusWorker')
-  var btnCloseStatus = $('#statusCloseModal')
-  var modalContent = $('#status-ModalContent')
+  var modal = $('#status-worker-modal')
+  var btnStatus = $('#show-status-worker')
+  var btnCloseStatus = $('#status-close-modal-worker')
+  var modalContent = $('#status-worker-content')
 
   btnStatus.click(() => {
     modal.css('visibility', 'visible')
