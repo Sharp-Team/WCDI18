@@ -9,6 +9,7 @@ const store = () =>
       range: 5,
       username: null,
       avatar: null,
+      career: null,
       map: null,
       icons: {
         electric: {

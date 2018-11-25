@@ -14,7 +14,7 @@
         >
           <h6 class="title is-6">Chọn công việc: {{ selected }}</h6>
           <b-autocomplete
-            v-model="name"
+            v-model="title"
             :keep-first="keepFirst"
             :open-on-focus="openOnFocus"
             :data="filteredDataObj"
@@ -31,7 +31,7 @@
           <h6 class="title is-6">Nội dung công việc: </h6>
           <textarea
             id="message-text"
-            v-model="detailwork"
+            v-model="content"
             class="form-control"
             rows="3"
             placeholder="Nhập chi tiết công việc" />
@@ -42,7 +42,8 @@
         >
           <button
             type="submit"
-            class="btn btn-success text-center btn-scan-user">
+            class="btn btn-success text-center btn-scan-user"
+            @click="sendNotification">
             <i class="fas fa-broom mr-2" />
             Phát thông báo
           </button>
@@ -81,8 +82,8 @@ export default {
       checked: false,
       keepFirst: true,
       openOnFocus: false,
-      name: '',
-      detailwork: '',
+      title: '',
+      content: '',
       data,
       selected: null
     }
@@ -104,6 +105,17 @@ export default {
       set(value) {
         this.$store.commit('setRange', value)
       }
+    }
+  },
+  methods: {
+    sendNotification() {
+      this.$io.sendNotification({
+        username: this.username,
+        title: this.title,
+        content: this.content
+      })
+      this.title = ''
+      this.content = ''
     }
   }
 }

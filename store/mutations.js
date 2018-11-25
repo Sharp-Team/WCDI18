@@ -16,5 +16,8 @@ export default {
   },
   setMap(state, map) {
     state.map = map
+  },
+  setCareer(state, career) {
+    state.career = career
   }
 }

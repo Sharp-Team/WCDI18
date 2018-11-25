@@ -88,12 +88,24 @@ export default {
       return this.data.length
     }
   },
+  mounted() {
+    const { socket } = this.$io
+    this.$io.getNotification()
+    socket.on('updateNotification', this.updateNotification)
+  },
   methods: {
     done(index) {
       this.data.splice(index, 1)
     },
     cancel(index) {
       this.data.splice(index, 1)
+    },
+    updateNotification(alldata) {
+      const career = this.$store.getters.GET_CAREER
+      const data = alldata.notifications.filter(
+        notification => notification.title === career
+      )
+      this.data = data
     }
   }
 }

@@ -70,6 +70,7 @@ router.post('/signin', async (req, res) => {
       if (result.password === password) {
         req.session.username = result.full_name
         req.session.avatar = result.avatar
+        req.session.career = result.career
         res.status(200).json({
           data: result.avatar,
           error: null

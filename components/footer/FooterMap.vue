@@ -42,7 +42,8 @@
             Quét
           </span>
         </div>
-        <div class="icon noti">
+        <div
+          class="icon noti">
           <a href="#">
             <i
               id="showNotiWorker"

@@ -19,5 +19,8 @@ export default {
   },
   GET_MAP: state => {
     return state.map
+  },
+  GET_CAREER: state => {
+    return state.career
   }
 }

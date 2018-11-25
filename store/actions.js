@@ -6,6 +6,9 @@ export default {
     if (req.session && req.session.avatar) {
       commit('setAvatar', req.session.avatar)
     }
+    if (req.session && req.session.career) {
+      commit('setCareer', req.session.career)
+    }
   },
   SET_RANGE({ commit }, range) {
     commit('setRange', range)
@@ -24,5 +27,8 @@ export default {
   },
   SET_MAP({ commit }, map) {
     commit('setMap', map)
+  },
+  SET_CAREER({ commit }, career) {
+    commit('setCareer', career)
   }
 }

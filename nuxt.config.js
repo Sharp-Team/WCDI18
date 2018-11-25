@@ -80,7 +80,8 @@ module.exports = {
       src: '~/plugins/google-authen.js',
       ssr: false
     },
-    { src: '~/plugins/facebook-authen.js', ssr: false }
+    { src: '~/plugins/facebook-authen.js', ssr: false },
+    { src: '~/plugins/socket.js', ssr: false }
   ],
 
   modules: [
