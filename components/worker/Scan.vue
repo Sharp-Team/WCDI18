@@ -177,9 +177,11 @@ export default {
     } else {
       handleLocationError(false, infoWindow, map.getCenter())
     }
+    const { socket } = this.$io
+    this.$io.getCustomerOnline()
+    socket.on('updateCustomers', this.updateCustomers)
   },
   beforeMount() {
-    this.features = this.$store.getters.GET_FEATURES
     this.markers = this.$store.getters.GET_MARKERS
     this.icons = this.$store.getters.GET_ICONS
   },
@@ -252,6 +254,15 @@ export default {
           }
         }, 400)
       })
+    },
+    updateCustomers(alldata) {
+      if (this.selected.length > 0) {
+        console.log(this.icons)
+        console.log(this.selected)
+        this.features = alldata.customers
+        this.showMarker(this.icons, this.selected)
+      }
+      this.features = alldata.customers
     }
   }
 }

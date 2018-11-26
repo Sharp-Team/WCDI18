@@ -67,7 +67,6 @@ export default {
   middleware: 'authentication',
   beforeMount() {
     this.icons = this.$store.getters.GET_ICONS
-    this.features = this.$store.getters.GET_FEATURES
   },
   mounted() {
     /**
@@ -174,8 +173,15 @@ export default {
     )
 
     this.$store.dispatch('SET_MAP', this.map)
+
+    const { socket } = this.$io
+    this.$io.getCustomerOnline()
+    socket.on('updateCustomers', this.updateCustomers)
   },
   methods: {
+    updateCustomers(alldata) {
+      this.features = alldata.customers
+    },
     CenterControl(controlDiv, map) {
       // Set CSS for the control border.
       var controlUI = document.createElement('div')

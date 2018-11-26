@@ -25,4 +25,20 @@ export default class ClientIO {
   getNotificationCustomer = () => {
     this.socket.emit('getNotificationCustomer')
   }
+
+  sendCustomerAcceptDeal = data => {
+    this.socket.emit('sendCustomerAcceptDeal', data)
+  }
+
+  customerOnline = data => {
+    this.socket.emit('customerOnline', data)
+  }
+
+  customerOffline = data => {
+    this.socket.emit('customerOffline', data)
+  }
+
+  getCustomerOnline = () => {
+    this.socket.emit('getCustomerOnline')
+  }
 }

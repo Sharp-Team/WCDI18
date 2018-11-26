@@ -172,6 +172,10 @@ export default {
       this.$nextTick(() => {
         this.$nuxt.$loading.start()
       })
+      const username = this.$store.getters.GET_USERNAME
+      this.$io.customerOffline({
+        username: username
+      })
       this.$axios
         .get(`/api/user/signout`)
         .then(response => {

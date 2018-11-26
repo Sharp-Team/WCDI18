@@ -116,11 +116,13 @@ export default {
                     const user = this.$store.getters.GET_USER
                     this.$io.sendNotificationCustomer({
                       username: item.username,
+                      usernameWorker: user.username,
                       fullnameWorker: user.full_name,
                       phoneWorker: user.phone_number,
                       emailWorker: user.email,
                       addressWorker: user.address_detail,
-                      addressCurrent: positionCurrent
+                      addressCurrent: positionCurrent,
+                      career: user.career
                     })
                     this.$toast.open({
                       message: 'Đã gửi thông báo xác nhận!',
@@ -154,6 +156,27 @@ export default {
         notification => notification.title === career
       )
       this.data = data
+      if (career) {
+        var modal = $('#noti-Modal')
+        var btnNoti = $('#showNotiWorker')
+        var btnCloseNoi = $('#notiCloseModal')
+        var modalContent = $('#noti-ModalContent')
+
+        modal.css('visibility', 'visible')
+        modalContent.removeClass('modal-content-1')
+
+        btnCloseNoi.click(() => {
+          modalContent.addClass('modal-content-1')
+          modal.css('visibility', 'hidden')
+        })
+
+        $(window).click(e => {
+          if (e.target.id === 'noti-Modal') {
+            modalContent.addClass('modal-content-1')
+            modal.css('visibility', 'hidden')
+          }
+        })
+      }
     }
   }
 }

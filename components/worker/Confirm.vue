@@ -43,7 +43,8 @@
           <button
             id="confirm-oke"
             type="button"
-            class="btn btn-success">Success</button>
+            class="btn btn-success"
+            @click="doneDeal">Oke</button>
         </div>
       </div>
     </div>
@@ -58,7 +59,9 @@ export default {
       email: '',
       phone: '',
       address: '',
-      addressCurrent: ''
+      addressCurrent: '',
+      career: '',
+      username: ''
     }
   },
   mounted() {
@@ -74,12 +77,13 @@ export default {
       )
       if (data.length > 0) {
         const worker = data[0]
-        console.log(worker)
         this.fullname = worker.fullnameWorker
         this.phone = worker.phoneWorker
         this.email = worker.emailWorker
         this.address = worker.addressWorker
         this.addressCurrent = worker.addressCurrent
+        this.career = worker.career
+        this.username = worker.username
         var modal = $('#confirm-Modal')
         var btnCloseNoi = $('#confirmCloseModal')
         var modalContent = $('#confirm-ModalContent')
@@ -101,6 +105,21 @@ export default {
           }
         })
       }
+    },
+    doneDeal() {
+      this.$io.sendCustomerAcceptDeal({
+        username: this.username,
+        career: this.career
+      })
+      const username = this.$store.getters.GET_USERNAME
+      this.$io.customerOffline({
+        username: username
+      })
+      this.$toast.open({
+        message: 'Giao dịch thành công!',
+        position: 'is-bottom',
+        type: 'is-success'
+      })
     }
   }
 }
