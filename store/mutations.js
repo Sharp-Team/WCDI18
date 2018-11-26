@@ -14,9 +14,6 @@ export default {
   setFullName(state, full_name) {
     state.full_name = full_name
   },
-  setFeatures(state, features) {
-    state.markers = features
-  },
   setMarkers(state, markers) {
     state.markers = markers
   },

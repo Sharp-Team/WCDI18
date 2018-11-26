@@ -28,9 +28,6 @@ export default {
   SET_FULL_NAME({ commit }, full_name) {
     commit('setFullName', full_name)
   },
-  SET_FEATURES({ commit }, features) {
-    commit('setFeatures', features)
-  },
   SET_MARKERS({ commit }, markers) {
     commit('setMarkers', markers)
   },

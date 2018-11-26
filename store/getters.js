@@ -17,9 +17,6 @@ export default {
   GET_ICONS: state => {
     return state.icons
   },
-  GET_FEATURES: state => {
-    return state.features
-  },
   GET_MARKERS: state => {
     return state.markers
   },
