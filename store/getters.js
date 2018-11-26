@@ -5,8 +5,14 @@ export default {
   GET_USERNAME: state => {
     return state.username
   },
+  GET_USER: state => {
+    return state.user
+  },
   GET_AVATAR: state => {
     return state.avatar
+  },
+  GET_FULL_NAME: state => {
+    return state.full_name
   },
   GET_ICONS: state => {
     return state.icons
@@ -19,8 +25,5 @@ export default {
   },
   GET_MAP: state => {
     return state.map
-  },
-  GET_CAREER: state => {
-    return state.career
   }
 }

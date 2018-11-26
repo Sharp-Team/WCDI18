@@ -8,8 +8,9 @@ const store = () =>
     state: {
       range: 5,
       username: null,
+      user: null,
       avatar: null,
-      career: null,
+      full_name: null,
       map: null,
       icons: {
         electric: {

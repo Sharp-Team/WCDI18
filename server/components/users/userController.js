@@ -68,9 +68,7 @@ router.post('/signin', async (req, res) => {
   await User.findOne({ username: username }, (err, result) => {
     if (result) {
       if (result.password === password) {
-        req.session.username = result.full_name
-        req.session.avatar = result.avatar
-        req.session.career = result.career
+        req.session.user = result
         res.status(200).json({
           data: result.avatar,
           error: null

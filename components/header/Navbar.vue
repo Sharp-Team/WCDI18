@@ -127,7 +127,7 @@ export default {
   },
   computed: {
     username() {
-      return this.$store.getters.GET_USERNAME
+      return this.$store.getters.GET_FULL_NAME
     },
     avatar() {
       return this.$store.getters.GET_AVATAR

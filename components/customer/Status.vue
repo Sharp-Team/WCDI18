@@ -109,13 +109,19 @@ export default {
   },
   methods: {
     sendNotification() {
-      this.$io.sendNotification({
-        username: this.username,
+      const username = this.$store.getters.GET_USERNAME
+      this.$io.sendNotificationWorker({
+        username: username,
         title: this.title,
         content: this.content
       })
       this.title = ''
       this.content = ''
+      this.$toast.open({
+        message: 'Phát thông báo thành công!',
+        position: 'is-bottom',
+        type: 'is-success'
+      })
     }
   }
 }

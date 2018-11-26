@@ -114,7 +114,7 @@ module.exports = {
       secret: 'thaycacac',
       resave: false,
       saveUninitialized: false,
-      cookie: { maxAge: 600000 }
+      cookie: { maxAge: 6000000 }
     }),
     '~/server/users.js',
     '~/server/deals.js'

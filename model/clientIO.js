@@ -10,11 +10,19 @@ export default class ClientIO {
     })
   }
 
-  sendNotification = data => {
-    this.socket.emit('sendNotification', data)
+  sendNotificationWorker = data => {
+    this.socket.emit('sendNotificationWorker', data)
   }
 
-  getNotification = () => {
-    this.socket.emit('getNotification')
+  getNotificationWorker = () => {
+    this.socket.emit('getNotificationWorker')
+  }
+
+  sendNotificationCustomer = data => {
+    this.socket.emit('sendNotificationCustomer', data)
+  }
+
+  getNotificationCustomer = () => {
+    this.socket.emit('getNotificationCustomer')
   }
 }

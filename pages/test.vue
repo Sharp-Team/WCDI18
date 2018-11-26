@@ -24,11 +24,11 @@ export default {
   },
   mounted() {
     const { socket } = this.$io
-    socket.on('updateNotification', this.updateNotification)
+    socket.on('updateNotificationWorker', this.updateNotification)
   },
   methods: {
     enterUsername() {
-      this.$io.sendNotification({
+      this.$io.sendNotificationWorker({
         username: this.username,
         title: this.title,
         content: this.content

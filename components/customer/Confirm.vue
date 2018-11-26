@@ -1,17 +1,17 @@
 <template>
   <div>
     <div
-      id="noti-Modal"
+      id="confirm-ModalCustomer"
       class="modal is-modal"
     >
       <div
-        id="noti-ModalContent"
+        id="confirm-ModalContentCustomer"
         class="notification-content modal-content-1 ml-2"
       >
         <h6 class="notification-title">
           Thông báo ({{ numberNoti }})
           <i
-            id="notiCloseModal"
+            id="confirmCloseModalCustomer"
             class="fas fa-times is-IconClose"
           />
         </h6>
@@ -39,7 +39,7 @@
                     <button
                       type="button"
                       class="btn-confirm-noti"
-                      @click="done(item)"
+                      @click="done(item.index)"
                     >
                       Xác nhận
                     </button>
@@ -48,7 +48,6 @@
                     <button
                       type="button"
                       class="btn-cancel-noti"
-                      disabled
                       @click="cancel(item.index)"
                     >
                       Huỷ
@@ -70,15 +69,15 @@ export default {
     return {
       data: [
         {
-          title: 'Yêu cầu sửa xe máy',
+          title: 'Chấp nhận sửa xe máy',
           content: 'Km29 đại lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội'
         },
         {
-          title: 'Yêu cầu sửa ô tô',
+          title: 'Chấp nhận sửa ô tô',
           content: 'Đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội'
         },
         {
-          title: 'Yêu cầu sửa laptop',
+          title: 'Chấp nhận sửa laptop',
           content: 'FSchool, Thạch Hòa, Thạch Thất, Hà Nội'
         }
       ]
@@ -89,71 +88,12 @@ export default {
       return this.data.length
     }
   },
-  mounted() {
-    const { socket } = this.$io
-    this.$io.getNotificationWorker()
-    socket.on('updateNotificationWorker', this.updateNotification)
-  },
   methods: {
-    done(item) {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          position => {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            }
-            var geocoder = new google.maps.Geocoder()
-            geocoder.geocode(
-              {
-                location: pos
-              },
-              (results, status) => {
-                if (status === 'OK') {
-                  if (results[0]) {
-                    const positionCurrent = results[0].formatted_address
-                    this.data.splice(item.index, 1)
-                    const user = this.$store.getters.GET_USER
-                    this.$io.sendNotificationCustomer({
-                      username: item.username,
-                      fullnameWorker: user.full_name,
-                      phoneWorker: user.phone_number,
-                      emailWorker: user.email,
-                      addressWorker: user.address_detail,
-                      addressCurrent: positionCurrent
-                    })
-                    this.$toast.open({
-                      message: 'Đã gửi thông báo xác nhận!',
-                      position: 'is-bottom',
-                      type: 'is-success'
-                    })
-                  } else {
-                    window.alert('No results found')
-                  }
-                } else {
-                  window.alert('Geocoder failed due to: ' + status)
-                }
-              }
-            )
-          },
-          function() {
-            handleLocationError(true, infoWindow, this.map.getCenter())
-          }
-        )
-      } else {
-        handleLocationError(false, infoWindow, map.getCenter())
-      }
+    done(index) {
+      this.data.splice(index, 1)
     },
     cancel(index) {
       this.data.splice(index, 1)
-    },
-    updateNotification(alldata) {
-      const user = this.$store.getters.GET_USER
-      const career = user.career
-      const data = alldata.notificationsWorker.filter(
-        notification => notification.title === career
-      )
-      this.data = data
     }
   }
 }
@@ -218,7 +158,7 @@ export default {
   color: #fff;
   padding: 0.6em 0 0.6em 1.2em;
   position: relative;
-  #notiCloseModal {
+  #notiCloseModalCustomer {
     position: absolute;
     right: 15px;
     font-size: 0.9em;
