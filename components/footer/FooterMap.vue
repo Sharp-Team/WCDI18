@@ -10,6 +10,7 @@
     <confirm-worker />
     <div class="my-footer">
       <div
+        v-if="object === 'Người làm việc'"
         class="action"
       >
         <div class="icon status">
@@ -56,6 +57,7 @@
         </div>
       </div>
       <div
+        v-else
         class="action"
       >
         <div class="icon status">
@@ -214,10 +216,14 @@ export default {
   },
   data() {
     return {
-      object: 'Người làm việ'
+      object: ''
     }
   },
-  beforeMount() {
+  created() {
+    const user = this.$store.getters.GET_USER
+    this.object = user.object
+  },
+  mounted() {
     statusWorker(),
       scanWorker(),
       scanCustomer(),
