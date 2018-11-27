@@ -25,10 +25,10 @@
       <h4>Thông tin tài khoản</h4>
       <ul>
         <li>
-          <nuxt-link to="/change-password">Đổi mật khẩu</nuxt-link>
+          <a href="/change-password">Đổi mật khẩu</a>
         </li>
         <li>
-          <nuxt-link to="/history">Quản lý giao dịch</nuxt-link>
+          <a href="/history">Quản lý giao dịch</a>
         </li>
       </ul>
     </div>

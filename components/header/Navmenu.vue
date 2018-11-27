@@ -12,25 +12,25 @@
           id="showContact"
           class="menu-header"
         >
-          <nuxt-link
+          <a
             v-if="username === ''"
-            to="/login"
+            href="/login"
             class="user-login"
           >
             Đăng nhập
-          </nuxt-link>
+          </a>
           <span
             v-if="username === ''"
             class="flat-line">/</span>
-          <nuxt-link
+          <a
             v-if="username === ''"
-            to="/register"
+            href="/register"
             class="user-register">
             Đăng ký
-          </nuxt-link>
-          <nuxt-link
+          </a>
+          <a
             v-else
-            to="/profile">
+            href="/profile">
             <div class="wrap-profile">
               <div class="wrap-img-profile">
                 <img
@@ -41,15 +41,12 @@
                 {{ username }}
               </div>
             </div>
-          </nuxt-link>
+          </a>
         </div>
         <div class="navbar-horizontal">
           <ul class="list-menu">
             <li>
               <a href="#">Trang chủ</a>
-            </li>
-            <li>
-              <a href="#">Tôi cần trợ giúp</a>
             </li>
             <li>
               <a href="#">Feed back</a>
