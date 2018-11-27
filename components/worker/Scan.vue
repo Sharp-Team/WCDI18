@@ -247,7 +247,13 @@ export default {
                   feature.content +
                   `</td>
                     </tr>
-                </table>`
+                </table>
+                <div class="wrap-button-direction has-text-centered">
+                  <button
+                    type="button"
+                    class="btn btn-danger btn-direction" >Chỉ đường
+                  </button>
+                </div>`
               )
               infowindow.open(map, marker)
             })
@@ -270,6 +276,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
+.wrap-button-direction {
+  width: 100%;
+}
 .noti-image {
   margin-right: 7px;
 }

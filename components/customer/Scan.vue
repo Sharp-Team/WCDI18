@@ -262,7 +262,6 @@ export default {
       })
     },
     updateWorkers(alldata) {
-      console.log(alldata)
       if (this.selected.length > 0) {
         console.log(this.icons)
         console.log(this.selected)
@@ -279,7 +278,6 @@ export default {
 @import '~assets/scss/variable.scss';
 .wrap-button-direction {
   width: 100%;
-  height: 15px !important;
 }
 .noti-image {
   margin-right: 7px;
