@@ -127,7 +127,7 @@ export default {
   },
   computed: {
     username() {
-      return this.$store.getters.GET_USERNAME
+      return this.$store.getters.GET_FULL_NAME
     },
     avatar() {
       return this.$store.getters.GET_AVATAR
@@ -171,6 +171,13 @@ export default {
     logout() {
       this.$nextTick(() => {
         this.$nuxt.$loading.start()
+      })
+      const username = this.$store.getters.GET_USERNAME
+      this.$io.customerOffline({
+        username: username
+      })
+      this.$io.workerOffline({
+        username: username
       })
       this.$axios
         .get(`/api/user/signout`)

@@ -5,14 +5,17 @@ export default {
   GET_USERNAME: state => {
     return state.username
   },
+  GET_USER: state => {
+    return state.user
+  },
   GET_AVATAR: state => {
     return state.avatar
   },
+  GET_FULL_NAME: state => {
+    return state.full_name
+  },
   GET_ICONS: state => {
     return state.icons
-  },
-  GET_FEATURES: state => {
-    return state.features
   },
   GET_MARKERS: state => {
     return state.markers

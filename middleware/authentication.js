@@ -1,5 +1,5 @@
 export default function({ redirect, req }) {
-  if (!req.session.username) {
+  if (!req.session.user) {
     return redirect('/')
   }
 }

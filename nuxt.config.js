@@ -80,7 +80,8 @@ module.exports = {
       src: '~/plugins/google-authen.js',
       ssr: false
     },
-    { src: '~/plugins/facebook-authen.js', ssr: false }
+    { src: '~/plugins/facebook-authen.js', ssr: false },
+    { src: '~/plugins/socket.js', ssr: false }
   ],
 
   modules: [
@@ -113,7 +114,7 @@ module.exports = {
       secret: 'thaycacac',
       resave: false,
       saveUninitialized: false,
-      cookie: { maxAge: 600000 }
+      cookie: { maxAge: 6000000 }
     }),
     '~/server/users.js',
     '~/server/deals.js'

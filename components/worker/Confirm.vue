@@ -1,0 +1,233 @@
+<template>
+  <div>
+    <div
+      id="confirm-Modal"
+      class="modal is-modal"
+    >
+      <div
+        id="confirm-ModalContent"
+        class="notification-content modal-content-1 ml-2"
+      >
+        <h6 class="notification-title">
+          CHẤP NHẬN GIAO DỊCH
+          <i
+            id="confirmCloseModal"
+            class="fas fa-times is-IconClose"
+          />
+        </h6>
+        <no-ssr>
+          <table class="table my-table">
+            <tr>
+              <td>Họ và tên</td>
+              <td style="font-weight: bold">{{ fullname }}</td>
+            </tr>
+            <tr class="table-success">
+              <td>Email</td>
+              <td style="font-weight: bold">{{ email }}</td>
+            </tr>
+            <tr>
+              <td>Số điện thoại</td>
+              <td style="font-weight: bold">{{ phone }}</td>
+            </tr>
+            <tr class="table-success">
+              <td>Địa chi</td>
+              <td style="font-weight: bold">{{ address }}</td>
+            </tr>
+            <tr>
+              <td>Địa chỉ hiện tại</td>
+              <td style="font-weight: bold">{{ addressCurrent }}</td>
+            </tr>
+          </table>
+        </no-ssr>
+        <div class="wrap-button has-text-centered">
+          <button
+            id="confirm-oke"
+            type="button"
+            class="btn btn-success"
+            @click="doneDeal">Oke</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      fullname: '',
+      email: '',
+      phone: '',
+      address: '',
+      addressCurrent: '',
+      career: '',
+      username: ''
+    }
+  },
+  mounted() {
+    const { socket } = this.$io
+    this.$io.getNotificationCustomer()
+    socket.on('updateNotificationCustomer', this.updateNotification)
+  },
+  methods: {
+    updateNotification(alldata) {
+      const username = this.$store.getters.GET_USERNAME
+      const data = alldata.notificationsCustomer.filter(
+        notification => notification.username === username
+      )
+      if (data.length > 0) {
+        const worker = data[0]
+        this.fullname = worker.fullnameWorker
+        this.phone = worker.phoneWorker
+        this.email = worker.emailWorker
+        this.address = worker.addressWorker
+        this.addressCurrent = worker.addressCurrent
+        this.career = worker.career
+        this.username = worker.username
+        var modal = $('#confirm-Modal')
+        var btnCloseNoi = $('#confirmCloseModal')
+        var modalContent = $('#confirm-ModalContent')
+        var btnOke = $('#confirm-oke')
+        modal.css('visibility', 'visible')
+        modalContent.removeClass('modal-content-1')
+        btnCloseNoi.click(() => {
+          modalContent.addClass('modal-content-1')
+          modal.css('visibility', 'hidden')
+        })
+        btnOke.click(() => {
+          modalContent.addClass('modal-content-1')
+          modal.css('visibility', 'hidden')
+        })
+        $(window).click(e => {
+          if (e.target.id === 'confirm-Modal') {
+            modalContent.addClass('modal-content-1')
+            modal.css('visibility', 'hidden')
+          }
+        })
+      }
+    },
+    doneDeal() {
+      this.$io.sendCustomerAcceptDeal({
+        username: this.username,
+        career: this.career
+      })
+      const username = this.$store.getters.GET_USERNAME
+      this.$io.customerOffline({
+        username: username
+      })
+      this.$toast.open({
+        message: 'Giao dịch thành công!',
+        position: 'is-bottom',
+        type: 'is-success'
+      })
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import '~assets/scss/variable.scss';
+.wrap-button {
+  width: 100%;
+}
+td {
+  padding-left: 20px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.my-table {
+  margin-top: 10px;
+}
+.is-IconClose {
+  float: right;
+  margin-right: 15px;
+}
+.my-card {
+  height: 100%;
+}
+.is-modal {
+  visibility: hidden;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: block;
+  cursor: pointer;
+}
+.notification-content {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  background-color: white;
+  height: 86vh;
+  width: 580px;
+  overflow-y: scroll;
+  border-radius: 10px !important;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.modal-content-1 {
+  background-color: white;
+  transform: translateX(120%);
+}
+.notification-title {
+  font-size: 17px;
+  background: $color-main;
+  color: #fff;
+  padding: 0.6em 0 0.6em 1.2em;
+  position: relative;
+  #notiCloseModal {
+    position: absolute;
+    right: 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 3px 5px;
+    color: $color-main;
+    background: #fff;
+  }
+}
+.is-close {
+  color: $font-color-grey;
+}
+.wrap-icon-noti {
+  cursor: pointer;
+  position: relative;
+  margin: 0 10px;
+  .is-icon-noti {
+    font-size: 30px;
+  }
+  .noti-number {
+    background-color: $color-main;
+    padding: 0px 5px;
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: -35px;
+  }
+}
+.reset-notification {
+  padding: 15px 0;
+  .btn-reset-notification {
+    background: $color-main;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    margin: auto;
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .notification-content {
+    width: 300px;
+    .notification-title {
+      font-size: 14px !important;
+    }
+  }
+}
+</style>

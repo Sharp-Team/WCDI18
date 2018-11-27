@@ -5,11 +5,14 @@ export default {
   setUsername(state, username) {
     state.username = username
   },
+  setUser(state, user) {
+    state.user = user
+  },
   setAvatar(state, avatar) {
     state.avatar = avatar
   },
-  setFeatures(state, features) {
-    state.markers = features
+  setFullName(state, full_name) {
+    state.full_name = full_name
   },
   setMarkers(state, markers) {
     state.markers = markers
