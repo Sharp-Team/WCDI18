@@ -9,6 +9,7 @@ export default {
     Login
   },
   layout: 'user',
+  middleware: 'signined',
   beforeCreate() {
     if (this.$store.getters.GET_USERNAME) {
       this.$router.push('/')

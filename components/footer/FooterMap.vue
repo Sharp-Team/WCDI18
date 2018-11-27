@@ -103,27 +103,6 @@
             Thông báo
           </span>
         </div>
-        <div class="icon noti">
-          <a href="#">
-            <i
-              class="fas fa-check-circle"
-              @click="confirm" />
-          </a>
-          <span class="tooltip-noti">
-            Confirm
-          </span>
-        </div>
-        <div class="icon noti">
-          <a href="#">
-            <i
-              id="showConfirmWorker"
-              class="fas fa-check-circle"
-            />
-          </a>
-          <span class="tooltip-noti">
-            Confirm
-          </span>
-        </div>
       </div>
     </div>
   </div>

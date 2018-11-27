@@ -38,7 +38,8 @@ export default function(username, password) {
         this.$store.dispatch('SET_USERNAME', username)
         this.$store.dispatch('SET_AVATAR', response.data.data)
         this.$nuxt.$loading.finish()
-        this.$router.go(-1)
+        this.$router.push('/')
+        location.reload()
       })
       .catch(function(error) {
         console.log(error)
