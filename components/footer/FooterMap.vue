@@ -84,8 +84,7 @@
             <i
               id="showScanCustomer"
               class="fab fa-cloudscale"
-              data-toggle="modal"
-              data-target="#scanUserModal" />
+            />
           </a>
           <span class="tooltip-search">
             Quét
@@ -197,6 +196,7 @@ import NotificationCustomer from '~/components/customer/Notification'
 import ConfirmWorker from '~/components/worker/Confirm'
 import statusWorker from '~/assets/js/status-worker'
 import scanWorker from '~/assets/js/scan-worker'
+import scanCustomer from '~/assets/js/scan-customer'
 import notiWorker from '~/assets/js/notification-worker'
 import notiCustomer from '~/assets/js/notification-customer'
 import confirmWorker from '~/assets/js/confirm-worker'
@@ -218,7 +218,12 @@ export default {
     }
   },
   beforeMount() {
-    statusWorker(), scanWorker(), notiWorker(), notiCustomer(), confirmWorker()
+    statusWorker(),
+      scanWorker(),
+      scanCustomer(),
+      notiWorker(),
+      notiCustomer(),
+      confirmWorker()
   },
   methods: {
     confirm() {

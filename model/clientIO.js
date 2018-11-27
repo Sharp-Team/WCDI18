@@ -41,4 +41,16 @@ export default class ClientIO {
   getCustomerOnline = () => {
     this.socket.emit('getCustomerOnline')
   }
+
+  workerOnline = data => {
+    this.socket.emit('workerOnline', data)
+  }
+
+  workerOffline = data => {
+    this.socket.emit('workerOffline', data)
+  }
+
+  getWorkerOnline = () => {
+    this.socket.emit('getWorkerOnline')
+  }
 }

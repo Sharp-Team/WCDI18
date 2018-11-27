@@ -176,6 +176,9 @@ export default {
       this.$io.customerOffline({
         username: username
       })
+      this.$io.workerOffline({
+        username: username
+      })
       this.$axios
         .get(`/api/user/signout`)
         .then(response => {

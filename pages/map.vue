@@ -18,7 +18,6 @@ export default {
   },
   data() {
     return {
-      features: null,
       icons: null,
       markers: null,
       map: null,
@@ -173,15 +172,8 @@ export default {
     )
 
     this.$store.dispatch('SET_MAP', this.map)
-
-    const { socket } = this.$io
-    this.$io.getCustomerOnline()
-    socket.on('updateCustomers', this.updateCustomers)
   },
   methods: {
-    updateCustomers(alldata) {
-      this.features = alldata.customers
-    },
     CenterControl(controlDiv, map) {
       // Set CSS for the control border.
       var controlUI = document.createElement('div')

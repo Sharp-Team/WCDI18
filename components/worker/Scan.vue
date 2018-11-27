@@ -7,7 +7,7 @@
       id="scan-ModalContent"
       class="notification-content modal-content-1 ml-2"
     >
-      <h6 class="notification-title">Quét
+      <h6 class="notification-title">Quét khách hàng
         <i
           id="scanCloseModal"
           class="fas fa-times is-IconClose"
@@ -89,7 +89,7 @@
                 <input
                   v-model.number="range"
                   type="range"
-                  min="0"
+                  min="1"
                   max="30"
                 >
               </div>
@@ -113,6 +113,7 @@
 <script>
 const data = require('~/assets/json/data-job.json')
 import { mapGetters } from 'vuex'
+
 export default {
   data() {
     return {
@@ -125,8 +126,7 @@ export default {
       features: null,
       markers: null,
       map: null,
-      icons: null,
-      job: ['electric', 'fridge']
+      icons: null
     }
   },
   computed: {
