@@ -8,46 +8,6 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div
-          v-if="checked"
-          class="modal-body"
-        >
-          <h6 class="title is-6">Chọn công việc: {{ selected }}</h6>
-          <b-autocomplete
-            v-model="title"
-            :keep-first="keepFirst"
-            :open-on-focus="openOnFocus"
-            :data="filteredDataObj"
-            class="pb-2 b-complete-cus"
-            icon="magnify"
-            placeholder="Chọn công việc"
-            field="name"
-            @select="option => selected = option"
-          />
-        </div>
-        <div
-          v-if="checked"
-          class="modal-body">
-          <h6 class="title is-6">Nội dung công việc: </h6>
-          <textarea
-            id="message-text"
-            v-model="content"
-            class="form-control"
-            rows="3"
-            placeholder="Nhập chi tiết công việc" />
-        </div>
-        <div
-          v-if="checked"
-          class="modal-footer d-flex justify-content-center"
-        >
-          <button
-            type="submit"
-            class="btn btn-success text-center btn-scan-user"
-            @click="sendNotification">
-            <i class="fas fa-broom mr-2" />
-            Phát thông báo
-          </button>
-        </div>
         <div class="modal-header">
           <h6
             id="myModalLabel"
@@ -55,10 +15,6 @@
           >
             Phát thông báo
           </h6>
-          <input
-            v-model="checked"
-            type="checkbox"
-            class="check check2 ml-4">
           <button
             type="button"
             class="close"
@@ -67,35 +23,74 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+        <div class="modal-body">
+          <h6 class="title is-6">Chọn công việc: {{ title }}</h6>
+          <p class="my-0 mt-1 is-content">
+            <img
+              src="/images/icon-navbar/local.png"
+              alt="local"
+              class="noti-image"
+            >
+            {{ address }}
+          </p>
+        </div>
+        <div class="modal-body">
+          <h6 class="title is-6">Chọn công việc: {{ title }}</h6>
+          <b-autocomplete
+            v-model="title"
+            :keep-first="keepFirst"
+            :open-on-focus="openOnFocus"
+            :data="filteredData"
+            class="pb-2 b-complete-cus"
+            icon="magnify"
+            placeholder="Chọn công việc"
+            field="name"
+            @select="option => selected = option"
+          />
+        </div>
+        <div class="modal-body">
+          <h6 class="title is-6">Nội dung công việc: </h6>
+          <textarea
+            id="message-text"
+            v-model="content"
+            class="form-control"
+            rows="3"
+            placeholder="Nhập chi tiết công việc" />
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button
+            type="submit"
+            class="btn btn-success text-center btn-scan-user"
+            @click="sendNotification">
+            <i class="fas fa-broom mr-2" />
+            Phát thông báo
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-const data = require('~/assets/json/data-job-user.json')
+const data = require('~/assets/json/data-job.json')
 import { mapGetters } from 'vuex'
 
 export default {
   data() {
     return {
-      checked: false,
       keepFirst: true,
       openOnFocus: false,
       title: '',
       content: '',
       data,
-      selected: null
+      selected: null,
+      address: 'Room D413, FPT University'
     }
   },
   computed: {
-    filteredDataObj() {
+    filteredData() {
       return this.data.filter(option => {
-        return
-        option
-          .toString()
-          .toLowerCase()
-          .indexOf(this.name.toLowerCase()) >= 0
+        return option.name.toLowerCase().indexOf(this.title.toLowerCase()) >= 0
       })
     },
     range: {
@@ -105,6 +100,40 @@ export default {
       set(value) {
         this.$store.commit('setRange', value)
       }
+    }
+  },
+  mounted() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          }
+          var geocoder = new google.maps.Geocoder()
+          geocoder.geocode(
+            {
+              location: pos
+            },
+            (results, status) => {
+              if (status === 'OK') {
+                if (results[0]) {
+                  this.address = results[0].formatted_address
+                } else {
+                  window.alert('No results found')
+                }
+              } else {
+                window.alert('Geocoder failed due to: ' + status)
+              }
+            }
+          )
+        },
+        function() {
+          handleLocationError(true, infoWindow, this.map.getCenter())
+        }
+      )
+    } else {
+      handleLocationError(false, infoWindow, map.getCenter())
     }
   },
   methods: {
@@ -201,6 +230,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
+.is-content {
+  font-size: 0.8rem !important;
+}
+.noti-image {
+  margin-right: 7px;
+  width: 4%;
+}
 .modal-scan-user {
   z-index: 1100 !important;
   .modal-dialog {
