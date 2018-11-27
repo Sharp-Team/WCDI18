@@ -199,7 +199,7 @@ export default {
   },
   data() {
     return {
-      object: 'Người làm việc'
+      object: 'Người làm việ'
     }
   },
   beforeMount() {
