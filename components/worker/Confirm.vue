@@ -44,7 +44,7 @@
             id="confirm-oke"
             type="button"
             class="btn btn-success"
-            @click="doneDeal">Oke</button>
+            @click="doneDeal">Hoàn tất và chỉ đường</button>
         </div>
       </div>
     </div>
@@ -61,7 +61,8 @@ export default {
       address: '',
       addressCurrent: '',
       career: '',
-      username: ''
+      username: '',
+      usernameWorker: ''
     }
   },
   mounted() {
@@ -84,6 +85,7 @@ export default {
         this.addressCurrent = worker.addressCurrent
         this.career = worker.career
         this.username = worker.username
+        this.usernameWorker = worker.usernameWorker
         var modal = $('#confirm-Modal')
         var btnCloseNoi = $('#confirmCloseModal')
         var modalContent = $('#confirm-ModalContent')
@@ -115,6 +117,69 @@ export default {
       this.$io.customerOffline({
         username: username
       })
+      // direction
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            }
+            var geocoder = new google.maps.Geocoder()
+            geocoder.geocode(
+              {
+                location: pos
+              },
+              (results, status) => {
+                if (status === 'OK') {
+                  if (results[0]) {
+                    // send for worker direction
+                    this.$io.sendDirection({
+                      username: this.usernameWorker,
+                      start: results[0].formatted_address,
+                      end: this.addressCurrent
+                    })
+                    const map = this.$store.getters.GET_MAP
+                    var directionsDisplay = new google.maps.DirectionsRenderer()
+                    var directionsService = new google.maps.DirectionsService()
+                    directionsDisplay.setMap(map)
+                    directionsDisplay.setPanel(
+                      document.getElementById('direction')
+                    )
+                    var start = results[0].formatted_address
+                    var end = this.addressCurrent
+                    directionsService.route(
+                      {
+                        origin: start,
+                        destination: end,
+                        travelMode: 'DRIVING'
+                      },
+                      (response, status) => {
+                        if (status === 'OK') {
+                          directionsDisplay.setDirections(response)
+                        } else {
+                          window.alert(
+                            'Directions request failed due to ' + status
+                          )
+                        }
+                      }
+                    )
+                  } else {
+                    window.alert('No results found')
+                  }
+                } else {
+                  window.alert('Geocoder failed due to: ' + status)
+                }
+              }
+            )
+          },
+          function() {
+            handleLocationError(true, infoWindow, this.map.getCenter())
+          }
+        )
+      } else {
+        handleLocationError(false, infoWindow, map.getCenter())
+      }
       this.$toast.open({
         message: 'Giao dịch thành công!',
         position: 'is-bottom',

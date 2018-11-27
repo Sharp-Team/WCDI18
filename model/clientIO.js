@@ -53,4 +53,12 @@ export default class ClientIO {
   getWorkerOnline = () => {
     this.socket.emit('getWorkerOnline')
   }
+
+  sendDirection = data => {
+    this.socket.emit('sendDirection', data)
+  }
+
+  getDirection = () => {
+    this.socket.emit('getDirection')
+  }
 }

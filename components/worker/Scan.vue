@@ -180,6 +180,8 @@ export default {
     const { socket } = this.$io
     this.$io.getCustomerOnline()
     socket.on('updateCustomers', this.updateCustomers)
+    this.$io.getDirection()
+    socket.on('updateDirections', this.updateDirections)
   },
   beforeMount() {
     this.markers = this.$store.getters.GET_MARKERS
@@ -212,51 +214,104 @@ export default {
             })
             this.markers.push(marker)
             this.$store.dispatch('SET_MARKERS', this.markers)
-            google.maps.event.addListener(marker, 'click', function() {
-              infowindow.close()
-              infowindow.setContent(
-                `<h6>Thông tin chi tiết</h6>
-                <table class="table">
-                  <tr>
-                    <td>Họ và tên</td>
-                    <td style="font-weight: bold">` +
-                  feature.fullname +
-                  `</td>
-                  </tr>
-                  <tr class="table-success">
-                    <td>Email</td>
-                    <td style="font-weight: bold">` +
-                  feature.email +
-                  `</td>
-                  </tr>
-                  <tr>
-                    <td>Số điện thoại</td>
-                    <td style="font-weight: bold">` +
-                  feature.phone +
-                  `</td>
-                  </tr>
-                  <tr class="table-success">
-                    <td>Địa chi</td>
-                    <td style="font-weight: bold">` +
-                  feature.address +
-                  `</td>
-                  </tr>
-                  <tr>
-                      <td>Nội dung</td>
-                      <td style="font-weight: bold">` +
-                  feature.content +
-                  `</td>
-                    </tr>
-                </table>
-                <div class="wrap-button-direction has-text-centered">
-                  <button
-                    type="button"
-                    class="btn btn-danger btn-direction"
-                    @click="direction()">Chỉ đường
-                  </button>
-                </div>`
-              )
-              infowindow.open(map, marker)
+            google.maps.event.addListener(marker, 'click', () => {
+              // worker confirm
+              this.$dialog.confirm({
+                message:
+                  'Bạn có muốn tiếp tục gửi yêu cầu đến khách hàng không?',
+                onConfirm: () => {
+                  infowindow.close()
+                  infowindow.setContent(
+                    `<h6>Thông tin chi tiết</h6>
+                    <table class="table">
+                      <tr>
+                        <td>Họ và tên</td>
+                        <td style="font-weight: bold">` +
+                      feature.fullname +
+                      `</td>
+                      </tr>
+                      <tr class="table-success">
+                        <td>Email</td>
+                        <td style="font-weight: bold">` +
+                      feature.email +
+                      `</td>
+                      </tr>
+                      <tr>
+                        <td>Số điện thoại</td>
+                        <td style="font-weight: bold">` +
+                      feature.phone +
+                      `</td>
+                      </tr>
+                      <tr class="table-success">
+                        <td>Địa chi</td>
+                        <td style="font-weight: bold">` +
+                      feature.address +
+                      `</td>
+                      </tr>
+                      <tr>
+                          <td>Nội dung</td>
+                          <td style="font-weight: bold">` +
+                      feature.content +
+                      `</td>
+                        </tr>
+                    </table>`
+                  )
+                  infowindow.open(map, marker)
+                  if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                      position => {
+                        var pos = {
+                          lat: position.coords.latitude,
+                          lng: position.coords.longitude
+                        }
+                        var geocoder = new google.maps.Geocoder()
+                        geocoder.geocode(
+                          {
+                            location: pos
+                          },
+                          (results, status) => {
+                            if (status === 'OK') {
+                              if (results[0]) {
+                                const positionCurrent =
+                                  results[0].formatted_address
+                                const user = this.$store.getters.GET_USER
+                                this.$io.sendNotificationCustomer({
+                                  username: feature.username,
+                                  usernameWorker: user.username,
+                                  fullnameWorker: user.full_name,
+                                  phoneWorker: user.phone_number,
+                                  emailWorker: user.email,
+                                  addressWorker: user.address_detail,
+                                  addressCurrent: positionCurrent,
+                                  career: user.career
+                                })
+                                this.$toast.open({
+                                  duration: 10000,
+                                  message: `Bạn đã gửi yêu cầu đến khách hàng. Sau khi khách hàng chấp nhận hệ thống sẽ chỉ đường cho bạn tới vị trí khách hàng`,
+                                  position: 'is-top'
+                                })
+                              } else {
+                                window.alert('No results found')
+                              }
+                            } else {
+                              window.alert('Geocoder failed due to: ' + status)
+                            }
+                          }
+                        )
+                      },
+                      function() {
+                        handleLocationError(
+                          true,
+                          infoWindow,
+                          this.map.getCenter()
+                        )
+                      }
+                    )
+                  } else {
+                    handleLocationError(false, infoWindow, map.getCenter())
+                  }
+                }
+              })
             })
           }
         }, 400)
@@ -271,8 +326,69 @@ export default {
       }
       this.features = alldata.customers
     },
-    direction() {
-      console.log('abcde')
+    updateDirections(alldata) {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            }
+            var geocoder = new google.maps.Geocoder()
+            geocoder.geocode(
+              {
+                location: pos
+              },
+              (results, status) => {
+                if (status === 'OK') {
+                  if (results[0]) {
+                    const username = this.$store.getters.GET_USERNAME
+                    const map = this.$store.getters.GET_MAP
+                    const data = alldata.directions.filter(
+                      item => item.username === username
+                    )
+                    if (data.length > 0) {
+                      var directionsDisplay = new google.maps.DirectionsRenderer()
+                      var directionsService = new google.maps.DirectionsService()
+                      directionsDisplay.setMap(map)
+                      directionsDisplay.setPanel(
+                        document.getElementById('direction')
+                      )
+                      var start = results[0].formatted_address
+                      var end = data[0].end
+                      directionsService.route(
+                        {
+                          origin: start,
+                          destination: end,
+                          travelMode: 'DRIVING'
+                        },
+                        (response, status) => {
+                          if (status === 'OK') {
+                            directionsDisplay.setDirections(response)
+                          } else {
+                            window.alert(
+                              'Directions request failed due to ' + status
+                            )
+                          }
+                        }
+                      )
+                    }
+                  } else {
+                    window.alert('No results found')
+                  }
+                } else {
+                  window.alert('Geocoder failed due to: ' + status)
+                }
+              }
+            )
+          },
+          function() {
+            handleLocationError(true, infoWindow, this.map.getCenter())
+          }
+        )
+      } else {
+        handleLocationError(false, infoWindow, map.getCenter())
+      }
     }
   }
 }
@@ -280,9 +396,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
-.wrap-button-direction {
-  width: 100%;
-}
 .noti-image {
   margin-right: 7px;
 }

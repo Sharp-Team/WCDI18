@@ -147,23 +147,23 @@
             <ul class="d-flex justify-content-center">
               <li class="p-2">
                 <a
+                  href="https://www.facebook.com/bacodekiller"
+                  target="_blank">
+                  <i class="fab fa-facebook" />
+                </a>
+              </li>
+              <li class="p-2">
+                <a
+                  href="#"
+                  target="_blank">
+                  <i class="fab fa-google-plus" />
+                </a>
+              </li>
+              <li class="p-2">
+                <a
                   href="#"
                   target="_blank">
                   <i class="fab fa-twitter" />
-                </a>
-              </li>
-              <li class="p-2">
-                <a
-                  href="#"
-                  target="_blank">
-                  <i class="fab fa-linkedin" />
-                </a>
-              </li>
-              <li class="p-2">
-                <a
-                  href="#"
-                  target="_blank">
-                  <i class="fab fa-foursquare" />
                 </a>
               </li>
             </ul>
@@ -188,9 +188,16 @@
             <ul class="d-flex justify-content-center">
               <li class="p-2">
                 <a
+                  href="https://www.facebook.com/Kaaye1712 "
+                  target="_blank">
+                  <i class="fab fa-facebook" />
+                </a>
+              </li>
+              <li class="p-2">
+                <a
                   href="#"
                   target="_blank">
-                  <i class="fab fa-dribbble" />
+                  <i class="fab fa-google-plus" />
                 </a>
               </li>
               <li class="p-2">
@@ -198,13 +205,6 @@
                   href="#"
                   target="_blank">
                   <i class="fab fa-twitter" />
-                </a>
-              </li>
-              <li class="p-2">
-                <a
-                  href="#"
-                  target="_blank">
-                  <i class="fab fa-linkedin" />
                 </a>
               </li>
             </ul>
@@ -229,23 +229,23 @@
             <ul class="d-flex justify-content-center">
               <li class="p-2">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/thaycacac"
                   target="_blank">
-                  <i class="fab fa-instagram" />
+                  <i class="fab fa-facebook" />
                 </a>
               </li>
               <li class="p-2">
                 <a
                   href="#"
                   target="_blank">
-                  <i class="fab fa-vimeo-square" />
+                  <i class="fab fa-google-plus" />
                 </a>
               </li>
               <li class="p-2">
                 <a
                   href="#"
                   target="_blank">
-                  <i class="fab fa-pinterest" />
+                  <i class="fab fa-twitter" />
                 </a>
               </li>
             </ul>
@@ -270,23 +270,9 @@
             <ul class="d-flex justify-content-center">
               <li class="p-2">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/phongpham197"
                   target="_blank">
-                  <i class="fab fa-twitter" />
-                </a>
-              </li>
-              <li class="p-2">
-                <a
-                  href="#"
-                  target="_blank">
-                  <i class="fab fa-linkedin" />
-                </a>
-              </li>
-              <li class="p-2">
-                <a
-                  href="#"
-                  target="_blank">
-                  <i class="fab fa-foursquare" />
+                  <i class="fab fa-facebook" />
                 </a>
               </li>
               <li class="p-2">
@@ -294,6 +280,13 @@
                   href="#"
                   target="_blank">
                   <i class="fab fa-google-plus" />
+                </a>
+              </li>
+              <li class="p-2">
+                <a
+                  href="#"
+                  target="_blank">
+                  <i class="fab fa-twitter" />
                 </a>
               </li>
             </ul>
@@ -319,23 +312,9 @@
             <ul class="d-flex justify-content-center">
               <li class="p-2">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/mark.allen.dt"
                   target="_blank">
-                  <i class="fab fa-twitter" />
-                </a>
-              </li>
-              <li class="p-2">
-                <a
-                  href="#"
-                  target="_blank">
-                  <i class="fab fa-linkedin" />
-                </a>
-              </li>
-              <li class="p-2">
-                <a
-                  href="#"
-                  target="_blank">
-                  <i class="fab fa-foursquare" />
+                  <i class="fab fa-facebook" />
                 </a>
               </li>
               <li class="p-2">
@@ -343,6 +322,13 @@
                   href="#"
                   target="_blank">
                   <i class="fab fa-google-plus" />
+                </a>
+              </li>
+              <li class="p-2">
+                <a
+                  href="#"
+                  target="_blank">
+                  <i class="fab fa-twitter" />
                 </a>
               </li>
             </ul>
