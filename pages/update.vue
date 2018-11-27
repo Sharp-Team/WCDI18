@@ -7,6 +7,7 @@ export default {
   components: {
     UserInfo
   },
-  layout: 'user'
+  layout: 'user',
+  middleware: 'authentication'
 }
 </script>

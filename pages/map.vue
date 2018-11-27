@@ -30,6 +30,7 @@ export default {
     }
   },
   layout: 'map',
+  middleware: 'authentication',
   computed: {
     rangeCurrent() {
       return this.$store.getters.GET_RANGE
