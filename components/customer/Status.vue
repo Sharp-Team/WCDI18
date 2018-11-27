@@ -24,7 +24,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <h6 class="title is-6">Chọn công việc: {{ title }}</h6>
+          <h6 class="title is-6">Vị trí của bạn:</h6>
           <p class="my-0 mt-1 is-content">
             <img
               src="/images/icon-navbar/local.png"
