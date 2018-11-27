@@ -7,7 +7,7 @@
       id="scan-ModalContent"
       class="notification-content modal-content-1 ml-2"
     >
-      <h6 class="notification-title">Quét
+      <h6 class="notification-title">Quét khách hàng
         <i
           id="scanCloseModal"
           class="fas fa-times is-IconClose"
@@ -89,7 +89,7 @@
                 <input
                   v-model.number="range"
                   type="range"
-                  min="0"
+                  min="1"
                   max="30"
                 >
               </div>
@@ -113,6 +113,7 @@
 <script>
 const data = require('~/assets/json/data-job.json')
 import { mapGetters } from 'vuex'
+
 export default {
   data() {
     return {
@@ -125,8 +126,7 @@ export default {
       features: null,
       markers: null,
       map: null,
-      icons: null,
-      job: ['electric', 'fridge']
+      icons: null
     }
   },
   computed: {
@@ -177,9 +177,11 @@ export default {
     } else {
       handleLocationError(false, infoWindow, map.getCenter())
     }
+    const { socket } = this.$io
+    this.$io.getCustomerOnline()
+    socket.on('updateCustomers', this.updateCustomers)
   },
   beforeMount() {
-    this.features = this.$store.getters.GET_FEATURES
     this.markers = this.$store.getters.GET_MARKERS
     this.icons = this.$store.getters.GET_ICONS
   },
@@ -245,13 +247,28 @@ export default {
                   feature.content +
                   `</td>
                     </tr>
-                </table>`
+                </table>
+                <div class="wrap-button-direction has-text-centered">
+                  <button
+                    type="button"
+                    class="btn btn-danger btn-direction" >Chỉ đường
+                  </button>
+                </div>`
               )
               infowindow.open(map, marker)
             })
           }
         }, 400)
       })
+    },
+    updateCustomers(alldata) {
+      if (this.selected.length > 0) {
+        console.log(this.icons)
+        console.log(this.selected)
+        this.features = alldata.customers
+        this.showMarker(this.icons, this.selected)
+      }
+      this.features = alldata.customers
     }
   }
 }
@@ -259,6 +276,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
+.wrap-button-direction {
+  width: 100%;
+}
 .noti-image {
   margin-right: 7px;
 }

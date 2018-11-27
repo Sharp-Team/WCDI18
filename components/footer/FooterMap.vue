@@ -7,9 +7,9 @@
     <scan-customer />
     <notification-worker />
     <notification-customer />
+    <confirm-worker />
     <div class="my-footer">
       <div
-        v-if="object==='Người làm việc'"
         class="action"
       >
         <div class="icon status">
@@ -42,7 +42,8 @@
             Quét
           </span>
         </div>
-        <div class="icon noti">
+        <div
+          class="icon noti">
           <a href="#">
             <i
               id="showNotiWorker"
@@ -55,7 +56,6 @@
         </div>
       </div>
       <div
-        v-else
         class="action"
       >
         <div class="icon status">
@@ -84,8 +84,7 @@
             <i
               id="showScanCustomer"
               class="fab fa-cloudscale"
-              data-toggle="modal"
-              data-target="#scanUserModal" />
+            />
           </a>
           <span class="tooltip-search">
             Quét
@@ -107,6 +106,17 @@
             <i
               class="fas fa-check-circle"
               @click="confirm" />
+          </a>
+          <span class="tooltip-noti">
+            Confirm
+          </span>
+        </div>
+        <div class="icon noti">
+          <a href="#">
+            <i
+              id="showConfirmWorker"
+              class="fas fa-check-circle"
+            />
           </a>
           <span class="tooltip-noti">
             Confirm
@@ -183,10 +193,14 @@ import ScanWorker from '~/components/worker/Scan'
 import ScanCustomer from '~/components/customer/Scan'
 import NotificationWorker from '~/components/worker/Notification'
 import NotificationCustomer from '~/components/customer/Notification'
+import ConfirmWorker from '~/components/worker/Confirm'
 import statusWorker from '~/assets/js/status-worker'
 import scanWorker from '~/assets/js/scan-worker'
+import scanCustomer from '~/assets/js/scan-customer'
 import notiWorker from '~/assets/js/notification-worker'
 import notiCustomer from '~/assets/js/notification-customer'
+import confirmWorker from '~/assets/js/confirm-worker'
+// import confirmCustomer from '~/assets/js/confirm-customer'
 
 export default {
   components: {
@@ -195,7 +209,8 @@ export default {
     ScanWorker,
     ScanCustomer,
     NotificationWorker,
-    NotificationCustomer
+    NotificationCustomer,
+    ConfirmWorker
   },
   data() {
     return {
@@ -203,7 +218,12 @@ export default {
     }
   },
   beforeMount() {
-    statusWorker(), scanWorker(), notiWorker(), notiCustomer()
+    statusWorker(),
+      scanWorker(),
+      scanCustomer(),
+      notiWorker(),
+      notiCustomer(),
+      confirmWorker()
   },
   methods: {
     confirm() {

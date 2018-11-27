@@ -14,7 +14,7 @@
         >
           <h6 class="title is-6">Chọn công việc: {{ selected }}</h6>
           <b-autocomplete
-            v-model="name"
+            v-model="title"
             :keep-first="keepFirst"
             :open-on-focus="openOnFocus"
             :data="filteredDataObj"
@@ -31,7 +31,7 @@
           <h6 class="title is-6">Nội dung công việc: </h6>
           <textarea
             id="message-text"
-            v-model="detailwork"
+            v-model="content"
             class="form-control"
             rows="3"
             placeholder="Nhập chi tiết công việc" />
@@ -42,7 +42,8 @@
         >
           <button
             type="submit"
-            class="btn btn-success text-center btn-scan-user">
+            class="btn btn-success text-center btn-scan-user"
+            @click="sendNotification">
             <i class="fas fa-broom mr-2" />
             Phát thông báo
           </button>
@@ -81,8 +82,8 @@ export default {
       checked: false,
       keepFirst: true,
       openOnFocus: false,
-      name: '',
-      detailwork: '',
+      title: '',
+      content: '',
       data,
       selected: null
     }
@@ -103,6 +104,95 @@ export default {
       },
       set(value) {
         this.$store.commit('setRange', value)
+      }
+    }
+  },
+  methods: {
+    sendNotification() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            }
+            var geocoder = new google.maps.Geocoder()
+            geocoder.geocode(
+              {
+                location: pos
+              },
+              (results, status) => {
+                if (status === 'OK') {
+                  if (results[0]) {
+                    const positionCurrent = results[0].formatted_address
+                    const user = this.$store.getters.GET_USER
+                    this.$io.sendNotificationWorker({
+                      username: user.username,
+                      title: this.title,
+                      content: this.content
+                    })
+                    let typeCareer
+                    switch (this.title) {
+                      case 'Thợ sửa điện tử':
+                        typeCareer = 'electric'
+                        break
+                      case 'Thợ sửa điện lạnh':
+                        typeCareer = 'fridge'
+                        break
+                      case 'Thợ sửa điện thoại':
+                        typeCareer = 'phone'
+                        break
+                      case 'Thợ sửa xe máy':
+                        typeCareer = 'motorcycle'
+                        break
+                      case 'Thợ sửa ô tô':
+                        typeCareer = 'car'
+                        break
+                      case 'Thu mua phế liệu':
+                        typeCareer = 'waste'
+                        break
+                      case 'Bác sĩ':
+                        typeCareer = 'doctor'
+                        break
+                      case 'Thợ sửa máy tính/ laptop':
+                        typeCareer = 'laptop'
+                        break
+                      case 'Thợ sửa đồ gia dụng':
+                        typeCareer = 'fan'
+                        break
+                    }
+                    this.$io.customerOnline({
+                      position: pos,
+                      type: typeCareer,
+                      fullname: user.full_name,
+                      email: user.email,
+                      phone: user.phone_number,
+                      address: positionCurrent,
+                      content: this.content,
+                      username: user.username
+                    })
+                    this.$toast.open({
+                      message: 'Phát thông báo thành công!',
+                      position: 'is-bottom',
+                      type: 'is-success'
+                    })
+                    this.title = ''
+                    this.content = ''
+                  } else {
+                    window.alert('No results found')
+                  }
+                } else {
+                  window.alert('Geocoder failed due to: ' + status)
+                }
+              }
+            )
+          },
+          function() {
+            handleLocationError(true, infoWindow, this.map.getCenter())
+          }
+        )
+      } else {
+        handleLocationError(false, infoWindow, map.getCenter())
       }
     }
   }

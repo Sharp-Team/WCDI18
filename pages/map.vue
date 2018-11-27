@@ -18,7 +18,6 @@ export default {
   },
   data() {
     return {
-      features: null,
       icons: null,
       markers: null,
       map: null,
@@ -67,7 +66,6 @@ export default {
   middleware: 'authentication',
   beforeMount() {
     this.icons = this.$store.getters.GET_ICONS
-    this.features = this.$store.getters.GET_FEATURES
   },
   mounted() {
     /**
