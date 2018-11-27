@@ -251,7 +251,8 @@ export default {
                 <div class="wrap-button-direction has-text-centered">
                   <button
                     type="button"
-                    class="btn btn-danger btn-direction" >Chỉ đường
+                    class="btn btn-danger btn-direction"
+                    @click="direction()">Chỉ đường
                   </button>
                 </div>`
               )
@@ -269,6 +270,9 @@ export default {
         this.showMarker(this.icons, this.selected)
       }
       this.features = alldata.customers
+    },
+    direction() {
+      console.log('abcde')
     }
   }
 }

@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div id="direction">
+      <h3 class="has-text-centered title-direction">Lộ trình</h3>
+    </div>
     <div id="map" />
     <div id="legend">
       <h3>Chú thích</h3>
@@ -21,7 +24,9 @@ export default {
       icons: null,
       markers: null,
       map: null,
-      drawRange: null
+      drawRange: null,
+      directionsDisplay: null,
+      directionsService: null
     }
   },
   layout: 'map',
@@ -82,7 +87,7 @@ export default {
        */
       zoomControl: true,
       zoomControlOptions: {
-        position: google.maps.ControlPosition.LEFT_CENTER
+        position: google.maps.ControlPosition.LEFT_TOP
       },
       scaleControl: true,
       streetViewControl: true,
@@ -91,6 +96,15 @@ export default {
       },
       fullscreenControl: true
     })
+    /**
+     * DIRECTION MAP
+     */
+    this.directionsDisplay = new google.maps.DirectionsRenderer()
+    this.directionsService = new google.maps.DirectionsService()
+    this.directionsDisplay.setMap(this.map)
+    this.directionsDisplay.setPanel(document.getElementById('direction'))
+    var directiona = document.getElementById('direction')
+    this.map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(directiona)
     /**
      * SET CENTER POSITION USER
      */
@@ -217,12 +231,51 @@ export default {
           handleLocationError(false, infoWindow, map.getCenter())
         }
       })
+    },
+    CalculateAndDisplayRoute() {
+      var start = 'ĐD Tòa Nhà Viettel Hòa Lạc, Thạch Thất, Hà Nội, Việt Nam'
+      var end = 'ĐD Tòa Nhà Viettel Hòa Lạc, Thạch Thất, Hà Nội, Việt Nam'
+      this.directionsService.route(
+        {
+          origin: start,
+          destination: end,
+          travelMode: 'DRIVING'
+        },
+        (response, status) => {
+          console.log(this)
+          if (status === 'OK') {
+            this.directionsDisplay.setDirections(response)
+          } else {
+            window.alert('Directions request failed due to ' + status)
+          }
+        }
+      )
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.abde {
+  margin-top: 45px;
+  position: absolute;
+  z-index: 999;
+  bottom: 85px;
+}
+button.abcd.button.is-success {
+  bottom: 85px;
+}
+#direction {
+  font-family: 'Roboto', 'sans-serif';
+  width: 300px;
+  height: 450px;
+  background: rgba(255, 255, 255, 0.8);
+  overflow: scroll;
+  .title-direction {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+}
 #map {
   background-color: #2ebe4a;
   width: 100%;
