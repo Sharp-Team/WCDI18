@@ -11,7 +11,7 @@
         <div class="modal-header">
           <h6
             id="myModalLabel"
-            class="modal-title ml-5"
+            class="modal-title ml-2"
           >
             Phát thông báo
           </h6>
@@ -237,21 +237,25 @@ export default {
   margin-right: 7px;
   width: 4%;
 }
+
 .modal-scan-user {
   z-index: 1100 !important;
   .modal-dialog {
+    margin: 0 !important;
     .modal-content {
       position: fixed;
       width: 70% !important;
       left: 10%;
       bottom: 10%;
+      border-radius: 10px !important;
       .modal-header {
+        background-color: $color-main !important;
         border-bottom: none !important;
         padding: 0.7rem;
         h6 {
           font-size: 1.2rem;
-          color: #363636;
-          font-weight: 600;
+          color: #fff;
+          font-weight: 400;
           line-height: 1.125;
         }
         .check {
@@ -359,6 +363,35 @@ export default {
           color: #fff;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-scan-user .modal-dialog .modal-content {
+    width: 90% !important;
+    left: 0%;
+    span {
+      position: absolute;
+      top: 2px;
+      right: 10px;
+    }
+  }
+  .modal-scan-user .modal-dialog .modal-content .modal-header h6 {
+    font-size: 13px;
+    position: absolute;
+    top: 10px;
+  }
+  .modal-scan-user .modal-dialog .modal-content .modal-header {
+    padding: 1rem;
+  }
+  .modal-body {
+    h6.title.is-6 {
+      font-size: $font-title-small-mobile;
+      margin-bottom: 10px;
+    }
+    p.my-0.mt-1.is-content {
+      font-size: $font-description-mobile !important;
     }
   }
 }

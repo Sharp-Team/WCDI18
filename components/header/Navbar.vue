@@ -18,12 +18,12 @@
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <nuxt-link
-              to="/"
+            <a
+              href="/"
               class="nav-link"
             >
               Trang chủ
-            </nuxt-link>
+            </a>
           </li>
           <li class="nav-item">
             <a
@@ -44,19 +44,19 @@
         id="idNavBranch"
         class="navbar-branch"
       >
-        <nuxt-link to="/">
+        <a href="/">
           <img
             src="/images/icon-navbar/logo-navbar.png"
             alt="nav-img"
             class="nav-img"
           >
-        </nuxt-link>
+        </a>
       </div>
       <div class="navbar-right">
         <div class="nav-button">
-          <nuxt-link
+          <a
             v-if="!username"
-            to="/login"
+            href="/login"
             class="ml-2">
             <my-button
               class="is-btn-login ml-4"
@@ -64,10 +64,10 @@
               background="white"
               background-hover="grey"
               color="black" />
-          </nuxt-link>
-          <nuxt-link
+          </a>
+          <a
             v-if="!username"
-            to="/register"
+            href="/register"
             class="ml-2">
             <my-button
               content="Đăng ký"
@@ -75,10 +75,10 @@
               background-hover="grey"
               color="white"
               class="is-btn-register" />
-          </nuxt-link>
-          <nuxt-link
+          </a>
+          <a
             v-if="username"
-            to="/profile"
+            href="/profile"
             class="ml-4">
             <div class="wrap-profile">
               <div class="wrap-img-profile">
@@ -90,15 +90,15 @@
                 {{ username }}
               </div>
             </div>
-          </nuxt-link>
-          <nuxt-link
+          </a>
+          <a
             v-if="username"
-            to="/"
+            href="/"
             class="ml-2">
             <button
               class="button my-button"
               @click="logout"> Đăng xuất </button>
-          </nuxt-link>
+          </a>
           <notification v-if="username" />
         </div>
       </div>
