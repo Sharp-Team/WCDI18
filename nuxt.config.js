@@ -117,6 +117,7 @@ module.exports = {
       cookie: { maxAge: 6000000 }
     }),
     '~/server/users.js',
-    '~/server/deals.js'
+    '~/server/deals.js',
+    '~/server/serverIO.js'
   ]
 }
