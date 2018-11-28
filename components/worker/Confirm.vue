@@ -180,6 +180,36 @@ export default {
       } else {
         handleLocationError(false, infoWindow, map.getCenter())
       }
+      var today = new Date()
+      const time = today.toLocaleString('en-US')
+      this.$axios
+        .post(`/api/deal/create`, {
+          username: this.username,
+          time: time,
+          job: this.career,
+          status: 'Hoàn thành',
+          object: this.usernameWorker
+        })
+        .then(response => {
+          console.log(response)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+      this.$axios
+        .post(`/api/deal/create`, {
+          username: this.usernameWorker,
+          time: time,
+          job: this.career,
+          status: 'Hoàn thành',
+          object: this.username
+        })
+        .then(response => {
+          console.log(response)
+        })
+        .catch(error => {
+          console.log(error)
+        })
       this.$toast.open({
         message: 'Giao dịch thành công!',
         position: 'is-bottom',
