@@ -92,7 +92,7 @@ module.exports = {
     '~/io'
   ],
   env: {
-    WS_URL: process.env.WS_URL || 'http://localhost:3000'
+    WS_URL: process.env.WS_URL || 'https://pacific-river-51576.herokuapp.com'
   },
   axios: {
     proxy: true
