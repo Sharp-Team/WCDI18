@@ -5,7 +5,7 @@
         <div class="row">
           <div class="item-footer my-auto col-md-3">
             <a
-              href="#"
+              href="/"
               class="logo-footer">
               <img
                 src="/images/logo.png"
@@ -13,21 +13,21 @@
             </a>
           </div>
           <div class="item-footer col-md-2">
-            <h3>LIÊN HỆ</h3>
+            <h3 class="title-footer">LIÊN HỆ</h3>
             <ul class="ul">
-              <li>
-                <a href="#">Về chúng tôi</a>
+              <li class="sub-contact">
+                <a href="#about">Về chúng tôi</a>
               </li>
-              <li>
-                <a href="#">Cách sử dụng</a>
+              <li class="sub-contact">
+                <a href="#how-to-use">Cách sử dụng</a>
               </li>
-              <li>
-                <a href="#">Hỏi đáp</a>
+              <li class="sub-contact">
+                <a href="/feedback">Feedback</a>
               </li>
             </ul>
           </div>
           <div class="item-footer col-md-3">
-            <h3>KẾT NỐI</h3>
+            <h3 class="title-footer">KẾT NỐI</h3>
             <div class="social-link">
               <a href="#">
                 <i class="fab fa-google" />
@@ -56,13 +56,13 @@
               <img
                 src="/images/icon-footer/icon-phone.png"
                 alt="" >
-              <span>0123456789</span>
+              <span class="is-address">0123456789</span>
             </div>
             <div class="footer-info mb-1">
               <img
                 src="/images/icon-footer/icon-contact.png"
                 alt="" >
-              <span>sharpteam.fpt@gmail.com</span>
+              <span class="is-address">sharpteam.fpt@gmail.com</span>
             </div>
             <form class="form-inline frm-contact">
               <div class="form-group">
@@ -269,19 +269,27 @@ export default {
   }
   @media (max-width: 768px) {
     .up-footer {
-      padding: 2rem 0 3rem;
+      padding-top: 25px;
+      padding-bottom: 5px;
     }
-  }
-}
-@media (max-width: 576px) {
-  .footer .up-footer .item-footer h3 {
-    font-size: $font-title-mobile;
-  }
-  .footer .up-footer .item-footer a {
-    font-size: $font-title-small-mobile;
-  }
-  .footer .up-footer .item-footer .social-link {
-    font-size: 2rem;
+    .title-footer {
+      font-size: 19px !important;
+    }
+    .sub-contact {
+      font-size: 13px !important;
+    }
+    .social-link {
+      font-size: 1.5rem !important;
+    }
+    .is-address {
+      font-size: 12px !important;
+    }
+    .bottom-footer {
+      padding: 10px 0 !important;
+      .copyright {
+        font-size: 12px;
+      }
+    }
   }
 }
 </style>
