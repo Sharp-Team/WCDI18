@@ -103,9 +103,7 @@
         </div>
       </div>
     </nav>
-    <navmenu
-      :username="username"
-      :img-profile="avatar" />
+    <navmenu />
   </div>
 </template>
 
@@ -166,6 +164,7 @@ export default {
     } else {
       handleLocationError(false, infoWindow, map.getCenter())
     }
+    navbar()
   },
   methods: {
     logout() {
