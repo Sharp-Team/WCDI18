@@ -129,6 +129,10 @@ export default {
                       position: 'is-bottom',
                       type: 'is-success'
                     })
+                    var modal = $('#noti-Modal')
+                    var modalContent = $('#noti-ModalContent')
+                    modalContent.addClass('modal-content-1')
+                    modal.css('visibility', 'hidden')
                   } else {
                     window.alert('No results found')
                   }
@@ -156,27 +160,6 @@ export default {
         notification => notification.title === career
       )
       this.data = data
-      if (career) {
-        var modal = $('#noti-Modal')
-        var btnNoti = $('#showNotiWorker')
-        var btnCloseNoi = $('#notiCloseModal')
-        var modalContent = $('#noti-ModalContent')
-
-        modal.css('visibility', 'visible')
-        modalContent.removeClass('modal-content-1')
-
-        btnCloseNoi.click(() => {
-          modalContent.addClass('modal-content-1')
-          modal.css('visibility', 'hidden')
-        })
-
-        $(window).click(e => {
-          if (e.target.id === 'noti-Modal') {
-            modalContent.addClass('modal-content-1')
-            modal.css('visibility', 'hidden')
-          }
-        })
-      }
     }
   }
 }
