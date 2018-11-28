@@ -121,7 +121,7 @@ export default function(
           type: 'is-success'
         })
         this.$nuxt.$loading.finish()
-        this.$router.push('/')
+        this.$router.go(-1)
         location.reload()
       })
       .catch(function(error) {

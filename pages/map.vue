@@ -7,9 +7,17 @@
     <button
       id="showNote"
       type="button"
-      class="btn btn-success d-sm-none"
+      class="button is-primary d-sm-none"
     >
-      Hiện/Ẩn chú thích</button>
+      Chú thích
+    </button>
+    <button
+      id="showDirection"
+      type="button"
+      class="button is-primary"
+    >
+      Lộ trình
+    </button>
     <div id="legend">
       <h3>Chú thích</h3>
     </div>
@@ -21,6 +29,7 @@
 import FooterMap from '~/components/footer/FooterMap'
 import { mapGetters } from 'vuex'
 import showNote from '~/assets/js/show-note'
+import showDirection from '~/assets/js/show-direction'
 
 export default {
   components: {
@@ -78,30 +87,31 @@ export default {
     this.icons = this.$store.getters.GET_ICONS
   },
   mounted() {
-    showNote(),
+    showNote()
+    showDirection()
+    /**
+     * INIT MAP
+     */
+    this.map = new google.maps.Map(document.getElementById('map'), {
+      center: {
+        lat: 21.1186188,
+        lng: 105.5698639
+      },
+      zoom: 10,
       /**
-       * INIT MAP
+       * CHANGE POSITION FUNCTION OF MAP
        */
-      (this.map = new google.maps.Map(document.getElementById('map'), {
-        center: {
-          lat: 21.1186188,
-          lng: 105.5698639
-        },
-        zoom: 10,
-        /**
-         * CHANGE POSITION FUNCTION OF MAP
-         */
-        zoomControl: true,
-        zoomControlOptions: {
-          position: google.maps.ControlPosition.LEFT_TOP
-        },
-        scaleControl: true,
-        streetViewControl: true,
-        streetViewControlOptions: {
-          position: google.maps.ControlPosition.LEFT_TOP
-        },
-        fullscreenControl: true
-      }))
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+      },
+      scaleControl: true,
+      streetViewControl: true,
+      streetViewControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+      },
+      fullscreenControl: true
+    })
     /**
      * DIRECTION MAP
      */
@@ -282,8 +292,19 @@ button.abcd.button.is-success {
 }
 button#showNote {
   position: absolute;
-  top: 85%;
-  right: 2%;
+  bottom: 55px;
+  right: 5px;
+}
+button#showDirection {
+  position: absolute;
+  bottom: 55px;
+  left: 5px;
+}
+#direction {
+  display: none;
+}
+.modal-note {
+  display: block !important;
 }
 @media (max-width: 576px) {
   #direction {
