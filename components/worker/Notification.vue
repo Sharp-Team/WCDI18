@@ -38,7 +38,7 @@
                   <div class="p-2">
                     <button
                       type="button"
-                      class="btn-confirm-noti"
+                      class="btn-confirm-noti button is-success"
                       @click="done(item)"
                     >
                       Xác nhận
@@ -47,8 +47,9 @@
                   <div class="p-2">
                     <button
                       type="button"
-                      class="btn-cancel-noti"
+                      class="btn-cancel-noti button is-warning"
                       disabled
+                      title="Disabled button"
                       @click="cancel(item.index)"
                     >
                       Huỷ
