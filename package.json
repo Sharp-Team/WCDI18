@@ -4,6 +4,11 @@
   "description": "Coding Project 2018",
   "author": "Elisa Kajima Team",
   "private": true,
+  "engines": {
+    "node": "v8.12.0",
+    "yarn": "1.9.4",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -11,7 +16,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "heroku-postbuild": "yarn run build"
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
@@ -44,17 +49,5 @@
     "nodemon": "^1.11.0",
     "prettier": "1.14.3",
     "pretty-quick": "^1.8.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "pretty-quick --staged",
-      "eslint . --fix --quiet --ignore-path .gitignore",
-      "git add"
-    ]
   }
 }
