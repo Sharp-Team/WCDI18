@@ -26,22 +26,22 @@
             <h1 class="title is-3 my-title">Các tính năng nổi bật</h1>
             <p class="sub-description">Dưới đây là một số tính năng nổi bật của project</p>
             <div class="list-function">
-              <ul>
-                <li>
+              <ul class="list-func">
+                <li class="one-func">
                   <i class="fas fa-globe p-2 my-icon" />
                   <span>
                     <p class="title-feature">Đa dạng các loại nhu cầu</p>
                     <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
                   </span>
                 </li>
-                <li>
+                <li class="one-func">
                   <i class="far fa-envelope my-icon" />
                   <span>
                     <p class="title-feature">Tìm được người phù hợp</p>
                     <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
                   </span>
                 </li>
-                <li>
+                <li class="one-func">
                   <i class="fas fa-globe p-2 my-icon" />
                   <span>
                     <p class="title-feature">Mọi nhu cầu mọi lúc mọi nơi</p>
@@ -555,32 +555,36 @@
     }
   }
 }
-// For responsive
-@media (max-width: 545px) {
+@media (max-width: 768px) {
   .homepage {
-    .title-border {
-      .my-title {
-        padding-bottom: 20px;
-        font-size: 30px;
-      }
+    padding-top: 5px;
+  }
+  .my-title {
+    font-size: 21px;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+  }
+  .text-para {
+    font-size: 14px;
+  }
+  .list-func {
+    margin-left: 0 !important;
+    .one-func {
+      padding-top: 15px !important;
     }
-    .text-para {
-      font-size: 13px !important;
-    }
-    .guide-register {
-      .text {
-        font-size: 30px;
-      }
-      .description {
-        font-size: 13px;
-      }
-      .img-huong-dan-dk {
-        .cril {
-          margin-bottom: 20px;
-          margin-top: 25px;
-        }
-      }
-    }
+  }
+  .homepage .function-row .title-border .list-function ul li .my-icon {
+    padding: 13px !important;
+  }
+  .sub-description {
+    font-size: 14px !important;
+  }
+  .title-feature {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .title-button {
+    padding: 0 10px;
   }
 }
 </style>

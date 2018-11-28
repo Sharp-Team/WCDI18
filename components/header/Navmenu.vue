@@ -61,16 +61,10 @@
         <div class="menu-contact">
           <ul class="list-menu">
             <li>
-              <a href="#">Hotline: 0349088188</a>
-            </li>
-            <li>
-              <a href="#">Điều khoản</a>
+              <a href="#">Hotline: 0123456789</a>
             </li>
             <li>
               <a href="#">Liên hệ</a>
-            </li>
-            <li>
-              <a href="#">F&Q</a>
             </li>
             <li>
               <a href="#">Version 1.0</a>

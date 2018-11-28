@@ -6,6 +6,13 @@
         <h2 class="title title-home text-center">
           Coding Project 2018
         </h2>
+        <button class="button-goto-map d-md-none">
+          <a href="/map">
+            <img
+              src="/images/homepage/goto-map-mobile.png"
+              alt="go to map">
+          </a>
+        </button>
       </div>
     </section>
     <home-page />
@@ -57,6 +64,14 @@ export default {
 @media (max-width: 768px) {
   .title-home {
     margin-top: 54px;
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+  .button-goto-map {
+    width: 100%;
+    background: 0;
+    border: 0;
+    margin-bottom: 35px;
   }
 }
 </style>

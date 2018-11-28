@@ -86,7 +86,7 @@
     <div class="bottom-footer">
       <div class="container is-footer">
         <div class="copyright">
-          Copyright@2018.Go Green
+          Copyright@2018. Go Green
         </div>
       </div>
     </div>

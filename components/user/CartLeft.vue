@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="avata-img d-none d-md-block">
+    <div class="avata-img">
       <img
         :src="avatar"
         alt="">
