@@ -19,5 +19,8 @@ export default {
   },
   setMap(state, map) {
     state.map = map
+  },
+  setNotiWorker(state, map) {
+    state.notiWorker = map
   }
 }

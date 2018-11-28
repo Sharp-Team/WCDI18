@@ -207,6 +207,7 @@ export default {
                     })
                     this.title = ''
                     this.content = ''
+                    $('#status-customer-modal').modal('hide')
                   } else {
                     window.alert('No results found')
                   }

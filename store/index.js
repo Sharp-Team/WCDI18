@@ -12,6 +12,7 @@ const store = () =>
       avatar: null,
       full_name: null,
       map: null,
+      notiWorker: 0,
       icons: {
         electric: {
           name: 'Thợ sửa điện tử',

@@ -45,6 +45,7 @@
         </div>
         <div
           class="icon noti">
+          <p class="number-noti-worker">{{ notiWorker }}</p>
           <a href="#">
             <i
               id="showNotiWorker"
@@ -110,6 +111,17 @@
 
 <style lang="scss" scoped>
 @import '~/assets/scss/variable.scss';
+.number-noti-worker {
+  color: white;
+  background: red;
+  position: absolute;
+  padding: 0 8px;
+  font-size: 13px;
+  border-radius: 15px;
+  z-index: 999;
+  bottom: 11px;
+  left: 19px;
+}
 .my-footer {
   width: 100%;
   height: 50px;
@@ -196,6 +208,11 @@ export default {
   data() {
     return {
       object: ''
+    }
+  },
+  computed: {
+    notiWorker() {
+      return this.$store.getters.GET_NOTI_WORKER
     }
   },
   created() {

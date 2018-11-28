@@ -33,5 +33,8 @@ export default {
   },
   SET_MAP({ commit }, map) {
     commit('setMap', map)
+  },
+  SET_NOTI_WORKER({ commit }, notiWorker) {
+    commit('setNotiWorker', notiWorker)
   }
 }

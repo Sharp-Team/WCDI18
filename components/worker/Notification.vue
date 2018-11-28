@@ -38,7 +38,7 @@
                   <div class="p-2">
                     <button
                       type="button"
-                      class="btn-confirm-noti"
+                      class="btn-confirm-noti button is-success"
                       @click="done(item)"
                     >
                       Xác nhận
@@ -47,8 +47,9 @@
                   <div class="p-2">
                     <button
                       type="button"
-                      class="btn-cancel-noti"
+                      class="btn-cancel-noti button is-warning"
                       disabled
+                      title="Disabled button"
                       @click="cancel(item.index)"
                     >
                       Huỷ
@@ -129,6 +130,10 @@ export default {
                       position: 'is-bottom',
                       type: 'is-success'
                     })
+                    var modal = $('#noti-Modal')
+                    var modalContent = $('#noti-ModalContent')
+                    modalContent.addClass('modal-content-1')
+                    modal.css('visibility', 'hidden')
                   } else {
                     window.alert('No results found')
                   }
@@ -157,25 +162,7 @@ export default {
       )
       this.data = data
       if (career) {
-        var modal = $('#noti-Modal')
-        var btnNoti = $('#showNotiWorker')
-        var btnCloseNoi = $('#notiCloseModal')
-        var modalContent = $('#noti-ModalContent')
-
-        modal.css('visibility', 'visible')
-        modalContent.removeClass('modal-content-1')
-
-        btnCloseNoi.click(() => {
-          modalContent.addClass('modal-content-1')
-          modal.css('visibility', 'hidden')
-        })
-
-        $(window).click(e => {
-          if (e.target.id === 'noti-Modal') {
-            modalContent.addClass('modal-content-1')
-            modal.css('visibility', 'hidden')
-          }
-        })
+        this.$store.dispatch('SET_NOTI_WORKER', this.data.length)
       }
     }
   }

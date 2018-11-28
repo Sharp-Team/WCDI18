@@ -22,5 +22,8 @@ export default {
   },
   GET_MAP: state => {
     return state.map
+  },
+  GET_NOTI_WORKER: state => {
+    return state.notiWorker
   }
 }
