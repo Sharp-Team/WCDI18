@@ -1,4 +1,8 @@
 import Vue from 'vue'
-import IO from '~/model/clientIO'
+import io from 'socket.io-client'
+import SKIO from '~/model/clientIO'
 
-Vue.prototype.$io = new IO()
+const socket = io(process.env.WS_URL)
+Vue.prototype.$io = new SKIO()
+
+export default socket

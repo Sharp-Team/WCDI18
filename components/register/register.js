@@ -121,7 +121,8 @@ export default function(
           type: 'is-success'
         })
         this.$nuxt.$loading.finish()
-        this.$router.push('/login')
+        this.$router.push('/')
+        location.reload()
       })
       .catch(function(error) {
         console.log(error)
