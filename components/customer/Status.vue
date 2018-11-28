@@ -230,12 +230,21 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
+.modal-body {
+  flex: 0 !important;
+}
+.modal-content {
+  margin: 0 !important;
+}
 .is-content {
   font-size: 0.8rem !important;
 }
 .noti-image {
   margin-right: 7px;
   width: 4%;
+}
+.modal-title {
+  font-size: 15px !important;
 }
 
 .modal-scan-user {
@@ -244,16 +253,18 @@ export default {
     margin: 0 !important;
     .modal-content {
       position: fixed;
-      width: 70% !important;
-      left: 10%;
-      bottom: 10%;
+      left: 20px;
+      top: 20px;
       border-radius: 10px !important;
+      height: 86vh;
+      overflow: scroll;
+      width: 310px;
       .modal-header {
         background-color: $color-main !important;
         border-bottom: none !important;
         padding: 0.7rem;
         h6 {
-          font-size: 1.2rem;
+          font-size: 17px;
           color: #fff;
           font-weight: 400;
           line-height: 1.125;
@@ -363,35 +374,6 @@ export default {
           color: #fff;
         }
       }
-    }
-  }
-}
-
-@media (max-width: 576px) {
-  .modal-scan-user .modal-dialog .modal-content {
-    width: 90% !important;
-    left: 0%;
-    span {
-      position: absolute;
-      top: 2px;
-      right: 10px;
-    }
-  }
-  .modal-scan-user .modal-dialog .modal-content .modal-header h6 {
-    font-size: 13px;
-    position: absolute;
-    top: 10px;
-  }
-  .modal-scan-user .modal-dialog .modal-content .modal-header {
-    padding: 1rem;
-  }
-  .modal-body {
-    h6.title.is-6 {
-      font-size: $font-title-small-mobile;
-      margin-bottom: 10px;
-    }
-    p.my-0.mt-1.is-content {
-      font-size: $font-description-mobile !important;
     }
   }
 }
