@@ -12,44 +12,49 @@
           id="showContact"
           class="menu-header"
         >
-          <a
-            v-if="username === ''"
-            href="/login"
-            class="user-login"
-          >
-            Đăng nhập
-          </a>
-          <span
-            v-if="username === ''"
-            class="flat-line">/</span>
-          <a
-            v-if="username === ''"
-            href="/register"
-            class="user-register">
-            Đăng ký
-          </a>
-          <a
-            v-else
-            href="/profile">
-            <div class="wrap-profile">
-              <div class="wrap-img-profile">
-                <img
-                  :src="imgProfile"
-                  alt="image-profile">
+          <div v-if="username === null">
+            <a
+              href="/login"
+              class="user-login"
+            >
+              Đăng nhập
+            </a>
+            <span
+              class="flat-line">/</span>
+            <a
+              href="/register"
+              class="user-register">
+              Đăng ký
+            </a>
+          </div>
+          <div v-else>
+            <a
+              href="/profile">
+              <div class="wrap-profile">
+                <div class="wrap-img-profile">
+                  <img
+                    :src="avatar"
+                    alt="image-profile">
+                </div>
+                <div class="wrap-username">
+                  {{ username }}
+                </div>
               </div>
-              <div class="wrap-username">
-                {{ username }}
-              </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
         <div class="navbar-horizontal">
           <ul class="list-menu">
             <li>
-              <a href="#">Trang chủ</a>
+              <a href="/">Trang chủ</a>
             </li>
             <li>
-              <a href="#">Feed back</a>
+              <a href="/feedback">Feed back</a>
+            </li>
+            <li v-if="username !== null">
+              <a
+                href="/"
+                @click="logout">Đăng xuất</a>
             </li>
           </ul>
         </div>
@@ -79,14 +84,41 @@
 <script>
 import navbar from '~/assets/js/navbar'
 export default {
-  props: {
-    username: {
-      type: String,
-      default: ''
+  computed: {
+    username() {
+      return this.$store.getters.GET_FULL_NAME
     },
-    imgProfile: {
-      type: String,
-      default: ''
+    avatar() {
+      return this.$store.getters.GET_AVATAR
+    }
+  },
+  methods: {
+    logout() {
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start()
+      })
+      const username = this.$store.getters.GET_USERNAME
+      this.$io.customerOffline({
+        username: username
+      })
+      this.$io.workerOffline({
+        username: username
+      })
+      this.$axios
+        .get(`/api/user/signout`)
+        .then(response => {
+          console.log(response)
+          this.$toast.open({
+            message: 'Đăng xuất thành công!',
+            position: 'is-bottom',
+            type: 'is-success'
+          })
+          this.$nuxt.$loading.finish()
+          location.reload()
+        })
+        .catch(function(error) {
+          console.log(error)
+        })
     }
   }
 }
