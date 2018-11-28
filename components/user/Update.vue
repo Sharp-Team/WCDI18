@@ -7,7 +7,18 @@
             <h3>Cập nhật tài khoản</h3>
           </div>
           <div class="form-info">
-            <form>
+            <form
+              @submit.prevent="
+                UPDATE_PROFILE(
+                  username,
+                  fullname,
+                  phone,
+                  provinceSelected,
+                  districtSelected,
+                  address,
+                  object,
+                  jobSelected
+            )">
               <div class="form-group row">
                 <label
                   for="fullname"
@@ -207,6 +218,7 @@
 
 <script>
 import MyButton from '~/components/share/Button'
+import UPDATE_PROFILE from './update-profile'
 import { mapGetters } from 'vuex'
 const vietnam = require('~/assets/json/data-viet-nam.json')
 const jobs = require('~/assets/json/data-job.json')
@@ -220,16 +232,14 @@ export default {
       vietnam,
       jobs,
       username: '',
-      password: '',
-      email: '',
       fullname: '',
       phone: '',
-      rePassword: '',
       address: '',
       provinceSelected: '',
       districtSelected: '',
-      object: 'Khách hàng',
-      jobSelected: ''
+      object: '',
+      jobSelected: '',
+      onFileCMNDPicked: ''
     }
   },
   computed: {
@@ -245,6 +255,19 @@ export default {
         )
       ]
     }
+  },
+  beforeMount() {
+    this.username = this.$store.getters.GET_USERNAME
+  },
+  mounted() {
+    this.$toast.open({
+      duration: 10000,
+      message: `Trước khi vào map bạn cần cập nhật đầy đủ các thông tin dưới đây`,
+      position: 'is-top'
+    })
+  },
+  methods: {
+    UPDATE_PROFILE
   }
 }
 </script>

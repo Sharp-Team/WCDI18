@@ -137,4 +137,38 @@ router.post('/password', async (req, res) => {
   }
 })
 
+router.post('/update', async (req, res) => {
+  const {
+    username,
+    full_name,
+    phone_number,
+    province,
+    district,
+    address_detail,
+    object,
+    career
+  } = req.body
+  try {
+    await User.findOneAndUpdate(
+      { username: username },
+      {
+        full_name: full_name,
+        phone_number: phone_number,
+        province: province,
+        district: district,
+        address_detail: address_detail,
+        object: object,
+        career: career
+      }
+    ).then(response => {
+      res.status(200).json({
+        data: `Cập nhật thông tin thành công`,
+        error: null
+      })
+    })
+  } catch (error) {
+    console.log(error)
+  }
+})
+
 module.exports = router
