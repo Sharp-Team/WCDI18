@@ -91,9 +91,6 @@ module.exports = {
     'nuxt-buefy',
     '~/io'
   ],
-  env: {
-    WS_URL: process.env.WS_URL || 'https://pacific-river-51576.herokuapp.com'
-  },
   axios: {
     proxy: true
   },

@@ -1,6 +1,6 @@
 import io from 'socket.io-client'
 
-const WS_URL = process.env.WS_URL || 'https://pacific-river-51576.herokuapp.com'
+const WS_URL = process.env.WS_URL || 'https://wcdi18.herokuapp.com'
 export default class ClientIO {
   constructor() {
     this.socket = io(WS_URL)

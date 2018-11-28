@@ -8,7 +8,6 @@ module.exports = function() {
     )
   // this.nuxt.plugin('close', () => new Promise(resolve => server.close(resolve)))
 
-  // Add `socket.io-client` in vendor
   this.addVendor('socket.io-client')
 
   let customers = []
