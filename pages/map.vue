@@ -4,6 +4,12 @@
       <h3 class="has-text-centered title-direction">Lộ trình</h3>
     </div>
     <div id="map" />
+    <button
+      id="showNote"
+      type="button"
+      class="btn btn-success d-sm-none"
+    >
+      Hiện/Ẩn chú thích</button>
     <div id="legend">
       <h3>Chú thích</h3>
     </div>
@@ -14,6 +20,7 @@
 <script>
 import FooterMap from '~/components/footer/FooterMap'
 import { mapGetters } from 'vuex'
+import showNote from '~/assets/js/show-note'
 
 export default {
   components: {
@@ -71,29 +78,30 @@ export default {
     this.icons = this.$store.getters.GET_ICONS
   },
   mounted() {
-    /**
-     * INIT MAP
-     */
-    this.map = new google.maps.Map(document.getElementById('map'), {
-      center: {
-        lat: 21.1186188,
-        lng: 105.5698639
-      },
-      zoom: 10,
+    showNote(),
       /**
-       * CHANGE POSITION FUNCTION OF MAP
+       * INIT MAP
        */
-      zoomControl: true,
-      zoomControlOptions: {
-        position: google.maps.ControlPosition.LEFT_TOP
-      },
-      scaleControl: true,
-      streetViewControl: true,
-      streetViewControlOptions: {
-        position: google.maps.ControlPosition.LEFT_TOP
-      },
-      fullscreenControl: true
-    })
+      (this.map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+          lat: 21.1186188,
+          lng: 105.5698639
+        },
+        zoom: 10,
+        /**
+         * CHANGE POSITION FUNCTION OF MAP
+         */
+        zoomControl: true,
+        zoomControlOptions: {
+          position: google.maps.ControlPosition.LEFT_TOP
+        },
+        scaleControl: true,
+        streetViewControl: true,
+        streetViewControlOptions: {
+          position: google.maps.ControlPosition.LEFT_TOP
+        },
+        fullscreenControl: true
+      }))
     /**
      * DIRECTION MAP
      */
@@ -271,5 +279,26 @@ button.abcd.button.is-success {
 }
 #legend img {
   vertical-align: middle;
+}
+button#showNote {
+  position: absolute;
+  top: 85%;
+  right: 2%;
+}
+@media (max-width: 576px) {
+  #direction {
+    width: 200px;
+    height: 300px;
+  }
+  #legend {
+    top: 175px !important;
+    width: 150px;
+    overflow: scroll;
+    height: 250px;
+    display: none;
+  }
+  .modal-note {
+    display: block !important;
+  }
 }
 </style>

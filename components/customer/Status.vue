@@ -377,4 +377,30 @@ export default {
     }
   }
 }
+@media (max-width: 576px) {
+  .modal-scan-user .modal-dialog .modal-content {
+    span {
+      position: absolute;
+      top: 2px;
+      right: 10px;
+    }
+  }
+  .modal-scan-user .modal-dialog .modal-content .modal-header h6 {
+    font-size: 13px;
+    position: absolute;
+    top: 10px;
+  }
+  .modal-scan-user .modal-dialog .modal-content .modal-header {
+    padding: 1rem;
+  }
+  .modal-body {
+    h6.title.is-6 {
+      font-size: $font-title-small-mobile;
+      margin-bottom: 10px;
+    }
+    p.my-0.mt-1.is-content {
+      font-size: $font-description-mobile !important;
+    }
+  }
+}
 </style>
