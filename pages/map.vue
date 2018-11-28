@@ -4,6 +4,20 @@
       <h3 class="has-text-centered title-direction">Lộ trình</h3>
     </div>
     <div id="map" />
+    <button
+      id="showNote"
+      type="button"
+      class="button is-primary d-sm-none"
+    >
+      Chú thích
+    </button>
+    <button
+      id="showDirection"
+      type="button"
+      class="button is-primary"
+    >
+      Lộ trình
+    </button>
     <div id="legend">
       <h3>Chú thích</h3>
     </div>
@@ -14,6 +28,8 @@
 <script>
 import FooterMap from '~/components/footer/FooterMap'
 import { mapGetters } from 'vuex'
+import showNote from '~/assets/js/show-note'
+import showDirection from '~/assets/js/show-direction'
 
 export default {
   components: {
@@ -71,6 +87,8 @@ export default {
     this.icons = this.$store.getters.GET_ICONS
   },
   mounted() {
+    showNote()
+    showDirection()
     /**
      * INIT MAP
      */
@@ -271,5 +289,37 @@ button.abcd.button.is-success {
 }
 #legend img {
   vertical-align: middle;
+}
+button#showNote {
+  position: absolute;
+  bottom: 55px;
+  right: 5px;
+}
+button#showDirection {
+  position: absolute;
+  bottom: 55px;
+  left: 5px;
+}
+#direction {
+  display: none;
+}
+.modal-note {
+  display: block !important;
+}
+@media (max-width: 576px) {
+  #direction {
+    width: 200px;
+    height: 300px;
+  }
+  #legend {
+    top: 175px !important;
+    width: 150px;
+    overflow: scroll;
+    height: 250px;
+    display: none;
+  }
+  .modal-note {
+    display: block !important;
+  }
 }
 </style>
