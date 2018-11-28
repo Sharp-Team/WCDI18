@@ -19,7 +19,7 @@
         class="notification-content modal-content-1 ml-2"
       >
         <h6 class="notification-title">
-          Thông báo ({{ numberNoti }})
+          Thông báo hệ thống chuyên gia
           <i
             id="iconCloseModal"
             class="fas fa-times is-IconClose"
@@ -38,10 +38,6 @@
                       <h5 class="mt-0 mb-1 title-notification">
                         {{ item.title }}
                       </h5>
-                      <i
-                        class="fas fa-times is-close"
-                        @click="remove(item.index)"
-                      />
                     </div>
                     <p class="my-0 is-content">
                       {{ item.content }}
@@ -51,15 +47,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="reset-notification text-center">
-          <button
-            class="btn-reset-notification btn"
-            @click="removeAll"
-          >
-            <i class="far fa-trash-alt mr-2" />
-            Xóa tất cả
-          </button>
         </div>
       </div>
     </div>
@@ -123,10 +110,6 @@
   }
 }
 
-.is-close {
-  color: $font-color-grey;
-}
-
 .wrap-icon-noti {
   cursor: pointer;
   position: relative;
@@ -162,27 +145,12 @@
           .is-content {
             font-size: 0.9rem;
           }
-
           .is-content {
             color: #868686;
           }
         }
       }
     }
-  }
-}
-
-.reset-notification {
-  padding: 15px 0;
-
-  .btn-reset-notification {
-    background: $color-main;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 10px 25px;
-    margin: auto;
-    font-size: 14px;
   }
 }
 
@@ -211,14 +179,9 @@ export default {
     return {
       data: [
         {
-          title: 'Đã hoàn thành',
+          title: 'Chuẩn bị cập nhật...',
           content:
-            'Giao dịch sửa xe đã hoàn thành xong. Cảm ơn bạn đã sử dụng dịch vụ'
-        },
-        {
-          title: 'Đã hủy',
-          content:
-            'Giao dịch sửa xe đã hoàn thành xong. Cảm ơn bạn đã sử dụng dịch vụ'
+            'Tính năng quét theo phạm vi dành cho người làm việc và khách hàng'
         }
       ]
     }
@@ -234,9 +197,6 @@ export default {
   methods: {
     remove(index) {
       this.data.splice(index, 1)
-    },
-    removeAll() {
-      this.data.splice(0, this.data.length)
     }
   }
 }

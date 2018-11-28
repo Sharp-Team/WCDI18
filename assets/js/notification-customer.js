@@ -15,7 +15,7 @@ export default () => {
   })
 
   $(window).click(e => {
-    if (e.target.id === 'noti-Modal') {
+    if (e.target.id === 'noti-ModalCustomer') {
       modalContent.addClass('modal-content-1')
       modal.css('visibility', 'hidden')
     }

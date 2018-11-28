@@ -68,18 +68,10 @@ export default {
   data() {
     return {
       data: [
-        {
-          title: 'Chấp nhận sửa xe máy',
-          content: 'Km29 đại lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội'
-        },
-        {
-          title: 'Chấp nhận sửa ô tô',
-          content: 'Đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội'
-        },
-        {
-          title: 'Chấp nhận sửa laptop',
-          content: 'FSchool, Thạch Hòa, Thạch Thất, Hà Nội'
-        }
+        // {
+        //   title: 'Chấp nhận sửa xe máy',
+        //   content: 'Km29 đại lộ Thăng Long, Thạch Hoà, Thạch Thất, Hà Nội'
+        // }
       ]
     }
   },
