@@ -88,8 +88,12 @@ module.exports = {
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    'nuxt-buefy'
+    'nuxt-buefy',
+    '~/io'
   ],
+  env: {
+    WS_URL: process.env.WS_URL || 'http://localhost:3000'
+  },
   axios: {
     proxy: true
   },
