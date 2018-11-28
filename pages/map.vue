@@ -24,13 +24,11 @@ export default {
       icons: null,
       markers: null,
       map: null,
-      drawRange: null,
-      directionsDisplay: null,
-      directionsService: null
+      drawRange: null
     }
   },
   layout: 'map',
-  middleware: 'authentication',
+  middleware: 'authenmap',
   computed: {
     rangeCurrent() {
       return this.$store.getters.GET_RANGE
@@ -69,7 +67,6 @@ export default {
       }
     }
   },
-  middleware: 'authentication',
   beforeMount() {
     this.icons = this.$store.getters.GET_ICONS
   },
@@ -84,7 +81,7 @@ export default {
       },
       zoom: 10,
       /**
-       * THAY ĐỔI VỊ TRÍ CÁC CÁC CHỨC NĂNG CỦA MAPS
+       * CHANGE POSITION FUNCTION OF MAP
        */
       zoomControl: true,
       zoomControlOptions: {
@@ -100,12 +97,8 @@ export default {
     /**
      * DIRECTION MAP
      */
-    this.directionsDisplay = new google.maps.DirectionsRenderer()
-    this.directionsService = new google.maps.DirectionsService()
-    this.directionsDisplay.setMap(this.map)
-    this.directionsDisplay.setPanel(document.getElementById('direction'))
-    var directiona = document.getElementById('direction')
-    this.map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(directiona)
+    var direction = document.getElementById('direction')
+    this.map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(direction)
     /**
      * SET CENTER POSITION USER
      */
@@ -232,25 +225,6 @@ export default {
           handleLocationError(false, infoWindow, map.getCenter())
         }
       })
-    },
-    CalculateAndDisplayRoute() {
-      var start = 'ĐD Tòa Nhà Viettel Hòa Lạc, Thạch Thất, Hà Nội, Việt Nam'
-      var end = 'ĐD Tòa Nhà Viettel Hòa Lạc, Thạch Thất, Hà Nội, Việt Nam'
-      this.directionsService.route(
-        {
-          origin: start,
-          destination: end,
-          travelMode: 'DRIVING'
-        },
-        (response, status) => {
-          console.log(this)
-          if (status === 'OK') {
-            this.directionsDisplay.setDirections(response)
-          } else {
-            window.alert('Directions request failed due to ' + status)
-          }
-        }
-      )
     }
   }
 }
