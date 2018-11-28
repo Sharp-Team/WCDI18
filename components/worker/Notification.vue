@@ -160,6 +160,9 @@ export default {
         notification => notification.title === career
       )
       this.data = data
+      if (career) {
+        this.$store.dispatch('SET_NOTI_WORKER', this.data.length)
+      }
     }
   }
 }
