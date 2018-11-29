@@ -127,13 +127,14 @@ export default {
       fbSignInParams: {
         scope: 'email,user_likes',
         return_scopes: true
-      }
+      },
+      fb: null
     }
   },
   beforeMount() {
     window.fbAsyncInit = (function() {
       // FB.init({
-      //   appId: '118289005758060',
+      //   appId: '2313158672248133',
       //   cookie: true,
       //   xfbml: true,
       //   version: 'v2.8'
@@ -199,9 +200,9 @@ export default {
       console.log('Không thể đăng nhập!!! ', error)
     },
     onSignInFBSuccess(response) {
-      // FB.api('/me', dude => {
-      //   console.log(`Good to see you, ${dude.name}.`)
-      // })
+      FB.api('/me', dude => {
+        console.log(`Good to see you, ${dude.name}.`)
+      })
     },
     onSignInFBError(error) {
       console.log('OH NOES', error)

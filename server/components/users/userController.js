@@ -90,6 +90,32 @@ router.post('/signin', async (req, res) => {
   })
 })
 
+router.post('/signinmobile', async (req, res) => {
+  const { username, password } = req.body
+  await User.findOne({ username: username }, (err, result) => {
+    if (result) {
+      if (result.password === password) {
+        res.status(200).json({
+          data: result,
+          error: null
+        })
+      } else {
+        res.status(200).json({
+          data: '',
+          error: 'Mật khẩu không chính xác'
+        })
+      }
+    } else {
+      console.log(err)
+      res.status(200).json({
+        data: null,
+        error: `Tài khoản
+        ${username} không tồn tại, vui lòng đăng ký. Hoặc mật khẩu sai`
+      })
+    }
+  })
+})
+
 router.get('/signout', async (req, res) => {
   await req.session.regenerate(error => {
     res.redirect('/')

@@ -137,7 +137,7 @@ export default {
                     this.$io.sendDirection({
                       username: this.usernameWorker,
                       start: results[0].formatted_address,
-                      end: this.addressCurrent
+                      end: this.addressWorker
                     })
                     const map = this.$store.getters.GET_MAP
                     var directionsDisplay = new google.maps.DirectionsRenderer()
@@ -168,7 +168,7 @@ export default {
                     window.alert('No results found')
                   }
                 } else {
-                  window.alert('Geocoder failed due to: ' + status)
+                  console.log('Geocoder failed due to: ' + status)
                 }
               }
             )
