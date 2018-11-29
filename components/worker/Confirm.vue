@@ -134,10 +134,13 @@ export default {
                 if (status === 'OK') {
                   if (results[0]) {
                     // send for worker direction
+                    console.log(this.usernameWorker)
+                    console.log(this.addressCurrent)
+                    console.log(results[0].formatted_address)
                     this.$io.sendDirection({
                       username: this.usernameWorker,
-                      start: this.addressWorker,
-                      end: this.addressCurrent
+                      start: this.addressCurrent,
+                      end: results[0].formatted_address
                     })
                     const map = this.$store.getters.GET_MAP
                     var directionsDisplay = new google.maps.DirectionsRenderer()
