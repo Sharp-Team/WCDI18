@@ -1,21 +1,34 @@
 <template>
   <div>
-    <slider />
     <section class="container">
       <div>
         <h2 class="title title-home text-center">
           Coding Project 2018
         </h2>
-        <button class="button-goto-map d-md-none">
-          <a href="/map">
-            <img
-              src="/images/homepage/goto-map-mobile.png"
-              alt="go to map">
-          </a>
-        </button>
+        <div class="has-text-centered">
+          <img
+            src="/images/tu.jpg"
+            alt="go to map"
+          >
+          <img
+            src="/images/hiep.jpg"
+            alt="go to map"
+          >
+          <img
+            src="/images/hoa.jpg"
+            alt="go to map"
+          >
+          <img
+            src="/images/phong.jpg"
+            alt="go to map"
+          >
+          <img
+            src="/images/nhat.jpg"
+            alt="go to map"
+          >
+        </div>
       </div>
     </section>
-    <home-page />
   </div>
 </template>
 
@@ -33,12 +46,14 @@ export default {
     Notification,
     Slider,
     HomePage
-  },
-  layout: 'home'
+  }
 }
 </script>
 
 <style lang="scss" scope>
+.image-1 {
+  width: 100%;
+}
 .title {
   margin: 35px auto;
   font-weight: 300;
