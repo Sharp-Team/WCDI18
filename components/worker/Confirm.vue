@@ -136,8 +136,8 @@ export default {
                     // send for worker direction
                     this.$io.sendDirection({
                       username: this.usernameWorker,
-                      start: results[0].formatted_address,
-                      end: this.addressWorker
+                      start: this.addressWorker,
+                      end: this.addressCurrent
                     })
                     const map = this.$store.getters.GET_MAP
                     var directionsDisplay = new google.maps.DirectionsRenderer()
