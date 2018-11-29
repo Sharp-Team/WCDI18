@@ -7,11 +7,13 @@
         </div>
         <div class="col-md-6">
           <p class="text-para">
-            - Thường xuyên thấy hình ảnh những người dân khổ cực tìm phế liệu tại các thùng rác, bãi rác hay lượng chai lọ rác thải nhựa tràn lan ngoài biển, chúng tôi nhận thấy việc phân loại rác thải tại Việt Nam đã triển khai nhưng chưa hiệu quả, triệt để.
+            - Khi bạn mới đến một khu vực nào đó và tất cả mọi thứ xung quanh với bạn đều rất mới lạ. Và đột nhiên một ngày, thiết bị trong căn hộ của bạn bị hỏng ví dụ như: máy giặt, tivi, điều hòa,... và bạn sẽ cảm thấy thật tồi tệ. Khi đó bạn có thể yêu cầu những thợ sửa chuyên nghiệp thông qua ứng dụng một cách hết sức nhanh chóng.
             <br>
-            - Việc này trực tiếp gây ra sự khó khăn trong việc xử lý rác thải tại Việt Nam, dẫn đến ô nhiễm môi trường nặng nề đặc biệt là biển và không khí.
+            - Bạn muốn sửa chữa những thứ quá cồng kềnh và bạn không thể mang đi đến địa điểm sửa được. Khi đó bạn có thể yêu cầu người sửa đến tận địa chỉ của bạn để sửa cho bạn.
             <br>
-            - Từ đó chúng tôi đã nghĩ đến nền tảng kết nối người đi mua và có phế liệu giúp họ tiết kiệm thời gian công sức, việc tái chế rác thải hiệu quả hơn.
+            - Người làm việc sẽ có thể biết được chính xác vị trí, vấn đề mà khách hàng đang gặp phải để có thể chuẩn bị một cách tốt nhất.
+            <br>
+            - Và rất nhiều trường hợp nữa trong cuộc sống mà ứng dụng chúng tôi giải quyết được vấn đề này.
           </p>
         </div>
         <div class="col-md-6 function-row">
@@ -23,29 +25,29 @@
         </div>
         <div class="col-md-6 function-row">
           <div class="title-border">
-            <h1 class="title is-3 my-title">Các tính năng nổi bật</h1>
-            <p class="sub-description">Dưới đây là một số tính năng nổi bật của project</p>
+            <h1 class="title is-3 my-title">Các tính năng chính của sản phẩm</h1>
+            <p class="sub-description">Dưới đây là một số tính năng chính của sản phẩm GoGreen</p>
             <div class="list-function">
               <ul class="list-func">
                 <li class="one-func">
-                  <i class="fas fa-globe p-2 my-icon" />
+                  <i class="fas fa-fingerprint p-2 my-icon" />
                   <span>
-                    <p class="title-feature">Đa dạng các loại nhu cầu</p>
-                    <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
+                    <p class="title-feature">Quét, tìm kiếm khách hàng/ người làm việc</p>
+                    <p class="sub-description">Có thể quét và tìm kiếm được tại vị trí xung quanh họ để kiểm tra xem có đối tượng phù hợp với công việc của họ.</p>
                   </span>
                 </li>
                 <li class="one-func">
                   <i class="far fa-envelope my-icon" />
                   <span>
-                    <p class="title-feature">Tìm được người phù hợp</p>
-                    <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
+                    <p class="title-bell">Nhận, phát thông báo công việc</p>
+                    <p class="sub-description">Phát thông  cho nhiều worker khi có công việc cần giúp đỡ một cách đơn giản và ngay lập tức.</p>
                   </span>
                 </li>
                 <li class="one-func">
-                  <i class="fas fa-globe p-2 my-icon" />
+                  <i class="fas fa-compass p-2 my-icon" />
                   <span>
-                    <p class="title-feature">Mọi nhu cầu mọi lúc mọi nơi</p>
-                    <p class="sub-description">Làm đẹp, sự kiện, việc làm nhanh, việc làm part-time</p>
+                    <p class="title-feature">Chỉ đường cho người làm việc đến tận nơi khách hàng</p>
+                    <p class="sub-description">Chỉ đường tận nơi cho các đối tượng cần sẽ tìm được đến với nhau.</p>
                   </span>
                 </li>
               </ul>

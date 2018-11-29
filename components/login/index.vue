@@ -56,51 +56,49 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group row">
-                <div class="col-sm-12 col-md-7 col-lg-7 offset-md-4 offset-lg-3">
-                  <div class="custom-btn-login">
-                    <div class="social-btn text-right mb-2">
-                      <no-ssr>
-                        <fb-signin-button
-                          :params="fbSignInParams"
-                          @success="onSignInFBSuccess"
-                          @error="onSignInFBError">
-                          <button class="btn-block">
-                            <a href="#">
-                              <img
-                                src="/images/facebook.png"
-                                alt="facebook"
-                              >
-                              <span class="text">Đăng nhập bằng Facebook</span>
-                            </a>
-                          </button>
-                        </fb-signin-button>
-                      </no-ssr>
-                    </div>
-                    <div class="social-btn">
-                      <no-ssr>
-                        <g-signin-button
-                          :params="googleSignInParams"
-                          @success="onSignInSuccess"
-                          @error="onSignInError">
-                          <button class="btn-block">
-                            <div class="right-social">
-                              <a href="#">
-                                <img
-                                  src="/images/google.png"
-                                  alt="google"
-                                >
-                                <span class="text">Đăng nhập bằng Google</span>
-                              </a>
-                            </div>
-                          </button>
-                        </g-signin-button>
-                      </no-ssr>
-                    </div>
-                  </div>
+            </form>
+            <div class="col-sm-12 col-md-7 col-lg-7 offset-md-4 offset-lg-3">
+              <div class="custom-btn-login">
+                <div class="social-btn text-right mb-2">
+                  <no-ssr>
+                    <fb-signin-button
+                      :params="fbSignInParams"
+                      @success="onSignInFBSuccess"
+                      @error="onSignInFBError">
+                      <button class="btn-block">
+                        <a href="#">
+                          <img
+                            src="/images/facebook.png"
+                            alt="facebook"
+                          >
+                          <span class="text">Đăng nhập bằng Facebook</span>
+                        </a>
+                      </button>
+                    </fb-signin-button>
+                  </no-ssr>
+                </div>
+                <div class="social-btn">
+                  <no-ssr>
+                    <g-signin-button
+                      :params="googleSignInParams"
+                      @success="onSignInSuccess"
+                      @error="onSignInError">
+                      <button class="btn-block">
+                        <div class="right-social">
+                          <a href="#">
+                            <img
+                              src="/images/google.png"
+                              alt="google"
+                            >
+                            <span class="text">Đăng nhập bằng Google</span>
+                          </a>
+                        </div>
+                      </button>
+                    </g-signin-button>
+                  </no-ssr>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
