@@ -56,7 +56,7 @@ module.exports = {
       },
       {
         src:
-          'https://maps.googleapis.com/maps/api/js?key=AIzaSyBQjtj0TxFDfqm8uQbovjJ0pEVtkCgePCw&language=vi',
+          'https://maps.googleapis.com/maps/api/js?key=AIzaSyCxP6jtd5QtSMWfUXLcPjnmGGUbyecCLy8&language=vi',
         async: true,
         defer: true
       },
