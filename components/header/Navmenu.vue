@@ -1,12 +1,12 @@
 <template>
   <div class="menu-section">
     <div
-      id="markMenuModal"
+      id="modalNavbar"
       class="modal mark-menu"
     >
       <div
-        id="markModalMenuContent"
-        class="modal-menu-content flex-column modal-menu-content-1"
+        id="contentNavbar"
+        class="modal-menu-content flex-column contentNavbar1"
       >
         <div
           id="showContact"
@@ -76,7 +76,6 @@
   </div>
 </template>
 <script>
-import navbar from '~/assets/js/navbar'
 export default {
   computed: {
     username() {
@@ -142,10 +141,10 @@ export default {
     border-radius: 0 !important;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
-  .modal-menu-content-1 {
+  .contentNavbar1 {
     transform: translateX(-120%);
   }
-  .modal-menu-content-2 {
+  .contentNavbar2 {
     transform: translateX(0);
   }
   .menu-header {

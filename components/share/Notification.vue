@@ -2,7 +2,7 @@
   <div>
     <div class="wrap-icon-noti">
       <i
-        id="showCart"
+        id="showNotification"
         class="fas fa-globe-asia is-icon-noti"
       />
       <span class="noti-number">
@@ -11,17 +11,17 @@
     </div>
 
     <div
-      id="is-Modal"
+      id="modalNotification"
       class="modal is-modal"
     >
       <div
-        id="is-ModalContent"
-        class="notification-content modal-content-1 ml-2"
+        id="contentNotification"
+        class="notification-content contentNotification ml-2"
       >
         <h6 class="notification-title">
           Thông báo hệ thống chuyên gia
           <i
-            id="iconCloseModal"
+            id="closeNotification"
             class="fas fa-times is-IconClose"
           />
         </h6>
@@ -86,7 +86,7 @@
   }
 }
 
-.modal-content-1 {
+.contentNotification {
   background-color: rgba(255, 255, 255, 0.9);
   transform: translateX(120%);
 }
@@ -98,7 +98,7 @@
   padding: 0.6em 0 0.6em 1.2em;
   position: relative;
 
-  #iconCloseModal {
+  #closeNotification {
     position: absolute;
     right: 15px;
     font-size: 0.9em;
@@ -172,8 +172,6 @@
 </style>
 
 <script>
-import notification from '~/assets/js/notification'
-
 export default {
   data() {
     return {
@@ -190,9 +188,6 @@ export default {
     numberNoti() {
       return this.data.length
     }
-  },
-  mounted() {
-    notification()
   },
   methods: {
     remove(index) {

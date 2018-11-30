@@ -1,15 +1,15 @@
 <template>
   <div
-    id="scan-Customer-Modal"
+    id="modalScanCustomer"
     class="modal is-modal"
   >
     <div
-      id="scan-CustomerModalContent"
-      class="notification-content modal-content-1 ml-2"
+      id="contentScanCustomer"
+      class="notification-content contentScanCustomer1 ml-2"
     >
       <h6 class="notification-title">Quét người làm việc
         <i
-          id="scanCustomerCloseModal"
+          id="closeScanCustomer"
           class="fas fa-times is-IconClose"
         />
       </h6>
@@ -306,7 +306,7 @@ export default {
     border: none !important;
   }
 }
-.modal-content-1 {
+.contentScanCustomer1 {
   background-color: rgba(255, 255, 255, 0.9);
   transform: translateX(-120%);
 }
@@ -316,7 +316,7 @@ export default {
   color: #fff;
   padding: 0.6em 0 0.6em 1.2em;
   position: relative;
-  #scanCustomerCloseModal {
+  #closeScanCustomer {
     position: absolute;
     right: 15px;
     font-size: 0.9em;

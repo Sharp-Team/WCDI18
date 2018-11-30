@@ -64,7 +64,8 @@ module.exports = {
         src: 'https://apis.google.com/js/platform.js',
         async: true,
         defer: true
-      }
+      },
+      { src: '/js/modals.js' }
     ]
   },
 

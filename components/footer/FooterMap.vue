@@ -16,7 +16,7 @@
         <div class="icon status">
           <a href="#">
             <i
-              id="show-status-worker"
+              id="showStatusWorker"
               class="fas fa-street-view"
             />
           </a>
@@ -48,7 +48,7 @@
           <p class="number-noti-worker">{{ notiWorker }}</p>
           <a href="#">
             <i
-              id="showNotiWorker"
+              id="showNotificationWorker"
               class="fas fa-dot-circle"
             />
           </a>
@@ -96,7 +96,7 @@
         <div class="icon noti">
           <a href="#">
             <i
-              id="showNotiCustomer"
+              id="showNotificationCustomer"
               class="fas fa-bell"
             />
           </a>
@@ -187,13 +187,6 @@ import ScanCustomer from '~/components/customer/Scan'
 import NotificationWorker from '~/components/worker/Notification'
 import NotificationCustomer from '~/components/customer/Notification'
 import ConfirmWorker from '~/components/worker/Confirm'
-import statusWorker from '~/assets/js/status-worker'
-import scanWorker from '~/assets/js/scan-worker'
-import scanCustomer from '~/assets/js/scan-customer'
-import notiWorker from '~/assets/js/notification-worker'
-import notiCustomer from '~/assets/js/notification-customer'
-import confirmWorker from '~/assets/js/confirm-worker'
-// import confirmCustomer from '~/assets/js/confirm-customer'
 
 export default {
   components: {
@@ -218,14 +211,6 @@ export default {
   created() {
     const user = this.$store.getters.GET_USER
     this.object = user.object
-  },
-  mounted() {
-    statusWorker(),
-      scanWorker(),
-      scanCustomer(),
-      notiWorker(),
-      notiCustomer(),
-      confirmWorker()
   },
   methods: {
     confirm() {

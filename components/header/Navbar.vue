@@ -5,7 +5,7 @@
       class="navbar navbar-expand-lg navbar-light bg-light"
     >
       <button
-        id="showMarkMenu"
+        id="showNavbar"
         class="navbar-toggler"
         type="button"
       >
@@ -111,7 +111,6 @@
 import Notification from '~/components/share/Notification'
 import MyButton from '~/components/share/Button'
 import Navmenu from './Navmenu'
-import navbar from '~/assets/js/navbar'
 export default {
   components: {
     Notification,
@@ -164,7 +163,6 @@ export default {
     } else {
       handleLocationError(false, infoWindow, map.getCenter())
     }
-    navbar()
   },
   methods: {
     logout() {
