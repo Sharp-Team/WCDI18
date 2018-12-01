@@ -52,10 +52,10 @@
               <nuxt-link to="/feedback">Feed back</nuxt-link>
             </li>
             <li v-if="username !== null">
-              <nuxt-link
-                to="/"
+              <a
+                href="#"
                 @click="logout">Đăng xuất
-              </nuxt-link>
+              </a>
             </li>
           </ul>
         </div>
@@ -108,6 +108,8 @@ export default {
             type: 'is-success'
           })
           this.$nuxt.$loading.finish()
+          this.$store.dispatch('SET_FULL_NAME', null)
+          this.$store.dispatch('SET_USER', null)
           this.$router.push('/')
         })
         .catch(function(error) {

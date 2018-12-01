@@ -404,7 +404,7 @@ export default {
 .wrap-register {
   background-color: $color-background;
   padding-bottom: 4rem;
-  padding-top: 45px;
+  padding-top: 120px;
   .breadcrumb {
     background-color: $color-background;
     .breadcrumb-item:first-child::after {
