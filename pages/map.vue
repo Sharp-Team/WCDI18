@@ -27,6 +27,7 @@
 
 <script>
 import FooterMap from '~/components/footer/FooterMap'
+import modal from '~/static/js/modals'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -42,7 +43,7 @@ export default {
     }
   },
   layout: 'map',
-  middleware: 'authenmap',
+  // middleware: 'authenmap',
   computed: {
     rangeCurrent() {
       return this.$store.getters.GET_RANGE
@@ -85,6 +86,9 @@ export default {
     this.icons = this.$store.getters.GET_ICONS
   },
   mounted() {
+    this.$nextTick(function() {
+      modal()
+    })
     /**
      * INIT MAP
      */

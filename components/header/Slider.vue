@@ -2,14 +2,14 @@
   <div class="home-page d-flex is-hidden-mobile">
     <no-ssr>
       <div class="my-button">
-        <a href="/map">
+        <nuxt-link to="/map">
           <button
             type="button"
             class="btn btn-home"
           >
             Bắt đầu với maps
           </button>
-        </a>
+        </nuxt-link>
       </div>
     </no-ssr>
     <!-- Add Map SVG -->

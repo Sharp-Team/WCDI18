@@ -18,19 +18,19 @@
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a
-              href="/"
+            <nuxt-link
+              to="/"
               class="nav-link"
             >
               Trang chủ
-            </a>
+            </nuxt-link>
           </li>
           <li class="nav-item">
-            <a
+            <nuxt-link
               class="nav-link"
-              href="/feedback">
+              to="/feedback">
               Feedback
-            </a>
+            </nuxt-link>
           </li>
         </ul>
         <img
@@ -44,19 +44,19 @@
         id="idNavBranch"
         class="navbar-branch"
       >
-        <a href="/">
+        <nuxt-link to="/">
           <img
             src="/images/icon-navbar/logo-navbar.png"
             alt="nav-img"
             class="nav-img"
           >
-        </a>
+        </nuxt-link>
       </div>
       <div class="navbar-right">
         <div class="nav-button">
-          <a
+          <nuxt-link
             v-if="!username"
-            href="/login"
+            to="/login"
             class="ml-2">
             <my-button
               class="is-btn-login ml-4"
@@ -64,10 +64,10 @@
               background="white"
               background-hover="grey"
               color="black" />
-          </a>
-          <a
+          </nuxt-link>
+          <nuxt-link
             v-if="!username"
-            href="/register"
+            to="/register"
             class="ml-2">
             <my-button
               content="Đăng ký"
@@ -75,10 +75,10 @@
               background-hover="grey"
               color="white"
               class="is-btn-register" />
-          </a>
-          <a
+          </nuxt-link>
+          <nuxt-link
             v-if="username"
-            href="/profile"
+            to="/profile"
             class="ml-4">
             <div class="wrap-profile">
               <div class="wrap-img-profile">
@@ -90,15 +90,15 @@
                 {{ username }}
               </div>
             </div>
-          </a>
-          <a
+          </nuxt-link>
+          <nuxt-link
             v-if="username"
-            href="/"
+            to="/"
             class="ml-2">
             <button
               class="button my-button"
               @click="logout"> Đăng xuất </button>
-          </a>
+          </nuxt-link>
           <notification v-if="username" />
         </div>
       </div>
@@ -110,6 +110,7 @@
 <script>
 import Notification from '~/components/share/Notification'
 import MyButton from '~/components/share/Button'
+import modal from '~/static/js/modals'
 import Navmenu from './Navmenu'
 export default {
   components: {
@@ -131,6 +132,7 @@ export default {
     }
   },
   mounted() {
+    modal()
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         position => {

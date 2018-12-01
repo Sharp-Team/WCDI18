@@ -1,4 +1,4 @@
-window.onload = function() {
+export default () => {
   /**
    * NOTIFICATION
    */

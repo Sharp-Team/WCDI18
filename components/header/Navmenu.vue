@@ -13,23 +13,23 @@
           class="menu-header"
         >
           <div v-if="username === null">
-            <a
-              href="/login"
+            <nuxt-link
+              to="/login"
               class="user-login"
             >
               Đăng nhập
-            </a>
+            </nuxt-link>
             <span
               class="flat-line">/</span>
-            <a
-              href="/register"
+            <nuxt-link
+              to="/register"
               class="user-register">
               Đăng ký
-            </a>
+            </nuxt-link>
           </div>
           <div v-else>
-            <a
-              href="/profile">
+            <nuxt-link
+              to="/profile">
               <div class="wrap-profile">
                 <div class="wrap-img-profile">
                   <img
@@ -40,21 +40,22 @@
                   {{ username }}
                 </div>
               </div>
-            </a>
+            </nuxt-link>
           </div>
         </div>
         <div class="navbar-horizontal">
           <ul class="list-menu">
             <li>
-              <a href="/">Trang chủ</a>
+              <nuxt-link to="/">Trang chủ</nuxt-link>
             </li>
             <li>
-              <a href="/feedback">Feed back</a>
+              <nuxt-link to="/feedback">Feed back</nuxt-link>
             </li>
             <li v-if="username !== null">
-              <a
-                href="/"
-                @click="logout">Đăng xuất</a>
+              <nuxt-link
+                to="/"
+                @click="logout">Đăng xuất
+              </nuxt-link>
             </li>
           </ul>
         </div>

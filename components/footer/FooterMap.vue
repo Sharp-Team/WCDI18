@@ -25,9 +25,9 @@
           </span>
         </div>
         <div class="icon history">
-          <a href="/history">
+          <nuxt-link to="/history">
             <i class="fas fa-map-marked-alt" />
-          </a>
+          </nuxt-link>
           <span class="tooltip-history">
             Lịch sử
           </span>
@@ -75,9 +75,9 @@
           </span>
         </div>
         <div class="icon history">
-          <a href="/history">
+          <nuxt-link to="/history">
             <i class="fas fa-map-marked" />
-          </a>
+          </nuxt-link>
           <span class="tooltip-history">
             Lịch sử
           </span>
