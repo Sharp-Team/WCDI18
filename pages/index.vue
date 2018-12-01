@@ -7,11 +7,11 @@
           Coding Project 2018
         </h2>
         <button class="button-goto-map d-md-none">
-          <a href="/map">
+          <nuxt-link to="/map">
             <img
               src="/images/homepage/goto-map-mobile.png"
               alt="go to map">
-          </a>
+          </nuxt-link>
         </button>
       </div>
     </section>

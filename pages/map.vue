@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="direction">
+    <div id="modalDirection">
       <h3 class="has-text-centered title-direction">Lộ trình</h3>
     </div>
     <div id="map" />
@@ -18,7 +18,7 @@
     >
       Lộ trình
     </button>
-    <div id="legend">
+    <div id="modalNote">
       <h3>Chú thích</h3>
     </div>
     <footer-map />
@@ -27,9 +27,8 @@
 
 <script>
 import FooterMap from '~/components/footer/FooterMap'
+import modal from '~/static/js/modals'
 import { mapGetters } from 'vuex'
-import showNote from '~/assets/js/show-note'
-import showDirection from '~/assets/js/show-direction'
 
 export default {
   components: {
@@ -87,8 +86,9 @@ export default {
     this.icons = this.$store.getters.GET_ICONS
   },
   mounted() {
-    showNote()
-    showDirection()
+    this.$nextTick(function() {
+      modal()
+    })
     /**
      * INIT MAP
      */
@@ -115,7 +115,7 @@ export default {
     /**
      * DIRECTION MAP
      */
-    var direction = document.getElementById('direction')
+    var direction = document.getElementById('modalDirection')
     this.map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(direction)
     /**
      * SET CENTER POSITION USER
@@ -149,7 +149,7 @@ export default {
       handleLocationError(false, infoWindow, this.map.getCenter())
     }
 
-    var legend = document.getElementById('legend')
+    var legend = document.getElementById('modalNote')
     for (var key in this.icons) {
       var type = this.icons[key]
       var name = type.name
@@ -258,7 +258,7 @@ export default {
 button.abcd.button.is-success {
   bottom: 85px;
 }
-#direction {
+#modalDirection {
   font-family: 'Roboto', 'sans-serif';
   width: 300px;
   height: 450px;
@@ -275,7 +275,7 @@ button.abcd.button.is-success {
   height: 90vh;
   margin-top: 54px;
 }
-#legend {
+#modalNote {
   font-family: Arial, sans-serif;
   background: rgba(255, 255, 255, 0.8);
   padding: 10px;
@@ -283,11 +283,11 @@ button.abcd.button.is-success {
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
-#legend h3 {
+#modalNote h3 {
   margin-top: 0;
   font-size: 1.2rem;
 }
-#legend img {
+#modalNote img {
   vertical-align: middle;
 }
 button#showNote {
@@ -300,18 +300,18 @@ button#showDirection {
   bottom: 55px;
   left: 5px;
 }
-#direction {
+#modalDirection {
   display: none;
 }
 .modal-note {
   display: block !important;
 }
 @media (max-width: 576px) {
-  #direction {
+  #modalDirection {
     width: 200px;
     height: 300px;
   }
-  #legend {
+  #modalNote {
     top: 175px !important;
     width: 150px;
     overflow: scroll;

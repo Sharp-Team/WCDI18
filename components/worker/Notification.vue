@@ -1,17 +1,17 @@
 <template>
   <div>
     <div
-      id="noti-Modal"
+      id="modalNotificationWorker"
       class="modal is-modal"
     >
       <div
-        id="noti-ModalContent"
-        class="notification-content modal-content-1 ml-2"
+        id="contentNotificationWorker"
+        class="notification-content contentNotificationWorker1 ml-2"
       >
         <h6 class="notification-title">
           Thông báo ({{ numberNoti }})
           <i
-            id="notiCloseModal"
+            id="closeNotificationWorker"
             class="fas fa-times is-IconClose"
           />
         </h6>
@@ -130,9 +130,9 @@ export default {
                       position: 'is-bottom',
                       type: 'is-success'
                     })
-                    var modal = $('#noti-Modal')
-                    var modalContent = $('#noti-ModalContent')
-                    modalContent.addClass('modal-content-1')
+                    var modal = $('#modalNotificationWorker')
+                    var modalContent = $('#contentNotificationWorker')
+                    modalContent.addClass('contentNotificationWorker1')
                     modal.css('visibility', 'hidden')
                   } else {
                     window.alert('No results found')
@@ -218,7 +218,7 @@ export default {
     border: 1px solid $color-red;
   }
 }
-.modal-content-1 {
+.contentNotificationWorker1 {
   background-color: rgba(255, 255, 255, 0.9);
   transform: translateX(120%);
 }
@@ -228,7 +228,7 @@ export default {
   color: #fff;
   padding: 0.6em 0 0.6em 1.2em;
   position: relative;
-  #notiCloseModal {
+  #closeNotificationWorker {
     position: absolute;
     right: 15px;
     font-size: 0.9em;

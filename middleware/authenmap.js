@@ -1,7 +1,7 @@
-export default function({ redirect, req }) {
-  if (!req.session.user) {
+export default function({ redirect, store }) {
+  if (!store.state.user) {
     return redirect('/login')
-  } else if (!req.session.user.phone_number) {
+  } else if (!store.state.user.phone_number) {
     return redirect('/update')
   }
 }

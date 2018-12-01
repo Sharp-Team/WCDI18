@@ -1,17 +1,17 @@
 <template>
   <div>
     <div
-      id="confirm-Modal"
+      id="modalConfirmWorker"
       class="modal is-modal"
     >
       <div
-        id="confirm-ModalContent"
-        class="notification-content modal-content-1 ml-2"
+        id="contentConfirmWorker"
+        class="notification-content contentConfirmWorker1 ml-2"
       >
         <h6 class="notification-title">
           CHẤP NHẬN GIAO DỊCH
           <i
-            id="confirmCloseModal"
+            id="closeConfirmWorker"
             class="fas fa-times is-IconClose"
           />
         </h6>
@@ -86,23 +86,23 @@ export default {
         this.career = worker.career
         this.username = worker.username
         this.usernameWorker = worker.usernameWorker
-        var modal = $('#confirm-Modal')
-        var btnCloseNoi = $('#confirmCloseModal')
-        var modalContent = $('#confirm-ModalContent')
+        var modal = $('#modalConfirmWorker')
+        var btnCloseNoi = $('#closeConfirmWorker')
+        var modalContent = $('#contentConfirmWorker')
         var btnOke = $('#confirm-oke')
         modal.css('visibility', 'visible')
-        modalContent.removeClass('modal-content-1')
+        modalContent.removeClass('contentConfirmWorker1')
         btnCloseNoi.click(() => {
-          modalContent.addClass('modal-content-1')
+          modalContent.addClass('contentConfirmWorker1')
           modal.css('visibility', 'hidden')
         })
         btnOke.click(() => {
-          modalContent.addClass('modal-content-1')
+          modalContent.addClass('contentConfirmWorker1')
           modal.css('visibility', 'hidden')
         })
         $(window).click(e => {
-          if (e.target.id === 'confirm-Modal') {
-            modalContent.addClass('modal-content-1')
+          if (e.target.id === 'modalConfirmWorker') {
+            modalContent.addClass('contentConfirmWorker1')
             modal.css('visibility', 'hidden')
           }
         })
@@ -147,7 +147,7 @@ export default {
                     var directionsService = new google.maps.DirectionsService()
                     directionsDisplay.setMap(map)
                     directionsDisplay.setPanel(
-                      document.getElementById('direction')
+                      document.getElementById('modalDirection')
                     )
                     var start = results[0].formatted_address
                     var end = this.addressCurrent
@@ -267,7 +267,7 @@ td {
   border-radius: 10px !important;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
-.modal-content-1 {
+.contentConfirmWorker1 {
   background-color: white;
   transform: translateX(120%);
 }

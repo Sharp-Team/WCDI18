@@ -1,15 +1,15 @@
 <template>
   <div
-    id="scan-Modal"
+    id="modalScanWorker"
     class="modal is-modal"
   >
     <div
-      id="scan-ModalContent"
-      class="notification-content modal-content-1 ml-2"
+      id="contentScanWorker"
+      class="notification-content modalContent1 ml-2"
     >
       <h6 class="notification-title">Quét khách hàng
         <i
-          id="scanCloseModal"
+          id="closeScanWorker"
           class="fas fa-times is-IconClose"
         />
       </h6>
@@ -352,7 +352,7 @@ export default {
                       var directionsService = new google.maps.DirectionsService()
                       directionsDisplay.setMap(map)
                       directionsDisplay.setPanel(
-                        document.getElementById('direction')
+                        document.getElementById('modalDirection')
                       )
                       var start = results[0].formatted_address
                       var end = data[0].end
@@ -432,7 +432,7 @@ export default {
     border: none !important;
   }
 }
-.modal-content-1 {
+.modalContent1 {
   background-color: rgba(255, 255, 255, 0.9);
   transform: translateX(-120%);
 }
@@ -442,7 +442,7 @@ export default {
   color: #fff;
   padding: 0.6em 0 0.6em 1.2em;
   position: relative;
-  #scanCloseModal {
+  #closeScanWorker {
     position: absolute;
     right: 15px;
     font-size: 0.9em;

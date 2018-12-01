@@ -1,35 +1,35 @@
 <template>
   <div class="menu-section">
     <div
-      id="markMenuModal"
+      id="modalNavbar"
       class="modal mark-menu"
     >
       <div
-        id="markModalMenuContent"
-        class="modal-menu-content flex-column modal-menu-content-1"
+        id="contentNavbar"
+        class="modal-menu-content flex-column contentNavbar1"
       >
         <div
           id="showContact"
           class="menu-header"
         >
           <div v-if="username === null">
-            <a
-              href="/login"
+            <nuxt-link
+              to="/login"
               class="user-login"
             >
               Đăng nhập
-            </a>
+            </nuxt-link>
             <span
               class="flat-line">/</span>
-            <a
-              href="/register"
+            <nuxt-link
+              to="/register"
               class="user-register">
               Đăng ký
-            </a>
+            </nuxt-link>
           </div>
           <div v-else>
-            <a
-              href="/profile">
+            <nuxt-link
+              to="/profile">
               <div class="wrap-profile">
                 <div class="wrap-img-profile">
                   <img
@@ -40,21 +40,22 @@
                   {{ username }}
                 </div>
               </div>
-            </a>
+            </nuxt-link>
           </div>
         </div>
         <div class="navbar-horizontal">
           <ul class="list-menu">
             <li>
-              <a href="/">Trang chủ</a>
+              <nuxt-link to="/">Trang chủ</nuxt-link>
             </li>
             <li>
-              <a href="/feedback">Feed back</a>
+              <nuxt-link to="/feedback">Feed back</nuxt-link>
             </li>
             <li v-if="username !== null">
-              <a
-                href="/"
-                @click="logout">Đăng xuất</a>
+              <nuxt-link
+                to="/"
+                @click="logout">Đăng xuất
+              </nuxt-link>
             </li>
           </ul>
         </div>
@@ -76,7 +77,6 @@
   </div>
 </template>
 <script>
-import navbar from '~/assets/js/navbar'
 export default {
   computed: {
     username() {
@@ -142,10 +142,10 @@ export default {
     border-radius: 0 !important;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
-  .modal-menu-content-1 {
+  .contentNavbar1 {
     transform: translateX(-120%);
   }
-  .modal-menu-content-2 {
+  .contentNavbar2 {
     transform: translateX(0);
   }
   .menu-header {

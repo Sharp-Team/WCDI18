@@ -4,13 +4,13 @@
       <div class="container">
         <div class="row">
           <div class="item-footer my-auto col-md-3">
-            <a
-              href="/"
+            <nuxt-link
+              to="/"
               class="logo-footer">
               <img
                 src="/images/logo.png"
                 alt="" >
-            </a>
+            </nuxt-link>
           </div>
           <div class="item-footer col-md-2">
             <h3 class="title-footer">LIÊN HỆ</h3>
@@ -22,7 +22,7 @@
                 <a href="#how-to-use">Cách sử dụng</a>
               </li>
               <li class="sub-contact">
-                <a href="/feedback">Feedback</a>
+                <nuxt-link to="/feedback">Feedback</nuxt-link>
               </li>
             </ul>
           </div>
