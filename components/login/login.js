@@ -35,11 +35,12 @@ export default function(username, password) {
           position: 'is-bottom',
           type: 'is-success'
         })
+        this.$store.dispatch('SET_FULL_NAME', response.data.full_name)
         this.$store.dispatch('SET_USERNAME', username)
+        this.$store.dispatch('SET_USER', response.data.user)
         this.$store.dispatch('SET_AVATAR', response.data.data)
         this.$nuxt.$loading.finish()
-        this.$router.push('/')
-        location.reload()
+        this.$router.go(-1)
       })
       .catch(function(error) {
         console.log(error)

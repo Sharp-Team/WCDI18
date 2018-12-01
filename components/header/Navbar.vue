@@ -188,7 +188,9 @@ export default {
             type: 'is-success'
           })
           this.$nuxt.$loading.finish()
-          location.reload()
+          this.$store.dispatch('SET_FULL_NAME', null)
+          this.$store.dispatch('SET_USER', null)
+          this.$router.push('/')
         })
         .catch(function(error) {
           console.log(error)

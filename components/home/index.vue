@@ -39,7 +39,7 @@
                 <li class="one-func">
                   <i class="far fa-envelope my-icon" />
                   <span>
-                    <p class="title-bell">Nhận, phát thông báo công việc</p>
+                    <p class="title-feature">Nhận, phát thông báo công việc</p>
                     <p class="sub-description">Phát thông  cho nhiều worker khi có công việc cần giúp đỡ một cách đơn giản và ngay lập tức.</p>
                   </span>
                 </li>

@@ -71,6 +71,8 @@ router.post('/signin', async (req, res) => {
         req.session.user = result
         res.status(200).json({
           data: result.avatar,
+          full_name: result.full_name,
+          user: result,
           error: null
         })
       } else {
