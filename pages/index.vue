@@ -27,6 +27,7 @@ import Slider from '~/components/header/Slider'
 import HomePage from '~/components/home'
 
 export default {
+  transition: 'slider-right',
   components: {
     MyFooter,
     Navbar,

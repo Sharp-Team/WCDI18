@@ -6,15 +6,11 @@
 import Register from '../components/register'
 
 export default {
+  transition: 'slider-right',
   components: {
     Register
   },
   layout: 'user',
-  middleware: 'signined',
-  beforeCreate() {
-    if (this.$store.getters.GET_USERNAME) {
-      this.$router.push('/')
-    }
-  }
+  middleware: 'signined'
 }
 </script>

@@ -4,15 +4,11 @@
 <script>
 import FeedBack from '~/components/feedback'
 export default {
+  transition: 'slider-left',
   components: {
     FeedBack
   },
   layout: 'user',
-  middleware: 'authentication',
-  beforeCreate() {
-    if (!this.$store.getters.GET_USERNAME) {
-      this.$router.push('/')
-    }
-  }
+  middleware: 'authentication'
 }
 </script>

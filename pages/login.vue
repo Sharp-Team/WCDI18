@@ -5,15 +5,11 @@
 <script>
 import Login from '../components/login'
 export default {
+  transition: 'slider-left',
   components: {
     Login
   },
   layout: 'user',
-  middleware: 'signined',
-  beforeCreate() {
-    if (this.$store.getters.GET_USERNAME) {
-      this.$router.push('/')
-    }
-  }
+  middleware: 'signined'
 }
 </script>

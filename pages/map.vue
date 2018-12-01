@@ -31,6 +31,7 @@ import modal from '~/static/js/modals'
 import { mapGetters } from 'vuex'
 
 export default {
+  transition: 'slider-left',
   components: {
     FooterMap
   },

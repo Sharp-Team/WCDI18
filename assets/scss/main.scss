@@ -10,3 +10,34 @@ html {
 .container {
   margin-top: 53px;
 }
+
+.slider-right-enter-active {
+  animation: slider-right-in .3s;
+}
+.slider-right-leave-active {
+  animation: slider-right-out .3s;
+}
+@keyframes slider-right-in {
+  0% { transform:translateX(-100%); }
+  100% { transform:translateX(0); }
+}
+@keyframes slider-right-out {
+  0% { transform:translateX(0); }
+  100% { transform:translateX(100%); }
+}
+
+.slider-left-enter-active {
+  animation: slider-left-in .3s;
+}
+.slider-left-leave-active {
+  animation: slider-left-out .3s;
+}
+@keyframes slider-left-in {
+  0% { transform:translateX(100%) }
+  100% { transform:translateX(0); }
+}
+@keyframes slider-left-out {
+  0% { transform:translateX(0) }
+  100% { transform:translateX(-100%) }
+}
+
