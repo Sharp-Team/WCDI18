@@ -201,7 +201,46 @@ export default {
     },
     onSignInFBSuccess(response) {
       FB.api('/me', dude => {
-        console.log(dude)
+        this.$axios
+          .post(`/api/user/signup`, {
+            username: dude.id,
+            password: null,
+            avatar: '/images/user.jpg',
+            email: null,
+            full_name: dude.name,
+            phone_number: null,
+            province: null,
+            district: null,
+            address_detail: null,
+            indentify_card: null,
+            object: 'Khách hàng',
+            career: null
+          })
+          .then(response => {
+            this.$axios
+              .post(`/api/user/signin`, {
+                username: dude.id,
+                password: null
+              })
+              .then(response => {
+                this.$toast.open({
+                  message: 'Đăng nhập thành công!',
+                  position: 'is-bottom',
+                  type: 'is-success'
+                })
+                this.$store.dispatch('SET_USERNAME', dude.id)
+                this.$store.dispatch('SET_AVATAR', response.data.data)
+                this.$nuxt.$loading.finish()
+                this.$router.push('/')
+                location.reload()
+              })
+              .catch(function(error) {
+                console.log(error)
+              })
+          })
+          .catch(function(error) {
+            console.log(error)
+          })
       })
     },
     onSignInFBError(error) {
