@@ -43,7 +43,7 @@ export default {
     }
   },
   layout: 'map',
-  // middleware: 'authenmap',
+  middleware: 'authenmap',
   computed: {
     rangeCurrent() {
       return this.$store.getters.GET_RANGE

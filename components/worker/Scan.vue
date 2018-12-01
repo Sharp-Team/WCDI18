@@ -352,7 +352,7 @@ export default {
                       var directionsService = new google.maps.DirectionsService()
                       directionsDisplay.setMap(map)
                       directionsDisplay.setPanel(
-                        document.getElementById('direction')
+                        document.getElementById('modalDirection')
                       )
                       var start = results[0].formatted_address
                       var end = data[0].end

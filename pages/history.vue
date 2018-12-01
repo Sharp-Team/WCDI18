@@ -9,11 +9,6 @@ export default {
     History
   },
   layout: 'user',
-  // middleware: 'authentication',
-  beforeCreate() {
-    if (!this.$store.getters.GET_USERNAME) {
-      this.$router.push('/')
-    }
-  }
+  middleware: 'authentication'
 }
 </script>

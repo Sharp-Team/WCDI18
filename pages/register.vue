@@ -10,7 +10,7 @@ export default {
     Register
   },
   layout: 'user',
-  // middleware: 'signined',
+  middleware: 'signined',
   beforeCreate() {
     if (this.$store.getters.GET_USERNAME) {
       this.$router.push('/')

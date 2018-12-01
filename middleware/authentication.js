@@ -1,5 +1,5 @@
-export default function({ redirect, req }) {
-  if (!req.session.user) {
+export default function({ redirect, store }) {
+  if (!store.state.user) {
     return redirect('/')
   }
 }
