@@ -24,7 +24,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <h6 class="title is-6">Vị trí của bạn:</h6>
+          <h6 class="title-status">Vị trí của bạn:</h6>
           <p class="my-0 mt-1 is-content">
             <img
               src="/images/icon-navbar/local.png"
@@ -35,7 +35,7 @@
           </p>
         </div>
         <div class="modal-body">
-          <h6 class="title is-6">Chọn công việc: {{ title }}</h6>
+          <h6 class="title-status">Chọn công việc: {{ title }}</h6>
           <b-autocomplete
             v-model="title"
             :keep-first="keepFirst"
@@ -49,7 +49,7 @@
           />
         </div>
         <div class="modal-body">
-          <h6 class="title is-6">Nội dung công việc: </h6>
+          <h6 class="title-status">Nội dung công việc: </h6>
           <textarea
             id="message-text"
             v-model="content"
@@ -231,6 +231,14 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
+.title-status {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.is-content {
+  padding: 0;
+  color: #868686;
+}
 .modal-body {
   flex: 0 !important;
 }
@@ -243,9 +251,6 @@ export default {
 .noti-image {
   margin-right: 7px;
   width: 4%;
-}
-.modal-title {
-  font-size: 15px !important;
 }
 
 .modal-scan-user {
@@ -263,7 +268,7 @@ export default {
       .modal-header {
         background-color: $color-main !important;
         border-bottom: none !important;
-        padding: 0.7rem;
+        padding: 0.5rem;
         h6 {
           font-size: 17px;
           color: #fff;
