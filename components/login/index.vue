@@ -201,7 +201,7 @@ export default {
     },
     onSignInFBSuccess(response) {
       FB.api('/me', dude => {
-        console.log(`Good to see you, ${dude.name}.`)
+        console.log(dude)
       })
     },
     onSignInFBError(error) {
