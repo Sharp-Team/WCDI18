@@ -133,7 +133,7 @@ export default {
     // eslint-disable-next-line
     window.fbAsyncInit = function() {
       FB.init({
-        appId: '118289005758060',
+        appId: '264952374167896',
         cookie: true,
         xfbml: true,
         version: 'v2.8'
