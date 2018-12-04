@@ -330,9 +330,9 @@ export default {
 <style lang="scss" csoped>
 .home-page {
   width: 100%;
-  height: 100%;
   position: relative;
   height: 100vh;
+  background-size: cover;
   background-image: url('/images/slider/slider.png');
   .map {
     width: 100%;

@@ -153,15 +153,13 @@ export default {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
-  display: block;
+  display: flex;
   cursor: pointer;
   .status-content {
-    position: relative;
     display: flex;
     background-color: #fff;
     position: fixed;
     height: 50px;
-    left: 30%;
     bottom: 10%;
     border-radius: 5px !important;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -235,10 +233,10 @@ export default {
   }
 }
 .contentStatusWorker1 {
-  transform: translateY(250%);
+  transform: translateY(400%);
 }
 .contentStatusWorker2 {
-  transform: translateX(-120);
+  transform: translate(-120);
 }
 @media (max-width: 992px) {
   .status-modal .status-content {
