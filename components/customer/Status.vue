@@ -138,6 +138,14 @@ export default {
   },
   methods: {
     sendNotification() {
+      if (!this.title || !this.content) {
+        this.$toast.open({
+          message: `Bạn phải chọn công việc và điền nội dung công việc`,
+          position: 'is-bottom',
+          type: 'is-danger'
+        })
+        return
+      }
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
           position => {
@@ -232,7 +240,7 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/variable.scss';
 .title-status {
-  margin: 0;
+  margin: 0 0 10px 0;
   font-size: 0.9rem;
 }
 .is-content {

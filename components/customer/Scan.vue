@@ -190,6 +190,14 @@ export default {
       this.selected.splice(index, 1)
     },
     showMarker(icons, selected) {
+      if (this.selected.length === 0) {
+        this.$toast.open({
+          message: `Bạn phải chọn công việc`,
+          position: 'is-bottom',
+          type: 'is-danger'
+        })
+        return
+      }
       let jobs = []
       selected.forEach(element => {
         if (element) {
@@ -254,6 +262,15 @@ export default {
           }
         }, 400)
       })
+      this.$toast.open({
+        message: `Quét thành công, người làm việc sẽ hiện trên map.`,
+        position: 'is-bottom',
+        type: 'is-success'
+      })
+      var modalScanCustomer = $('#modalScanCustomer')
+      var contentScanCustomer = $('#contentScanCustomer')
+      contentScanCustomer.addClass('contentScanCustomer1')
+      modalScanCustomer.css('visibility', 'hidden')
     },
     updateWorkers(alldata) {
       if (this.selected.length > 0) {

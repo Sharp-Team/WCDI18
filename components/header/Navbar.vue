@@ -120,7 +120,7 @@ export default {
   },
   data() {
     return {
-      address: 'Room D413, FPT University'
+      address: ''
     }
   },
   computed: {
