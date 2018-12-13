@@ -13,8 +13,8 @@ mongoose
     console.log('Database connected')
   })
 
-require('./components/deals/deal')
-const dealController = require('./components/deals/dealController')
+require('./deals/model')
+const dealController = require('./deals/controller')
 app.use('/api/deal', dealController)
 
 module.exports = {

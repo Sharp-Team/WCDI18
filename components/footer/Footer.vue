@@ -35,7 +35,7 @@
               <a href="#">
                 <i class="fab fa-facebook-f" />
               </a>
-              <a href="#">
+              <a href="https://github.com/Sharp-Team">
                 <i class="fab fa-github" />
               </a>
               <a href="#">
@@ -62,7 +62,7 @@
               <img
                 src="/images/icon-footer/icon-contact.png"
                 alt="" >
-              <span class="is-address">sharpteam.fpt@gmail.com</span>
+              <span class="is-address">thaycacacc@gmail.com</span>
             </div>
             <form class="form-inline frm-contact">
               <div class="form-group">

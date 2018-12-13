@@ -1,7 +1,7 @@
 const express = require('express')
 const http = require('http')
 const socketIO = require('socket.io')
-const { initGame } = require('./components/socket')
+const { initGame } = require('./socket')
 const port = process.env.PORT || 4500
 
 const app = express()

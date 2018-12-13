@@ -2,8 +2,8 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
-require('./components/users/user')
-const userController = require('./components/users/userController')
+require('./users/model')
+const userController = require('./users/controller')
 app.use('/api/user', userController)
 
 module.exports = {

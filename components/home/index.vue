@@ -1,5 +1,5 @@
 <template>
-  <div class=" homepage">
+  <div class="homepage">
     <div class="container">
       <div class="row">
         <div class="col-md-6 title-border">
@@ -56,7 +56,9 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
+    <div
+      id="how-to-use"
+      class="container-fluid">
       <div class="guide-register">
         <div class="title-button">
           <h3 class="title is-3 text">HƯỚNG DẪN SỬ DỤNG APP</h3>
@@ -126,7 +128,9 @@
         </div>
       </div>
     </div>
-    <div class="container team-page">
+    <div
+      id="about"
+      class="container team-page">
       <section id="speakers">
         <div class="row d-flex justify-content-center">
           <div class="wrap-img-profile">
@@ -150,47 +154,6 @@
               <li class="p-2">
                 <a
                   href="https://www.facebook.com/bacodekiller"
-                  target="_blank">
-                  <i class="fab fa-facebook" />
-                </a>
-              </li>
-              <li class="p-2">
-                <a
-                  href="#"
-                  target="_blank">
-                  <i class="fab fa-google-plus" />
-                </a>
-              </li>
-              <li class="p-2">
-                <a
-                  href="#"
-                  target="_blank">
-                  <i class="fab fa-twitter" />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="wrap-img-profile">
-            <a
-              href="#"
-              class="member-profile">
-              <div class="unhover_img">
-                <img
-                  src="/images/homepage/speaker-2.png"
-                  alt="">
-              </div>
-              <div class="hover_img">
-                <img
-                  src="/images/homepage/speaker-2-hover.png"
-                  alt="">
-              </div>
-              <span class="position">Designer</span>
-              <h4><span>ThachDN</span> Baby Kajima</h4>
-            </a>
-            <ul class="d-flex justify-content-center">
-              <li class="p-2">
-                <a
-                  href="https://www.facebook.com/Kaaye1712 "
                   target="_blank">
                   <i class="fab fa-facebook" />
                 </a>

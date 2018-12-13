@@ -1,7 +1,7 @@
 {
-  "name": "CDI18",
+  "name": "WCDI18",
   "version": "1.0.0",
-  "description": "Coding Project 2018",
+  "description": "Ứng dụng dành cho người làm việc và người có công việc cần trợ giúp ngay lập tức - Coding Project 2018",
   "author": "Elisa Kajima Team",
   "private": true,
   "engines": {
