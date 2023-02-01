@@ -27,7 +27,7 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "heroku": "^7.18.9",
-    "mongoose": "^5.3.12",
+    "mongoose": "^5.13.15",
     "node-sass": "^4.9.4",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.1.0",
